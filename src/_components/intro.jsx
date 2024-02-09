@@ -11,7 +11,11 @@ const IntroContext = createContext()
 export const Intro = (props) => {
     const [cannotStart, setCannotStart] = useState(true)
 
-    useEffect(() => { }, []);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setCannotStart(false)
+        }, 5000) // TODO: make this like 30s instead 
+    }, []);
 
     const labels = props.expPages.IntroLabels
 
