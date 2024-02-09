@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rtl-exp1/static/css/main.b39c46ab.css",
+    "main.js": "/rtl-exp1/static/js/main.fdea976f.js",
+    "static/media/slider-en.gif": "/rtl-exp1/static/media/slider-en.541a72d1449c026ac0d8.gif",
+    "static/media/gray-scale-donut.png": "/rtl-exp1/static/media/gray-scale-donut.95e8c609a26d16413e38.png",
+    "index.html": "/rtl-exp1/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.b39c46ab.css",
+    "static/js/main.fdea976f.js"
+  ]
+}
