@@ -34,14 +34,6 @@ export const Intro = (props) => {
                             ic.onClickStart(props.navigate, props.nextUrl)
                         }}> {labels.start} </Button>
 
-                    <Grid item style={{ margin: '15px' }}>
-                        {!cannotStart && <div>
-                            <Typography>{labels.noteHelp} <HelpOutlineIcon style={{ marginLeft: 5, marginRight: 5 }} fontSize="medium" /> </Typography>
-                            <div style={{ position: 'absolute', top: 0, left: 0, padding: '10px' }}>
-                                <HelpOutlineIcon />
-                            </div>
-                        </div>}
-                    </Grid>
                 </Grid>
             </Grid>
         </IntroContext.Provider>
