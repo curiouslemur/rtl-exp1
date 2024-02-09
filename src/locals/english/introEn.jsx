@@ -1,56 +1,68 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
-import sliderEn from '../../_utils/slider-en.gif'
+import { Box, Grid, ListItem, Typography } from "@mui/material";
 
 export const IntroEn = (props) => {
+    const il = IntroLabelsEn
     return (
-        <Grid>
-            <Typography > You will be asked to rate <b>how much you associate each color with each of the following concepts</b>:</Typography>
-            <Grid container justifyContent="" marginTop={2}>
-                <i style={{ marginTop: 0 }}>
-                    {IntroLabelsEn.cptFood},
-                    {IntroLabelsEn.cptAbstract},
-                    {IntroLabelsEn.cptEmotion},
-                    {IntroLabelsEn.cptWeather}<br />
-                </i>
-            </Grid>
-            <br />
-
-            <Typography paragraph>You will enter your rating by sliding a cursor along a continuous scale ranging from <i>"Not at all"</i> to <i>"Very much"</i>, as shown below</Typography>
-            <div style={{ marginTop: 5 }}>
-                <img src={sliderEn} alt={IntroLabelsEn.sliderAltText} width="55%" />
-            </div>
-
-            <Typography paragraph style={{ marginTop: '3ch' }}>There will be <b>16 blocks</b> of trials, one for each concept. You will be asked to rate all of the colors for each concept before going on to the next block.</Typography>
-            <Typography paragraph> <b>Let's try it!</b> Click on one of the concepts below</Typography>
-        </Grid >
+        <>
+            <Grid container align='justify'>
+                <Typography>
+                    {il.intro}
+                    {/* Note: radial chart? */}
+                    {/* <br /> */}
+                    {/* Add screenshot of the barcharts */}
+                    <br />
+                    {/* Each barchart is a visualization of the data for the following fictitious scenario: */}
+                    <br />
+                </Typography>
+            </Grid >
+            <Grid>
+                <Box sx={{
+                    width: '100%', backgroundColor: '#9c27b022',
+                    '&:hover': {
+                        backgroundColor: '#80818312', //opacity: [0.9, 0.8, 0.7]
+                    }
+                }}>
+                    <Typography variant="body1" style={{ padding: '1%' }}>
+                        <b>{il.scenarioTitle}</b> Following a request from the city of Worcesterland, officials recorded the daily number of cars passing in front of the city hall.
+                        {/* the number of cars passing in front of the main theater building was recorded daily.  */}
+                        The recorded counts per day are visualized using barcharts.
+                        The data collected during the study are presented visually using the barchart.
+                        <br />
+                    </Typography>
+                </Box>
+                <img src="figures/bar-example-english.svg" alt="" width={'600px'} />
+                <Box sx={{
+                    width: '100%', backgroundColor: '#9c27b022', paddingBottom: '10px',
+                    '&:hover': {
+                        backgroundColor: '#80818312', //opacity: [0.9, 0.8, 0.7]
+                    }
+                }}>
+                    <Typography variant="body1" style={{ padding: '1%' }}>
+                        <b> About the barcharts: </b>
+                    </Typography>
+                    <Typography>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            each day is represented by a bar in the barchart
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            the height of a bar represents the number of cars observed during that day (the actual value is shown above each bar)
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            the days are ordered from first to last day of the study. Dark-colored bars indicate <b>holidays</b>
+                        </ListItem>
+                    </Typography>
+                </Box>
+            </Grid >
+        </>
     )
 }
 
 export const IntroLabelsEn = {
     introTitle: "Instructions",
-    introOpening: "During this experiment you’ll be presented with each of the colored squares from the set below, one at a time.",
-    sliderAltText: "Example slider for enter assocaition rating",
-    cptFood: " mango, peach, banana, carrot ", // cpt is short for concept. !! KEEP the space at the beginning of the list
-    cptAbstract: " safety, justice, peace, comfort",
-    cptEmotion: " sad, love, happy, angry",
-    cptWeather: " drought, lightning, sandstorm, hurricane",
+    intro: "In the following pages you will see a series of barcharts representing the data from the fictitious scenario highlighted below.",
     start: "Start",
-    tutoQMost: "Which color do you associate MOST with ",
-    tutoQLeast: "Which color do you associate LEAST with ",
+    scenarioTitle: "The scenario:",
 
-    modalWhen: "When you see that color with the concept of ",
-    modalMove: "you would move the slider ⚫️ near ",
-    modalMarkerMost: "Very much",
-    modalMarkerLeast: "Not at all",
-    modalNext: "Next",
-
-    markMost: "Very much",
-    markLeast: "Not at All",
-
-    alertAgain: "Select another concept from the list.",
-    alertStart: "You can try another color or concept or start the experiment.",
-
-    noteHelp: "Note that you can review these instructions by clicking on the help icon at the top left of the page."
 }
 export default IntroEn;

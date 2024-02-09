@@ -23,6 +23,12 @@
 // // hurricane -> Tree, lightning -> Healthy, sandstorm --> Sick
 
 export const concepts = {
+    "ar": {
+        cptFood: ['Banane', 'Épices', 'Mangue', 'Pêche'],
+        cptAbstract: ['Vie', 'Justice', 'Paix', 'Mort',],
+        cptEmotion: ['En colère', 'Heureux', 'Amour', 'Triste'],
+        cptWeather: ['Sécheresse', 'Arbre', 'En bonne santé', 'Malade']
+    },
     "en": {
         cptFood: ['Banana', 'Spices', 'Mango', 'Peach'],
         cptAbstract: ['Life', 'Justice', 'Peace', 'Death'],
@@ -46,14 +52,3 @@ export const getConcepts = (lang) => {
     }
     return res
 }
-
-
-// const shuffle = (a) => { //Fisher-Yates shuffle
-//     var j, x, i;
-//     for (i = a.length - 1; i > 0; i--) {
-//         j = Math.floor(Math.random() * (i + 1));
-//         x = a[i]; a[i] = a[j]; a[j] = x;
-//     } return a;
-// }
-
-

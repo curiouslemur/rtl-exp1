@@ -1,50 +1,42 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
-
-const b = { color: '#3e3a53' }
+const styles = {
+    root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
+    textField: { marginLeft: 10, marginRight: 10, width: 200, }
+    , label: { margin: 0 }
+}
 
 export const ConsentEn = (props) => {
     return (
-        <Grid container alignContent={'justify'}>
-            <Typography paragraph> Before you begin, please read this page carefully.</Typography>
-            <Typography paragraph><b style={b}>The goal of this study is </b>
-                to learn the different ways people associate colors to concepts of everyday life, and vice versa.</Typography>
-
-            <Typography paragraph><b style={b}>Procedure: </b>
-                You will be asked to ** rate how much you associate a color with a given concept **, using a continuous scale from <i>“not at all”</i> to <i>“very much”</i>.
-                Before starting, you will be asked to provide information about you and to adjust the brightness of your screen.
-            </Typography>
-
-            <Grid style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', marginBottom: 10 }}>
-                <Typography><HelpOutlineIcon style={{ marginLeft: 5, marginRight: 5 }} fontSize="medium" /> At all times, the help button will be available at the top-left of the screen. Click to review instructions on how to complete the survey.</Typography>
-            </Grid>
-
-            <Typography paragraph> <b style={b}>Duration: </b> The experiment will take about 30 minutes.</Typography>
-
-            <Typography paragraph> <b style={b}>Risks to study participants: </b>
-                There are no expected risks to you beyond using a computer in a way similar to everyday activity.
-            </Typography>
-
-            <Typography paragraph> <b style={b}>Privacy: </b>Your participation is anonymous and your responses cannot be used to identify you.</Typography>
-
-            <Typography paragraph> <b style={b}>Record keeping: </b> Records of your participation will be held confidential so far as permitted by law.
-                However, the study investigators and, under certain circumstances, the Worcester Polytechnic Institute Institutional Review Board (WPI IRB) will be able to inspect and have access to this data.
-                Any publication or presentation of the data will <b>not</b> identify you.</Typography>
-
-            <Typography paragraph> <b style={b}> Your participation in this research is voluntary.  </b> Your refusal to participate will not result in any penalty to you or any loss of benefits to which you may otherwise be entitled.
-                You may decide to stop participating in the research at any time without penalty or loss of other benefits. </Typography>
-
-            <Typography paragraph> <b style={b}>For more information </b> about this research or your rights as a study participant, please contact Dr.Lane Harrison, Email: ltharrison(at)wpi(dot)edu </Typography>
-            <Typography paragraph> <b style={b}>If you agree to participate, </b> please provide the following information and then click * Sign *</Typography>
+        <Grid align='justify'>
+            <Typography paragraph style={styles}> Before starting the study, please read this page carefully.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>The goal of this research is </b> to understand how people read data visualization to form their most intuitive answer to a given question.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Procedure: </b> You will read about a fictitious context for which data was collected and visually presented.
+                The study asks questions about what you see on the visualizations. You will have to <i>identify a scpecific element</i> or <i>count elements in the chart.</i>
+                The charts will be visible only for a short time, so read it quickly, then type your answer in the provided area right below the chart. </Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>What you will get: </b> We hope that you will find the exercise enjoyable.
+                Your participation will help us understand how people quickly read charts to form answer to questions.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Duration: </b> about 10 minutes.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Privacy: </b> Your participation is anonymous and your responses cannot be used to identify you.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Record keeping: </b> Records of your participation will be held confidential so far as permitted by law.
+                However, the study investigators and, under certain circumstances, the Worcester Polytechnic Institute Institutional Review Board (WPI IRB) will be able to inspect and have access to this data.</Typography>
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Risks: </b> We do not expect there to be any risks beyond daily use of computer devices.</Typography>
+            {/* <Typography paragraph><b style={{ color: props.keywordColor }}>Contact info: </b> Prof. L. Harrison, ltharrison@wpi.edu</Typography> */}
+            <Typography paragraph><b style={{ color: props.keywordColor }}>Your participation in this research is voluntary.</b> We do not expect there to be any risks. Your refusal to participate will not result in any penalty to you or any loss of benefits to which you may otherwise be entitled.
+                You may decide to stop participating at any time without penalty or loss of other benefits. </Typography>
+            <Typography paragraph>For more information about your rights as a research participant, or any concerns related to this study, please contact Prof. Lane Harrison (ltharrison@wpi.edu)</Typography>
+            <br />
+            <Typography paragraph>By filling in the following form, and clicking 'NEXT', you agree to participate in the study.</Typography>
         </Grid>
     )
 }
 
 
 export const ConsentLabelsEn = {
-    consentTitle: "Welcome!!!",
+    mobileWarning: "Please use a device or a computer with wider screen.",
+    consentTitle: "Welcome",
+
     countryResQ: "From which country are you taking this survey? *",
     countryResLabel: "Country of residence",
     countryResLenQ: "How many years have you lived there? *",
@@ -67,7 +59,8 @@ export const ConsentLabelsEn = {
     colorblindLink: "https://en.wikipedia.org/wiki/Color_blindness",
     colorblindYes: "Yes", colorblindNo: "No", colorblindIdk: "I don't know",
 
-    mobileWarning: "Please use a device or a computer with wider screen.",
+    visFamiliarityQ: "How often do you use charts or data visualizations?",
+    visFamiliarityLabel: "",
     sign: "Sign"
 }
 

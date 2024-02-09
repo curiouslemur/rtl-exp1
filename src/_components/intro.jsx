@@ -9,50 +9,20 @@ import { sliderStyle, sliderTheme } from "../stimuli/slider";
 const IntroContext = createContext()
 
 export const Intro = (props) => {
-    const [tutoIsopen, setTutoOpen] = useState(false)
-    const [chipLabel, setChipLabel] = useState("")
-    // const [tryOut, setTryOut] = useState(Math.floor(Math.random() * (1 - 0 + 1)) + 0) // Math.floor(Math.random() * (max - min + 1)) + min;
-    const [tryOut, setTryOut] = useState(1)
     const [cannotStart, setCannotStart] = useState(true)
 
-    const handleOpenTutoSection = (chipLabel) => { // clicking chip
-        setChipLabel(chipLabel);
-        setTryOut(tryOut + 1)
-        setTutoOpen(true);
-    };
-
-    useEffect(() => {
-        document.body.classList.add('intro-body');
-        ic.addGridColorPatches("#grid-color-patches", 35, 10);
-    }, []);
+    useEffect(() => { }, []);
 
     const labels = props.expPages.IntroLabels
 
     return (
-        <IntroContext.Provider value={{ labels, chipLabel, tryOut, setCannotStart }}>
+        <IntroContext.Provider value={{ labels, setCannotStart }}>
             <Grid container justifyContent="center">
-                <Grid item xl={6} xs={9}>
-                    <Typography variant="h4">{labels.introTitle}</Typography>
+                <Grid item xl={6} xs={10}>
 
-                    <hr style={{ color: "#ffffff00", backgroundColor: "#ffffff00", height: 1.5 }} />
-                    <Typography paragraph>{labels.introOpening}</Typography>
-
-                    <Grid id="grid-color-patches" style={{ marginTop: 10 }}></Grid>
-
-                    <Grid item ><props.expPages.Intro /> </Grid>
-
-                    <Grid item xs={12} sm={12} style={{ marginTop: 10 }} id="chips">
-                        {props.conceptList.map(c =>
-                            <ConceptChip key={c} value={c} id={c}
-                                label={c}
-                                variant={"outlined"}
-                                selected={false}
-                                handleChipClick={(chipLabel) => handleOpenTutoSection(c, tryOut)}
-                            />
-                        )}
-                    </Grid>
-
-                    {tutoIsopen && <TutoSection labels={labels} chipLabel={chipLabel} tryOut={tryOut} />}
+                    <h2>{labels.introTitle}</h2>
+                    <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
+                    <props.expPages.Intro keywordColor="#ea3433" /> <br />
 
                     <Button variant='contained' style={{ marginTop: '5ch' }}
                         disabled={cannotStart}

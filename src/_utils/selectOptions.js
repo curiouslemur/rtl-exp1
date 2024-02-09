@@ -1,5 +1,255 @@
 export const countryNames =
 {
+    "ar": [
+        { "id": 4, "name": "أفغانستان", "alpha2": "af", "alpha3": "afg" },
+        { "id": 248, "name": "جزر أولاند", "alpha2": "ax", "alpha3": "ala" },
+        { "id": 8, "name": "ألبانيا", "alpha2": "al", "alpha3": "alb" },
+        { "id": 12, "name": "الجزائر", "alpha2": "dz", "alpha3": "dza" },
+        { "id": 16, "name": "ساموا الأمريكية", "alpha2": "as", "alpha3": "asm" },
+        { "id": 20, "name": "أندورا", "alpha2": "ad", "alpha3": "and" },
+        { "id": 24, "name": "أنغولا", "alpha2": "ao", "alpha3": "ago" },
+        { "id": 660, "name": "أنغويلا", "alpha2": "ai", "alpha3": "aia" },
+        { "id": 10, "name": "القارة القطبية الجنوبية", "alpha2": "aq", "alpha3": "ata" },
+        { "id": 28, "name": "أنتيغوا وباربودا", "alpha2": "ag", "alpha3": "atg" },
+        { "id": 32, "name": "الأرجنتين", "alpha2": "ar", "alpha3": "arg" },
+        { "id": 51, "name": "أرمينيا", "alpha2": "am", "alpha3": "arm" },
+        { "id": 533, "name": "أروبا", "alpha2": "aw", "alpha3": "abw" },
+        { "id": 36, "name": "أستراليا", "alpha2": "au", "alpha3": "aus" },
+        { "id": 40, "name": "النمسا", "alpha2": "at", "alpha3": "aut" },
+        { "id": 31, "name": "أذربيجان", "alpha2": "az", "alpha3": "aze" },
+        { "id": 44, "name": "باهاماس", "alpha2": "bs", "alpha3": "bhs" },
+        { "id": 48, "name": "البحرين", "alpha2": "bh", "alpha3": "bhr" },
+        { "id": 50, "name": "بنغلاديش", "alpha2": "bd", "alpha3": "bgd" },
+        { "id": 52, "name": "باربادوس", "alpha2": "bb", "alpha3": "brb" },
+        { "id": 112, "name": "بيلاروس", "alpha2": "by", "alpha3": "blr" },
+        { "id": 56, "name": "بلجيكا", "alpha2": "be", "alpha3": "bel" },
+        { "id": 84, "name": "بليز", "alpha2": "bz", "alpha3": "blz" },
+        { "id": 204, "name": "بنين", "alpha2": "bj", "alpha3": "ben" },
+        { "id": 60, "name": "برمودا", "alpha2": "bm", "alpha3": "bmu" },
+        { "id": 64, "name": "بوتان", "alpha2": "bt", "alpha3": "btn" },
+        { "id": 68, "name": "بوليفيا", "alpha2": "bo", "alpha3": "bol" },
+        { "id": 535, "name": "الجزر الكاريبية الهولندية", "alpha2": "bq", "alpha3": "bes" },
+        { "id": 70, "name": "البوسنة والهرسك", "alpha2": "ba", "alpha3": "bih" },
+        { "id": 72, "name": "بوتسوانا", "alpha2": "bw", "alpha3": "bwa" },
+        { "id": 74, "name": "جزيرة بوفيه", "alpha2": "bv", "alpha3": "bvt" },
+        { "id": 76, "name": "البرازيل", "alpha2": "br", "alpha3": "bra" },
+        { "id": 86, "name": "إقليم المحيط الهندي البريطاني", "alpha2": "io", "alpha3": "iot" },
+        { "id": 96, "name": "بروناي", "alpha2": "bn", "alpha3": "brn" },
+        { "id": 100, "name": "بلغاريا", "alpha2": "bg", "alpha3": "bgr" },
+        { "id": 854, "name": "بوركينا فاسو", "alpha2": "bf", "alpha3": "bfa" },
+        { "id": 108, "name": "بوروندي", "alpha2": "bi", "alpha3": "bdi" },
+        { "id": 116, "name": "كمبوديا", "alpha2": "kh", "alpha3": "khm" },
+        { "id": 120, "name": "الكاميرون", "alpha2": "cm", "alpha3": "cmr" },
+        { "id": 124, "name": "كندا", "alpha2": "ca", "alpha3": "can" },
+        { "id": 132, "name": "الرأس الأخضر", "alpha2": "cv", "alpha3": "cpv" },
+        { "id": 136, "name": "جزر كايمان", "alpha2": "ky", "alpha3": "cym" },
+        { "id": 140, "name": "جمهورية أفريقيا الوسطى", "alpha2": "cf", "alpha3": "caf" },
+        { "id": 148, "name": "تشاد", "alpha2": "td", "alpha3": "tcd" },
+        { "id": 152, "name": "تشيلي", "alpha2": "cl", "alpha3": "chl" },
+        { "id": 156, "name": "الصين", "alpha2": "cn", "alpha3": "chn" },
+        { "id": 162, "name": "جزيرة كريسماس", "alpha2": "cx", "alpha3": "cxr" },
+        { "id": 166, "name": "جزر كوكوس", "alpha2": "cc", "alpha3": "cck" },
+        { "id": 170, "name": "كولومبيا", "alpha2": "co", "alpha3": "col" },
+        { "id": 174, "name": "جزر القمر", "alpha2": "km", "alpha3": "com" },
+        { "id": 178, "name": "جمهورية الكونغو", "alpha2": "cg", "alpha3": "cog" },
+        { "id": 180, "name": "جمهورية الكونغو الديمقراطية", "alpha2": "cd", "alpha3": "cod" },
+        { "id": 184, "name": "جزر كوك", "alpha2": "ck", "alpha3": "cok" },
+        { "id": 188, "name": "كوستاريكا", "alpha2": "cr", "alpha3": "cri" },
+        { "id": 384, "name": "ساحل العاج", "alpha2": "ci", "alpha3": "civ" },
+        { "id": 191, "name": "كرواتيا", "alpha2": "hr", "alpha3": "hrv" },
+        { "id": 192, "name": "كوبا", "alpha2": "cu", "alpha3": "cub" },
+        { "id": 531, "name": "كوراساو", "alpha2": "cw", "alpha3": "cuw" },
+        { "id": 196, "name": "قبرص", "alpha2": "cy", "alpha3": "cyp" },
+        { "id": 203, "name": "جمهورية التشيك", "alpha2": "cz", "alpha3": "cze" },
+        { "id": 208, "name": "الدنمارك", "alpha2": "dk", "alpha3": "dnk" },
+        { "id": 262, "name": "جيبوتي", "alpha2": "dj", "alpha3": "dji" },
+        { "id": 212, "name": "دومينيكا", "alpha2": "dm", "alpha3": "dma" },
+        { "id": 214, "name": "جمهورية الدومينيكان", "alpha2": "do", "alpha3": "dom" },
+        { "id": 218, "name": "الإكوادور", "alpha2": "ec", "alpha3": "ecu" },
+        { "id": 818, "name": "مصر", "alpha2": "eg", "alpha3": "egy" },
+        { "id": 222, "name": "السلفادور", "alpha2": "sv", "alpha3": "slv" },
+        { "id": 226, "name": "غينيا الاستوائية", "alpha2": "gq", "alpha3": "gnq" },
+        { "id": 232, "name": "إريتريا", "alpha2": "er", "alpha3": "eri" },
+        { "id": 233, "name": "إستونيا", "alpha2": "ee", "alpha3": "est" },
+        { "id": 231, "name": "إثيوبيا", "alpha2": "et", "alpha3": "eth" },
+        { "id": 238, "name": "جزر فوكلاند", "alpha2": "fk", "alpha3": "flk" },
+        { "id": 234, "name": "جزر فارو", "alpha2": "fo", "alpha3": "fro" },
+        { "id": 242, "name": "فيجي", "alpha2": "fj", "alpha3": "fji" },
+        { "id": 246, "name": "فنلندا", "alpha2": "fi", "alpha3": "fin" },
+        { "id": 250, "name": "فرنسا", "alpha2": "fr", "alpha3": "fra" },
+        { "id": 254, "name": "غويانا الفرنسية", "alpha2": "gf", "alpha3": "guf" },
+        { "id": 258, "name": "بولينزيا الفرنسية", "alpha2": "pf", "alpha3": "pyf" },
+        { "id": 260, "name": "أراض فرنسية جنوبية وأنتارتيكية", "alpha2": "tf", "alpha3": "atf" },
+        { "id": 266, "name": "الغابون", "alpha2": "ga", "alpha3": "gab" },
+        { "id": 270, "name": "غامبيا", "alpha2": "gm", "alpha3": "gmb" },
+        { "id": 268, "name": "جورجيا", "alpha2": "ge", "alpha3": "geo" },
+        { "id": 276, "name": "ألمانيا", "alpha2": "de", "alpha3": "deu" },
+        { "id": 288, "name": "غانا", "alpha2": "gh", "alpha3": "gha" },
+        { "id": 292, "name": "جبل طارق", "alpha2": "gi", "alpha3": "gib" },
+        { "id": 300, "name": "اليونان", "alpha2": "gr", "alpha3": "grc" },
+        { "id": 304, "name": "جرينلاند", "alpha2": "gl", "alpha3": "grl" },
+        { "id": 308, "name": "غرينادا", "alpha2": "gd", "alpha3": "grd" },
+        { "id": 312, "name": "غوادلوب", "alpha2": "gp", "alpha3": "glp" },
+        { "id": 316, "name": "غوام", "alpha2": "gu", "alpha3": "gum" },
+        { "id": 320, "name": "غواتيمالا", "alpha2": "gt", "alpha3": "gtm" },
+        { "id": 831, "name": "غيرنزي", "alpha2": "gg", "alpha3": "ggy" },
+        { "id": 324, "name": "غينيا", "alpha2": "gn", "alpha3": "gin" },
+        { "id": 624, "name": "غينيا بيساو", "alpha2": "gw", "alpha3": "gnb" },
+        { "id": 328, "name": "غيانا", "alpha2": "gy", "alpha3": "guy" },
+        { "id": 332, "name": "هايتي", "alpha2": "ht", "alpha3": "hti" },
+        { "id": 334, "name": "جزيرة هيرد وجزر ماكدونالد", "alpha2": "hm", "alpha3": "hmd" },
+        { "id": 336, "name": "الفاتيكان", "alpha2": "va", "alpha3": "vat" },
+        { "id": 340, "name": "هندوراس", "alpha2": "hn", "alpha3": "hnd" },
+        { "id": 344, "name": "هونغ كونغ", "alpha2": "hk", "alpha3": "hkg" },
+        { "id": 348, "name": "المجر", "alpha2": "hu", "alpha3": "hun" },
+        { "id": 352, "name": "آيسلندا", "alpha2": "is", "alpha3": "isl" },
+        { "id": 356, "name": "الهند", "alpha2": "in", "alpha3": "ind" },
+        { "id": 360, "name": "إندونيسيا", "alpha2": "id", "alpha3": "idn" },
+        { "id": 364, "name": "إيران", "alpha2": "ir", "alpha3": "irn" },
+        { "id": 368, "name": "العراق", "alpha2": "iq", "alpha3": "irq" },
+        { "id": 372, "name": "أيرلندا", "alpha2": "ie", "alpha3": "irl" },
+        { "id": 833, "name": "جزيرة مان", "alpha2": "im", "alpha3": "imn" },
+        { "id": 376, "name": "إسرائيل", "alpha2": "il", "alpha3": "isr" },
+        { "id": 380, "name": "إيطاليا", "alpha2": "it", "alpha3": "ita" },
+        { "id": 388, "name": "جامايكا", "alpha2": "jm", "alpha3": "jam" },
+        { "id": 392, "name": "اليابان", "alpha2": "jp", "alpha3": "jpn" },
+        { "id": 832, "name": "جيرزي", "alpha2": "je", "alpha3": "jey" },
+        { "id": 400, "name": "الأردن", "alpha2": "jo", "alpha3": "jor" },
+        { "id": 398, "name": "كازاخستان", "alpha2": "kz", "alpha3": "kaz" },
+        { "id": 404, "name": "كينيا", "alpha2": "ke", "alpha3": "ken" },
+        { "id": 296, "name": "كيريباتي", "alpha2": "ki", "alpha3": "kir" },
+        { "id": 408, "name": "كوريا الشمالية", "alpha2": "kp", "alpha3": "prk" },
+        { "id": 410, "name": "كوريا الجنوبية", "alpha2": "kr", "alpha3": "kor" },
+        { "id": 414, "name": "الكويت", "alpha2": "kw", "alpha3": "kwt" },
+        { "id": 417, "name": "قيرغيزستان", "alpha2": "kg", "alpha3": "kgz" },
+        { "id": 418, "name": "لاوس", "alpha2": "la", "alpha3": "lao" },
+        { "id": 428, "name": "لاتفيا", "alpha2": "lv", "alpha3": "lva" },
+        { "id": 422, "name": "لبنان", "alpha2": "lb", "alpha3": "lbn" },
+        { "id": 426, "name": "ليسوتو", "alpha2": "ls", "alpha3": "lso" },
+        { "id": 430, "name": "ليبيريا", "alpha2": "lr", "alpha3": "lbr" },
+        { "id": 434, "name": "ليبيا", "alpha2": "ly", "alpha3": "lby" },
+        { "id": 438, "name": "ليختنشتاين", "alpha2": "li", "alpha3": "lie" },
+        { "id": 440, "name": "ليتوانيا", "alpha2": "lt", "alpha3": "ltu" },
+        { "id": 442, "name": "لوكسمبورغ", "alpha2": "lu", "alpha3": "lux" },
+        { "id": 446, "name": "ماكاو", "alpha2": "mo", "alpha3": "mac" },
+        { "id": 807, "name": "مقدونيا", "alpha2": "mk", "alpha3": "mkd" },
+        { "id": 450, "name": "مدغشقر", "alpha2": "mg", "alpha3": "mdg" },
+        { "id": 454, "name": "مالاوي", "alpha2": "mw", "alpha3": "mwi" },
+        { "id": 458, "name": "ماليزيا", "alpha2": "my", "alpha3": "mys" },
+        { "id": 462, "name": "جزر المالديف", "alpha2": "mv", "alpha3": "mdv" },
+        { "id": 466, "name": "مالي", "alpha2": "ml", "alpha3": "mli" },
+        { "id": 470, "name": "مالطا", "alpha2": "mt", "alpha3": "mlt" },
+        { "id": 584, "name": "جزر مارشال", "alpha2": "mh", "alpha3": "mhl" },
+        { "id": 474, "name": "مارتينيك", "alpha2": "mq", "alpha3": "mtq" },
+        { "id": 478, "name": "موريتانيا", "alpha2": "mr", "alpha3": "mrt" },
+        { "id": 480, "name": "موريشيوس", "alpha2": "mu", "alpha3": "mus" },
+        { "id": 175, "name": "مايوت", "alpha2": "yt", "alpha3": "myt" },
+        { "id": 484, "name": "المكسيك", "alpha2": "mx", "alpha3": "mex" },
+        { "id": 583, "name": "ولايات ميكرونيسيا المتحدة", "alpha2": "fm", "alpha3": "fsm" },
+        { "id": 504, "name": "المغرب", "alpha2": "ma", "alpha3": "mar" },
+        { "id": 498, "name": "مولدوفا", "alpha2": "md", "alpha3": "mda" },
+        { "id": 492, "name": "موناكو", "alpha2": "mc", "alpha3": "mco" },
+        { "id": 496, "name": "منغوليا", "alpha2": "mn", "alpha3": "mng" },
+        { "id": 499, "name": "الجبل الأسود", "alpha2": "me", "alpha3": "mne" },
+        { "id": 500, "name": "مونتسرات", "alpha2": "ms", "alpha3": "msr" },
+        { "id": 508, "name": "موزمبيق", "alpha2": "mz", "alpha3": "moz" },
+        { "id": 104, "name": "ميانمار", "alpha2": "mm", "alpha3": "mmr" },
+        { "id": 516, "name": "ناميبيا", "alpha2": "na", "alpha3": "nam" },
+        { "id": 520, "name": "ناورو", "alpha2": "nr", "alpha3": "nru" },
+        { "id": 524, "name": "نيبال", "alpha2": "np", "alpha3": "npl" },
+        { "id": 528, "name": "هولندا", "alpha2": "nl", "alpha3": "nld" },
+        { "id": 540, "name": "كاليدونيا الجديدة", "alpha2": "nc", "alpha3": "ncl" },
+        { "id": 554, "name": "نيوزيلندا", "alpha2": "nz", "alpha3": "nzl" },
+        { "id": 558, "name": "نيكاراغوا", "alpha2": "ni", "alpha3": "nic" },
+        { "id": 562, "name": "النيجر", "alpha2": "ne", "alpha3": "ner" },
+        { "id": 566, "name": "نيجيريا", "alpha2": "ng", "alpha3": "nga" },
+        { "id": 570, "name": "نييوي", "alpha2": "nu", "alpha3": "niu" },
+        { "id": 574, "name": "جزيرة نورفولك", "alpha2": "nf", "alpha3": "nfk" },
+        { "id": 580, "name": "جزر ماريانا الشمالية", "alpha2": "mp", "alpha3": "mnp" },
+        { "id": 578, "name": "النرويج", "alpha2": "no", "alpha3": "nor" },
+        { "id": 512, "name": "عمان", "alpha2": "om", "alpha3": "omn" },
+        { "id": 586, "name": "باكستان", "alpha2": "pk", "alpha3": "pak" },
+        { "id": 585, "name": "بالاو", "alpha2": "pw", "alpha3": "plw" },
+        { "id": 275, "name": "فلسطين", "alpha2": "ps", "alpha3": "pse" },
+        { "id": 591, "name": "بنما", "alpha2": "pa", "alpha3": "pan" },
+        { "id": 598, "name": "بابوا غينيا الجديدة", "alpha2": "pg", "alpha3": "png" },
+        { "id": 600, "name": "باراغواي", "alpha2": "py", "alpha3": "pry" },
+        { "id": 604, "name": "بيرو", "alpha2": "pe", "alpha3": "per" },
+        { "id": 608, "name": "الفلبين", "alpha2": "ph", "alpha3": "phl" },
+        { "id": 612, "name": "جزر بيتكيرن", "alpha2": "pn", "alpha3": "pcn" },
+        { "id": 616, "name": "بولندا", "alpha2": "pl", "alpha3": "pol" },
+        { "id": 620, "name": "البرتغال", "alpha2": "pt", "alpha3": "prt" },
+        { "id": 630, "name": "بورتوريكو", "alpha2": "pr", "alpha3": "pri" },
+        { "id": 634, "name": "قطر", "alpha2": "qa", "alpha3": "qat" },
+        { "id": 638, "name": "لا ريونيون", "alpha2": "re", "alpha3": "reu" },
+        { "id": 642, "name": "رومانيا", "alpha2": "ro", "alpha3": "rou" },
+        { "id": 643, "name": "روسيا", "alpha2": "ru", "alpha3": "rus" },
+        { "id": 646, "name": "رواندا", "alpha2": "rw", "alpha3": "rwa" },
+        { "id": 652, "name": "سان بارتيلمي", "alpha2": "bl", "alpha3": "blm" },
+        { "id": 654, "name": "سانت هيلانة وأسينشين وتريستان دا كونا", "alpha2": "sh", "alpha3": "shn" },
+        { "id": 659, "name": "سانت كيتس ونيفيس", "alpha2": "kn", "alpha3": "kna" },
+        { "id": 662, "name": "سانت لوسيا", "alpha2": "lc", "alpha3": "lca" },
+        { "id": 663, "name": "تجمع سان مارتين", "alpha2": "mf", "alpha3": "maf" },
+        { "id": 666, "name": "سان بيير وميكلون", "alpha2": "pm", "alpha3": "spm" },
+        { "id": 670, "name": "سانت فينسنت والغرينادين", "alpha2": "vc", "alpha3": "vct" },
+        { "id": 882, "name": "ساموا", "alpha2": "ws", "alpha3": "wsm" },
+        { "id": 674, "name": "سان مارينو", "alpha2": "sm", "alpha3": "smr" },
+        { "id": 678, "name": "ساو تومي وبرينسيب", "alpha2": "st", "alpha3": "stp" },
+        { "id": 682, "name": "السعودية", "alpha2": "sa", "alpha3": "sau" },
+        { "id": 686, "name": "السنغال", "alpha2": "sn", "alpha3": "sen" },
+        { "id": 688, "name": "صربيا", "alpha2": "rs", "alpha3": "srb" },
+        { "id": 690, "name": "سيشل", "alpha2": "sc", "alpha3": "syc" },
+        { "id": 694, "name": "سيراليون", "alpha2": "sl", "alpha3": "sle" },
+        { "id": 702, "name": "سنغافورة", "alpha2": "sg", "alpha3": "sgp" },
+        { "id": 534, "name": "سينت مارتن", "alpha2": "sx", "alpha3": "sxm" },
+        { "id": 703, "name": "سلوفاكيا", "alpha2": "sk", "alpha3": "svk" },
+        { "id": 705, "name": "سلوفينيا", "alpha2": "si", "alpha3": "svn" },
+        { "id": 90, "name": "جزر سليمان", "alpha2": "sb", "alpha3": "slb" },
+        { "id": 706, "name": "الصومال", "alpha2": "so", "alpha3": "som" },
+        { "id": 710, "name": "جنوب أفريقيا", "alpha2": "za", "alpha3": "zaf" },
+        { "id": 239, "name": "جورجيا الجنوبية وجزر ساندويتش الجنوبية", "alpha2": "gs", "alpha3": "sgs" },
+        { "id": 728, "name": "جنوب السودان", "alpha2": "ss", "alpha3": "ssd" },
+        { "id": 724, "name": "إسبانيا", "alpha2": "es", "alpha3": "esp" },
+        { "id": 144, "name": "سريلانكا", "alpha2": "lk", "alpha3": "lka" },
+        { "id": 729, "name": "السودان", "alpha2": "sd", "alpha3": "sdn" },
+        { "id": 740, "name": "سورينام", "alpha2": "sr", "alpha3": "sur" },
+        { "id": 744, "name": "سفالبارد ويان ماين", "alpha2": "sj", "alpha3": "sjm" },
+        { "id": 748, "name": "إسواتيني", "alpha2": "sz", "alpha3": "swz" },
+        { "id": 752, "name": "السويد", "alpha2": "se", "alpha3": "swe" },
+        { "id": 756, "name": "سويسرا", "alpha2": "ch", "alpha3": "che" },
+        { "id": 760, "name": "سوريا", "alpha2": "sy", "alpha3": "syr" },
+        { "id": 158, "name": "تايوان", "alpha2": "tw", "alpha3": "twn" },
+        { "id": 762, "name": "طاجيكستان", "alpha2": "tj", "alpha3": "tjk" },
+        { "id": 834, "name": "تنزانيا", "alpha2": "tz", "alpha3": "tza" },
+        { "id": 764, "name": "تايلاند", "alpha2": "th", "alpha3": "tha" },
+        { "id": 626, "name": "تيمور الشرقية", "alpha2": "tl", "alpha3": "tls" },
+        { "id": 768, "name": "توغو", "alpha2": "tg", "alpha3": "tgo" },
+        { "id": 772, "name": "توكيلاو", "alpha2": "tk", "alpha3": "tkl" },
+        { "id": 776, "name": "تونغا", "alpha2": "to", "alpha3": "ton" },
+        { "id": 780, "name": "ترينيداد وتوباغو", "alpha2": "tt", "alpha3": "tto" },
+        { "id": 788, "name": "تونس", "alpha2": "tn", "alpha3": "tun" },
+        { "id": 792, "name": "تركيا", "alpha2": "tr", "alpha3": "tur" },
+        { "id": 795, "name": "تركمانستان", "alpha2": "tm", "alpha3": "tkm" },
+        { "id": 796, "name": "جزر توركس وكايكوس", "alpha2": "tc", "alpha3": "tca" },
+        { "id": 798, "name": "توفالو", "alpha2": "tv", "alpha3": "tuv" },
+        { "id": 800, "name": "أوغندا", "alpha2": "ug", "alpha3": "uga" },
+        { "id": 804, "name": "أوكرانيا", "alpha2": "ua", "alpha3": "ukr" },
+        { "id": 784, "name": "الإمارات العربية المتحدة", "alpha2": "ae", "alpha3": "are" },
+        { "id": 826, "name": "المملكة المتحدة", "alpha2": "gb", "alpha3": "gbr" },
+        { "id": 840, "name": "الولايات المتحدة", "alpha2": "us", "alpha3": "usa" },
+        { "id": 581, "name": "جزر الولايات المتحدة الصغيرة النائية", "alpha2": "um", "alpha3": "umi" },
+        { "id": 858, "name": "الأوروغواي", "alpha2": "uy", "alpha3": "ury" },
+        { "id": 860, "name": "أوزبكستان", "alpha2": "uz", "alpha3": "uzb" },
+        { "id": 548, "name": "فانواتو", "alpha2": "vu", "alpha3": "vut" },
+        { "id": 862, "name": "فنزويلا", "alpha2": "ve", "alpha3": "ven" },
+        { "id": 704, "name": "فيتنام", "alpha2": "vn", "alpha3": "vnm" },
+        { "id": 92, "name": "جزر العذراء البريطانية", "alpha2": "vg", "alpha3": "vgb" },
+        { "id": 850, "name": "جزر العذراء الأمريكية", "alpha2": "vi", "alpha3": "vir" },
+        { "id": 876, "name": "واليس وفوتونا", "alpha2": "wf", "alpha3": "wlf" },
+        { "id": 732, "name": "الصحراء الغربية", "alpha2": "eh", "alpha3": "esh" },
+        { "id": 887, "name": "اليمن", "alpha2": "ye", "alpha3": "yem" },
+        { "id": 894, "name": "زامبيا", "alpha2": "zm", "alpha3": "zmb" },
+        { "id": 716, "name": "زيمبابوي", "alpha2": "zw", "alpha3": "zwe" }],
     "en": [
         { "id": 4, "name": "Afghanistan", "alpha2": "af", "alpha3": "afg" },
         { "id": 248, "name": "Åland Islands", "alpha2": "ax", "alpha3": "ala" },
@@ -250,255 +500,257 @@ export const countryNames =
         { "id": 887, "name": "Yemen", "alpha2": "ye", "alpha3": "yem" },
         { "id": 894, "name": "Zambia", "alpha2": "zm", "alpha3": "zmb" },
         { "id": 716, "name": "Zimbabwe", "alpha2": "zw", "alpha3": "zwe" }],
-    "fr": [{ "id": 4, "name": "Afghanistan", "alpha2": "af", "alpha3": "afg" },
-    { "id": 710, "name": "Afrique du Sud", "alpha2": "za", "alpha3": "zaf" },
-    { "id": 248, "name": "Îles Åland", "alpha2": "ax", "alpha3": "ala" },
-    { "id": 8, "name": "Albanie", "alpha2": "al", "alpha3": "alb" },
-    { "id": 12, "name": "Algérie", "alpha2": "dz", "alpha3": "dza" },
-    { "id": 276, "name": "Allemagne", "alpha2": "de", "alpha3": "deu" },
-    { "id": 20, "name": "Andorre", "alpha2": "ad", "alpha3": "and" },
-    { "id": 24, "name": "Angola", "alpha2": "ao", "alpha3": "ago" },
-    { "id": 660, "name": "Anguilla", "alpha2": "ai", "alpha3": "aia" },
-    { "id": 10, "name": "Antarctique", "alpha2": "aq", "alpha3": "ata" },
-    { "id": 28, "name": "Antigua-et-Barbuda", "alpha2": "ag", "alpha3": "atg" },
-    { "id": 682, "name": "Arabie saoudite", "alpha2": "sa", "alpha3": "sau" },
-    { "id": 32, "name": "Argentine", "alpha2": "ar", "alpha3": "arg" },
-    { "id": 51, "name": "Arménie", "alpha2": "am", "alpha3": "arm" },
-    { "id": 533, "name": "Aruba", "alpha2": "aw", "alpha3": "abw" },
-    { "id": 36, "name": "Australie", "alpha2": "au", "alpha3": "aus" },
-    { "id": 40, "name": "Autriche", "alpha2": "at", "alpha3": "aut" },
-    { "id": 31, "name": "Azerbaïdjan", "alpha2": "az", "alpha3": "aze" },
-    { "id": 44, "name": "Bahamas", "alpha2": "bs", "alpha3": "bhs" },
-    { "id": 48, "name": "Bahreïn", "alpha2": "bh", "alpha3": "bhr" },
-    { "id": 50, "name": "Bangladesh", "alpha2": "bd", "alpha3": "bgd" },
-    { "id": 52, "name": "Barbade", "alpha2": "bb", "alpha3": "brb" },
-    { "id": 112, "name": "Biélorussie", "alpha2": "by", "alpha3": "blr" },
-    { "id": 56, "name": "Belgique", "alpha2": "be", "alpha3": "bel" },
-    { "id": 84, "name": "Belize", "alpha2": "bz", "alpha3": "blz" },
-    { "id": 204, "name": "Bénin", "alpha2": "bj", "alpha3": "ben" },
-    { "id": 60, "name": "Bermudes", "alpha2": "bm", "alpha3": "bmu" },
-    { "id": 64, "name": "Bhoutan", "alpha2": "bt", "alpha3": "btn" },
-    { "id": 68, "name": "Bolivie", "alpha2": "bo", "alpha3": "bol" },
-    { "id": 535, "name": "Pays-Bas caribéens", "alpha2": "bq", "alpha3": "bes" },
-    { "id": 70, "name": "Bosnie-Herzégovine", "alpha2": "ba", "alpha3": "bih" },
-    { "id": 72, "name": "Botswana", "alpha2": "bw", "alpha3": "bwa" },
-    { "id": 74, "name": "Île Bouvet", "alpha2": "bv", "alpha3": "bvt" },
-    { "id": 76, "name": "Brésil", "alpha2": "br", "alpha3": "bra" },
-    { "id": 96, "name": "Brunei", "alpha2": "bn", "alpha3": "brn" },
-    { "id": 100, "name": "Bulgarie", "alpha2": "bg", "alpha3": "bgr" },
-    { "id": 854, "name": "Burkina Faso", "alpha2": "bf", "alpha3": "bfa" },
-    { "id": 108, "name": "Burundi", "alpha2": "bi", "alpha3": "bdi" },
-    { "id": 136, "name": "Îles Caïmans", "alpha2": "ky", "alpha3": "cym" },
-    { "id": 116, "name": "Cambodge", "alpha2": "kh", "alpha3": "khm" },
-    { "id": 120, "name": "Cameroun", "alpha2": "cm", "alpha3": "cmr" },
-    { "id": 124, "name": "Canada", "alpha2": "ca", "alpha3": "can" },
-    { "id": 132, "name": "Cap-Vert", "alpha2": "cv", "alpha3": "cpv" },
-    { "id": 140, "name": "République centrafricaine", "alpha2": "cf", "alpha3": "caf" },
-    { "id": 152, "name": "Chili", "alpha2": "cl", "alpha3": "chl" },
-    { "id": 156, "name": "Chine", "alpha2": "cn", "alpha3": "chn" },
-    { "id": 162, "name": "Île Christmas", "alpha2": "cx", "alpha3": "cxr" },
-    { "id": 196, "name": "Chypre (pays)", "alpha2": "cy", "alpha3": "cyp" },
-    { "id": 166, "name": "Îles Cocos", "alpha2": "cc", "alpha3": "cck" },
-    { "id": 170, "name": "Colombie", "alpha2": "co", "alpha3": "col" },
-    { "id": 174, "name": "Comores (pays)", "alpha2": "km", "alpha3": "com" },
-    { "id": 178, "name": "République du Congo", "alpha2": "cg", "alpha3": "cog" },
-    { "id": 180, "name": "République démocratique du Congo", "alpha2": "cd", "alpha3": "cod" },
-    { "id": 184, "name": "Îles Cook", "alpha2": "ck", "alpha3": "cok" },
-    { "id": 410, "name": "Corée du Sud", "alpha2": "kr", "alpha3": "kor" },
-    { "id": 408, "name": "Corée du Nord", "alpha2": "kp", "alpha3": "prk" },
-    { "id": 188, "name": "Costa Rica", "alpha2": "cr", "alpha3": "cri" },
-    { "id": 384, "name": "Côte d'Ivoire", "alpha2": "ci", "alpha3": "civ" },
-    { "id": 191, "name": "Croatie", "alpha2": "hr", "alpha3": "hrv" },
-    { "id": 192, "name": "Cuba", "alpha2": "cu", "alpha3": "cub" },
-    { "id": 531, "name": "Curaçao", "alpha2": "cw", "alpha3": "cuw" },
-    { "id": 208, "name": "Danemark", "alpha2": "dk", "alpha3": "dnk" },
-    { "id": 262, "name": "Djibouti", "alpha2": "dj", "alpha3": "dji" },
-    { "id": 214, "name": "République dominicaine", "alpha2": "do", "alpha3": "dom" },
-    { "id": 212, "name": "Dominique", "alpha2": "dm", "alpha3": "dma" },
-    { "id": 818, "name": "Égypte", "alpha2": "eg", "alpha3": "egy" },
-    { "id": 222, "name": "Salvador", "alpha2": "sv", "alpha3": "slv" },
-    { "id": 784, "name": "Émirats arabes unis", "alpha2": "ae", "alpha3": "are" },
-    { "id": 218, "name": "Équateur (pays)", "alpha2": "ec", "alpha3": "ecu" },
-    { "id": 232, "name": "Érythrée", "alpha2": "er", "alpha3": "eri" },
-    { "id": 724, "name": "Espagne", "alpha2": "es", "alpha3": "esp" },
-    { "id": 233, "name": "Estonie", "alpha2": "ee", "alpha3": "est" },
-    { "id": 840, "name": "États-Unis", "alpha2": "us", "alpha3": "usa" },
-    { "id": 231, "name": "Éthiopie", "alpha2": "et", "alpha3": "eth" },
-    { "id": 238, "name": "Malouines", "alpha2": "fk", "alpha3": "flk" },
-    { "id": 234, "name": "Îles Féroé", "alpha2": "fo", "alpha3": "fro" },
-    { "id": 242, "name": "Fidji", "alpha2": "fj", "alpha3": "fji" },
-    { "id": 246, "name": "Finlande", "alpha2": "fi", "alpha3": "fin" },
-    { "id": 250, "name": "France", "alpha2": "fr", "alpha3": "fra" },
-    { "id": 266, "name": "Gabon", "alpha2": "ga", "alpha3": "gab" },
-    { "id": 270, "name": "Gambie", "alpha2": "gm", "alpha3": "gmb" },
-    { "id": 268, "name": "Géorgie (pays)", "alpha2": "ge", "alpha3": "geo" },
-    { "id": 239, "name": "Géorgie du Sud-et-les îles Sandwich du Sud", "alpha2": "gs", "alpha3": "sgs" },
-    { "id": 288, "name": "Ghana", "alpha2": "gh", "alpha3": "gha" },
-    { "id": 292, "name": "Gibraltar", "alpha2": "gi", "alpha3": "gib" },
-    { "id": 300, "name": "Grèce", "alpha2": "gr", "alpha3": "grc" },
-    { "id": 308, "name": "Grenade (pays)", "alpha2": "gd", "alpha3": "grd" },
-    { "id": 304, "name": "Groenland", "alpha2": "gl", "alpha3": "grl" },
-    { "id": 312, "name": "Guadeloupe", "alpha2": "gp", "alpha3": "glp" },
-    { "id": 316, "name": "Guam", "alpha2": "gu", "alpha3": "gum" },
-    { "id": 320, "name": "Guatemala", "alpha2": "gt", "alpha3": "gtm" },
-    { "id": 831, "name": "Guernesey", "alpha2": "gg", "alpha3": "ggy" },
-    { "id": 324, "name": "Guinée", "alpha2": "gn", "alpha3": "gin" },
-    { "id": 624, "name": "Guinée-Bissau", "alpha2": "gw", "alpha3": "gnb" },
-    { "id": 226, "name": "Guinée équatoriale", "alpha2": "gq", "alpha3": "gnq" },
-    { "id": 328, "name": "Guyana", "alpha2": "gy", "alpha3": "guy" },
-    { "id": 254, "name": "Guyane", "alpha2": "gf", "alpha3": "guf" },
-    { "id": 332, "name": "Haïti", "alpha2": "ht", "alpha3": "hti" },
-    { "id": 334, "name": "Îles Heard-et-MacDonald", "alpha2": "hm", "alpha3": "hmd" },
-    { "id": 340, "name": "Honduras", "alpha2": "hn", "alpha3": "hnd" },
-    { "id": 344, "name": "Hong Kong", "alpha2": "hk", "alpha3": "hkg" },
-    { "id": 348, "name": "Hongrie", "alpha2": "hu", "alpha3": "hun" },
-    { "id": 833, "name": "Île de Man", "alpha2": "im", "alpha3": "imn" },
-    { "id": 581, "name": "Îles mineures éloignées des États-Unis", "alpha2": "um", "alpha3": "umi" },
-    { "id": 92, "name": "Îles Vierges britanniques", "alpha2": "vg", "alpha3": "vgb" },
-    { "id": 850, "name": "Îles Vierges des États-Unis", "alpha2": "vi", "alpha3": "vir" },
-    { "id": 356, "name": "Inde", "alpha2": "in", "alpha3": "ind" },
-    { "id": 360, "name": "Indonésie", "alpha2": "id", "alpha3": "idn" },
-    { "id": 364, "name": "Iran", "alpha2": "ir", "alpha3": "irn" },
-    { "id": 368, "name": "Irak", "alpha2": "iq", "alpha3": "irq" },
-    { "id": 372, "name": "Irlande (pays)", "alpha2": "ie", "alpha3": "irl" },
-    { "id": 352, "name": "Islande", "alpha2": "is", "alpha3": "isl" },
-    { "id": 376, "name": "Israël", "alpha2": "il", "alpha3": "isr" },
-    { "id": 380, "name": "Italie", "alpha2": "it", "alpha3": "ita" },
-    { "id": 388, "name": "Jamaïque", "alpha2": "jm", "alpha3": "jam" },
-    { "id": 392, "name": "Japon", "alpha2": "jp", "alpha3": "jpn" },
-    { "id": 832, "name": "Jersey", "alpha2": "je", "alpha3": "jey" },
-    { "id": 400, "name": "Jordanie", "alpha2": "jo", "alpha3": "jor" },
-    { "id": 398, "name": "Kazakhstan", "alpha2": "kz", "alpha3": "kaz" },
-    { "id": 404, "name": "Kenya", "alpha2": "ke", "alpha3": "ken" },
-    { "id": 417, "name": "Kirghizistan", "alpha2": "kg", "alpha3": "kgz" },
-    { "id": 296, "name": "Kiribati", "alpha2": "ki", "alpha3": "kir" },
-    { "id": 414, "name": "Koweït", "alpha2": "kw", "alpha3": "kwt" },
-    { "id": 418, "name": "Laos", "alpha2": "la", "alpha3": "lao" },
-    { "id": 426, "name": "Lesotho", "alpha2": "ls", "alpha3": "lso" },
-    { "id": 428, "name": "Lettonie", "alpha2": "lv", "alpha3": "lva" },
-    { "id": 422, "name": "Liban", "alpha2": "lb", "alpha3": "lbn" },
-    { "id": 430, "name": "Liberia", "alpha2": "lr", "alpha3": "lbr" },
-    { "id": 434, "name": "Libye", "alpha2": "ly", "alpha3": "lby" },
-    { "id": 438, "name": "Liechtenstein", "alpha2": "li", "alpha3": "lie" },
-    { "id": 440, "name": "Lituanie", "alpha2": "lt", "alpha3": "ltu" },
-    { "id": 442, "name": "Luxembourg (pays)", "alpha2": "lu", "alpha3": "lux" },
-    { "id": 446, "name": "Macao", "alpha2": "mo", "alpha3": "mac" },
-    { "id": 807, "name": "Macédoine du Nord", "alpha2": "mk", "alpha3": "mkd" },
-    { "id": 450, "name": "Madagascar", "alpha2": "mg", "alpha3": "mdg" },
-    { "id": 458, "name": "Malaisie", "alpha2": "my", "alpha3": "mys" },
-    { "id": 454, "name": "Malawi", "alpha2": "mw", "alpha3": "mwi" },
-    { "id": 462, "name": "Maldives", "alpha2": "mv", "alpha3": "mdv" },
-    { "id": 466, "name": "Mali", "alpha2": "ml", "alpha3": "mli" },
-    { "id": 470, "name": "Malte", "alpha2": "mt", "alpha3": "mlt" },
-    { "id": 580, "name": "Îles Mariannes du Nord", "alpha2": "mp", "alpha3": "mnp" },
-    { "id": 504, "name": "Maroc", "alpha2": "ma", "alpha3": "mar" },
-    { "id": 584, "name": "Îles Marshall (pays)", "alpha2": "mh", "alpha3": "mhl" },
-    { "id": 474, "name": "Martinique", "alpha2": "mq", "alpha3": "mtq" },
-    { "id": 480, "name": "Maurice (pays)", "alpha2": "mu", "alpha3": "mus" },
-    { "id": 478, "name": "Mauritanie", "alpha2": "mr", "alpha3": "mrt" },
-    { "id": 175, "name": "Mayotte", "alpha2": "yt", "alpha3": "myt" },
-    { "id": 484, "name": "Mexique", "alpha2": "mx", "alpha3": "mex" },
-    { "id": 583, "name": "États fédérés de Micronésie (pays)", "alpha2": "fm", "alpha3": "fsm" },
-    { "id": 498, "name": "Moldavie", "alpha2": "md", "alpha3": "mda" },
-    { "id": 492, "name": "Monaco", "alpha2": "mc", "alpha3": "mco" },
-    { "id": 496, "name": "Mongolie", "alpha2": "mn", "alpha3": "mng" },
-    { "id": 499, "name": "Monténégro", "alpha2": "me", "alpha3": "mne" },
-    { "id": 500, "name": "Montserrat", "alpha2": "ms", "alpha3": "msr" },
-    { "id": 508, "name": "Mozambique", "alpha2": "mz", "alpha3": "moz" },
-    { "id": 104, "name": "Birmanie", "alpha2": "mm", "alpha3": "mmr" },
-    { "id": 516, "name": "Namibie", "alpha2": "na", "alpha3": "nam" },
-    { "id": 520, "name": "Nauru", "alpha2": "nr", "alpha3": "nru" },
-    { "id": 524, "name": "Népal", "alpha2": "np", "alpha3": "npl" },
-    { "id": 558, "name": "Nicaragua", "alpha2": "ni", "alpha3": "nic" },
-    { "id": 562, "name": "Niger", "alpha2": "ne", "alpha3": "ner" },
-    { "id": 566, "name": "Nigeria", "alpha2": "ng", "alpha3": "nga" },
-    { "id": 570, "name": "Niue", "alpha2": "nu", "alpha3": "niu" },
-    { "id": 574, "name": "Île Norfolk", "alpha2": "nf", "alpha3": "nfk" },
-    { "id": 578, "name": "Norvège", "alpha2": "no", "alpha3": "nor" },
-    { "id": 540, "name": "Nouvelle-Calédonie", "alpha2": "nc", "alpha3": "ncl" },
-    { "id": 554, "name": "Nouvelle-Zélande", "alpha2": "nz", "alpha3": "nzl" },
-    { "id": 86, "name": "Territoire britannique de l'océan Indien", "alpha2": "io", "alpha3": "iot" },
-    { "id": 512, "name": "Oman", "alpha2": "om", "alpha3": "omn" },
-    { "id": 800, "name": "Ouganda", "alpha2": "ug", "alpha3": "uga" },
-    { "id": 860, "name": "Ouzbékistan", "alpha2": "uz", "alpha3": "uzb" },
-    { "id": 586, "name": "Pakistan", "alpha2": "pk", "alpha3": "pak" },
-    { "id": 585, "name": "Palaos", "alpha2": "pw", "alpha3": "plw" },
-    { "id": 275, "name": "Palestine", "alpha2": "ps", "alpha3": "pse" },
-    { "id": 591, "name": "Panama", "alpha2": "pa", "alpha3": "pan" },
-    { "id": 598, "name": "Papouasie-Nouvelle-Guinée", "alpha2": "pg", "alpha3": "png" },
-    { "id": 600, "name": "Paraguay", "alpha2": "py", "alpha3": "pry" },
-    { "id": 528, "name": "Pays-Bas", "alpha2": "nl", "alpha3": "nld" },
-    { "id": 604, "name": "Pérou", "alpha2": "pe", "alpha3": "per" },
-    { "id": 608, "name": "Philippines", "alpha2": "ph", "alpha3": "phl" },
-    { "id": 612, "name": "Îles Pitcairn", "alpha2": "pn", "alpha3": "pcn" },
-    { "id": 616, "name": "Pologne", "alpha2": "pl", "alpha3": "pol" },
-    { "id": 258, "name": "Polynésie française", "alpha2": "pf", "alpha3": "pyf" },
-    { "id": 630, "name": "Porto Rico", "alpha2": "pr", "alpha3": "pri" },
-    { "id": 620, "name": "Portugal", "alpha2": "pt", "alpha3": "prt" },
-    { "id": 634, "name": "Qatar", "alpha2": "qa", "alpha3": "qat" },
-    { "id": 638, "name": "La Réunion", "alpha2": "re", "alpha3": "reu" },
-    { "id": 642, "name": "Roumanie", "alpha2": "ro", "alpha3": "rou" },
-    { "id": 826, "name": "Royaume-Uni", "alpha2": "gb", "alpha3": "gbr" },
-    { "id": 643, "name": "Russie", "alpha2": "ru", "alpha3": "rus" },
-    { "id": 646, "name": "Rwanda", "alpha2": "rw", "alpha3": "rwa" },
-    { "id": 732, "name": "République arabe sahraouie démocratique", "alpha2": "eh", "alpha3": "esh" },
-    { "id": 652, "name": "Saint-Barthélemy", "alpha2": "bl", "alpha3": "blm" },
-    { "id": 659, "name": "Saint-Christophe-et-Niévès", "alpha2": "kn", "alpha3": "kna" },
-    { "id": 674, "name": "Saint-Marin", "alpha2": "sm", "alpha3": "smr" },
-    { "id": 663, "name": "Saint-Martin", "alpha2": "mf", "alpha3": "maf" },
-    { "id": 534, "name": "Saint-Martin", "alpha2": "sx", "alpha3": "sxm" },
-    { "id": 666, "name": "Saint-Pierre-et-Miquelon", "alpha2": "pm", "alpha3": "spm" },
-    { "id": 336, "name": "Saint-Siège (État de la Cité du Vatican)", "alpha2": "va", "alpha3": "vat" },
-    { "id": 670, "name": "Saint-Vincent-et-les-Grenadines", "alpha2": "vc", "alpha3": "vct" },
-    { "id": 654, "name": "Sainte-Hélène, Ascension et Tristan da Cunha", "alpha2": "sh", "alpha3": "shn" },
-    { "id": 662, "name": "Sainte-Lucie", "alpha2": "lc", "alpha3": "lca" },
-    { "id": 90, "name": "Salomon", "alpha2": "sb", "alpha3": "slb" },
-    { "id": 882, "name": "Samoa", "alpha2": "ws", "alpha3": "wsm" },
-    { "id": 16, "name": "Samoa américaines", "alpha2": "as", "alpha3": "asm" },
-    { "id": 678, "name": "Sao Tomé-et-Principe", "alpha2": "st", "alpha3": "stp" },
-    { "id": 686, "name": "Sénégal", "alpha2": "sn", "alpha3": "sen" },
-    { "id": 688, "name": "Serbie", "alpha2": "rs", "alpha3": "srb" },
-    { "id": 690, "name": "Seychelles", "alpha2": "sc", "alpha3": "syc" },
-    { "id": 694, "name": "Sierra Leone", "alpha2": "sl", "alpha3": "sle" },
-    { "id": 702, "name": "Singapour", "alpha2": "sg", "alpha3": "sgp" },
-    { "id": 703, "name": "Slovaquie", "alpha2": "sk", "alpha3": "svk" },
-    { "id": 705, "name": "Slovénie", "alpha2": "si", "alpha3": "svn" },
-    { "id": 706, "name": "Somalie", "alpha2": "so", "alpha3": "som" },
-    { "id": 729, "name": "Soudan", "alpha2": "sd", "alpha3": "sdn" },
-    { "id": 728, "name": "Soudan du Sud", "alpha2": "ss", "alpha3": "ssd" },
-    { "id": 144, "name": "Sri Lanka", "alpha2": "lk", "alpha3": "lka" },
-    { "id": 752, "name": "Suède", "alpha2": "se", "alpha3": "swe" },
-    { "id": 756, "name": "Suisse", "alpha2": "ch", "alpha3": "che" },
-    { "id": 740, "name": "Suriname", "alpha2": "sr", "alpha3": "sur" },
-    { "id": 744, "name": "Svalbard et ile Jan Mayen", "alpha2": "sj", "alpha3": "sjm" },
-    { "id": 748, "name": "Eswatini", "alpha2": "sz", "alpha3": "swz" },
-    { "id": 760, "name": "Syrie", "alpha2": "sy", "alpha3": "syr" },
-    { "id": 762, "name": "Tadjikistan", "alpha2": "tj", "alpha3": "tjk" },
-    { "id": 158, "name": "Taïwan (République de Chine (Taïwan))", "alpha2": "tw", "alpha3": "twn" },
-    { "id": 834, "name": "Tanzanie", "alpha2": "tz", "alpha3": "tza" },
-    { "id": 148, "name": "Tchad", "alpha2": "td", "alpha3": "tcd" },
-    { "id": 203, "name": "Tchéquie", "alpha2": "cz", "alpha3": "cze" },
-    { "id": 260, "name": "Terres australes et antarctiques françaises", "alpha2": "tf", "alpha3": "atf" },
-    { "id": 764, "name": "Thaïlande", "alpha2": "th", "alpha3": "tha" },
-    { "id": 626, "name": "Timor oriental", "alpha2": "tl", "alpha3": "tls" },
-    { "id": 768, "name": "Togo", "alpha2": "tg", "alpha3": "tgo" },
-    { "id": 772, "name": "Tokelau", "alpha2": "tk", "alpha3": "tkl" },
-    { "id": 776, "name": "Tonga", "alpha2": "to", "alpha3": "ton" },
-    { "id": 780, "name": "Trinité-et-Tobago", "alpha2": "tt", "alpha3": "tto" },
-    { "id": 788, "name": "Tunisie", "alpha2": "tn", "alpha3": "tun" },
-    { "id": 795, "name": "Turkménistan", "alpha2": "tm", "alpha3": "tkm" },
-    { "id": 796, "name": "Îles Turques-et-Caïques", "alpha2": "tc", "alpha3": "tca" },
-    { "id": 792, "name": "Turquie", "alpha2": "tr", "alpha3": "tur" },
-    { "id": 798, "name": "Tuvalu", "alpha2": "tv", "alpha3": "tuv" },
-    { "id": 804, "name": "Ukraine", "alpha2": "ua", "alpha3": "ukr" },
-    { "id": 858, "name": "Uruguay", "alpha2": "uy", "alpha3": "ury" },
-    { "id": 548, "name": "Vanuatu", "alpha2": "vu", "alpha3": "vut" },
-    { "id": 862, "name": "Venezuela", "alpha2": "ve", "alpha3": "ven" },
-    { "id": 704, "name": "Viêt Nam", "alpha2": "vn", "alpha3": "vnm" },
-    { "id": 876, "name": "Wallis-et-Futuna", "alpha2": "wf", "alpha3": "wlf" },
-    { "id": 887, "name": "Yémen", "alpha2": "ye", "alpha3": "yem" },
-    { "id": 894, "name": "Zambie", "alpha2": "zm", "alpha3": "zmb" },
-    { "id": 716, "name": "Zimbabwe", "alpha2": "zw", "alpha3": "zwe" }]
+    "fr": [
+        { "id": 4, "name": "Afghanistan", "alpha2": "af", "alpha3": "afg" },
+        { "id": 710, "name": "Afrique du Sud", "alpha2": "za", "alpha3": "zaf" },
+        { "id": 248, "name": "Îles Åland", "alpha2": "ax", "alpha3": "ala" },
+        { "id": 8, "name": "Albanie", "alpha2": "al", "alpha3": "alb" },
+        { "id": 12, "name": "Algérie", "alpha2": "dz", "alpha3": "dza" },
+        { "id": 276, "name": "Allemagne", "alpha2": "de", "alpha3": "deu" },
+        { "id": 20, "name": "Andorre", "alpha2": "ad", "alpha3": "and" },
+        { "id": 24, "name": "Angola", "alpha2": "ao", "alpha3": "ago" },
+        { "id": 660, "name": "Anguilla", "alpha2": "ai", "alpha3": "aia" },
+        { "id": 10, "name": "Antarctique", "alpha2": "aq", "alpha3": "ata" },
+        { "id": 28, "name": "Antigua-et-Barbuda", "alpha2": "ag", "alpha3": "atg" },
+        { "id": 682, "name": "Arabie saoudite", "alpha2": "sa", "alpha3": "sau" },
+        { "id": 32, "name": "Argentine", "alpha2": "ar", "alpha3": "arg" },
+        { "id": 51, "name": "Arménie", "alpha2": "am", "alpha3": "arm" },
+        { "id": 533, "name": "Aruba", "alpha2": "aw", "alpha3": "abw" },
+        { "id": 36, "name": "Australie", "alpha2": "au", "alpha3": "aus" },
+        { "id": 40, "name": "Autriche", "alpha2": "at", "alpha3": "aut" },
+        { "id": 31, "name": "Azerbaïdjan", "alpha2": "az", "alpha3": "aze" },
+        { "id": 44, "name": "Bahamas", "alpha2": "bs", "alpha3": "bhs" },
+        { "id": 48, "name": "Bahreïn", "alpha2": "bh", "alpha3": "bhr" },
+        { "id": 50, "name": "Bangladesh", "alpha2": "bd", "alpha3": "bgd" },
+        { "id": 52, "name": "Barbade", "alpha2": "bb", "alpha3": "brb" },
+        { "id": 112, "name": "Biélorussie", "alpha2": "by", "alpha3": "blr" },
+        { "id": 56, "name": "Belgique", "alpha2": "be", "alpha3": "bel" },
+        { "id": 84, "name": "Belize", "alpha2": "bz", "alpha3": "blz" },
+        { "id": 204, "name": "Bénin", "alpha2": "bj", "alpha3": "ben" },
+        { "id": 60, "name": "Bermudes", "alpha2": "bm", "alpha3": "bmu" },
+        { "id": 64, "name": "Bhoutan", "alpha2": "bt", "alpha3": "btn" },
+        { "id": 68, "name": "Bolivie", "alpha2": "bo", "alpha3": "bol" },
+        { "id": 535, "name": "Pays-Bas caribéens", "alpha2": "bq", "alpha3": "bes" },
+        { "id": 70, "name": "Bosnie-Herzégovine", "alpha2": "ba", "alpha3": "bih" },
+        { "id": 72, "name": "Botswana", "alpha2": "bw", "alpha3": "bwa" },
+        { "id": 74, "name": "Île Bouvet", "alpha2": "bv", "alpha3": "bvt" },
+        { "id": 76, "name": "Brésil", "alpha2": "br", "alpha3": "bra" },
+        { "id": 96, "name": "Brunei", "alpha2": "bn", "alpha3": "brn" },
+        { "id": 100, "name": "Bulgarie", "alpha2": "bg", "alpha3": "bgr" },
+        { "id": 854, "name": "Burkina Faso", "alpha2": "bf", "alpha3": "bfa" },
+        { "id": 108, "name": "Burundi", "alpha2": "bi", "alpha3": "bdi" },
+        { "id": 136, "name": "Îles Caïmans", "alpha2": "ky", "alpha3": "cym" },
+        { "id": 116, "name": "Cambodge", "alpha2": "kh", "alpha3": "khm" },
+        { "id": 120, "name": "Cameroun", "alpha2": "cm", "alpha3": "cmr" },
+        { "id": 124, "name": "Canada", "alpha2": "ca", "alpha3": "can" },
+        { "id": 132, "name": "Cap-Vert", "alpha2": "cv", "alpha3": "cpv" },
+        { "id": 140, "name": "République centrafricaine", "alpha2": "cf", "alpha3": "caf" },
+        { "id": 152, "name": "Chili", "alpha2": "cl", "alpha3": "chl" },
+        { "id": 156, "name": "Chine", "alpha2": "cn", "alpha3": "chn" },
+        { "id": 162, "name": "Île Christmas", "alpha2": "cx", "alpha3": "cxr" },
+        { "id": 196, "name": "Chypre (pays)", "alpha2": "cy", "alpha3": "cyp" },
+        { "id": 166, "name": "Îles Cocos", "alpha2": "cc", "alpha3": "cck" },
+        { "id": 170, "name": "Colombie", "alpha2": "co", "alpha3": "col" },
+        { "id": 174, "name": "Comores (pays)", "alpha2": "km", "alpha3": "com" },
+        { "id": 178, "name": "République du Congo", "alpha2": "cg", "alpha3": "cog" },
+        { "id": 180, "name": "République démocratique du Congo", "alpha2": "cd", "alpha3": "cod" },
+        { "id": 184, "name": "Îles Cook", "alpha2": "ck", "alpha3": "cok" },
+        { "id": 410, "name": "Corée du Sud", "alpha2": "kr", "alpha3": "kor" },
+        { "id": 408, "name": "Corée du Nord", "alpha2": "kp", "alpha3": "prk" },
+        { "id": 188, "name": "Costa Rica", "alpha2": "cr", "alpha3": "cri" },
+        { "id": 384, "name": "Côte d'Ivoire", "alpha2": "ci", "alpha3": "civ" },
+        { "id": 191, "name": "Croatie", "alpha2": "hr", "alpha3": "hrv" },
+        { "id": 192, "name": "Cuba", "alpha2": "cu", "alpha3": "cub" },
+        { "id": 531, "name": "Curaçao", "alpha2": "cw", "alpha3": "cuw" },
+        { "id": 208, "name": "Danemark", "alpha2": "dk", "alpha3": "dnk" },
+        { "id": 262, "name": "Djibouti", "alpha2": "dj", "alpha3": "dji" },
+        { "id": 214, "name": "République dominicaine", "alpha2": "do", "alpha3": "dom" },
+        { "id": 212, "name": "Dominique", "alpha2": "dm", "alpha3": "dma" },
+        { "id": 818, "name": "Égypte", "alpha2": "eg", "alpha3": "egy" },
+        { "id": 222, "name": "Salvador", "alpha2": "sv", "alpha3": "slv" },
+        { "id": 784, "name": "Émirats arabes unis", "alpha2": "ae", "alpha3": "are" },
+        { "id": 218, "name": "Équateur (pays)", "alpha2": "ec", "alpha3": "ecu" },
+        { "id": 232, "name": "Érythrée", "alpha2": "er", "alpha3": "eri" },
+        { "id": 724, "name": "Espagne", "alpha2": "es", "alpha3": "esp" },
+        { "id": 233, "name": "Estonie", "alpha2": "ee", "alpha3": "est" },
+        { "id": 840, "name": "États-Unis", "alpha2": "us", "alpha3": "usa" },
+        { "id": 231, "name": "Éthiopie", "alpha2": "et", "alpha3": "eth" },
+        { "id": 238, "name": "Malouines", "alpha2": "fk", "alpha3": "flk" },
+        { "id": 234, "name": "Îles Féroé", "alpha2": "fo", "alpha3": "fro" },
+        { "id": 242, "name": "Fidji", "alpha2": "fj", "alpha3": "fji" },
+        { "id": 246, "name": "Finlande", "alpha2": "fi", "alpha3": "fin" },
+        { "id": 250, "name": "France", "alpha2": "fr", "alpha3": "fra" },
+        { "id": 266, "name": "Gabon", "alpha2": "ga", "alpha3": "gab" },
+        { "id": 270, "name": "Gambie", "alpha2": "gm", "alpha3": "gmb" },
+        { "id": 268, "name": "Géorgie (pays)", "alpha2": "ge", "alpha3": "geo" },
+        { "id": 239, "name": "Géorgie du Sud-et-les îles Sandwich du Sud", "alpha2": "gs", "alpha3": "sgs" },
+        { "id": 288, "name": "Ghana", "alpha2": "gh", "alpha3": "gha" },
+        { "id": 292, "name": "Gibraltar", "alpha2": "gi", "alpha3": "gib" },
+        { "id": 300, "name": "Grèce", "alpha2": "gr", "alpha3": "grc" },
+        { "id": 308, "name": "Grenade (pays)", "alpha2": "gd", "alpha3": "grd" },
+        { "id": 304, "name": "Groenland", "alpha2": "gl", "alpha3": "grl" },
+        { "id": 312, "name": "Guadeloupe", "alpha2": "gp", "alpha3": "glp" },
+        { "id": 316, "name": "Guam", "alpha2": "gu", "alpha3": "gum" },
+        { "id": 320, "name": "Guatemala", "alpha2": "gt", "alpha3": "gtm" },
+        { "id": 831, "name": "Guernesey", "alpha2": "gg", "alpha3": "ggy" },
+        { "id": 324, "name": "Guinée", "alpha2": "gn", "alpha3": "gin" },
+        { "id": 624, "name": "Guinée-Bissau", "alpha2": "gw", "alpha3": "gnb" },
+        { "id": 226, "name": "Guinée équatoriale", "alpha2": "gq", "alpha3": "gnq" },
+        { "id": 328, "name": "Guyana", "alpha2": "gy", "alpha3": "guy" },
+        { "id": 254, "name": "Guyane", "alpha2": "gf", "alpha3": "guf" },
+        { "id": 332, "name": "Haïti", "alpha2": "ht", "alpha3": "hti" },
+        { "id": 334, "name": "Îles Heard-et-MacDonald", "alpha2": "hm", "alpha3": "hmd" },
+        { "id": 340, "name": "Honduras", "alpha2": "hn", "alpha3": "hnd" },
+        { "id": 344, "name": "Hong Kong", "alpha2": "hk", "alpha3": "hkg" },
+        { "id": 348, "name": "Hongrie", "alpha2": "hu", "alpha3": "hun" },
+        { "id": 833, "name": "Île de Man", "alpha2": "im", "alpha3": "imn" },
+        { "id": 581, "name": "Îles mineures éloignées des États-Unis", "alpha2": "um", "alpha3": "umi" },
+        { "id": 92, "name": "Îles Vierges britanniques", "alpha2": "vg", "alpha3": "vgb" },
+        { "id": 850, "name": "Îles Vierges des États-Unis", "alpha2": "vi", "alpha3": "vir" },
+        { "id": 356, "name": "Inde", "alpha2": "in", "alpha3": "ind" },
+        { "id": 360, "name": "Indonésie", "alpha2": "id", "alpha3": "idn" },
+        { "id": 364, "name": "Iran", "alpha2": "ir", "alpha3": "irn" },
+        { "id": 368, "name": "Irak", "alpha2": "iq", "alpha3": "irq" },
+        { "id": 372, "name": "Irlande (pays)", "alpha2": "ie", "alpha3": "irl" },
+        { "id": 352, "name": "Islande", "alpha2": "is", "alpha3": "isl" },
+        { "id": 376, "name": "Israël", "alpha2": "il", "alpha3": "isr" },
+        { "id": 380, "name": "Italie", "alpha2": "it", "alpha3": "ita" },
+        { "id": 388, "name": "Jamaïque", "alpha2": "jm", "alpha3": "jam" },
+        { "id": 392, "name": "Japon", "alpha2": "jp", "alpha3": "jpn" },
+        { "id": 832, "name": "Jersey", "alpha2": "je", "alpha3": "jey" },
+        { "id": 400, "name": "Jordanie", "alpha2": "jo", "alpha3": "jor" },
+        { "id": 398, "name": "Kazakhstan", "alpha2": "kz", "alpha3": "kaz" },
+        { "id": 404, "name": "Kenya", "alpha2": "ke", "alpha3": "ken" },
+        { "id": 417, "name": "Kirghizistan", "alpha2": "kg", "alpha3": "kgz" },
+        { "id": 296, "name": "Kiribati", "alpha2": "ki", "alpha3": "kir" },
+        { "id": 414, "name": "Koweït", "alpha2": "kw", "alpha3": "kwt" },
+        { "id": 418, "name": "Laos", "alpha2": "la", "alpha3": "lao" },
+        { "id": 426, "name": "Lesotho", "alpha2": "ls", "alpha3": "lso" },
+        { "id": 428, "name": "Lettonie", "alpha2": "lv", "alpha3": "lva" },
+        { "id": 422, "name": "Liban", "alpha2": "lb", "alpha3": "lbn" },
+        { "id": 430, "name": "Liberia", "alpha2": "lr", "alpha3": "lbr" },
+        { "id": 434, "name": "Libye", "alpha2": "ly", "alpha3": "lby" },
+        { "id": 438, "name": "Liechtenstein", "alpha2": "li", "alpha3": "lie" },
+        { "id": 440, "name": "Lituanie", "alpha2": "lt", "alpha3": "ltu" },
+        { "id": 442, "name": "Luxembourg (pays)", "alpha2": "lu", "alpha3": "lux" },
+        { "id": 446, "name": "Macao", "alpha2": "mo", "alpha3": "mac" },
+        { "id": 807, "name": "Macédoine du Nord", "alpha2": "mk", "alpha3": "mkd" },
+        { "id": 450, "name": "Madagascar", "alpha2": "mg", "alpha3": "mdg" },
+        { "id": 458, "name": "Malaisie", "alpha2": "my", "alpha3": "mys" },
+        { "id": 454, "name": "Malawi", "alpha2": "mw", "alpha3": "mwi" },
+        { "id": 462, "name": "Maldives", "alpha2": "mv", "alpha3": "mdv" },
+        { "id": 466, "name": "Mali", "alpha2": "ml", "alpha3": "mli" },
+        { "id": 470, "name": "Malte", "alpha2": "mt", "alpha3": "mlt" },
+        { "id": 580, "name": "Îles Mariannes du Nord", "alpha2": "mp", "alpha3": "mnp" },
+        { "id": 504, "name": "Maroc", "alpha2": "ma", "alpha3": "mar" },
+        { "id": 584, "name": "Îles Marshall (pays)", "alpha2": "mh", "alpha3": "mhl" },
+        { "id": 474, "name": "Martinique", "alpha2": "mq", "alpha3": "mtq" },
+        { "id": 480, "name": "Maurice (pays)", "alpha2": "mu", "alpha3": "mus" },
+        { "id": 478, "name": "Mauritanie", "alpha2": "mr", "alpha3": "mrt" },
+        { "id": 175, "name": "Mayotte", "alpha2": "yt", "alpha3": "myt" },
+        { "id": 484, "name": "Mexique", "alpha2": "mx", "alpha3": "mex" },
+        { "id": 583, "name": "États fédérés de Micronésie (pays)", "alpha2": "fm", "alpha3": "fsm" },
+        { "id": 498, "name": "Moldavie", "alpha2": "md", "alpha3": "mda" },
+        { "id": 492, "name": "Monaco", "alpha2": "mc", "alpha3": "mco" },
+        { "id": 496, "name": "Mongolie", "alpha2": "mn", "alpha3": "mng" },
+        { "id": 499, "name": "Monténégro", "alpha2": "me", "alpha3": "mne" },
+        { "id": 500, "name": "Montserrat", "alpha2": "ms", "alpha3": "msr" },
+        { "id": 508, "name": "Mozambique", "alpha2": "mz", "alpha3": "moz" },
+        { "id": 104, "name": "Birmanie", "alpha2": "mm", "alpha3": "mmr" },
+        { "id": 516, "name": "Namibie", "alpha2": "na", "alpha3": "nam" },
+        { "id": 520, "name": "Nauru", "alpha2": "nr", "alpha3": "nru" },
+        { "id": 524, "name": "Népal", "alpha2": "np", "alpha3": "npl" },
+        { "id": 558, "name": "Nicaragua", "alpha2": "ni", "alpha3": "nic" },
+        { "id": 562, "name": "Niger", "alpha2": "ne", "alpha3": "ner" },
+        { "id": 566, "name": "Nigeria", "alpha2": "ng", "alpha3": "nga" },
+        { "id": 570, "name": "Niue", "alpha2": "nu", "alpha3": "niu" },
+        { "id": 574, "name": "Île Norfolk", "alpha2": "nf", "alpha3": "nfk" },
+        { "id": 578, "name": "Norvège", "alpha2": "no", "alpha3": "nor" },
+        { "id": 540, "name": "Nouvelle-Calédonie", "alpha2": "nc", "alpha3": "ncl" },
+        { "id": 554, "name": "Nouvelle-Zélande", "alpha2": "nz", "alpha3": "nzl" },
+        { "id": 86, "name": "Territoire britannique de l'océan Indien", "alpha2": "io", "alpha3": "iot" },
+        { "id": 512, "name": "Oman", "alpha2": "om", "alpha3": "omn" },
+        { "id": 800, "name": "Ouganda", "alpha2": "ug", "alpha3": "uga" },
+        { "id": 860, "name": "Ouzbékistan", "alpha2": "uz", "alpha3": "uzb" },
+        { "id": 586, "name": "Pakistan", "alpha2": "pk", "alpha3": "pak" },
+        { "id": 585, "name": "Palaos", "alpha2": "pw", "alpha3": "plw" },
+        { "id": 275, "name": "Palestine", "alpha2": "ps", "alpha3": "pse" },
+        { "id": 591, "name": "Panama", "alpha2": "pa", "alpha3": "pan" },
+        { "id": 598, "name": "Papouasie-Nouvelle-Guinée", "alpha2": "pg", "alpha3": "png" },
+        { "id": 600, "name": "Paraguay", "alpha2": "py", "alpha3": "pry" },
+        { "id": 528, "name": "Pays-Bas", "alpha2": "nl", "alpha3": "nld" },
+        { "id": 604, "name": "Pérou", "alpha2": "pe", "alpha3": "per" },
+        { "id": 608, "name": "Philippines", "alpha2": "ph", "alpha3": "phl" },
+        { "id": 612, "name": "Îles Pitcairn", "alpha2": "pn", "alpha3": "pcn" },
+        { "id": 616, "name": "Pologne", "alpha2": "pl", "alpha3": "pol" },
+        { "id": 258, "name": "Polynésie française", "alpha2": "pf", "alpha3": "pyf" },
+        { "id": 630, "name": "Porto Rico", "alpha2": "pr", "alpha3": "pri" },
+        { "id": 620, "name": "Portugal", "alpha2": "pt", "alpha3": "prt" },
+        { "id": 634, "name": "Qatar", "alpha2": "qa", "alpha3": "qat" },
+        { "id": 638, "name": "La Réunion", "alpha2": "re", "alpha3": "reu" },
+        { "id": 642, "name": "Roumanie", "alpha2": "ro", "alpha3": "rou" },
+        { "id": 826, "name": "Royaume-Uni", "alpha2": "gb", "alpha3": "gbr" },
+        { "id": 643, "name": "Russie", "alpha2": "ru", "alpha3": "rus" },
+        { "id": 646, "name": "Rwanda", "alpha2": "rw", "alpha3": "rwa" },
+        { "id": 732, "name": "République arabe sahraouie démocratique", "alpha2": "eh", "alpha3": "esh" },
+        { "id": 652, "name": "Saint-Barthélemy", "alpha2": "bl", "alpha3": "blm" },
+        { "id": 659, "name": "Saint-Christophe-et-Niévès", "alpha2": "kn", "alpha3": "kna" },
+        { "id": 674, "name": "Saint-Marin", "alpha2": "sm", "alpha3": "smr" },
+        { "id": 663, "name": "Saint-Martin", "alpha2": "mf", "alpha3": "maf" },
+        { "id": 534, "name": "Saint-Martin", "alpha2": "sx", "alpha3": "sxm" },
+        { "id": 666, "name": "Saint-Pierre-et-Miquelon", "alpha2": "pm", "alpha3": "spm" },
+        { "id": 336, "name": "Saint-Siège (État de la Cité du Vatican)", "alpha2": "va", "alpha3": "vat" },
+        { "id": 670, "name": "Saint-Vincent-et-les-Grenadines", "alpha2": "vc", "alpha3": "vct" },
+        { "id": 654, "name": "Sainte-Hélène, Ascension et Tristan da Cunha", "alpha2": "sh", "alpha3": "shn" },
+        { "id": 662, "name": "Sainte-Lucie", "alpha2": "lc", "alpha3": "lca" },
+        { "id": 90, "name": "Salomon", "alpha2": "sb", "alpha3": "slb" },
+        { "id": 882, "name": "Samoa", "alpha2": "ws", "alpha3": "wsm" },
+        { "id": 16, "name": "Samoa américaines", "alpha2": "as", "alpha3": "asm" },
+        { "id": 678, "name": "Sao Tomé-et-Principe", "alpha2": "st", "alpha3": "stp" },
+        { "id": 686, "name": "Sénégal", "alpha2": "sn", "alpha3": "sen" },
+        { "id": 688, "name": "Serbie", "alpha2": "rs", "alpha3": "srb" },
+        { "id": 690, "name": "Seychelles", "alpha2": "sc", "alpha3": "syc" },
+        { "id": 694, "name": "Sierra Leone", "alpha2": "sl", "alpha3": "sle" },
+        { "id": 702, "name": "Singapour", "alpha2": "sg", "alpha3": "sgp" },
+        { "id": 703, "name": "Slovaquie", "alpha2": "sk", "alpha3": "svk" },
+        { "id": 705, "name": "Slovénie", "alpha2": "si", "alpha3": "svn" },
+        { "id": 706, "name": "Somalie", "alpha2": "so", "alpha3": "som" },
+        { "id": 729, "name": "Soudan", "alpha2": "sd", "alpha3": "sdn" },
+        { "id": 728, "name": "Soudan du Sud", "alpha2": "ss", "alpha3": "ssd" },
+        { "id": 144, "name": "Sri Lanka", "alpha2": "lk", "alpha3": "lka" },
+        { "id": 752, "name": "Suède", "alpha2": "se", "alpha3": "swe" },
+        { "id": 756, "name": "Suisse", "alpha2": "ch", "alpha3": "che" },
+        { "id": 740, "name": "Suriname", "alpha2": "sr", "alpha3": "sur" },
+        { "id": 744, "name": "Svalbard et ile Jan Mayen", "alpha2": "sj", "alpha3": "sjm" },
+        { "id": 748, "name": "Eswatini", "alpha2": "sz", "alpha3": "swz" },
+        { "id": 760, "name": "Syrie", "alpha2": "sy", "alpha3": "syr" },
+        { "id": 762, "name": "Tadjikistan", "alpha2": "tj", "alpha3": "tjk" },
+        { "id": 158, "name": "Taïwan (République de Chine (Taïwan))", "alpha2": "tw", "alpha3": "twn" },
+        { "id": 834, "name": "Tanzanie", "alpha2": "tz", "alpha3": "tza" },
+        { "id": 148, "name": "Tchad", "alpha2": "td", "alpha3": "tcd" },
+        { "id": 203, "name": "Tchéquie", "alpha2": "cz", "alpha3": "cze" },
+        { "id": 260, "name": "Terres australes et antarctiques françaises", "alpha2": "tf", "alpha3": "atf" },
+        { "id": 764, "name": "Thaïlande", "alpha2": "th", "alpha3": "tha" },
+        { "id": 626, "name": "Timor oriental", "alpha2": "tl", "alpha3": "tls" },
+        { "id": 768, "name": "Togo", "alpha2": "tg", "alpha3": "tgo" },
+        { "id": 772, "name": "Tokelau", "alpha2": "tk", "alpha3": "tkl" },
+        { "id": 776, "name": "Tonga", "alpha2": "to", "alpha3": "ton" },
+        { "id": 780, "name": "Trinité-et-Tobago", "alpha2": "tt", "alpha3": "tto" },
+        { "id": 788, "name": "Tunisie", "alpha2": "tn", "alpha3": "tun" },
+        { "id": 795, "name": "Turkménistan", "alpha2": "tm", "alpha3": "tkm" },
+        { "id": 796, "name": "Îles Turques-et-Caïques", "alpha2": "tc", "alpha3": "tca" },
+        { "id": 792, "name": "Turquie", "alpha2": "tr", "alpha3": "tur" },
+        { "id": 798, "name": "Tuvalu", "alpha2": "tv", "alpha3": "tuv" },
+        { "id": 804, "name": "Ukraine", "alpha2": "ua", "alpha3": "ukr" },
+        { "id": 858, "name": "Uruguay", "alpha2": "uy", "alpha3": "ury" },
+        { "id": 548, "name": "Vanuatu", "alpha2": "vu", "alpha3": "vut" },
+        { "id": 862, "name": "Venezuela", "alpha2": "ve", "alpha3": "ven" },
+        { "id": 704, "name": "Viêt Nam", "alpha2": "vn", "alpha3": "vnm" },
+        { "id": 876, "name": "Wallis-et-Futuna", "alpha2": "wf", "alpha3": "wlf" },
+        { "id": 887, "name": "Yémen", "alpha2": "ye", "alpha3": "yem" },
+        { "id": 894, "name": "Zambie", "alpha2": "zm", "alpha3": "zmb" },
+        { "id": 716, "name": "Zimbabwe", "alpha2": "zw", "alpha3": "zwe" }],
+
 }
 
 export const languageNames = [
@@ -507,21 +759,21 @@ export const languageNames = [
         "en": "Afar",
         "fr": "Afar",
         "de": "Danakil-Sprache",
-        "arabic": "لغة عفارية"
+        "ar": "لغة عفارية"
     },
     {
         "alpha3": "afr",
         "en": "Afrikaans",
         "fr": "Afrikaans",
         "de": "Afrikaans",
-        "arabic": "لغة أفريقانية"
+        "ar": "لغة أفريقانية"
     },
     {
         "alpha3": "aka",
         "en": "Akan",
         "fr": "Akan",
         "de": "Akan-Sprache",
-        "arabic": "لغة أكانية"
+        "ar": "لغة أكانية"
     },
     {
         "alpha3": "alb",
@@ -534,168 +786,168 @@ export const languageNames = [
         "en": "Amharic",
         "fr": "Amharique",
         "de": "Amharisch",
-        "arabic": "لغة أمهرية"
+        "ar": "لغة أمهرية"
     },
     {
         "alpha3": "ara",
         "en": "Arabic",
         "fr": "Arabe",
         "de": "Arabisch",
-        "arabic": "لغة عربية"
+        "ar": "لغة عربية"
     },
     {
         "alpha3": "arc",
         "en": "Aramaic",
         "fr": "Araméen",
         "de": "Aramäisch",
-        "arabic": "اللغة الآرامية"
+        "ar": "اللغة الآرامية"
     },
     {
         "alpha3": "arg",
         "en": "Aragonese",
         "fr": "Aragonais",
         "de": "Aragonesisch",
-        "arabic": "لغة أراغونية"
+        "ar": "لغة أراغونية"
     },
     {
         "alpha3": "arm",
         "en": "Armenian",
         "fr": "Arménien",
         "de": "Armenisch",
-        "arabic": "اللغة الأرمنية"
+        "ar": "اللغة الأرمنية"
     },
     {
         "alpha3": "ava",
         "en": "Avaric",
         "fr": "Avar",
         "de": "Awarisch",
-        "arabic": "لغة أوارية"
+        "ar": "لغة أوارية"
     },
     {
         "alpha3": "ave",
         "en": "Avestan",
         "fr": "Avestique",
         "de": "Avestisch",
-        "arabic": "أفستية"
+        "ar": "أفستية"
     },
     {
         "alpha3": "aze",
         "en": "Azerbaijani",
         "fr": "Azéri",
         "de": "Aserbeidschanisch",
-        "arabic": "لغة أذرية"
+        "ar": "لغة أذرية"
     },
     {
         "alpha3": "bam",
         "en": "Bambara",
         "fr": "Bambara",
         "de": "Bambara-Sprache",
-        "arabic": "لغة بمبرية"
+        "ar": "لغة بمبرية"
     },
     {
         "alpha3": "ban",
         "en": "Balinese",
         "fr": "Balinais",
         "de": "Balinesisch",
-        "arabic": "اللغة البالية"
+        "ar": "اللغة البالية"
     },
     {
         "alpha3": "baq",
         "en": "Basque",
         "fr": "Basque",
         "de": "Baskisch",
-        "arabic": "لغة بشكنشية"
+        "ar": "لغة بشكنشية"
     },
     {
         "alpha3": "bel",
         "en": "Belarusian",
         "fr": "Biélorusse",
         "de": "Weißrussisch",
-        "arabic": "لغة بيلاروسية"
+        "ar": "لغة بيلاروسية"
     },
     {
         "alpha3": "ben",
         "en": "Bengali",
         "fr": "Bengali",
         "de": "Bengali",
-        "arabic": "لغة بنغالية"
+        "ar": "لغة بنغالية"
     },
     {
         "alpha3": "bos",
         "en": "Bosnian",
         "fr": "Bosniaque",
         "de": "Bosnisch",
-        "arabic": "لغة بوسنوية"
+        "ar": "لغة بوسنوية"
     },
     {
         "alpha3": "bre",
         "en": "Breton",
         "fr": "Breton",
         "de": "Bretonisch",
-        "arabic": "لغة بريتانية"
+        "ar": "لغة بريتانية"
     },
     {
         "alpha3": "bul",
         "en": "Bulgarian",
         "fr": "Bulgare",
         "de": "Bulgarisch",
-        "arabic": "لغة بلغارية"
+        "ar": "لغة بلغارية"
     },
     {
         "alpha3": "bur",
         "en": "Burmese",
         "fr": "Birman",
         "de": "Birmanisch",
-        "arabic": "اللغة البورمية"
+        "ar": "اللغة البورمية"
     },
     {
         "alpha3": "cat",
         "en": "Catalan; Valencian",
         "fr": "Catalan; Valencien",
         "de": "Katalanisch",
-        "arabic": "لغة كتالانية"
+        "ar": "لغة كتالانية"
     },
     {
         "alpha3": "cze",
         "en": "Czech",
         "fr": "Tchèque",
         "de": "Tschechisch",
-        "arabic": "اللغة التشيكية"
+        "ar": "اللغة التشيكية"
     },
     {
         "alpha3": "cha",
         "en": "Chamorro",
         "fr": "Chamorro",
         "de": "Chamorro-Sprache",
-        "arabic": "لغة تشاموروية"
+        "ar": "لغة تشاموروية"
     },
     {
         "alpha3": "zho",
         "en": "Chinese",
         "fr": "Chinois",
         "de": "Chinesisch",
-        "arabic": "اللغة الصينية"
+        "ar": "اللغة الصينية"
     },
     {
         "alpha3": "chr",
         "en": "Cherokee",
         "fr": "Cherokee",
         "de": "Cherokee-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "chy",
         "en": "Cheyenne",
         "fr": "Cheyenne",
         "de": "Cheyenne-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "cos",
         "en": "Corsican",
         "fr": "Corse",
         "de": "Korsisch",
-        "arabic": "لغة كورسية"
+        "ar": "لغة كورسية"
     },
     {
         "alpha3": "crp",
@@ -708,7 +960,7 @@ export const languageNames = [
         "en": "Croatian",
         "fr": "Croate",
         "de": "Kroatisch",
-        "arabic": "لغة كرواتية"
+        "ar": "لغة كرواتية"
     },
     {
         "alpha3": "wel",
@@ -721,476 +973,476 @@ export const languageNames = [
         "en": "Danish",
         "fr": "Danois",
         "de": "Dänisch",
-        "arabic": "لغة دنماركية"
+        "ar": "لغة دنماركية"
     },
     {
         "alpha3": "div",
         "en": "Divehi; Maldivian",
         "fr": "Maldivien",
         "de": "Maledivisch",
-        "arabic": "ديفهي"
+        "ar": "ديفهي"
     },
     {
         "alpha3": "dua",
         "en": "Duala",
         "fr": "Douala",
         "de": "Duala-Sprachen",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "nld",
         "en": "Dutch; Flemish",
         "fr": "Néerlandais; Flamand",
         "de": "Niederländisch",
-        "arabic": "لغة هولندية"
+        "ar": "لغة هولندية"
     },
     {
         "alpha3": "dzo",
         "en": "Dzongkha",
         "fr": "Dzongkha",
         "de": "Dzongkha",
-        "arabic": "لغة دزونكا"
+        "ar": "لغة دزونكا"
     },
     {
         "alpha3": "eng",
         "en": "English",
         "fr": "Anglais",
         "de": "Englisch",
-        "arabic": "لغة إنجليزية"
+        "ar": "لغة إنجليزية"
     },
     {
         "alpha3": "epo",
         "en": "Esperanto",
         "fr": "Espéranto",
         "de": "Esperanto",
-        "arabic": "إسبرانتو"
+        "ar": "إسبرانتو"
     },
     {
         "alpha3": "est",
         "en": "Estonian",
         "fr": "Estonien",
         "de": "Estnisch",
-        "arabic": "لغة إستونية"
+        "ar": "لغة إستونية"
     },
     {
         "alpha3": "fas",
         "en": "Farsi",
         "fr": "Persan",
         "de": "Persisch",
-        "arabic": "لغة فارسية"
+        "ar": "لغة فارسية"
     },
     {
         "alpha3": "fij",
         "en": "Fijian",
         "fr": "Fidjien",
         "de": "Fidschi-Sprache",
-        "arabic": "لغة فيجية"
+        "ar": "لغة فيجية"
     },
     {
         "alpha3": "fil",
         "en": "Filipino; Pilipino",
         "fr": "Filipino; Pilipino",
         "de": "Pilipino",
-        "arabic": "اللغة الفلبينية"
+        "ar": "اللغة الفلبينية"
     },
     {
         "alpha3": "fin",
         "en": "Finnish",
         "fr": "Finnois",
         "de": "Finnisch",
-        "arabic": "لغة فنلندية"
+        "ar": "لغة فنلندية"
     },
     {
         "alpha3": "fon",
         "en": "Fon",
         "fr": "Fon",
         "de": "Fon-Sprache",
-        "arabic": "الفون"
+        "ar": "الفون"
     },
     {
         "alpha3": "fra",
         "en": "French",
         "fr": "Français",
         "de": "Französisch",
-        "arabic": "لغة فرنسية"
+        "ar": "لغة فرنسية"
     },
     {
         "alpha3": "ful",
         "en": "Fulah",
         "fr": "Peul",
         "de": "Ful",
-        "arabic": "لغة فولانية"
+        "ar": "لغة فولانية"
     },
     {
         "alpha3": "ger",
         "en": "German",
         "fr": "Allemand",
         "de": "Deutsch",
-        "arabic": "لغة ألمانية"
+        "ar": "لغة ألمانية"
     },
     {
         "alpha3": "gil",
         "en": "Gilbertese",
         "fr": "Kiribati",
         "de": "Gilbertesisch",
-        "arabic": "اللغة الكيريباتية"
+        "ar": "اللغة الكيريباتية"
     },
     {
         "alpha3": "gla",
         "en": "Gaelic; Scottish",
         "fr": "Gaélique; Écossais",
         "de": "Gälisch-Schottisch",
-        "arabic": "لغة غيلية اسكتلندية"
+        "ar": "لغة غيلية اسكتلندية"
     },
     {
         "alpha3": "glg",
         "en": "Galician",
         "fr": "Galicien",
         "de": "Galicisch",
-        "arabic": "لغة غاليسية"
+        "ar": "لغة غاليسية"
     },
     {
         "alpha3": "lug",
         "en": "Ganda",
         "fr": "Ganda",
         "de": "Ganda-Sprache",
-        "arabic": "اللوغندية"
+        "ar": "اللوغندية"
     },
     {
         "alpha3": "grc",
         "en": "Greek",
         "fr": "Grec",
         "de": "Griechisch",
-        "arabic": "لغة يونانية"
+        "ar": "لغة يونانية"
     },
     {
         "alpha3": "grn",
         "en": "Guarani",
         "fr": "Guarani",
         "de": "Guaraní-Sprache",
-        "arabic": "غوارانية"
+        "ar": "غوارانية"
     },
     {
         "alpha3": "hat",
         "en": "Haitian; Haitian Creole",
         "fr": "Haïtien; Créole Haïtien",
         "de": "Haïtien (Haiti-Kreolisch)",
-        "arabic": "لغة كريولية هايتية"
+        "ar": "لغة كريولية هايتية"
     },
     {
         "alpha3": "hau",
         "en": "Hausa",
         "fr": "Haoussa",
         "de": "Haussa-Sprache",
-        "arabic": "لغة هوسية"
+        "ar": "لغة هوسية"
     },
     {
         "alpha3": "haw",
         "en": "Hawaiian",
         "fr": "Hawaïen",
         "de": "Hawaiisch",
-        "arabic": "اللغة الهاوائية"
+        "ar": "اللغة الهاوائية"
     },
     {
         "alpha3": "heb",
         "en": "Hebrew",
         "fr": "Hébreu",
         "de": "Hebräisch",
-        "arabic": "لغة عبرية "
+        "ar": "لغة عبرية "
     },
     {
         "alpha3": "her",
         "en": "Herero",
         "fr": "Herero",
         "de": "Herero-Sprache",
-        "arabic": "لغة هيريرو"
+        "ar": "لغة هيريرو"
     },
     {
         "alpha3": "hin",
         "en": "Hindi",
         "fr": "Hindi",
         "de": "Hindi",
-        "arabic": "لغة هندية"
+        "ar": "لغة هندية"
     },
     {
         "alpha3": "hmo",
         "en": "Hiri Motu",
         "fr": "Hiri Motu",
         "de": "Hiri-Motu",
-        "arabic": "هيري موتو"
+        "ar": "هيري موتو"
     },
     {
         "alpha3": "hun",
         "en": "Hungarian",
         "fr": "Hongrois",
         "de": "Ungarisch",
-        "arabic": "لغة مجرية"
+        "ar": "لغة مجرية"
     },
     {
         "alpha3": "ibo",
         "en": "Igbo",
         "fr": "Igbo",
         "de": "Ibo-Sprache",
-        "arabic": "لغة الإيجبو"
+        "ar": "لغة الإيجبو"
     },
     {
         "alpha3": "ido",
         "en": "Ido",
         "fr": "Ido",
         "de": "Ido",
-        "arabic": "لغة إيدو"
+        "ar": "لغة إيدو"
     },
     {
         "alpha3": "iku",
         "en": "Inuktitut",
         "fr": "Inuktitut",
         "de": "Inuktitut",
-        "arabic": "لغة إنكتيتوتية"
+        "ar": "لغة إنكتيتوتية"
     },
     {
         "alpha3": "ind",
         "en": "Indonesian",
         "fr": "Indonésien",
         "de": "Bahasa Indonesia",
-        "arabic": "لغة إندونيسية"
+        "ar": "لغة إندونيسية"
     },
     {
         "alpha3": "ipk",
         "en": "Inupiaq",
         "fr": "Inupiaq",
         "de": "Inupik",
-        "arabic": "اللغات الإسكيمو أليوطية"
+        "ar": "اللغات الإسكيمو أليوطية"
     },
     {
         "alpha3": "gle",
         "en": "Irish",
         "fr": "Irlandais",
         "de": "Irisch",
-        "arabic": "لغة أيرلندية"
+        "ar": "لغة أيرلندية"
     },
     {
         "alpha3": "ice",
         "en": "Icelandic",
         "fr": "Islandais",
         "de": "Isländisch",
-        "arabic": "اللغة الآيسلندية"
+        "ar": "اللغة الآيسلندية"
     },
     {
         "alpha3": "ita",
         "en": "Italian",
         "fr": "Italien",
         "de": "Italienisch",
-        "arabic": "لغة إيطالية"
+        "ar": "لغة إيطالية"
     },
     {
         "alpha3": "jav",
         "en": "Javanese",
         "fr": "Javanais",
         "de": "Javanisch",
-        "arabic": "لغة جاوية"
+        "ar": "لغة جاوية"
     },
     {
         "alpha3": "jpn",
         "en": "Japanese",
         "fr": "Japonais",
         "de": "Japanisch",
-        "arabic": "لغة يابانية"
+        "ar": "لغة يابانية"
     },
     {
         "alpha3": "kab",
         "en": "Kabyle",
         "fr": "Kabyle",
         "de": "Kabylisch",
-        "arabic": "اللهجة القبائلية"
+        "ar": "اللهجة القبائلية"
     },
     {
         "alpha3": "kal",
         "en": "Kalaallisut; Greenlandic",
         "fr": "Groenlandais",
         "de": "Grönländisch",
-        "arabic": "لغة غرينلاندية"
+        "ar": "لغة غرينلاندية"
     },
     {
         "alpha3": "kan",
         "en": "Kannada",
         "fr": "Kannada",
         "de": "Kannada",
-        "arabic": "لغة كنادية"
+        "ar": "لغة كنادية"
     },
     {
         "alpha3": "kas",
         "en": "Kashmiri",
         "fr": "Kashmiri",
         "de": "Kaschmiri",
-        "arabic": "لغة كشميرية"
+        "ar": "لغة كشميرية"
     },
     {
         "alpha3": "geo",
         "en": "Georgian",
         "fr": "Géorgien",
         "de": "Georgisch",
-        "arabic": "اللغة الجورجية"
+        "ar": "اللغة الجورجية"
     },
     {
         "alpha3": "kau",
         "en": "Kanuri",
         "fr": "Kanouri",
         "de": "Kanuri-Sprache",
-        "arabic": "لغة كانورية"
+        "ar": "لغة كانورية"
     },
     {
         "alpha3": "kaz",
         "en": "Kazakh",
         "fr": "Kazakh",
         "de": "Kasachisch",
-        "arabic": "لغة قازاقية"
+        "ar": "لغة قازاقية"
     },
     {
         "alpha3": "khm",
         "en": "Central Khmer",
         "fr": "Khmer Central",
         "de": "Kambodschanisch",
-        "arabic": "لغة خميرية"
+        "ar": "لغة خميرية"
     },
     {
         "alpha3": "kik",
         "en": "Kikuyu; Gikuyu",
         "fr": "Kikuyu",
         "de": "Kikuyu-Sprache",
-        "arabic": "لغة كيكويو"
+        "ar": "لغة كيكويو"
     },
     {
         "alpha3": "kin",
         "en": "Kinyarwanda",
         "fr": "Rwanda",
         "de": "Rwanda-Sprache",
-        "arabic": "كينيارواندا"
+        "ar": "كينيارواندا"
     },
     {
         "alpha3": "kir",
         "en": "Kirghiz; Kyrgyz",
         "fr": "Kirghiz",
         "de": "Kirgisisch",
-        "arabic": "لغة قيرغيزية"
+        "ar": "لغة قيرغيزية"
     },
     {
         "alpha3": "kom",
         "en": "Komi",
         "fr": "Kom",
         "de": "Komi-Sprache",
-        "arabic": "لغة كومية"
+        "ar": "لغة كومية"
     },
     {
         "alpha3": "kon",
         "en": "Kongo",
         "fr": "Kongo",
         "de": "Kongo-Sprache",
-        "arabic": "لغة كونغو"
+        "ar": "لغة كونغو"
     },
     {
         "alpha3": "kor",
         "en": "Korean",
         "fr": "Coréen",
         "de": "Koreanisch",
-        "arabic": "لغة كورية"
+        "ar": "لغة كورية"
     },
     {
         "alpha3": "kur",
         "en": "Kurdish",
         "fr": "Kurde",
         "de": "Kurdisch",
-        "arabic": "لغة كردية"
+        "ar": "لغة كردية"
     },
     {
         "alpha3": "lao",
         "en": "Lao",
         "fr": "Lao",
         "de": "Laotisch",
-        "arabic": "لاو"
+        "ar": "لاو"
     },
     {
         "alpha3": "lat",
         "en": "Latin",
         "fr": "Latin",
         "de": "Latein",
-        "arabic": "لغة لاتينية"
+        "ar": "لغة لاتينية"
     },
     {
         "alpha3": "lav",
         "en": "Latvian",
         "fr": "Letton",
         "de": "Lettisch",
-        "arabic": "لغة لاتفية"
+        "ar": "لغة لاتفية"
     },
     {
         "alpha3": "lim",
         "en": "Limburgan; Limburger; Limburgish",
         "fr": "Limbourgeois",
         "de": "Limburgisch",
-        "arabic": "لغة ليمبورغية"
+        "ar": "لغة ليمبورغية"
     },
     {
         "alpha3": "lin",
         "en": "Lingala",
         "fr": "Lingala",
         "de": "Lingala",
-        "arabic": "لينغالا"
+        "ar": "لينغالا"
     },
     {
         "alpha3": "lit",
         "en": "Lithuanian",
         "fr": "Lituanien",
         "de": "Litauisch",
-        "arabic": "لغة ليتوانية"
+        "ar": "لغة ليتوانية"
     },
     {
         "alpha3": "ltz",
         "en": "Luxembourgish",
         "fr": "Luxembourgeois",
         "de": "Luxemburgisch",
-        "arabic": "لغة لوكسمبورغية"
+        "ar": "لغة لوكسمبورغية"
     },
     {
         "alpha3": "mkd",
         "en": "Macedonian",
         "fr": "Macédonien",
         "de": "Makedonisch",
-        "arabic": "لغة مقدونية"
+        "ar": "لغة مقدونية"
     },
     {
         "alpha3": "mah",
         "en": "Marshallese",
         "fr": "Marshall",
         "de": "Marschallesisch",
-        "arabic": "لغة مارشالية"
+        "ar": "لغة مارشالية"
     },
     {
         "alpha3": "mak",
         "en": "Makasar",
         "fr": "Makassar",
         "de": "Makassarisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "mal",
         "en": "Malayalam",
         "fr": "Malayalam",
         "de": "Malayalam",
-        "arabic": "لغة ماليالامية"
+        "ar": "لغة ماليالامية"
     },
     {
         "alpha3": "mri",
         "en": "Maori",
         "fr": "Maori",
         "de": "Maori-Sprache",
-        "arabic": "لغة ماورية"
+        "ar": "لغة ماورية"
     },
     {
         "alpha3": "mar",
         "en": "Marathi",
         "fr": "Marathe",
         "de": "Marathi",
-        "arabic": "لغة مراثية"
+        "ar": "لغة مراثية"
     },
     {
         "alpha3": "mas",
@@ -1203,56 +1455,56 @@ export const languageNames = [
         "en": "Malay",
         "fr": "Malais",
         "de": "Malaiisch",
-        "arabic": "لغة ملايو"
+        "ar": "لغة ملايو"
     },
     {
         "alpha3": "glv",
         "en": "Manx",
         "fr": "Manx; Mannois",
         "de": "Manx",
-        "arabic": "لغة منكية"
+        "ar": "لغة منكية"
     },
     {
         "alpha3": "min",
         "en": "Minangkabau",
         "fr": "Minangkabau",
         "de": "Minangkabau-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "mlg",
         "en": "Malagasy",
         "fr": "Malgache",
         "de": "Malagassi-Sprache",
-        "arabic": "لغة ملغاشية"
+        "ar": "لغة ملغاشية"
     },
     {
         "alpha3": "mlt",
         "en": "Maltese",
         "fr": "Maltais",
         "de": "Maltesisch",
-        "arabic": "لغة مالطية"
+        "ar": "لغة مالطية"
     },
     {
         "alpha3": "moh",
         "en": "Mohawk",
         "fr": "Mohawk",
         "de": "Mohawk-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "mon",
         "en": "Mongolian",
         "fr": "Mongol",
         "de": "Mongolisch",
-        "arabic": "لغة منغولية"
+        "ar": "لغة منغولية"
     },
     {
         "alpha3": "mos",
         "en": "Mossi",
         "fr": "Moré",
         "de": "Mossi-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "myn",
@@ -1265,294 +1517,294 @@ export const languageNames = [
         "en": "Nauru",
         "fr": "Nauruan",
         "de": "Nauruanisch",
-        "arabic": "لغة ناورونية"
+        "ar": "لغة ناورونية"
     },
     {
         "alpha3": "nav",
         "en": "Navajo; Navaho",
         "fr": "Navaho",
         "de": "Navajo-Sprache",
-        "arabic": "نافاهو"
+        "ar": "نافاهو"
     },
     {
         "alpha3": "nde",
         "en": "Ndebele",
         "fr": "Ndébélé",
         "de": "Ndebele-Sprache",
-        "arabic": "لغة نديبلي"
+        "ar": "لغة نديبلي"
     },
     {
         "alpha3": "nep",
         "en": "Nepali",
         "fr": "Népalais",
         "de": "Nepali",
-        "arabic": "لغة نيبالية"
+        "ar": "لغة نيبالية"
     },
     {
         "alpha3": "nog",
         "en": "Nogai",
         "fr": "Nogaï; Nogay",
         "de": "Nogaisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "nor",
         "en": "Norwegian",
         "fr": "Norvégien",
         "de": "Norwegisch",
-        "arabic": "لغة نرويجية"
+        "ar": "لغة نرويجية"
     },
     {
         "alpha3": "ori",
         "en": "Oriya",
         "fr": "Oriya",
         "de": "Oriya-Sprache",
-        "arabic": "لغة الأوريا"
+        "ar": "لغة الأوريا"
     },
     {
         "alpha3": "orm",
         "en": "Oromo",
         "fr": "Galla",
         "de": "Galla-Sprache",
-        "arabic": "لغة الأورومو"
+        "ar": "لغة الأورومو"
     },
     {
         "alpha3": "oss",
         "en": "Ossetian; Ossetic",
         "fr": "Ossète",
         "de": "Ossetisch",
-        "arabic": "لغة أوسيتية"
+        "ar": "لغة أوسيتية"
     },
     {
         "alpha3": "pan",
         "en": "Panjabi; Punjabi",
         "fr": "Pendjabi",
         "de": "Pandschabi-Sprache",
-        "arabic": "لغة بنجابية"
+        "ar": "لغة بنجابية"
     },
     {
         "alpha3": "pli",
         "en": "Pali",
         "fr": "Pali",
         "de": "Pali",
-        "arabic": "بالية"
+        "ar": "بالية"
     },
     {
         "alpha3": "pol",
         "en": "Polish",
         "fr": "Polonais",
         "de": "Polnisch",
-        "arabic": "لغة بولندية"
+        "ar": "لغة بولندية"
     },
     {
         "alpha3": "por",
         "en": "Portuguese",
         "fr": "Portugais",
         "de": "Portugiesisch",
-        "arabic": "لغة برتغالية"
+        "ar": "لغة برتغالية"
     },
     {
         "alpha3": "pus",
         "en": "Pushto; Pashto",
         "fr": "Pachto",
         "de": "Paschtu",
-        "arabic": "لغة بشتوية"
+        "ar": "لغة بشتوية"
     },
     {
         "alpha3": "que",
         "en": "Quechua",
         "fr": "Quechua",
         "de": "Quechua-Sprache",
-        "arabic": "كتشوا"
+        "ar": "كتشوا"
     },
     {
         "alpha3": "mda",
         "en": "Moldavian",
         "fr": "Moldave",
         "de": "Rumänisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "run",
         "en": "Rundi",
         "fr": "Rundi",
         "de": "Rundi-Sprache",
-        "arabic": "لغة كيروندية"
+        "ar": "لغة كيروندية"
     },
     {
         "alpha3": "rus",
         "en": "Russian",
         "fr": "Russe",
         "de": "Russisch",
-        "arabic": "لغة روسية"
+        "ar": "لغة روسية"
     },
     {
         "alpha3": "sag",
         "en": "Sango",
         "fr": "Sango",
         "de": "Sango-Sprache",
-        "arabic": "السانغوية"
+        "ar": "السانغوية"
     },
     {
         "alpha3": "san",
         "en": "Sanskrit",
         "fr": "Sanskrit",
         "de": "Sanskrit",
-        "arabic": "لغة سنسكريتية"
+        "ar": "لغة سنسكريتية"
     },
     {
         "alpha3": "scn",
         "en": "Sicilian",
         "fr": "Sicilien",
         "de": "Sizilianisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "sco",
         "en": "Scots",
         "fr": "Écossais",
         "de": "Schottisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "sin",
         "en": "Sinhala; Sinhalese",
         "fr": "Singhalais",
         "de": "Singhalesisch",
-        "arabic": "لغة سنهالية"
+        "ar": "لغة سنهالية"
     },
     {
         "alpha3": "slk",
         "en": "Slovak",
         "fr": "Slovaque",
         "de": "Slowakisch",
-        "arabic": "لغة سلوفاكية"
+        "ar": "لغة سلوفاكية"
     },
     {
         "alpha3": "slv",
         "en": "Slovenian",
         "fr": "Slovène",
         "de": "Slowenisch",
-        "arabic": "لغة سلوفينية"
+        "ar": "لغة سلوفينية"
     },
     {
         "alpha3": "smo",
         "en": "Samoan",
         "fr": "Samoan",
         "de": "Samoanisch",
-        "arabic": "لغة ساموية"
+        "ar": "لغة ساموية"
     },
     {
         "alpha3": "sna",
         "en": "Shona",
         "fr": "Shona",
         "de": "Schona-Sprache",
-        "arabic": "لغة الشونا"
+        "ar": "لغة الشونا"
     },
     {
         "alpha3": "snd",
         "en": "Sindhi",
         "fr": "Sindhi",
         "de": "Sindhi-Sprache",
-        "arabic": "لغة سندية"
+        "ar": "لغة سندية"
     },
     {
         "alpha3": "som",
         "en": "Somali",
         "fr": "Somali",
         "de": "Somali",
-        "arabic": "لغة صومالية"
+        "ar": "لغة صومالية"
     },
     {
         "alpha3": "sot",
         "en": "Sotho, Southern",
         "fr": "Sotho Du Sud",
         "de": "Süd-Sotho-Sprache",
-        "arabic": "لغة سوتية"
+        "ar": "لغة سوتية"
     },
     {
         "alpha3": "spa",
         "en": "Spanish; Castilian",
         "fr": "Espagnol; Castillan",
         "de": "Spanisch",
-        "arabic": "لغة إسبانية"
+        "ar": "لغة إسبانية"
     },
     {
         "alpha3": "srd",
         "en": "Sardinian",
         "fr": "Sarde",
         "de": "Sardisch",
-        "arabic": "لغة سردينية"
+        "ar": "لغة سردينية"
     },
     {
         "alpha3": "srp",
         "en": "Serbian",
         "fr": "Serbe",
         "de": "Serbisch",
-        "arabic": "لغة صربية"
+        "ar": "لغة صربية"
     },
     {
         "alpha3": "ssw",
         "en": "Swati",
         "fr": "Swati",
         "de": "Swasi-Sprache",
-        "arabic": "لغة سوازي"
+        "ar": "لغة سوازي"
     },
     {
         "alpha3": "sun",
         "en": "Sundanese",
         "fr": "Soundanais",
         "de": "Sundanesisch",
-        "arabic": "اللغات السوندية"
+        "ar": "اللغات السوندية"
     },
     {
         "alpha3": "swa",
         "en": "Swahili",
         "fr": "Swahili",
         "de": "Swahili",
-        "arabic": "لغة سواحلية"
+        "ar": "لغة سواحلية"
     },
     {
         "alpha3": "swe",
         "en": "Swedish",
         "fr": "Suédois",
         "de": "Schwedisch",
-        "arabic": "لغة سويدية"
+        "ar": "لغة سويدية"
     },
     {
         "alpha3": "syr",
         "en": "Syriac",
         "fr": "Syriaque",
         "de": "Neuostaramäisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "tah",
         "en": "Tahitian",
         "fr": "Tahitien",
         "de": "Tahitisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "tam",
         "en": "Tamil",
         "fr": "Tamoul",
         "de": "Tamil",
-        "arabic": "لغة تاميلية"
+        "ar": "لغة تاميلية"
     },
     {
         "alpha3": "tat",
         "en": "Tatar",
         "fr": "Tatar",
         "de": "Tatarisch",
-        "arabic": "لغة تترية"
+        "ar": "لغة تترية"
     },
     {
         "alpha3": "tel",
         "en": "Telugu",
         "fr": "Télougou",
         "de": "Telugu-Sprache",
-        "arabic": "لغة تيلوغوية"
+        "ar": "لغة تيلوغوية"
     },
     {
         "alpha3": "tib",
@@ -1565,166 +1817,166 @@ export const languageNames = [
         "en": "Timne",
         "fr": "Temne",
         "de": "Temne-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "tgk",
         "en": "Tajik",
         "fr": "Tadjik",
         "de": "Tadschikisch",
-        "arabic": "لغة طاجيكية"
+        "ar": "لغة طاجيكية"
     },
     {
         "alpha3": "tgl",
         "en": "Tagalog",
         "fr": "Tagalog",
         "de": "Tagalog",
-        "arabic": "لغة تاغالوغية"
+        "ar": "لغة تاغالوغية"
     },
     {
         "alpha3": "tha",
         "en": "Thai",
         "fr": "Thaï",
         "de": "Thailändisch",
-        "arabic": "لغة تايلندية"
+        "ar": "لغة تايلندية"
     },
     {
         "alpha3": "tig",
         "en": "Tigre",
         "fr": "Tigré",
         "de": "Tigre-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "tir",
         "en": "Tigrinya",
         "fr": "Tigrigna",
         "de": "Tigrinja-Sprache",
-        "arabic": "لغة تغرينية"
+        "ar": "لغة تغرينية"
     },
     {
         "alpha3": "tog",
         "en": "Tonga",
         "fr": "Tonga",
         "de": "Tonga",
-        "arabic": "التونغية"
+        "ar": "التونغية"
     },
     {
         "alpha3": "tsn",
         "en": "Tswana",
         "fr": "Tswana",
         "de": "Tswana-Sprache",
-        "arabic": "لغة تسوانية"
+        "ar": "لغة تسوانية"
     },
     {
         "alpha3": "tso",
         "en": "Tsonga",
         "fr": "Tsonga",
         "de": "Tsonga-Sprache",
-        "arabic": "لغة تسونجا"
+        "ar": "لغة تسونجا"
     },
     {
         "alpha3": "tuk",
         "en": "Turkmen",
         "fr": "Turkmène",
         "de": "Turkmenisch",
-        "arabic": "لغة تركمانية"
+        "ar": "لغة تركمانية"
     },
     {
         "alpha3": "tur",
         "en": "Turkish",
         "fr": "Turc",
         "de": "Türkisch",
-        "arabic": "لغة تركية"
+        "ar": "لغة تركية"
     },
     {
         "alpha3": "tvl",
         "en": "Tuvalu",
         "fr": "Tuvalu",
         "de": "Elliceanisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "twi",
         "en": "Twi",
         "fr": "Twi",
         "de": "Twi-Sprache",
-        "arabic": "توي"
+        "ar": "توي"
     },
     {
         "alpha3": "uig",
         "en": "Uighur; Uyghur",
         "fr": "Ouïgour",
         "de": "Uigurisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "ukr",
         "en": "Ukrainian",
         "fr": "Ukrainien",
         "de": "Ukrainisch",
-        "arabic": "اللغة الأوكرانية"
+        "ar": "اللغة الأوكرانية"
     },
     {
         "alpha3": "urd",
         "en": "Urdu",
         "fr": "Ourdou",
         "de": "Urdu",
-        "arabic": "اردو"
+        "ar": "اردو"
     },
     {
         "alpha3": "uzb",
         "en": "Uzbek",
         "fr": "Ouszbek",
         "de": "Usbekisch",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "vie",
         "en": "Vietnamese",
         "fr": "Vietnamien",
         "de": "Vietnamesisch",
-        "arabic": "اللغة الفيتنامية"
+        "ar": "اللغة الفيتنامية"
     },
     {
         "alpha3": "wol",
         "en": "Wolof",
         "fr": "Wolof",
         "de": "Wolof-Sprache",
-        "arabic": "ولوفل"
+        "ar": "ولوفل"
     },
     {
         "alpha3": "xho",
         "en": "Xhosa",
         "fr": "Xhosa",
         "de": "Xhosa-Sprache",
-        "arabic": "اللغة الكوسية"
+        "ar": "اللغة الكوسية"
     },
     {
         "alpha3": "yid",
         "en": "Yiddish",
         "fr": "Yiddish",
         "de": "Jiddisch",
-        "arabic": "اللغة اليديشية"
+        "ar": "اللغة اليديشية"
     },
     {
         "alpha3": "yor",
         "en": "Yoruba",
         "fr": "Yoruba",
         "de": "Yoruba-Sprache",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "zgh",
         "en": "Moroccan Tamazight",
         "fr": "Amazighe Marocain",
-        "arabic": ""
+        "ar": ""
     },
     {
         "alpha3": "zul",
         "en": "Zulu",
         "fr": "Zoulou",
         "de": "Zulu-Sprache",
-        "arabic": "اللغة الزولوية"
+        "ar": "اللغة الزولوية"
     }
 ]

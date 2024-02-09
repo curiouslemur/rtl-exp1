@@ -1,4 +1,5 @@
 // Routines to load the corresponding pages depending on the language on the experiment
+import * as pages_inAr from "../locals/arabic/_pagesAr"
 import * as pages_inEn from "../locals/english/_pagesEn"
 import * as pages_inFr from "../locals/french/_pagesFr"
 import * as options from "./selectOptions"
@@ -6,6 +7,8 @@ import { concepts } from '../stimuli/concepts'
 
 export const loadPages_inLang = (lang) => {
     switch (lang) {
+        case "ar":
+            return pages_inAr // TODO: update this to pages_inAr instead
         case "en":
             return pages_inEn
         case "fr":

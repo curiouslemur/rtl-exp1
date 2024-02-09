@@ -27,15 +27,14 @@ var demography = {
     gender: "",
     profession: "",
     colorblind: "",
-    // visFamiliarity: "",
     prolificID: getUrlParams().PROLIFIC_PID ? getUrlParams().PROLIFIC_PID : "",
     expLang: getUrlParams().lang ? getUrlParams().lang : "en",
     expCountry: getUrlParams().ct ? getUrlParams().ct : "", // mdg2 == pilot #2 for mdg participants
     sessionID: 0,
-    // progress: 0,
     expName: "color1",
     progressBlock: 0,
-    progressColor: 0
+    progressColor: 0,
+    visFamiliarity: ""
 }
 
 // // Params: demography, setDisableButton: dis/enable button to move to next experiment page
@@ -47,7 +46,7 @@ const checkStart = (dem, setDisableButton) => {
         & dem.languageNative.length > 0
         // & dem.languageOther.length > 0
         & dem.age.length > 0 & dem.gender.length > 0 & dem.profession.length > 0
-        & dem.colorblind.length > 0
+        & dem.visFamiliarity.length > 0
     ) { setDisableButton(false) } else { setDisableButton(true) }
 }
 
@@ -60,6 +59,6 @@ export const onChangeField = (value, key, setDisabledButton) => {
 export const onClickStart = (sessionID, navigate, nextUrl) => {
     demography.sessionID = sessionID
     sessionStorage.setItem("demography", JSON.stringify(demography))
-    document.body.classList.remove('consent-body');
+    // document.body.classList.remove('consent-body');
     navigate(nextUrl)
 }

@@ -3,7 +3,7 @@ import { Autocomplete, Box, Grid, InputLabel, TextField, Typography } from "@mui
 
 
 import * as dc from "../_controllers/displayController"
-import greyscale from '../_utils/gray-scale-donut.png'
+// import greyscale from '../_utils/gray-scale-donut.png'
 
 import '../App.css'
 const styles = {
@@ -12,7 +12,6 @@ const styles = {
     root: { flexGrow: 1, margin: '2%' },
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
-
 
 export const Display = (props) => {
     useEffect(() => {
@@ -29,12 +28,6 @@ export const Display = (props) => {
                 <Grid item >
                     {/* <hr style={{ color: "#ea3433", backgroundColor: "#ea3433", height: 1.5 }} /> */}
                     <props.expPages.Display />
-                </Grid>
-
-                <Grid container justifyContent="center">
-                    <div style={{ marginTop: 50 }}>
-                        <img src={greyscale} alt="Donut chart in gray-scale" width="65%" />
-                    </div>
                 </Grid>
 
                 <Box id="grayscale-select" marginTop={5}>

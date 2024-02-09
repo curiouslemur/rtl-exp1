@@ -78,9 +78,11 @@ export const Consent = (props) => {
                                     placeholder={labels.countryResLabel} />)}
                         />
                     </Box>
+                </Stack>
+                <Stack spacing={4} style={{ marginTop: '25px' }}>
                     <Box id="country-res-length-field">
                         <InputLabel>{labels.countryResLenQ}</InputLabel>
-                        <TextField required style={{ minWidth: '15ch' }}
+                        <TextField required style={{ minWidth: '40ch' }}
                             type="number"
                             variant="standard" placeholder=""
                             onChange={(e) => cc.onChangeField(e.target.value, "countryResLen", setDisabledButton)} />
@@ -138,14 +140,16 @@ export const Consent = (props) => {
                 <Stack marginTop={3} spacing={4} direction="row" justifyContent="flex-start" alignItems="center">
                     <Box id="age-field">
                         <InputLabel>{labels.ageQ}</InputLabel>
-                        <TextField required style={{ minWidth: '18ch' }}
+                        <TextField required style={{ minWidth: '20ch' }}
                             variant="standard" placeholder={labels.ageLabel}
                             type="number"
                             onChange={(e) => cc.onChangeField(e.target.value, "age", setDisabledButton)} />
                     </Box>
+                </Stack>
+                <Stack spacing={4} style={{ marginTop: '25px' }}>
                     <Box id="gender-field">
                         <InputLabel>{labels.genderQ}</InputLabel>
-                        <TextField required style={{ minWidth: '19ch' }}
+                        <TextField required style={{ minWidth: '20ch' }}
                             variant="standard" placeholder={labels.genderLabel}
                             onChange={(e) => cc.onChangeField(e.target.value, "gender", setDisabledButton)} />
                     </Box>
@@ -158,20 +162,11 @@ export const Consent = (props) => {
                             onChange={(e) => cc.onChangeField(e.target.value, "profession", setDisabledButton)} />
                     </Box>
 
-                    <Box id="colorblind-select">
-                        <InputLabel>{labels.colorblindQ}</InputLabel>
-                        <Autocomplete style={{ maxWidth: '40ch' }}
-                            openOnFocus
-                            options={[labels.colorblindNo, labels.colorblindYes, labels.colorblindIdk]}
-                            getOptionLabel={(option) => option}
-                            onChange={(e, val, key) => {
-                                if (val !== null) { cc.onChangeField(val, "colorblind", setDisabledButton) }
-                                else { cc.onChangeField("", "colorblind", setDisabledButton) }
-                            }}
-                            renderInput={(params) => (
-                                <TextField {...params} variant="standard"
-                                    placeholder={labels.colorblindLabel} />
-                            )} />
+                    <Box id="country-res-length-field">
+                        <InputLabel>{labels.visFamiliarityQ}</InputLabel>
+                        <TextField required style={{ minWidth: '40ch' }}
+                            variant="standard" placeholder=""
+                            onChange={(e) => cc.onChangeField(e.target.value, "visFamiliarity", setDisabledButton)} />
                     </Box>
                 </Stack>
 
@@ -186,10 +181,5 @@ export const Consent = (props) => {
     )
 }
 
-
-const MobileWarning = (props) => {
-    switch (props.expLang) {
-    }
-}
 
 export default Consent

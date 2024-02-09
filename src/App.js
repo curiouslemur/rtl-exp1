@@ -33,10 +33,7 @@ function App() {
       <PageMeta meta={meta} />
       <Routes>
         <Route path={subdom} element={<navigator.Consent config={meta} navigate={navigate}
-          nextUrl={subdom + "/disp"} expPages={expPages} expLang={expLang} />} />
-
-        <Route path={subdom + '/disp'} element={<navigator.Display config={meta} navigate={navigate}
-          nextUrl={subdom + "/intro"} expPages={expPages} />} />
+          nextUrl={subdom + "/intro"} expPages={expPages} expLang={expLang} />} />
 
         <Route path={subdom + "/intro"} element={<navigator.Intro config={meta} navigate={navigate}
           nextUrl={subdom + "/trial"} expPages={expPages} conceptList={concepts} />} />
@@ -53,7 +50,7 @@ function App() {
 }
 
 const PageMeta = (props) => {
-  if (props.meta.language === 'arabic' || props.meta.language === "hebrew") {
+  if (props.meta.language === 'ar' || props.meta.language === "hebrew") {
     return (
       <HelmetProvider>
         <Helmet htmlAttributes={{ lang: 'ar', dir: 'rtl' }}>
@@ -74,8 +71,6 @@ const PageMeta = (props) => {
 
 const generateSessionID = () => {
   const d = new Date();
-  // const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  // return month[d.getMonth()] + d.getDate() + "-" + d.getHours() + d.getMinutes() + "-" + d.getSeconds() + d.getMilliseconds()
   let m = d.getMonth() + 1
   return "2024" + m + d.getDate() + "-" + d.getHours() + d.getMinutes() + "-" + d.getSeconds() + d.getMilliseconds()
 }
