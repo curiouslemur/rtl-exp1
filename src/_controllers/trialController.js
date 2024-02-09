@@ -62,7 +62,6 @@ export const onClickNext = (
         setSliderValue(50)
         alert(nextBlockAlertMessage + conceptList[progressBlock + 1].toUpperCase())
     } else {
-        document.body.classList.remove('trial-body');
         navigate(nextUrl)
     }
 

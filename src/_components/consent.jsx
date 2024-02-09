@@ -22,7 +22,7 @@ export const Consent = (props) => {
 
     useEffect(
         () => {
-            document.body.classList.add('consent-body');
+            // document.body.classList.add('consent-body');
             handleResize()
             window.addEventListener('resize', handleResize)
             return () => {
@@ -44,7 +44,7 @@ export const Consent = (props) => {
     } else if (!props.expLang) {
         return (
             <Grid container style={styles.container} justifyContent="center">
-                <Typography variant="h4"> Language undefined</Typography>
+                <Typography variant="h4"> Language undefined </Typography>
             </Grid>
         )
     }

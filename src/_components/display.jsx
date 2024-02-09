@@ -15,7 +15,6 @@ const styles = {
 
 export const Display = (props) => {
     useEffect(() => {
-        document.body.classList.add('display-body');
     }, []);
 
     const labels = props.expPages.DisplayLabels

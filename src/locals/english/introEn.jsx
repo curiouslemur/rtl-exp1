@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Grid, ListItem, Typography } from "@mui/material";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 export const IntroEn = (props) => {
     const il = IntroLabelsEn
@@ -53,7 +54,34 @@ export const IntroEn = (props) => {
                         </ListItem>
                     </Typography>
                 </Box>
+                <Typography>
+                    <br /> You will be asked questions about the charts. You will be given a few seconds to read each question carefully.
+                    <br /> When ready, click the button to show the chart. Use the chart to form your answer. <br />
+                </Typography>
+                <br />
+                <Box sx={{
+                    width: '100%', height: '30px', backgroundColor: '#9c27b022', padding: '10px',
+                    '&:hover': {
+                        backgroundColor: '#80818312', //opacity: [0.9, 0.8, 0.7]
+                    }
+                }}>
+                    <Typography fontWeight={'bold'}>The charts will be visible only during a few seconds, so answer quickly.</Typography>
+                </Box>
+                <Typography >
+                    <br /> There are no trick questions. Feel free to follow your intuition when answering the question.
+                </Typography>
+
+                <Typography>
+                    <br /> Type your answer in the space provided. Unless otherwise indicated, we expect your answer to be numerical only.
+                    {/* <br /> <b> a GIF that showing typing 1, or 3 or </b> */}
+                </Typography>
+
+                <Typography>
+                    <br /> When you are happy with your answer, click next to proceed to the next question
+                    <br /> You can access the scenario and this instruction page at anytime by clicking on the help icon <HelpOutlineIcon style={{ marginLeft: 5, marginRight: 5 }} fontSize="medium" />
+                </Typography>
             </Grid >
+
         </>
     )
 }

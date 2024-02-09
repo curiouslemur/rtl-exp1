@@ -52,14 +52,8 @@ export const getConceptList = (lang) => {
 export const onClickStart = (navigate, nextUrl) => {
     // add tuto answers info from sessionStrorage to gemography: tuto: "[array here]" 
     let dem = JSON.parse(sessionStorage.getItem('demography'))
-    let tut = sessionStorage.getItem('tutoValues') // record the tutoValues as string in the demography data
-
-    dem.tutoValues = tut
-
     sessionStorage.setItem('demography', JSON.stringify(dem))
-    // dao.logDem(dem.sessionID, dem, dem.expLang, dem.expName)
     dao.logDem(dem)
-    document.body.classList.remove('intro-body');
     navigate(nextUrl)
 }
 
