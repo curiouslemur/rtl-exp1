@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/rtl-exp1/static/css/main.b39c46ab.css",
-    "main.js": "/rtl-exp1/static/js/main.990249bd.js",
+    "main.js": "/rtl-exp1/static/js/main.c857de13.js",
     "static/media/slider-en.gif": "/rtl-exp1/static/media/slider-en.541a72d1449c026ac0d8.gif",
     "index.html": "/rtl-exp1/index.html"
   },
   "entrypoints": [
     "static/css/main.b39c46ab.css",
-    "static/js/main.990249bd.js"
+    "static/js/main.c857de13.js"
   ]
 }
