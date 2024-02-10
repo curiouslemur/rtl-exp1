@@ -7,6 +7,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import '../App.css'
 import * as tc from "../_controllers/trialController"
 import { stimuli } from "../stimuli/stimuli";
+import { refEqual } from "firebase/firestore";
 
 const styles = {
     button: { marginTop: 10, marginBottom: 10 },
@@ -21,7 +22,7 @@ export const Trial = (props) => {
     let expLang = props.config.expLang
     const labels = props.expPages.TrialLabels
 
-    const [progress, setProgress] = useState(1)
+    const [progressIndex, setProgressIndex] = useState(0) // TODO: when saving progress: add +1
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [isVisible, setIsVisible] = React.useState(false);
@@ -82,15 +83,59 @@ export const Trial = (props) => {
             <Grid container justify="center" align="center">
                 <Grid item xs={12} marginTop={2}>
                     <Typography fontSize={18} fontWeight='bold'>
-                        {stimuli[progress][expLang].q}
+                        {stimuli[progressIndex][expLang].q}
                     </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
                         onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
                         disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
+                <Grid item xs={12} marginTop={2}>
+                    <AnswerSection
+                        answerType={stimuli[progressIndex].ansType}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <Button id="consent-next-button" variant="contained" color="secondary"
+                        disableRipple disableFocusRipple style={styles.button}
+                        // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
+                        disabled={cannotNext}
+                    > {labels.nextButton} </Button>
+                </Grid>
             </Grid>
 
         </Container >
+    )
+}
+
+const AnswerSection = (props) => {
+    console.log(props.answerType)
+    switch (props.answerType) {
+        case "input":
+            return (
+                <input
+                    id={'inputAnswer'}
+                    type={"number"}
+                // onChange={(event, scs) => { tc.onChangeField(event) }}
+                ></input>
+            )
+
+        case "buttons":
+            return (
+                <>
+                    <Button>Button1</Button>
+                    <Button>Button2</Button>
+                </>
+            )
+        default: return (<></>)
+    }
+}
+
+const AnswerButtons = (props) => {
+    return (
+        <>
+            <Button>Button 1</Button>
+            <Button>Button 2</Button>
+        </>
     )
 }
 
@@ -127,5 +172,6 @@ const HelpModal = (props) => {
         </Modal>
     )
 }
+
 
 export default Trial;

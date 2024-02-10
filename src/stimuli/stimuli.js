@@ -5,6 +5,7 @@
  * valL: value to the left of the marked element: 0 if no mark
  * valR: value to the right of the marked element: 0 if no mark
  * hideAfter: time in ms after which to hide the image
+ * ansType: The expected type of answer from participants: two buttons (increasing / decreasing), input text
  **/
 
 
@@ -20,6 +21,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valR: 0,
         showAfter: 2000,
         hideAfter: 8000,
+        ansType: "buttons",
         en: {
             q: "How many people participated in the experiment on the fourth day?",
             nextButton: "Next"
@@ -39,6 +41,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valR: 0,
         showAfter: 2000,
         hideAfter: 8000,
+        ansType: "buttons",
         en: {
             q: "How many people participated in the experiment on the fourth day?",
             nextButton: "Next"
