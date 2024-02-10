@@ -26,14 +26,11 @@ var demography = {
     age: "",
     gender: "",
     profession: "",
-    colorblind: "",
     prolificID: getUrlParams().PROLIFIC_PID ? getUrlParams().PROLIFIC_PID : "",
     expLang: getUrlParams().lang ? getUrlParams().lang : "en",
     expCountry: getUrlParams().ct ? getUrlParams().ct : "", // mdg2 == pilot #2 for mdg participants
     sessionID: 0,
-    expName: "color1",
-    progressBlock: 0,
-    progressColor: 0,
+    expName: "rtl1",
     visFamiliarity: ""
 }
 

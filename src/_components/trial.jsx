@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Grid, Modal, Slider, Typography } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
+import { Container, Box, Button, Grid, Modal, Typography } from "@mui/material";
+// import { ThemeProvider } from "@mui/material/styles";
 
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
-import { sliderTheme } from "../stimuli/slider";
+import { stimuli } from "../stimuli/stimuli";
 
 const styles = {
     button: { marginTop: 10, marginBottom: 10 },
@@ -17,128 +17,80 @@ const styles = {
 }
 
 export const Trial = (props) => {
+    let imagePath = "figures/"
+    let expLang = props.config.expLang
     const labels = props.expPages.TrialLabels
+
+    const [progress, setProgress] = useState(1)
+    // --------------------------------
+    const [cannotNext, setCannotNext] = React.useState(true);
+    const [isVisible, setIsVisible] = React.useState(false);
+    const [cannotShowChart, setCannotShowChart] = React.useState(false)
+
+    const [displayAnswerField, setDisplayAnserwField] = React.useState('none')
+
+    const onClickShowChart = (e, setCannotShowChart) => {
+        e.preventDefault()
+        setCannotShowChart(true)
+        setIsVisible(true)
+        setDisplayAnserwField('')
+    }
+
+    // --------------------------------
     const [progressBlock, setProgressBlock] = useState(0)
     const [progressColor, setProgressColor] = useState(0)
 
     const [colorCodeList, setColorCodeList] = useState(props.colorCodes) // list of color codes
     // console.log("showing index: ", progressColor)
-    const [showComponent, setShowComponent] = useState(false);
-
-    const [sliderValue, setSliderValue] = useState(50)
-    const [cannotNext, setCannotNext] = useState(true)
-    const [canPressEnter, setCanPressEnter] = useState(false)
 
     const [helpIsOpen, setHelpIsOpen] = useState(false)
 
     const conceptList = props.conceptList
-    const nBlock = conceptList.length
+    // const nBlock = conceptList.length
 
-    // console.log(progressColor, colorCodeList)
-
-    const marks = [
-        { value: -0, label: labels.markLeast, },
-        { value: 50, },
-        { value: 100, label: labels.markMost, },
-    ];
-
-    const onChangeSlider = (e) => {
-        setCannotNext(false)
-        setSliderValue(e.target.value)
-        setCanPressEnter(true)
-    }
 
     const closeHelpModal = () => {
         setHelpIsOpen(false)
     }
 
     useEffect(() => {
-        document.body.classList.add('trial-body');
-        const timeoutId = setTimeout(() => {
-            setShowComponent(true);
-        }, 250)
-        return () => clearTimeout(timeoutId);
-    }, [showComponent]);
+    }, []);
 
     return (
-        <ThemeProvider theme={sliderTheme}>
+        // <ThemeProvider>
+        // <Grid container style={styles.container} justifyContent="center" >
+        //     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
+        //         onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
+        //         disabled={cannotShowChart} > {labels.showChartButton}</Button>
+        //     <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+        //     </Grid>
 
-            <Grid container style={styles.container} justifyContent="center"
-            // spacing={5}
-            >
+        //     <Grid>
 
-                <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={0}>
-                    <Typography>{labels.block} {progressBlock + 1} / {nBlock}</Typography>
+        //         <div style={{ position: 'absolute', top: 10, left: 10, padding: '10px' }}>
+        //             <HelpOutlineIcon
+        //                 onClick={() => setHelpIsOpen(true)} />
+        //         </div>
+        //         <HelpModal
+        //             open={helpIsOpen}
+        //             close={closeHelpModal}
+        //             modalLabels={labels.modalLabels} />
+        //     </Grid>
+        // </Grid>
+        // </ThemeProvider>
+        <Container maxWidth='md'>
+            <Grid container justify="center" align="center">
+                <Grid item xs={12} marginTop={2}>
+                    <Typography fontSize={18} fontWeight='bold'>
+                        {stimuli[progress][expLang].q}
+                    </Typography>
+                    <Button sx={{ display: '' }} style={styles.button} variant="outlined"
+                        onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
+                        disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
-
-                <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
-                    <Typography style={{ fontSize: '1.25rem' }}><b>{conceptList[progressBlock].toUpperCase()}</b></Typography>
-                </Grid>
-
-                <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
-                    {!showComponent ?
-                        <img style={{ marginTop: 15, marginBottom: 25 }} src={"./png/background.png"} alt={""} width="100px" />
-                        : <img style={{ marginTop: 15, marginBottom: 25 }} src={"./png/" + colorCodeList[progressColor] + ".png"} alt={"color-patch-" + colorCodeList[progressColor]} width="100px" />}
-                </Grid>
-
-                <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
-                    <div style={{ marginTop: 20 }}>
-                        <Slider
-                            onKeyDown={(e) => {
-                                if (e.key === "Enter") {
-                                    if (canPressEnter) {
-                                        tc.onClickNext(
-                                            setColorCodeList, colorCodeList, conceptList,
-                                            setProgressColor, progressColor,
-                                            setSliderValue, sliderValue,
-                                            setShowComponent,
-                                            setCannotNext, setCanPressEnter,
-                                            setProgressBlock, progressBlock,
-                                            labels.nextBlockAlertMessage,
-                                            props.navigate, props.nextUrl)
-                                    }
-                                }
-                            }}
-                            track={false}
-                            marks={marks}
-                            sx={{ width: 400, boxShadow: 0, }}
-                            value={sliderValue}
-                            onChange={onChangeSlider}
-                        />
-                    </div>
-                </Grid>
-
-                <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={3}>
-                    <Button variant="contained"
-                        disabled={cannotNext}
-                        onClick={(sccL, ccL, cL,
-                            spC, pC,
-                            ssV, sV,
-                            sshowC,
-                            scN, scpE,
-                            spB, pB,
-                            nbaM,
-                            nav, nu) => tc.onClickNext(
-                                setColorCodeList, colorCodeList, conceptList,
-                                setProgressColor, progressColor,
-                                setSliderValue, sliderValue,
-                                setShowComponent,
-                                setCannotNext, setCanPressEnter,
-                                setProgressBlock, progressBlock,
-                                labels.nextBlockAlertMessage,
-                                props.navigate, props.nextUrl)}
-                    >{labels.nextButton}</Button>
-                </Grid>
-                <div style={{ position: 'absolute', top: 10, left: 10, padding: '10px' }}>
-                    <HelpOutlineIcon
-                        onClick={() => setHelpIsOpen(true)} />
-                </div>
-                <HelpModal
-                    open={helpIsOpen}
-                    close={closeHelpModal}
-                    helpModalLabels={labels.helpModalLabels} />
             </Grid>
-        </ThemeProvider>
+
+        </Container >
     )
 }
 
@@ -155,8 +107,7 @@ const HelpModal = (props) => {
         p: 4,
     };
 
-    const labels = props.helpModalLabels
-
+    const modalLabels = props.modalLabels
     return (
         <Modal
             open={props.open}
@@ -166,18 +117,12 @@ const HelpModal = (props) => {
         >
             <Box sx={style}>
                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                    {labels.title}
+                    {modalLabels.title}
                 </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    {labels.instruction1}
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }} marginBottom={2}>
-                    {labels.instruction2}
-                </Typography>
-                <Typography id="modal-modal-description" sx={{ mt: 2 }} marginTop={1} marginBottom={2}>
-                    {labels.break2}
-                </Typography>
-                <Button onClick={props.close}>{labels.close}</Button>
+                {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    {modalLabels.instruction1}
+                </Typography> */}
+                <Button onClick={props.close}>{modalLabels.close}</Button>
             </Box>
         </Modal>
     )
