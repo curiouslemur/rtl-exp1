@@ -12,7 +12,7 @@ export const Intro = (props) => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setCannotStart(false)
-        }, 5000) // TODO: make this like 30s instead 
+        }, 1000) // TODO: make this like 30s instead 
         return () => clearTimeout(timeout);
     }, []);
 
@@ -25,7 +25,6 @@ export const Intro = (props) => {
 
                     <h2>{labels.introTitle}</h2>
                     <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
-
                     <props.expPages.Intro keywordColor="#ea3433" /> <br />
 
                     <Button variant='contained' style={{ marginTop: '5ch' }}

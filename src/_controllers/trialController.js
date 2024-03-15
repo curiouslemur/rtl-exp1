@@ -1,4 +1,5 @@
 import * as dao from '../_utils/firebase-config'
+import * as d3 from 'd3'
 
 export const shuffle = (a) => { //Fisher-Yates shuffle
     var j, x, i;
@@ -8,7 +9,7 @@ export const shuffle = (a) => { //Fisher-Yates shuffle
     } return a;
 }
 
-export const onClickNext = (
+export const onClickNext_old = (
     setColorCodeList, colorCodeList, conceptList,
     setProgressColor, progressColor,
     setSliderValue, sliderValue,
@@ -61,6 +62,69 @@ export const onClickNext = (
         // TODO: here alert the next block
         setSliderValue(50)
         alert(nextBlockAlertMessage + conceptList[progressBlock + 1].toUpperCase())
+    } else {
+        navigate(nextUrl)
+    }
+
+}
+
+export const addEmptyPlaceholder = (divId) => {
+    d3.select("#chartSvg").remove()
+    d3.select(divId).append('svg')
+        .attr('width', 100).attr('height', 408)
+        .attr('id', "chartSvg")
+}
+
+
+export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart) => {
+    d3.select("#chartSvg").remove()
+
+    var elem = document.createElement("img");
+    document.getElementById(divId).appendChild(elem);
+    elem.src = stimulusData.imgSrc;
+    elem.id = "chartSvg"
+    // elem.width = 900
+    // elem.height = 900
+
+    setVisibilityAnserwField("visible")
+    setCannotShowChart(true)
+
+}
+
+export const onChangeAnsField = (e, setCannotNext) => {
+    if (e.target.value.length >= 1) {
+        setCannotNext(false)
+    }
+}
+
+/**
+ * 
+ * @param {*} e 
+ * @param {*} progress initiated at 0
+ * @param {*} setProgress 
+ * @param {*} chartSvgId 
+ * @param {*} setCannotShowChart 
+ * @param {*} setVisibilityAnserwField 
+ * @param {*} totalQ 
+ * @param {*} stimulusData 
+ */
+export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowChart, setVisibilityAnserwField,
+    setCannotNext,
+    totalQ, stimulusData,
+    navigate, nextUrl) => {
+
+    let dem = JSON.parse(sessionStorage.getItem('demography'))
+    dem.progress = progress + 1 // because progress was initiated at 0
+
+    dao.logDem(dem)
+    if (progress < totalQ - 1) {
+
+        setProgress(progress + 1)
+        addEmptyPlaceholder(chartSvgId)
+        setCannotShowChart(false)
+        setVisibilityAnserwField("hidden")
+        setCannotNext(true)
+
     } else {
         navigate(nextUrl)
     }

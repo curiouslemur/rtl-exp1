@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Container, Box, Button, Grid, Modal, Typography } from "@mui/material";
+import { Container, Box, Button, Grid, Modal, TextField, Typography } from "@mui/material";
 // import { ThemeProvider } from "@mui/material/styles";
-
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+// import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
 import { stimuli } from "../stimuli/stimuli";
-import { refEqual } from "firebase/firestore";
+import { Visibility } from "@mui/icons-material";
 
 const styles = {
     button: { marginTop: 10, marginBottom: 10 },
@@ -22,39 +21,29 @@ export const Trial = (props) => {
     let expLang = props.config.expLang
     const labels = props.expPages.TrialLabels
 
-    const [progressIndex, setProgressIndex] = useState(0) // TODO: when saving progress: add +1
+    const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [isVisible, setIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
 
-    const [displayAnswerField, setDisplayAnserwField] = React.useState('none')
+    const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
 
     const onClickShowChart = (e, setCannotShowChart) => {
         e.preventDefault()
         setCannotShowChart(true)
         setIsVisible(true)
-        setDisplayAnserwField('')
+        setVisibilityAnserwField(1)
     }
 
     // --------------------------------
     const [progressBlock, setProgressBlock] = useState(0)
-    const [progressColor, setProgressColor] = useState(0)
-
-    const [colorCodeList, setColorCodeList] = useState(props.colorCodes) // list of color codes
-    // console.log("showing index: ", progressColor)
-
     const [helpIsOpen, setHelpIsOpen] = useState(false)
 
-    const conceptList = props.conceptList
-    // const nBlock = conceptList.length
-
-
-    const closeHelpModal = () => {
-        setHelpIsOpen(false)
-    }
+    const closeHelpModal = () => { setHelpIsOpen(false) }
 
     useEffect(() => {
+        tc.addEmptyPlaceholder("#chartDiv")
     }, []);
 
     return (
@@ -63,11 +52,9 @@ export const Trial = (props) => {
         //     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
         //         onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
         //         disabled={cannotShowChart} > {labels.showChartButton}</Button>
-        //     <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
-        //     </Grid>
+        //     <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}> </Grid>
 
         //     <Grid>
-
         //         <div style={{ position: 'absolute', top: 10, left: 10, padding: '10px' }}>
         //             <HelpOutlineIcon
         //                 onClick={() => setHelpIsOpen(true)} />
@@ -82,24 +69,38 @@ export const Trial = (props) => {
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
                 <Grid item xs={12} marginTop={2}>
-                    <Typography fontSize={18} fontWeight='bold'>
-                        {stimuli[progressIndex][expLang].q}
+                    <Typography fontSize={20} fontWeight='bold'>
+                        {stimuli[progress][expLang].q}
                     </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                        onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
+                        // onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
+                        onClick={(e, divId, stimulusData, svaf, scsc) => tc.onClickShowChart(
+                            "chartDiv",
+                            stimuli[progress],
+                            setVisibilityAnserwField,
+                            setCannotShowChart)}
                         disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
+
+                <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
+
                 <Grid item xs={12} marginTop={2}>
-                    <AnswerSection
-                        answerType={stimuli[progressIndex].ansType}
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <Button id="consent-next-button" variant="contained" color="secondary"
-                        disableRipple disableFocusRipple style={styles.button}
-                        // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
-                        disabled={cannotNext}
-                    > {labels.nextButton} </Button>
+                    {visibilityAnsField === "visible" ?
+                        <AnswerSection
+                            answerType={stimuli[progress].ansType}
+                            labels={labels}
+                            cannotNext={cannotNext}
+                            setCannotNext={setCannotNext}
+                            progress={progress}
+                            setProgress={setProgress}
+                            setCannotShowChart={setCannotShowChart}
+                            setVisibilityAnserwField={setVisibilityAnserwField}
+                            totalQ={stimuli.length}
+                            stimulusData={stimuli[progress]}
+                            navigate={props.navigate} nextUrl={props.nextUrl}
+                        /> : <></>
+                    }
+
                 </Grid>
             </Grid>
 
@@ -108,17 +109,38 @@ export const Trial = (props) => {
 }
 
 const AnswerSection = (props) => {
-    console.log(props.answerType)
+    // console.log(props.answerType)
+    const labels = props.labels
     switch (props.answerType) {
         case "input":
             return (
-                <input
-                    id={'inputAnswer'}
-                    type={"number"}
-                // onChange={(event, scs) => { tc.onChangeField(event) }}
-                ></input>
-            )
+                <>
+                    <Grid item xs={12} marginTop={2}>
+                        <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
+                            type="number"
+                            // helperText={labels.ansTextfieldHelper}
+                            onChange={(e, scn) => tc.onChangeAnsField(e, props.setCannotNext)}
+                        />
+                        <Grid item xs={12}>
 
+                            <Button id="consent-next-button" variant="contained" color="secondary"
+                                disableRipple disableFocusRipple style={styles.button}
+                                // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
+                                disabled={props.cannotNext}
+                                onClick={(e, p, setP, chartSvgId, scsc, svaf,
+                                    scn,
+                                    tq, sd, nav, nU) => tc.onClickNext(
+                                        e, props.progress, props.setProgress, "#chartSvg",
+                                        props.setCannotShowChart, props.setVisibilityAnserwField,
+                                        props.setCannotNext,
+                                        props.totalQ, props.stimulusData,
+                                        props.navigate, props.nextUrl)}
+                            > {labels.nextButton} </Button>
+                        </Grid>
+                    </Grid>
+                </>
+
+            )
         case "buttons":
             return (
                 <>
@@ -128,15 +150,6 @@ const AnswerSection = (props) => {
             )
         default: return (<></>)
     }
-}
-
-const AnswerButtons = (props) => {
-    return (
-        <>
-            <Button>Button 1</Button>
-            <Button>Button 2</Button>
-        </>
-    )
 }
 
 const HelpModal = (props) => {
