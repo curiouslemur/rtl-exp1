@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, ListItem, Typography } from "@mui/material";
+import { Box, Grid, ListItem, Paper, Typography } from "@mui/material";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 export const IntroEn = (props) => {
@@ -25,14 +25,30 @@ export const IntroEn = (props) => {
                     }
                 }}>
                     <Typography variant="body1" style={{ padding: '1%' }}>
-                        <b>{il.scenarioTitle}</b> Following a request from the city of Worcesterland, officials recorded the daily number of cars passing in front of the city hall.
-                        {/* the number of cars passing in front of the main theater building was recorded daily.  */}
-                        The recorded counts per day are visualized using barcharts.
-                        The data collected during the study are presented visually using the barchart.
+                        <b>{il.scenarioTitle}</b> Following a request from the city council, the number of daily visitors of the art museum is recorded over several days.
+                        {/* The recorded number of visitors per day is visualized using barcharts. */}
+                        The data collected are presented visually using a barchart, a linechart, or a radial chart.
                         <br />
                     </Typography>
                 </Box>
                 <img src="figures/bar-example-english.svg" alt="" width={'600px'} />
+
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        '& > :not(style)': {
+                            m: 1,
+                            width: '31%',
+                            height: 128,
+                        },
+                    }}
+                >
+                    <Paper elevation={0} />
+                    <Paper />
+                    <Paper elevation={3} />
+                </Box>
+
                 <Box sx={{
                     width: '100%', backgroundColor: '#9c27b022', paddingBottom: '10px',
                     '&:hover': {
@@ -44,44 +60,48 @@ export const IntroEn = (props) => {
                     </Typography>
                     <Typography>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            each day is represented by a bar in the barchart
+                            each day is represented by one chart attribute: a bar in a barchart, a connected dot in a linechart, and a wedge in the radial chart.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            the height of a bar represents the number of cars observed during that day (the actual value is shown above each bar)
+                            the height of a bar represents the number of cars observed during that day (the actual value is sometimes shown above the bar). A general rule of thumb is that the taller the bar, the more cars there are in that day.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            the days are ordered from first to last day of the study. Dark-colored bars indicate <b>holidays</b>
+                            the days are ordered from first to last day of the study.
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Dark-colored bars indicate <b>holidays</b>
                         </ListItem>
                     </Typography>
                 </Box>
-                <Typography>
-                    <br /> You will be asked questions about the charts. You will be given a few seconds to read each question carefully.
-                    <br /> When ready, click the button to show the chart. Use the chart to form your answer. <br />
-                </Typography>
+
                 <br />
                 <Box sx={{
-                    width: '100%', height: '30px', backgroundColor: '#9c27b022', padding: '10px',
+                    width: '100%', backgroundColor: '#9c27b022', paddingBottom: '10px',
                     '&:hover': {
                         backgroundColor: '#80818312', //opacity: [0.9, 0.8, 0.7]
                     }
                 }}>
-                    <Typography fontWeight={'bold'}>The charts will be visible only during a few seconds, so answer quickly.</Typography>
+                    <Typography variant="body1" style={{ padding: '1%' }}>
+                        <b> About the trials: </b>
+                    </Typography>
+                    <Typography>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            each trial consists of a question and an interactive chart. You will be given a few seconds to read each question carefully.
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            When ready, click the button to show the chart.
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
+                            There are no trick questions. Use your intuition to answer as quickly as possible.
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Depending on the question, you will answer by either clicking on one element of the chart, select from a dropdown list, or type your answer.
+                        </ListItem>
+                    </Typography>
                 </Box>
-                <Typography >
-                    <br /> There are no trick questions. Feel free to follow your intuition when answering the question.
-                </Typography>
 
                 <Typography>
-                    <br /> Type your answer in the space provided. Unless otherwise indicated, we expect your answer to be numerical only.
-                    {/* <br /> <b> a GIF that showing typing 1, or 3 or </b> */}
-                </Typography>
-
-                <Typography>
-                    <br /> When you are happy with your answer, click next to proceed to the next question
-                    <br /> You can access the scenario and this instruction page at anytime by clicking on the help icon <HelpOutlineIcon style={{ marginLeft: 5, marginRight: 5 }} fontSize="medium" />
+                    <br /> You can accessthis instruction page at anytime by clicking on the help icon <HelpOutlineIcon style={{ marginLeft: 5, marginRight: 5 }} fontSize="medium" />
                 </Typography>
             </Grid >
-
         </>
     )
 }

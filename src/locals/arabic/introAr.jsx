@@ -25,10 +25,9 @@ export const IntroAr = (props) => {
                     }
                 }}>
                     <Typography variant="body1" style={{ padding: '1%' }}>
-                        <b>{il.scenarioTitle}</b> Following a request from the city of Worcesterland, officials recorded the daily number of cars passing in front of the city hall.
-                        {/* the number of cars passing in front of the main theater building was recorded daily.  */}
-                        The recorded counts per day are visualized using barcharts.
-                        The data collected during the study are presented visually using the barchart.
+                        <b>{il.scenarioTitle}</b> Following a request from the city council, the number of daily visitors of the art museum is recorded over several days.
+                        {/* The recorded number of visitors per day is visualized using barcharts. */}
+                        The data collected are presented visually using a barchart, a linechart, or a radial chart.
                         <br />
                     </Typography>
                 </Box>
@@ -44,19 +43,23 @@ export const IntroAr = (props) => {
                     </Typography>
                     <Typography>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            each day is represented by a bar in the barchart
+                            each day is represented by one chart attribute: a bar in a barchart, a connected dot in a linechart, and a wedge in the radial chart.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            the height of a bar represents the number of cars observed during that day (the actual value is shown above each bar)
+                            the height of a bar represents the number of cars observed during that day (the actual value is sometimes shown above the bar). A general rule of thumb is that the taller the bar, the more cars there are in that day.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            the days are ordered from first to last day of the study. Dark-colored bars indicate <b>holidays</b>
+                            the days are ordered from first to last day of the study.
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Dark-colored bars indicate <b>holidays</b>
                         </ListItem>
                     </Typography>
                 </Box>
                 <Typography>
-                    <br /> You will be asked questions about the charts. You will be given a few seconds to read each question carefully.
-                    <br /> When ready, click the button to show the chart. Use the chart to form your answer. <br />
+                    <br /> Each chart comes with a question about the data. You will be given a few seconds to read each question carefully.
+                    <br /> When ready, click the button to show the chart.
+                    <br /> Use your intuition to answer as fast as you can.
+                    <br /> Click on the chart answer and move on to the next question.
                 </Typography>
                 <br />
                 <Box sx={{

@@ -25,6 +25,7 @@ export const Intro = (props) => {
 
                     <h2>{labels.introTitle}</h2>
                     <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
+
                     <props.expPages.Intro keywordColor="#ea3433" /> <br />
 
                     <Button variant='contained' style={{ marginTop: '5ch' }}
