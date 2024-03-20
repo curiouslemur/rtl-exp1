@@ -71,12 +71,12 @@ export const onClickNext_old = (
 export const addEmptyPlaceholder = (divId) => {
     d3.select("#chartSvg").remove()
     d3.select(divId).append('svg')
-        .attr('width', 100).attr('height', 408)
+        .attr('width', 720).attr('height', 325)
         .attr('id', "chartSvg")
 }
 
 
-export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart) => {
+export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible) => {
     d3.select("#chartSvg").remove()
 
     var elem = document.createElement("img");
@@ -88,7 +88,7 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
 
     setVisibilityAnserwField("visible")
     setCannotShowChart(true)
-
+    setChartIsVisible(true)
 }
 
 export const onChangeAnsField = (e, setCannotNext) => {

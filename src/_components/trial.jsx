@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Box, Button, Grid, Modal, TextField, Typography } from "@mui/material";
+import * as d3 from 'd3'
 // import { ThemeProvider } from "@mui/material/styles";
 // import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
@@ -24,7 +25,7 @@ export const Trial = (props) => {
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
-    const [isVisible, setIsVisible] = React.useState(false);
+    const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
@@ -32,7 +33,7 @@ export const Trial = (props) => {
     const onClickShowChart = (e, setCannotShowChart) => {
         e.preventDefault()
         setCannotShowChart(true)
-        setIsVisible(true)
+        setChartIsVisible(true)
         setVisibilityAnserwField(1)
     }
 
@@ -45,6 +46,15 @@ export const Trial = (props) => {
     useEffect(() => {
         tc.addEmptyPlaceholder("#chartDiv")
     }, []);
+
+    useEffect(() => {
+        if (chartIsVisible === true) {
+            setTimeout(() => {
+                tc.addEmptyPlaceholder("#chartDiv");
+                setChartIsVisible(false)
+            }, 4000)
+        }
+    }, [chartIsVisible])
 
     return (
         // <ThemeProvider>
@@ -73,12 +83,12 @@ export const Trial = (props) => {
                         {stimuli[progress][expLang].q}
                     </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                        // onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
-                        onClick={(e, divId, stimulusData, svaf, scsc) => tc.onClickShowChart(
+                        onClick={(e, divId, stimulusData, svaf, scsc, sciv) => tc.onClickShowChart(
                             "chartDiv",
                             stimuli[progress],
                             setVisibilityAnserwField,
-                            setCannotShowChart)}
+                            setCannotShowChart,
+                            setChartIsVisible)}
                         disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
 
