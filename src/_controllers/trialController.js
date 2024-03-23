@@ -83,8 +83,8 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
     document.getElementById(divId).appendChild(elem);
     elem.src = stimulusData.imgSrc;
     elem.id = "chartSvg"
-    // elem.width = 900
-    // elem.height = 900
+    elem.style.width = "100%"
+    // elem.style.height = 
 
     setVisibilityAnserwField("visible")
     setCannotShowChart(true)

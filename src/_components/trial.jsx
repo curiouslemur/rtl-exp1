@@ -52,7 +52,7 @@ export const Trial = (props) => {
             setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 4000)
+            }, 100000)
         }
     }, [chartIsVisible])
 
