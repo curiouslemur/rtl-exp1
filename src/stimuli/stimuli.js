@@ -16,43 +16,29 @@ export const stimuli = [ // questions and labels in English. Order is important 
         cat: "count-all",
         imgSrc: imgPath + "bar-1-u.svg",
         sorted: "u",
-        anchors: [
-            { pos: -1, val: 0 },
-            { pos: -1, val: 0 },
-        ],
-        valMarked: -1,
-        valL: -1,
-        valR: -1,
-        ansExpected: 16,
-        ansL: 16,
-        ansR: 16,
+        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        valMarked: -1, valL: -1, valR: -1,
+        ansExpected: 16, ansL: 16, ansR: 16,
         ansType: "input",
         ansOptions: [7, 8, 9, 10, 11],
         en: {
             q: "How many days did the data collection last?",
             ansLabel: "Type a number here",
-            ansOptions: [],
-            nextButton: "Next"
+            ansOptions: []
         },
         ar: {
             q: "Question in arabic: How many days did the data collection last?",
             ansLabel: "Type a number here",
-            ansOptions: [],
-            nextButton: "التالي"
+            ansOptions: []
         }
     }, {
-        qId: 2,
+        qId: 2, // The second question will be either of the sst or sts versions
         chartType: "bar",
         imgSrc: imgPath + ["bar-2-sst.svg", "bar-2-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
         cat: "identify-trends",
         sorted: "sst",
-        anchors: [
-            { pos: -1, val: 0 },
-            { pos: -1, val: 0 },
-        ],
-        valMarked: -1,
-        valL: -1,
-        valR: -1,
+        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", // two possible answers depending on from where participant starts
         ansL: "increase", // answer had the user started from the left
         ansR: "decrease", // answer had the user started from the right
@@ -61,17 +47,16 @@ export const stimuli = [ // questions and labels in English. Order is important 
             q: "Did the number of visitors increase or decrease over the course of the study?",
             ansLabel: "The number of visitors ",
             ansOptions: ["increased", "decreased"],
-            nextButton: "Next"
         },
         ar: {
             q: "Question in arabic?",
             ansLabel: "The number of visitors ",
             ansOptions: ["increased", "decreased"],
-            nextButton: "التالي"
         }
     }, {
         qId: 3,
         chartType: "bar",
-        imgSrc: imgPath + "bar-3-"
+        imgSrc: imgPath + "bar-3-u.svg",
+
     }
 ]

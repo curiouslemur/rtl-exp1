@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Box, Button, Grid, Modal, TextField, Typography } from "@mui/material";
+import { Container, Box, Button, Grid, Modal, TextField, Typography, MenuItem, FormControl, InputLabel, Select } from "@mui/material";
 import * as d3 from 'd3'
 // import { ThemeProvider } from "@mui/material/styles";
 // import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
@@ -18,7 +18,6 @@ const styles = {
 }
 
 export const Trial = (props) => {
-    let imagePath = "figures/"
     let expLang = props.config.expLang
     const labels = props.expPages.TrialLabels
 
@@ -99,18 +98,33 @@ export const Trial = (props) => {
                         <AnswerSection
                             answerType={stimuli[progress].ansType}
                             labels={labels}
-                            cannotNext={cannotNext}
+                            // cannotNext={cannotNext}
                             setCannotNext={setCannotNext}
-                            progress={progress}
-                            setProgress={setProgress}
+                            // progress={progress}
+                            // setProgress={setProgress}
                             setCannotShowChart={setCannotShowChart}
                             setVisibilityAnserwField={setVisibilityAnserwField}
-                            totalQ={stimuli.length}
+                            // totalQ={stimuli.length}
                             stimulusData={stimuli[progress]}
-                            navigate={props.navigate} nextUrl={props.nextUrl}
+                            expLang={props.expLang}
+                        // navigate={props.navigate} nextUrl={props.nextUrl}
                         /> : <></>
                     }
-
+                </Grid>
+                <Grid item xs={12} marginTop={2}>
+                    <Button id="consent-next-button" variant="contained" color="secondary"
+                        disableRipple disableFocusRipple style={styles.button}
+                        // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
+                        disabled={cannotNext}
+                        onClick={(e, p, setP, chartSvgId, scsc, svaf,
+                            scn,
+                            tq, sd, nav, nU) => tc.onClickNext(
+                                e, progress, setProgress, "#chartSvg",
+                                setCannotShowChart, setVisibilityAnserwField,
+                                setCannotNext,
+                                stimuli.length, stimuli[progress],
+                                props.navigate, props.nextUrl)}
+                    > {labels.nextButton} </Button>
                 </Grid>
             </Grid>
 
@@ -119,8 +133,11 @@ export const Trial = (props) => {
 }
 
 const AnswerSection = (props) => {
+    const [optionValue, setOptionValue] = useState('')
     // console.log(props.answerType)
     const labels = props.labels
+    const ansElements = props.stimulusData[props.expLang]
+
     switch (props.answerType) {
         case "input":
             return (
@@ -129,35 +146,35 @@ const AnswerSection = (props) => {
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
                             type="number"
                             // helperText={labels.ansTextfieldHelper}
-                            onChange={(e, scn) => tc.onChangeAnsField(e, props.setCannotNext)}
+                            onChange={(e, scn) => tc.onChangeAnsTextField(e, props.setCannotNext)}
                         />
-                        <Grid item xs={12}>
-
-                            <Button id="consent-next-button" variant="contained" color="secondary"
-                                disableRipple disableFocusRipple style={styles.button}
-                                // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
-                                disabled={props.cannotNext}
-                                onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                                    scn,
-                                    tq, sd, nav, nU) => tc.onClickNext(
-                                        e, props.progress, props.setProgress, "#chartSvg",
-                                        props.setCannotShowChart, props.setVisibilityAnserwField,
-                                        props.setCannotNext,
-                                        props.totalQ, props.stimulusData,
-                                        props.navigate, props.nextUrl)}
-                            > {labels.nextButton} </Button>
-                        </Grid>
                     </Grid>
                 </>
-
             )
-        case "buttons":
-            return (
-                <>
-                    <Button>Button1</Button>
-                    <Button>Button2</Button>
-                </>
-            )
+        case "select":
+            let options = ansElements.ansOptions
+            return (<>
+                <Box sx={{ minWidth: 120 }}>
+                    <FormControl style={{ minWidth: 150 }}>
+                        {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
+                        <Select
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={optionValue}
+                            // label=""
+                            onChange={(e, scn, sov) => tc.onChangeAnsSelect(e, props.setCannotNext, setOptionValue)}
+                        >
+                            {options.map((option, index) => {
+                                return (
+                                    <MenuItem key={option} value={option}>{option}</MenuItem>
+                                )
+                            })}
+                            {/* <MenuItem value={10}>{ansElements.ansOptions[1]}</MenuItem>
+                            <MenuItem value={30}>Thirty</MenuItem> */}
+                        </Select>
+                    </FormControl>
+                </Box >
+            </>)
         default: return (<></>)
     }
 }

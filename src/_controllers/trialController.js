@@ -91,14 +91,17 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
     setChartIsVisible(true)
 }
 
-export const onChangeAnsField = (e, setCannotNext) => {
+export const onChangeAnsTextField = (e, setCannotNext) => {
     if (e.target.value.length >= 1) {
         setCannotNext(false)
     }
 }
 
+export const onChangeAnsSelect = (e, setCannotNext, setOptionValue) => {
+    setOptionValue(e.target.value)
+}
+
 /**
- * 
  * @param {*} e 
  * @param {*} progress initiated at 0
  * @param {*} setProgress 
