@@ -45,9 +45,7 @@ export const onClickNext_old = (
 
     sessionStorage.setItem("demography", JSON.stringify(dem))
 
-    if (progressColor === 0 & progressBlock === 0) {
-        alert("You can also press Enter to progress to the next trial")
-    }
+    if (progressColor === 0 & progressBlock === 0) { alert("You can also press Enter to progress to the next trial") }
 
     if (progressColor < colorCodeList.length - 1) { // colorCodeLength = 37. Within the same block but with a different color
         setProgressColor(progressColor + 1)
@@ -62,16 +60,14 @@ export const onClickNext_old = (
         // TODO: here alert the next block
         setSliderValue(50)
         alert(nextBlockAlertMessage + conceptList[progressBlock + 1].toUpperCase())
-    } else {
-        navigate(nextUrl)
-    }
+    } else { navigate(nextUrl) }
 
 }
 
 export const addEmptyPlaceholder = (divId) => {
     d3.select("#chartSvg").remove()
     d3.select(divId).append('svg')
-        .attr('width', 720).attr('height', 325)
+        .attr('width', 720).attr('height', 395)
         .attr('id', "chartSvg")
 }
 
@@ -91,15 +87,20 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
     setChartIsVisible(true)
 }
 
-export const onChangeAnsTextField = (e, setCannotNext) => {
+export const onChangeAnsTextField = (e, setCannotNext, setAnsValue) => {
     if (e.target.value.length >= 1) {
         setCannotNext(false)
+        setAnsValue(e.target.value)
     }
 }
 
-export const onChangeAnsSelect = (e, setCannotNext, setOptionValue) => {
-    setOptionValue(e.target.value)
+export const onChangeAnsSelect = (e, setCannotNext, setAnsValue) => {
+    // setOptionValue(e.target.value)
+    setCannotNext(false)
+    setAnsValue(e.target.value)
 }
+
+
 
 /**
  * @param {*} e 
@@ -117,11 +118,11 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     navigate, nextUrl) => {
 
     let dem = JSON.parse(sessionStorage.getItem('demography'))
+    console.log(dem)
     dem.progress = progress + 1 // because progress was initiated at 0
-
     dao.logDem(dem)
-    if (progress < totalQ - 1) {
 
+    if (progress < totalQ - 1) {
         setProgress(progress + 1)
         addEmptyPlaceholder(chartSvgId)
         setCannotShowChart(false)

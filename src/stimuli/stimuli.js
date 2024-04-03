@@ -23,7 +23,6 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansOptions: [7, 8, 9, 10, 11],
         en: {
             q: "How many days did the data collection last?",
-            ansLabel: "Type a number here",
             ansOptions: []
         },
         ar: {
@@ -35,8 +34,8 @@ export const stimuli = [ // questions and labels in English. Order is important 
         qId: 2, // The second question will be either of the sst or sts versions
         chartType: "bar",
         imgSrc: imgPath + ["bar-2-sst.svg", "bar-2-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
-        cat: "identify-trends",
-        sorted: "sst",
+        cat: "identify-trend",
+        // sorted: "sst",
         anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", // two possible answers depending on from where participant starts
@@ -57,6 +56,21 @@ export const stimuli = [ // questions and labels in English. Order is important 
         qId: 3,
         chartType: "bar",
         imgSrc: imgPath + "bar-3-u.svg",
-
+        cat: "extract-value",
+        sorted: "u",
+        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        valMarked: -1, valL: -1, valR: -1,
+        ansExpected: "either", ansL: 133, ansR: 200,
+        ansType: "input",
+        en: {
+            q: "How many visitors on the fifth day?",
+            ansLabel: " ",
+            ansOptions: [],
+        },
+        ar: {
+            q: "كم عدد الزوار في اليوم الخامس؟",
+            ansLabel: "",
+            ansOptions: [],
+        }
     }
 ]

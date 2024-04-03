@@ -7,7 +7,6 @@ import * as d3 from 'd3'
 import '../App.css'
 import * as tc from "../_controllers/trialController"
 import { stimuli } from "../stimuli/stimuli";
-import { Visibility } from "@mui/icons-material";
 
 const styles = {
     button: { marginTop: 10, marginBottom: 10 },
@@ -28,6 +27,7 @@ export const Trial = (props) => {
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
+    const [ansValue, setAnsValue] = useState()
 
     const onClickShowChart = (e, setCannotShowChart) => {
         e.preventDefault()
@@ -95,36 +95,37 @@ export const Trial = (props) => {
 
                 <Grid item xs={12} marginTop={2}>
                     {visibilityAnsField === "visible" ?
-                        <AnswerSection
-                            answerType={stimuli[progress].ansType}
-                            labels={labels}
-                            // cannotNext={cannotNext}
-                            setCannotNext={setCannotNext}
-                            // progress={progress}
-                            // setProgress={setProgress}
-                            setCannotShowChart={setCannotShowChart}
-                            setVisibilityAnserwField={setVisibilityAnserwField}
-                            // totalQ={stimuli.length}
-                            stimulusData={stimuli[progress]}
-                            expLang={props.expLang}
-                        // navigate={props.navigate} nextUrl={props.nextUrl}
-                        /> : <></>
+                        <>
+                            <AnswerSection
+                                answerType={stimuli[progress].ansType}
+                                labels={labels}
+                                // cannotNext={cannotNext}
+                                setCannotNext={setCannotNext}
+                                // progress={progress}
+                                // setProgress={setProgress}
+                                setCannotShowChart={setCannotShowChart}
+                                setVisibilityAnserwField={setVisibilityAnserwField}
+                                // totalQ={stimuli.length}
+                                stimulusData={stimuli[progress]}
+                                expLang={props.expLang}
+                                setAnsValue={setAnsValue}
+                            // navigate={props.navigate} nextUrl={props.nextUrl}
+                            />
+                            <Button id="consent-next-button" variant="contained" color="secondary"
+                                disableRipple disableFocusRipple style={styles.button}
+                                // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
+                                disabled={cannotNext}
+                                onClick={(e, p, setP, chartSvgId, scsc, svaf,
+                                    scn,
+                                    tq, stimData, nav, nU) => tc.onClickNext(
+                                        e, progress, setProgress, "#chartSvg",
+                                        setCannotShowChart, setVisibilityAnserwField,
+                                        setCannotNext,
+                                        stimuli.length, stimuli[progress],
+                                        props.navigate, props.nextUrl)}
+                            > {labels.nextButton} </Button>
+                        </> : <></>
                     }
-                </Grid>
-                <Grid item xs={12} marginTop={2}>
-                    <Button id="consent-next-button" variant="contained" color="secondary"
-                        disableRipple disableFocusRipple style={styles.button}
-                        // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
-                        disabled={cannotNext}
-                        onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                            scn,
-                            tq, sd, nav, nU) => tc.onClickNext(
-                                e, progress, setProgress, "#chartSvg",
-                                setCannotShowChart, setVisibilityAnserwField,
-                                setCannotNext,
-                                stimuli.length, stimuli[progress],
-                                props.navigate, props.nextUrl)}
-                    > {labels.nextButton} </Button>
                 </Grid>
             </Grid>
 
@@ -146,7 +147,7 @@ const AnswerSection = (props) => {
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
                             type="number"
                             // helperText={labels.ansTextfieldHelper}
-                            onChange={(e, scn) => tc.onChangeAnsTextField(e, props.setCannotNext)}
+                            onChange={(e, scn, sav) => tc.onChangeAnsTextField(e, props.setCannotNext, props.setAnsValue)}
                         />
                     </Grid>
                 </>
@@ -155,14 +156,13 @@ const AnswerSection = (props) => {
             let options = ansElements.ansOptions
             return (<>
                 <Box sx={{ minWidth: 120 }}>
+                    <InputLabel>{ansElements.ansLabel}</InputLabel>
                     <FormControl style={{ minWidth: 150 }}>
-                        {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
                             value={optionValue}
-                            // label=""
-                            onChange={(e, scn, sov) => tc.onChangeAnsSelect(e, props.setCannotNext, setOptionValue)}
+                            onChange={(e, scn, sav) => { setOptionValue(e.target.value); tc.onChangeAnsSelect(e, props.setCannotNext, props.setAnsValue) }}
                         >
                             {options.map((option, index) => {
                                 return (
