@@ -22,13 +22,14 @@ function App() {
   const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp
 
   const stimuli = loadStimuli_inLang(expLang)
-
+  console.log(stimuli)
   const meta = {
     expLang: expLang,
     expName: expLang + '-rtl1', title: "rtl-exp1",
     sessionID: generateSessionID(),
     totalQs: stimuli
   }
+
   const navigate = useNavigate()
   const subdom = "/rtl-exp1"
 

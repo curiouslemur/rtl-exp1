@@ -43,7 +43,22 @@ export const loadStimuli_inLang = (lang) => {
             }
         }
     }
-    return (tmp)
 
+    // Removing unnecessary questions
+
+    let fin = [
+        tmp[0],
+        [tmp[1], tmp[2]][(Math.random() > 0.5) ? 1 : 0],
+        tmp[3],
+        [tmp[4], tmp[5]][(Math.random() > 0.5) ? 1 : 0],
+        tmp[6],
+        [tmp[8], tmp[9]][(Math.random() > 0.5) ? 1 : 0],
+
+    ]
+    return (fin)
+
+
+
+    // imgSrc: imgPath + ["bar-2-sst.svg", "bar-2-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
 
 }

@@ -6,7 +6,7 @@ import * as d3 from 'd3'
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
-import { stimuli } from "../stimuli/stimuli";
+// import { stimuli } from "../stimuli/stimuli";
 
 const styles = {
     button: { marginTop: 10, marginBottom: 10 },
@@ -35,16 +35,14 @@ export const Trial = (props) => {
         setChartIsVisible(true)
         setVisibilityAnserwField(1)
     }
-
+    const stimuli = props.stimuli
     // --------------------------------
     const [progressBlock, setProgressBlock] = useState(0)
     const [helpIsOpen, setHelpIsOpen] = useState(false)
 
     const closeHelpModal = () => { setHelpIsOpen(false) }
 
-    useEffect(() => {
-        tc.addEmptyPlaceholder("#chartDiv")
-    }, []);
+    useEffect(() => { tc.addEmptyPlaceholder("#chartDiv") }, []);
 
     useEffect(() => {
         if (chartIsVisible === true) {
