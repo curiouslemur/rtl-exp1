@@ -18,14 +18,13 @@ export const stimuli = [ // questions and labels in English. Order is important 
     {
         qId: 1,
         chartType: "bar",
-        cat: "count-all",
+        cat: "count-all", // also attention-checker
         imgSrc: imgPath + "bar-1-u.svg",
         sorted: "u",
-        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 16, ansL: 16, ansR: 16,
         ansType: "input",
-        ansOptions: [7, 8, 9, 10, 11],
         en: { q: "How many days did the data collection last?" },
         ar: { q: "Question in arabic: How many days did the data collection last?" }
     }, {
@@ -33,7 +32,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         chartType: "bar",
         imgSrc: imgPath + ["bar-2-sst.svg", "bar-2-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
         cat: "identify-trend", sorted: "",
-        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", // two possible answers depending on from where participant starts
         ansL: "increase", // answer had the user started from the left
@@ -54,7 +53,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         imgSrc: imgPath + "bar-3-u.svg",
         cat: "extract-value",
         sorted: "u",
-        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", ansL: -1, ansR: -1,
         ansType: "input",
@@ -66,15 +65,131 @@ export const stimuli = [ // questions and labels in English. Order is important 
         imgSrc: imgPath + ["bar-4-sst.svg", "bar-4-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
         cat: "extract-value",
         sorted: "",
-        anchors: [{ pos: -1, val: 0 }, { pos: -1, val: 0 }],
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: "either", ansL: -1, ansR: -1, // ansL and aansR can be added later to the data
+        ansExpected: "either", ansL: -1, ansR: -1, // TODO: Rather add it final now xxxx ansL and aansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
         ar: { q: "Question in arabic?" }
     }, {
         qId: 5,
         chartType: "bar",
-        imgSrc: imgPath + ".svg"
+        imgSrc: imgPath + "bar-5-u.svg",
+        cat: "count", // also attention-checker
+        sorted: "u",
+        anchorPos: 3,
+        valMarked: 50, valL: 89, valR: 46,
+        ansExpected: 1, ansL: 1, ansR: 1,
+        ansType: 'input',
+        en: { q: "How many holidays were there during the study?" },
+        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة?" }
+    }, {
+        qId: "X", // This is hard to collect the data for so maybe skip this one
+        chartType: "bar",
+        imgSrc: imgPath + "bar-6-u.svg",
+        cat: "locate-variable",
+        sorted: "u",
+        anchorPos: 11,
+        valMarked: 108, valL: 81, valR: 116,
+        ansExpected: "either", ansL: 11, ansR: 6,
+        ansType: 'input',
+        en: { q: "Which day was a holiday?" }, // answer would be 11th or 6th
+        ar: { q: "Question in Arabic?" }
+    }, {
+        qId: "6-count-until",
+        chartType: "bar",
+        imgSrc: imgPath + "bar-6-u.svg",
+        cat: "count",
+        sorted: "u",
+        anchorPos: 11,
+        valMarked: 108, valL: 81, valR: 116,
+        ansExpected: "either", ansL: 10, ansR: 5,
+        ansType: 'input',
+        en: { q: "How many days passed before the holiday?" }, // answer would be 11th or 6th
+        ar: { q: "Question in Arabic?" }
+    }, {
+        qId: "6-count-from",
+        chartType: "bar",
+        imgSrc: imgPath + "bar-6-u.svg",
+        cat: "count",
+        sorted: "u",
+        anchorPos: 11,
+        valMarked: 108, valL: 81, valR: 116,
+        ansExpected: "either", ansL: 11, ansR: 6,
+        ansType: 'input',
+        en: { q: "How many days passed after the holiday?" }, // answer would be 11th or 6th
+        ar: { q: "Question in Arabic?" }
+    }, {
+        qId: "7-extract-before",
+        chartType: "bar",
+        imgSrc: imgPath + "bar-7-u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: 7,
+        valMarked: 90, valL: 157, valR: 103,
+        ansExpected: "either", ansL: 157, ansR: 103,
+        ansType: 'input',
+        en: { q: "How many visistors were recorded on the day before the holiday?" },
+        ar: { q: "" }
+    }, {
+        qId: "7-extract-after",
+        chartType: "bar",
+        imgSrc: imgPath + "bar-7-u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: 71,
+        valMarked: 90, valL: 157, valR: 103,
+        ansExpected: "either", ansL: 157, ansR: 103,
+        ansType: 'input',
+        en: { q: "How many visistors were recorded on the day after the holiday?" },
+        ar: { q: "" }
+    }, {
+        qId: 0,
+        chartType: "bar",
+        imgSrc: imgPath + "bar--u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: -1,
+        valMarked: 0, valL: 89, valR: 46,
+        ansExpected: 1, ansL: 1, ansR: 1,
+        ansType: '',
+        en: { q: "" },
+        ar: { q: "" }
+    }, {
+        qId: 0,
+        chartType: "bar",
+        imgSrc: imgPath + "bar--u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: -1,
+        valMarked: 0, valL: 89, valR: 46,
+        ansExpected: 1, ansL: 1, ansR: 1,
+        ansType: '',
+        en: { q: "" },
+        ar: { q: "" }
+    }, {
+        qId: 0,
+        chartType: "bar",
+        imgSrc: imgPath + "bar--u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: -1,
+        valMarked: 0, valL: 89, valR: 46,
+        ansExpected: 1, ansL: 1, ansR: 1,
+        ansType: '',
+        en: { q: "" },
+        ar: { q: "" }
+    }, {
+        qId: 0,
+        chartType: "bar",
+        imgSrc: imgPath + "bar--u.svg",
+        cat: "",
+        sorted: "",
+        anchorPos: -1,
+        valMarked: 0, valL: 89, valR: 46,
+        ansExpected: 1, ansL: 1, ansR: 1,
+        ansType: '',
+        en: { q: "" },
+        ar: { q: "" }
     }
 ]
