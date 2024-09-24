@@ -67,7 +67,7 @@ export const onClickNext_old = (
 export const addEmptyPlaceholder = (divId) => {
     d3.select("#chartSvg").remove()
     d3.select(divId).append('svg')
-        .attr('width', 720).attr('height', 395)
+        .attr('width', 720).attr('height', 340)
         .attr('id', "chartSvg")
 }
 

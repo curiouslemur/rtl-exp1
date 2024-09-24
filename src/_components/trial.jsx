@@ -9,7 +9,7 @@ import * as tc from "../_controllers/trialController"
 // import { stimuli } from "../stimuli/stimuli";
 
 const styles = {
-    button: { marginTop: 10, marginBottom: 10 },
+    button: { marginTop: 20, marginBottom: 10 },
     container: { display: 'flex', flexWrap: 'wrap', padding: '5%' },
     gridItem: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
     root: { flexGrow: 1, margin: '2%' },
@@ -49,7 +49,7 @@ export const Trial = (props) => {
             setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 100000)
+            }, 3000)
         }
     }, [chartIsVisible])
 
@@ -97,7 +97,7 @@ export const Trial = (props) => {
                             <AnswerSection
                                 answerType={stimuli[progress].ansType}
                                 labels={labels}
-                                // cannotNext={cannotNext}
+                                cannotNext={cannotNext}
                                 setCannotNext={setCannotNext}
                                 // progress={progress}
                                 // setProgress={setProgress}
@@ -109,19 +109,22 @@ export const Trial = (props) => {
                                 setAnsValue={setAnsValue}
                             // navigate={props.navigate} nextUrl={props.nextUrl}
                             />
-                            <Button id="consent-next-button" variant="contained" color="secondary"
-                                disableRipple disableFocusRipple style={styles.button}
-                                // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
-                                disabled={cannotNext}
-                                onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                                    scn,
-                                    tq, stimData, nav, nU) => tc.onClickNext(
-                                        e, progress, setProgress, "#chartSvg",
-                                        setCannotShowChart, setVisibilityAnserwField,
-                                        setCannotNext,
-                                        stimuli.length, stimuli[progress],
-                                        props.navigate, props.nextUrl)}
-                            > {labels.nextButton} </Button>
+                            <Grid>
+
+                                <Button id="trial-next-button" variant="contained" color="secondary"
+                                    disableRipple disableFocusRipple style={styles.button}
+                                    // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
+                                    disabled={cannotNext}
+                                    onClick={(e, p, setP, chartSvgId, scsc, svaf,
+                                        scn,
+                                        tq, stimData, nav, nU) => tc.onClickNext(
+                                            e, progress, setProgress, "#chartSvg",
+                                            setCannotShowChart, setVisibilityAnserwField,
+                                            setCannotNext,
+                                            stimuli.length, stimuli[progress],
+                                            props.navigate, props.nextUrl)}
+                                > {labels.nextButton} </Button>
+                            </Grid>
                         </> : <></>
                     }
                 </Grid>
@@ -141,26 +144,38 @@ const AnswerSection = (props) => {
         case "input":
             return (
                 <>
-                    <Grid item xs={12} marginTop={2}>
+                    <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
+                        {/* <Grid item xs={12} marginTop={2}> */}
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
                             type="number"
+                            minWidth={5}
                             // helperText={labels.ansTextfieldHelper}
                             onChange={(e, scn, sav) => tc.onChangeAnsTextField(e, props.setCannotNext, props.setAnsValue)}
+                            InputProps={{
+                                inputProps: {
+                                    style: { textAlign: 'center' }
+                                }
+                            }}
                         />
-                    </Grid>
+                        {/* </Grid>  */}
+                    </Box>
                 </>
             )
         case "select":
             let options = ansElements.ansOptions
             return (<>
-                <Box sx={{ minWidth: 120 }}>
-                    <InputLabel>{ansElements.ansLabel}</InputLabel>
-                    <FormControl style={{ minWidth: 150 }}>
+                <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
+                    {/* <span style={{ marginTop: 10000 }}>{ansElements.ansLabel}</span> */}
+                    <InputLabel>{ansElements.ansLabel} </InputLabel>
+                    <FormControl variant="standard" style={{ minWidth: 110 }}>
                         <Select
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
+                            placeholder="Select"
+                            labelId="answer-select-label"
+                            id="answer-select"
                             value={optionValue}
+                            label="age"
                             onChange={(e, scn, sav) => { setOptionValue(e.target.value); tc.onChangeAnsSelect(e, props.setCannotNext, props.setAnsValue) }}
+
                         >
                             {options.map((option, index) => {
                                 return (

@@ -16,7 +16,7 @@
 const imgPath = "figures/"
 export const stimuli = [ // questions and labels in English. Order is important here
     {
-        qId: "1",
+        qId: "1-u",
         chartType: "bar",
         cat: "count-all", // also attention-checker
         imgSrc: imgPath + "bar-1-u.svg",
@@ -25,8 +25,8 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 16, ansL: 16, ansR: 16,
         ansType: "input",
-        en: { q: "How many days did the data collection last?" },
-        ar: { q: "Question in arabic: How many days did the data collection last?" }
+        en: { q: "How many days did the data collection last?", unit: "days." },
+        ar: { q: "Question in arabic: How many days did the data collection last?", unit: "days" }
     }, {
         qId: "2-sst", // The second question will be either of the sst or sts versions
         chartType: "bar",
@@ -40,7 +40,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansType: "select",
         en: {
             q: "Did the number of visitors increase or decrease over the course of the study?",
-            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
+            ansLabel: "The number of visitors ", ansOptions: ["increased.", "decreased."],
         }, ar: {
             q: "Question in arabic?",
             ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
@@ -64,7 +64,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
             ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
         }
     }, {
-        qId: "3",
+        qId: "3-u",
         chartType: "bar",
         imgSrc: imgPath + "bar-3-u.svg",
         cat: "extract-value",
@@ -76,14 +76,14 @@ export const stimuli = [ // questions and labels in English. Order is important 
         en: { q: "How many visitors on the fifth (5th) day?" },
         ar: { q: "كم عدد الزوار في اليوم الخامس؟" }
     }, {
-        qId: "4-sst",
+        qId: "4-sst", // The fourth question will be either of the sst or sts versions
         chartType: "bar",
         imgSrc: imgPath + "bar-4-sst.svg",
         cat: "extract-value",
         sorted: "sst",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: "either", ansL: 44, ansR: 64, // TODO: Rather add it final now xxxx ansL and aansR can be added later to the data
+        ansExpected: "either", ansL: 44, ansR: 64, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
         ar: { q: "Question in arabic?" }
@@ -95,14 +95,14 @@ export const stimuli = [ // questions and labels in English. Order is important 
         sorted: "sts",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: "either", ansL: 88, ansR: 31, // TODO: Rather add it final now xxxx ansL and aansR can be added later to the data
+        ansExpected: "either", ansL: 88, ansR: 31, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
         ar: { q: "Question in arabic?" }
     }, {
-        qId: "5",
+        qId: "5-u-1", // the fifth question will be either of the u-1 or u-2 versions
         chartType: "bar",
-        imgSrc: imgPath + "bar-5-u.svg",
+        imgSrc: imgPath + "bar-5-u-1.svg",
         cat: "count", // also attention-checker
         sorted: "u",
         anchorPos: 3,
@@ -111,19 +111,21 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansType: 'input',
         en: { q: "How many holidays were there during the study?" },
         ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة?" }
-    }, {
-        qId: "X", // This is hard to collect the data for so maybe skip this one
+    },
+    {
+        qId: "5-u-2",
         chartType: "bar",
-        imgSrc: imgPath + "bar-6-u.svg",
-        cat: "locate-variable",
+        imgSrc: imgPath + "bar-5-u-2.svg",
+        cat: "count", // also attention-checker
         sorted: "u",
-        anchorPos: 11,
-        valMarked: 108, valL: 81, valR: 116,
-        ansExpected: "either", ansL: 11, ansR: 6,
+        anchorPos: 3,
+        valMarked: 0, valL: 0, valR: 0,
+        ansExpected: 2, ansL: 2, ansR: 2,
         ansType: 'input',
-        en: { q: "Which day was a holiday?" }, // answer would be 11th or 6th
-        ar: { q: "Question in Arabic?" }
-    }, {
+        en: { q: "How many holidays were there during the study?" },
+        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة?" }
+    },
+    {
         qId: "6-count-until",
         chartType: "bar",
         imgSrc: imgPath + "bar-6-u.svg",
@@ -133,7 +135,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: 108, valL: 81, valR: 116,
         ansExpected: "either", ansL: 10, ansR: 5,
         ansType: 'input',
-        en: { q: "How many days passed before the holiday?" }, // answer would be 11th or 6th
+        en: { q: "How many days passed before the holiday?", note: "Do not include the holiday in your count." }, // answer would be 11 or 6
         ar: { q: "Question in Arabic?" }
     }, {
         qId: "6-count-from",
@@ -171,7 +173,20 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansType: 'input',
         en: { q: "How many visistors were recorded on the day after the holiday?" },
         ar: { q: "" }
-    }
+    },
+    {
+        qId: "8-rank", // it's is hard to collect the data from this so maybe skip this one?
+        chartType: "bar",
+        imgSrc: imgPath + "bar-8-u.svg",
+        cat: "locate-variable",
+        sorted: "u",
+        anchorPos: 11,
+        valMarked: 146, valL: 33, valR: 55,
+        ansExpected: "either", ansL: 6, ansR: 11,
+        ansType: 'input-rank',
+        en: { q: "On which day did the museum have 146 visitors?", note: "Holidays are represented with dark colored bars." }, // answer would be 11th or 6th
+        ar: { q: "Question in Arabic?" }
+    },
     //, {
     //     qId: 0,
     //     chartType: "bar",

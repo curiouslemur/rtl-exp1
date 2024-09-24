@@ -51,7 +51,7 @@ export const loadStimuli_inLang = (lang) => {
         [tmp[1], tmp[2]][(Math.random() > 0.5) ? 1 : 0],
         tmp[3],
         [tmp[4], tmp[5]][(Math.random() > 0.5) ? 1 : 0],
-        tmp[6],
+        [tmp[6], tmp[7]][(Math.random() > 0.5) ? 1 : 0],
         [tmp[8], tmp[9]][(Math.random() > 0.5) ? 1 : 0],
 
     ]

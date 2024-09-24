@@ -19,14 +19,15 @@ export const IntroEn = (props) => {
             </Grid >
             <Grid>
                 <Box sx={{
-                    width: '100%', backgroundColor: '#9c27b022',
+                    width: '100%', backgroundColor: '#80818312',
                     '&:hover': {
-                        backgroundColor: '#80818312', //opacity: [0.9, 0.8, 0.7]
+                        backgroundColor: '#9c27b022', //opacity: [0.9, 0.8, 0.7]
                     }
                 }}>
                     <Typography variant="body1" style={{ padding: '1%' }}>
-                        <b>{il.scenarioTitle}</b> Following a request from the city council, the number of daily visitors of the art museum is recorded over several days.
-                        {/* The recorded number of visitors per day is visualized using barcharts. */}
+                        <b>{il.scenarioTitle}</b></Typography>
+                    <Typography variant="body1" style={{ padding: '1%', paddingTop: 0 }} >
+                        Following a request from the city council, the number of daily visitors of the art museum is recorded over several days.
                         The data collected are presented visually using a barchart, a linechart, or a radial chart.
                         <br />
                     </Typography>
@@ -70,6 +71,7 @@ export const IntroEn = (props) => {
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Dark-colored bars indicate <b>holidays</b>
                         </ListItem>
+
                     </Typography>
                 </Box>
 
@@ -85,15 +87,15 @@ export const IntroEn = (props) => {
                     </Typography>
                     <Typography>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            each trial consists of a question and an interactive chart. You will be given a few seconds to read each question carefully.
+                            Each trial consists of a question and an interactive chart. There are no trick questions.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
                             When ready, click the button to show the chart.
                         </ListItem>
                         <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}>
-                            There are no trick questions. Use your intuition to answer as quickly as possible.
+                            The chart is only visible for a few seconds so read it as quickly as possible. You will see different barchart configurations, however, the instruction remains the same.
                         </ListItem>
-                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Depending on the question, you will answer by either clicking on one element of the chart, select from a dropdown list, or type your answer.
+                        <ListItem sx={{ display: 'list-item', lineHeight: '15px' }}> Depending on the question, you will answer by selecting from a dropdown list, or write in a text area.
                         </ListItem>
                     </Typography>
                 </Box>

@@ -18,7 +18,7 @@ export const TrialLabelsEn = {
     nextButton: "Next",
     showChartButton: "Show chart",
 
-    ansTextfieldLabel: "Type a number here",
+    ansTextfieldLabel: "Type a number",
     ansTextfieldHelper: "number only",
     modalLabels: {
         title: "Instructions",
