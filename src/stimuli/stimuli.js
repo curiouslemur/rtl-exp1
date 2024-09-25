@@ -23,7 +23,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         sorted: "u",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 16, ansL: 16, ansR: 16,
+        ansExpected: 11, ansL: 11, ansR: 11,
         ansType: "input",
         en: { q: "How many days did the data collection last?", unit: "days." },
         ar: { q: "Question in arabic: How many days did the data collection last?", unit: "days" }
