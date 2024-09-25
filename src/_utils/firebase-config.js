@@ -1,4 +1,5 @@
-import { initializeApp } from 'firebase/app'
+// import { initializeApp } from 'firebase/app'
+import firebase from 'firebase/compat/app'
 import { doc, getFirestore, setDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -11,7 +12,7 @@ const firebaseConfig = {
 }
 
 // initialize firebase
-const app = initializeApp(firebaseConfig)
+const app = firebase.initializeApp(firebaseConfig)
 
 // initialize cloud Firestore 
 const fsdb = getFirestore(app)

@@ -69,3 +69,68 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+.markdown-content li {
+  margin-bottom: 5px;
+  /* Adjust the spacing as needed */
+}
+
+.markdown-content img {
+  display: block;
+  margin: 0 auto;
+  /* This centers the image */
+  width: 90%;
+  display: block;
+}
+
+/* On larger screens, make the image smaller (e.g., 70% of the container) */
+@media (min-width: 768px) {
+  .markdown-content img {
+    max-width: 100%;
+    /* Image takes 100% of the container width on larger screens */
+  }
+}
+
+/* On very large screens, further reduce the image size */
+@media (min-width: 1200px) {
+  .markdown-content img {
+    max-width: 80%;
+    /* Image takes 80% of the container width on very large screens */
+  }
+}
+
+.markdown-content mark {
+  background-color: yellow;
+  /* Default is yellow, change if you want */
+  color: black;
+  /* Customize the text color if needed */
+  padding: 0.1em 0.2em;
+  /* Adjust padding around the highlighted text */
+  border-radius: 0.2em;
+  /* Optional: make the highlight look smoother */
+}
+
+.highlight-box {
+  background-color: #9c27b01a;
+  color: black;
+  padding: 15px;
+  margin: 15px 0px 20px 0;
+  width: calc(100% + 0px);
+  box-sizing: border-box;
+  /* Ensures padding is included in the width calculation */
+  border-radius: 3px;
+}
+
+.hover-box {
+  background-color: #80818312;
+  color: black;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hover-box:hover {
+  background-color: #9c27b022;
+  /* Color when hovered */
+}

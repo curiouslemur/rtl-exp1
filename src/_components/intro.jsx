@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createContext, useContext } from "react";
-import { Chip, Button, Grid } from "@mui/material"
+import { Button, Grid } from "@mui/material"
 // import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import * as ic from "../_controllers/introController"
@@ -22,10 +22,10 @@ export const Intro = (props) => {
         <IntroContext.Provider value={{ labels, setCannotStart }}>
             <Grid container justifyContent="center">
                 <Grid item xl={6} xs={10}>
-
-                    <h2>{labels.introTitle}</h2>
+                    {/* <h2>{labels.introTitle}</h2> */}
                     <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
-                    <props.expPages.Intro keywordColor="#ea3433" /> <br />
+
+                    <props.expPages.Intro keywordColor="#ea3433" expLang={props.expLang} /> <br />
 
                     <Button variant='contained' style={{ marginTop: '5ch' }}
                         disabled={cannotStart}
@@ -38,23 +38,5 @@ export const Intro = (props) => {
         </IntroContext.Provider>
     )
 }
-
-export const ConceptChip = (props) => {
-    const [disabled, setDisabled] = useState(false)
-    return (<>
-        <Chip
-            disabled={disabled}
-            label={props.label}
-            style={{ marginTop: 10, marginRight: 10 }}
-            onClick={(cl) => {
-                setDisabled(true) // set the Chip as disabled
-                props.handleChipClick(true);
-            }} />
-    </>)
-}
-
-// The tuto section of the intro page comprises the Question w/ qualifier, the color patches,
-// clicking on one color patch opens the modal
-
 
 export default Intro;
