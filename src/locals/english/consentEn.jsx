@@ -4,17 +4,21 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw';
 
-const styles = {
-    root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
-    textField: { marginLeft: 10, marginRight: 10, width: 200, }
-    , label: { margin: 0 }
-}
+import { useLocation } from 'react-router-dom';
+
+// const styles = {
+//     root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
+//     textField: { marginLeft: 10, marginRight: 10, width: 200, }
+//     , label: { margin: 0 }
+// }
 
 export const ConsentEn = (props) => {
     const [intro_md, setIntro_md] = useState('');
+    let location = useLocation();
+    console.log(location);
 
     useEffect(() => {
-        // fetch('rtl-exp1/en/consent.md')
+        // fetch('en/consent.md')
         fetch(props.expTitle + "/" + props.expLang + "/consent.md")
             .then((response) => {
                 if (!response.ok) {
