@@ -50,11 +50,13 @@ export const Trial = (props) => {
 
     useEffect(() => {
         if (chartIsVisible === true) {
-            setTimeout(() => {
+            const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 3000)
+            }, 3000) // TODO: update the time 
+            return () => clearTimeout(timeoutT);
         }
+
     }, [chartIsVisible])
 
     return (
