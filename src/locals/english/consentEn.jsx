@@ -14,9 +14,6 @@ import { useLocation } from 'react-router-dom';
 
 export const ConsentEn = (props) => {
     const [consent_md, setConsent_md] = useState('');
-    let location = useLocation();
-
-    console.log(window.location.origin + window.location.pathname);
 
     useEffect(() => {
         // fetch('en/consent.md')
