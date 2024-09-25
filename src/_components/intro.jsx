@@ -1,6 +1,6 @@
 import React, { useEffect, useState, createContext, useContext } from "react";
-import { Box, Chip, Button, Grid, Modal, Slider, Typography } from "@mui/material"
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { Chip, Button, Grid } from "@mui/material"
+// import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 import * as ic from "../_controllers/introController"
 
