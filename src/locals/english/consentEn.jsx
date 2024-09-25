@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Grid } from "@mui/material";
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw';
+// import ReactMarkdown from 'react-markdown'
+// import remarkGfm from 'remark-gfm'
+// import rehypeRaw from 'rehype-raw';
 
-import { useLocation } from 'react-router-dom';
 
 // const styles = {
 //     root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
@@ -13,26 +12,26 @@ import { useLocation } from 'react-router-dom';
 // }
 
 export const ConsentEn = (props) => {
-    const [consent_md, setConsent_md] = useState('');
+    // const [consent_md, setConsent_md] = useState('');
 
-    useEffect(() => {
-        // fetch('en/consent.md')
-        fetch(window.location.origin + window.location.pathname + "/" + props.expLang + "/consent.md")
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then((text) => setConsent_md(text))
-            .catch((err) => console.error('Error fetching the Markdown file:', err));
-    },);
+    // useEffect(() => {
+    //     // fetch('en/consent.md')
+    //     fetch(window.location.origin + window.location.pathname + "/" + props.expLang + "/consent.md")
+    //         .then((response) => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.text();
+    //         })
+    //         .then((text) => setConsent_md(text))
+    //         .catch((err) => console.error('Error fetching the Markdown file:', err));
+    // },);
 
     return (
         <Grid align='justify'>
-            <div className="markdown-content">
+            {/* <div className="markdown-content">
                 <ReactMarkdown children={consent_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
-            </div>
+            </div> */}
             {/* <Typography paragraph style={styles}> Before starting the study, please read this page carefully.</Typography>
             <Typography paragraph><b style={{ color: props.keywordColor }}>The goal of this research is </b> to understand how people read data visualization to form their most intuitive answer to a given question.</Typography>
             <Typography paragraph><b style={{ color: props.keywordColor }}>Procedure: </b> You will read about a fictitious context for which data was collected and visually presented.

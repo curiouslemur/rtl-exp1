@@ -4,6 +4,9 @@ import { Autocomplete, Box, Button, Grid, InputLabel, Stack, TextField, Typograp
 // import { StudyContext } from "../_utils/contexts";
 import * as cc from "../_controllers/consentController"
 import { loadCountries_inLang, loadLanguages_inLang } from "../_utils/content-loader";
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw';
 
 import '../App.css'
 const styles = {
@@ -14,6 +17,8 @@ const styles = {
 }
 
 export const Consent = (props) => {
+    const [consent_md, setConsent_md] = useState('');
+
     const [disabledButton, setDisabledButton] = useState(true);
     const [selectedValues, setSelectedValues] = useState()
     const [isMobile, setIsMobile] = useState(false)
@@ -25,9 +30,21 @@ export const Consent = (props) => {
             // document.body.classList.add('consent-body');
             handleResize()
             window.addEventListener('resize', handleResize)
+
+            fetch(window.location.origin + window.location.pathname + "/" + props.expLang + "/consent.md")
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then((text) => setConsent_md(text))
+                .catch((err) => console.error('Error fetching the Markdown file:', err));
+
             return () => {
                 window.removeEventListener('resize', handleResize)
             }
+
         }, []);
 
     const labels = props.expPages.ConsentLabels
@@ -54,13 +71,15 @@ export const Consent = (props) => {
 
             <Grid item xl={6} xs={10} marginTop={2}>
                 <Typography variant="h4">{labels.consentTitle}</Typography>
-
                 <Grid item >
                     <hr style={{ color: "#ea3433", backgroundColor: "#ea3433", height: 1.5 }} />
-                    <props.expPages.Consent expLang={props.expLang} expTitle={props.config.title} /> <br />
+                    <div className="markdown-content">
+                        <ReactMarkdown children={consent_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
+                    </div>
+                    {/* <props.expPages.Consent expLang={props.expLang} /> <br /> */}
                 </Grid>
 
-                <Stack marginTop={0} spacing={5} direction="row" justifyContent="flex-start">
+                <Stack marginTop={5} spacing={5} direction="row" justifyContent="flex-start">
                     <Box id="country-res-select" >
                         <InputLabel>{labels.countryResQ}</InputLabel>
                         <Autocomplete style={{ minWidth: '40ch', maxWidth: '55ch' }}
