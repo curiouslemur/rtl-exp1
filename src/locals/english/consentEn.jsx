@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Typography } from "@mui/material";
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw';
 
 const styles = {
     root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
@@ -8,6 +11,18 @@ const styles = {
 }
 
 export const ConsentEn = (props) => {
+    useEffect(() => {
+        fetch('/consent.md')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then((text) => console.log(text))
+            .catch((err) => console.error('Error fetching the Markdown file:', err));
+    }, []);
+
     return (
         <Grid align='justify'>
             <Typography paragraph style={styles}> Before starting the study, please read this page carefully.</Typography>

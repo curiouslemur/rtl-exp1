@@ -23,7 +23,7 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - Dark-colored bars indicate **holidays**
 
-![Image of a barchart used in this stud](en/intro-bar.svg)
+![Image of a barchart used in this stud](en/intro-bar-bar.svg)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box">
@@ -35,7 +35,7 @@ Your task is to interpret the charts and answer questions to help understand the
 - The chart is only visible for a few seconds so read it as quickly as possible. You will see different barchart configurations, however, the instruction remains the same.
 - Depending on the question, you will answer by selecting from a dropdown list, or write in a text area.
 
-![Image of a barchart used in this stud](en/intro-task.svg)
+![Image of a barchart used in this stud](en/intro-bar-task.svg)
 
 <br /> 
 You can access this instruction page at anytime by clicking on the help icon.

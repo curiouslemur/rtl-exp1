@@ -4,13 +4,13 @@ import { Routes, Route, useNavigate, useSearchParams } from 'react-router-dom';
 
 // import ConsentEn from './locals/english/consentEn';
 import * as navigator from './_components/_route'
-import { colorCodes } from './stimuli/colors'
+// import { colorCodes } from './stimuli/colors'
 
 import './App.css';
 
 import { StudyContext } from './_utils/contexts';
 import { loadPages_inLang, loadStimuli_inLang } from './_utils/content-loader'
-import { stimuli } from './stimuli/stimuli';
+// import { stimuli } from './stimuli/stimuli';
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en
@@ -22,7 +22,7 @@ function App() {
   const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp
 
   const stimuli = loadStimuli_inLang(expLang)
-  console.log(stimuli)
+  // console.log(stimuli)
   const meta = {
     expLang: expLang,
     expName: expLang + '-rtl1', title: "rtl-exp1",
@@ -87,12 +87,12 @@ const generateSessionID = () => {
   return "2024" + month + day + "-" + D.getHours() + D.getMinutes() + "-" + D.getSeconds() + D.getMilliseconds()
 }
 
-const shuffle = (a) => { //Fisher-Yates shuffle
-  var j, x, i;
-  for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
-    x = a[i]; a[i] = a[j]; a[j] = x;
-  } return a;
-}
+// const shuffle = (a) => { //Fisher-Yates shuffle
+//   var j, x, i;
+//   for (i = a.length - 1; i > 0; i--) {
+//     j = Math.floor(Math.random() * (i + 1));
+//     x = a[i]; a[i] = a[j]; a[j] = x;
+//   } return a;
+// }
 
 export default App;

@@ -57,7 +57,7 @@ export const Consent = (props) => {
 
                 <Grid item >
                     <hr style={{ color: "#ea3433", backgroundColor: "#ea3433", height: 1.5 }} />
-                    <props.expPages.Consent /> <br />
+                    <props.expPages.Consent expLang={props.expLang} /> <br />
                 </Grid>
 
                 <Stack marginTop={0} spacing={5} direction="row" justifyContent="flex-start">

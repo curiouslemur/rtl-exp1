@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Container, Box, Button, Grid, Modal, TextField, Typography, MenuItem, FormControl, InputLabel, Select } from "@mui/material";
-import * as d3 from 'd3'
+// import * as d3 from 'd3'
 // import { ThemeProvider } from "@mui/material/styles";
 // import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
@@ -42,7 +42,11 @@ export const Trial = (props) => {
 
     const closeHelpModal = () => { setHelpIsOpen(false) }
 
-    useEffect(() => { tc.addEmptyPlaceholder("#chartDiv") }, []);
+    useEffect(() => {
+        tc.addEmptyPlaceholder("#chartDiv");
+    }, []
+
+    );
 
     useEffect(() => {
         if (chartIsVisible === true) {
@@ -55,23 +59,6 @@ export const Trial = (props) => {
 
     return (
         // <ThemeProvider>
-        // <Grid container style={styles.container} justifyContent="center" >
-        //     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-        //         onClick={(e, c) => onClickShowChart(e, setCannotShowChart)}
-        //         disabled={cannotShowChart} > {labels.showChartButton}</Button>
-        //     <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}> </Grid>
-
-        //     <Grid>
-        //         <div style={{ position: 'absolute', top: 10, left: 10, padding: '10px' }}>
-        //             <HelpOutlineIcon
-        //                 onClick={() => setHelpIsOpen(true)} />
-        //         </div>
-        //         <HelpModal
-        //             open={helpIsOpen}
-        //             close={closeHelpModal}
-        //             modalLabels={labels.modalLabels} />
-        //     </Grid>
-        // </Grid>
         // </ThemeProvider>
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
@@ -144,11 +131,11 @@ const AnswerSection = (props) => {
         case "input":
             return (
                 <>
-                    <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
+                    <Box sx={{ minwidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                         {/* <Grid item xs={12} marginTop={2}> */}
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
                             type="number"
-                            minWidth={5}
+                            minwidth={5}
                             // helperText={labels.ansTextfieldHelper}
                             onChange={(e, scn, sav) => tc.onChangeAnsTextField(e, props.setCannotNext, props.setAnsValue)}
                             InputProps={{
