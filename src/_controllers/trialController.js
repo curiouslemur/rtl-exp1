@@ -114,13 +114,24 @@ export const onChangeAnsSelect = (e, setCannotNext, setAnsValue) => {
  */
 export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowChart, setVisibilityAnserwField,
     setCannotNext,
-    totalQ, stimulusData,
+    totalQ, stimulusData, ansValue,
     navigate, nextUrl) => {
 
     let dem = JSON.parse(sessionStorage.getItem('demography'))
-    console.log(dem)
+    // console.log(dem)
     dem.progress = progress + 1 // because progress was initiated at 0
     dao.logDem(dem)
+    sessionStorage.setItem("demography", JSON.stringify(dem))
+
+    delete stimulusData[dem.expLang];
+    stimulusData.ans = ansValue // ans is the answer from the participant
+    stimulusData.sessionID = dem.sessionID
+
+    let idx = progress + 1
+    let record = {}
+    record[idx] = stimulusData
+
+    dao.logData(dem, record)
 
     if (progress < totalQ - 1) {
         setProgress(progress + 1)
@@ -128,7 +139,6 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
         setCannotShowChart(false)
         setVisibilityAnserwField("hidden")
         setCannotNext(true)
-
     } else {
         navigate(nextUrl)
     }

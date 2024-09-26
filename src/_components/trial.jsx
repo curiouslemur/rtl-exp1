@@ -25,6 +25,7 @@ export const Trial = (props) => {
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
+    // --------------------------------
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
@@ -60,8 +61,7 @@ export const Trial = (props) => {
     }, [chartIsVisible])
 
     return (
-        // <ThemeProvider>
-        // </ThemeProvider>
+        // <ThemeProvider> </ThemeProvider>
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
                 <Grid item xs={12} marginTop={2}>
@@ -106,11 +106,11 @@ export const Trial = (props) => {
                                     disabled={cannotNext}
                                     onClick={(e, p, setP, chartSvgId, scsc, svaf,
                                         scn,
-                                        tq, stimData, nav, nU) => tc.onClickNext(
+                                        tq, stimData, answer, nav, nU) => tc.onClickNext(
                                             e, progress, setProgress, "#chartSvg",
                                             setCannotShowChart, setVisibilityAnserwField,
                                             setCannotNext,
-                                            stimuli.length, stimuli[progress],
+                                            stimuli.length, stimuli[progress], ansValue,
                                             props.navigate, props.nextUrl)}
                                 > {labels.nextButton} </Button>
                             </Grid>

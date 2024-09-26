@@ -40,7 +40,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansType: "select",
         en: {
             q: "Did the number of visitors increase or decrease over the course of the study?",
-            ansLabel: "The number of visitors ", ansOptions: ["increased.", "decreased."],
+            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
         }, ar: {
             q: "Question in arabic?",
             ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
