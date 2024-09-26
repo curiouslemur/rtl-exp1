@@ -3,8 +3,7 @@ import { Grid } from '@mui/material';
 
 export const OutroEn = (props) => {
     return (
-        <Grid container alignContent='justify' marginTop={'2%'}>
-        </Grid>
+        <Grid container alignContent='justify' marginTop={'2%'}></Grid>
     )
 }
 
