@@ -1744,6 +1744,13 @@ export const languageNames = [
         "ar": "لغة صربية"
     },
     {
+        "alpha3": "sl",
+        "en": "Sign Language",
+        "fr": "Langage des Signes",
+        "de": "Gebärdensprache",
+        "ar": "لغة إشارة"
+    },
+    {
         "alpha3": "ssw",
         "en": "Swati",
         "fr": "Swati",

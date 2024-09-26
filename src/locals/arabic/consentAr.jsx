@@ -1,67 +1,43 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
-const styles = {
-    root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
-    textField: { marginLeft: 10, marginRight: 10, width: 200, }
-    , label: { margin: 0 }
-}
+// const styles = {
+//     root: { flexGrow: 1, margin: "2%", }, button: { marginTop: 10, marginBottom: 10 }, container: { display: 'flex', flexWrap: 'wrap', },
+//     textField: { marginLeft: 10, marginRight: 10, width: 200, }
+//     , label: { margin: 0 }
+// }
 
 export const ConsentAr = (props) => {
     return (
-        <Grid align='justify'>
-            <Typography paragraph style={styles}> Before starting the study, please read this page carefully.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>The goal of this research is </b> to understand how people read data visualization to form their most intuitive answer to a given question.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Procedure: </b> You will read about a fictitious context for which data was collected and visually presented.
-                The study asks questions about what you see on the visualizations. You will have to <i>identify a scpecific element</i> or <i>count elements in the chart.</i>
-                The charts will be visible only for a short time, so read it quickly, then type your answer in the provided area right below the chart. </Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>What you will get: </b> We hope that you will find the exercise enjoyable.
-                Your participation will help us understand how people quickly read charts to form answer to questions.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Duration: </b> about 10 minutes.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Privacy: </b> Your participation is anonymous and your responses cannot be used to identify you.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Record keeping: </b> Records of your participation will be held confidential so far as permitted by law.
-                However, the study investigators and, under certain circumstances, the Worcester Polytechnic Institute Institutional Review Board (WPI IRB) will be able to inspect and have access to this data.</Typography>
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Risks: </b> We do not expect there to be any risks beyond daily use of computer devices.</Typography>
-            {/* <Typography paragraph><b style={{ color: props.keywordColor }}>Contact info: </b> Prof. L. Harrison, ltharrison@wpi.edu</Typography> */}
-            <Typography paragraph><b style={{ color: props.keywordColor }}>Your participation in this research is voluntary.</b> We do not expect there to be any risks. Your refusal to participate will not result in any penalty to you or any loss of benefits to which you may otherwise be entitled.
-                You may decide to stop participating at any time without penalty or loss of other benefits. </Typography>
-            <Typography paragraph>For more information about your rights as a research participant, or any concerns related to this study, please contact Prof. Lane Harrison (ltharrison@wpi.edu)</Typography>
-            <br />
-            <Typography paragraph>By filling in the following form, and clicking 'NEXT', you agree to participate in the study.</Typography>
-        </Grid>
+        <Grid align='justify'></Grid>
     )
 }
 
 
 export const ConsentLabelsAr = {
-    mobileWarning: "Please use a device or a computer with wider screen.",
-    consentTitle: "Welcome",
+    mobileWarning: "يرجى استخدام جهاز أو كمبيوتر بشاشة أعرض.",
+    consentTitle: "مرحباً",
 
-    countryResQ: "From which country are you taking this survey? *",
-    countryResLabel: "Country of residence",
-    countryResLenQ: "How many years have you lived there? *",
+    countryResQ: "من أي بلد تشارك في هذا الاستطلاع؟ *",
+    countryResLabel: "بلد الإقامة",
+    countryResLenQ: "كم سنة عشت هناك؟ *",
     countryResLenLabel: "",
-    countryResLongestQ: "In which country have you lived the longest? *",
-    countryResLongestLabel: "Longest country of residence",
+    countryResLongestQ: "في أي بلد عشت أطول فترة؟ *",
+    countryResLongestLabel: "أطول دولة إقامة",
 
-    langNativeQ: "What is your native language? *",
-    langNativeLabel: "Mother tongue",
-    langOtherQ: "What other languages do you know fluently?",
-    langOtherLabel: "List all that apply",
+    langNativeQ: "ما هي لغتك الأم؟ *",
+    langNativeLabel: "لغة أم",
+    langOtherQ: "ما هي اللغات الأخرى التي تعرفها بطلاقة؟",
+    langOtherLabel: "قم بإدراج كل ما ينطبق",
 
-    ageQ: "How old are you? *", ageLabel: "Age",
-    genderQ: "What is your gender? *", genderLabel: "Gender",
+    ageQ: "كم عمرك؟ *", ageLabel: "عمر",
+    genderQ: "ما هو جنسك؟ *", genderLabel: "جنس",
 
-    professionQ: "What is your profession? *", professionLabel: "Profession",
+    professionQ: "ما هي مهنتك؟ *", professionLabel: "مهنة",
 
-    colorblindQ: "Do you have some form of color blindness? *", colorblindLabel: "",
-    olorblindDefinition: "(What is Color blindness?)",
-    colorblindLink: "https://en.wikipedia.org/wiki/Color_blindness",
-    colorblindYes: "Yes", colorblindNo: "No", colorblindIdk: "I don't know",
-
-    visFamiliarityQ: "How often do you use charts or data visualizations?",
+    visFamiliarityQ: "ما مدى تكرار استخدامك للمخططات أو تصورات البيانات؟",
     visFamiliarityLabel: "",
-    sign: "Sign"
+    sign: "يوافق"
 }
 
 export default ConsentAr;

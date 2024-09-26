@@ -29,9 +29,6 @@ export const ConsentEn = (props) => {
 
     return (
         <Grid align='justify'>
-            {/* <div className="markdown-content">
-                <ReactMarkdown children={consent_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
-            </div> */}
             {/* <Typography paragraph style={styles}> Before starting the study, please read this page carefully.</Typography>
             <Typography paragraph><b style={{ color: props.keywordColor }}>The goal of this research is </b> to understand how people read data visualization to form their most intuitive answer to a given question.</Typography>
             <Typography paragraph><b style={{ color: props.keywordColor }}>Procedure: </b> You will read about a fictitious context for which data was collected and visually presented.
@@ -74,11 +71,6 @@ export const ConsentLabelsEn = {
     genderQ: "What is your gender? *", genderLabel: "Gender",
 
     professionQ: "What is your profession? *", professionLabel: "Profession",
-
-    colorblindQ: "Do you have some form of color blindness? *", colorblindLabel: "",
-    olorblindDefinition: "(What is Color blindness?)",
-    colorblindLink: "https://en.wikipedia.org/wiki/Color_blindness",
-    colorblindYes: "Yes", colorblindNo: "No", colorblindIdk: "I don't know",
 
     visFamiliarityQ: "How often do you use charts or data visualizations?",
     visFamiliarityLabel: "",
