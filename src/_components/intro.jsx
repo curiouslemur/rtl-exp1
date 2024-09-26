@@ -20,7 +20,7 @@ export const Intro = (props) => {
         }, 3000) // TODO: make this like 30s instead 
 
         fetch(props.expLang + "/intro-bar.md")
-            .then((response) => response.text()).then((text) => { console.log(text); setIntro_md(text) }).catch((err) => console.error(err));
+            .then((response) => response.text()).then((text) => { setIntro_md(text) }).catch((err) => console.error(err));
 
         return () => clearTimeout(timeout);
     }, []);
