@@ -14,7 +14,7 @@ Before starting the study, please read this page carefully.
 
 **Your participation is anonymous** and your responses cannot be used to identify you.
 
-**Your participation is voluntary.** We do not expect there to be any risks. Your refusal to participate will not result in any penalty to you or any loss of benefits to which you may otherwise be entitled. You may decide to stop participating at any time without penalty or loss of other benefits.
+**Your participation is voluntary.** Refusing to participate will not result in any penalty to you or any loss of benefits to which you may otherwise be entitled. You may decide to stop participating at any time without penalty or loss of other benefits.
 
 For more information about your rights as a research participant, or any concerns related to this study, please contact Prof. Lane Harrison (ltharrison@wpi.edu)
 

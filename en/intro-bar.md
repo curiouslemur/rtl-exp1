@@ -30,12 +30,17 @@ Your task is to interpret the charts and answer questions to help understand the
 <b> Your task </b>
 </div>
 
+<div style="text-align: center;">
+  <video width="600" controls autoplay loop muted><source src="en/intro-bar-task.mp4" type="video/mp4"></video>
+</div>
+
 - Each trial consists of a question and a chart. There are no trick questions.
 - Once you show a chart, **it will disappear after a few seconds** so, read it as quickly as possible. 
 - You will see different barchart configurations, however, your task remains the same: 
-- read the question → show the chart → answer using a dropdown list, or write in a text area.
+- Read the question → show the chart → answer using a dropdown list, or write in a text area.
 
-![Example of how to answer a question in this study](en/intro-bar-task.gif)
+<!-- ![Example of how to answer a question in this study](en/intro-bar-task.gif) -->
+
 
 You can access this instruction page at anytime by clicking on the help icon.
 <!-- // TODO: add help icon and indicate where it is -->
