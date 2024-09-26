@@ -23,20 +23,19 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - Dark-colored bars indicate **holidays**
 
-![Image of a barchart used in this stud](en/intro-bar-bar.svg)
+![Image of a barchart used in this study](en/intro-bar-bar.svg)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box">
 <b> Your task </b>
 </div>
 
-- Each trial consists of a question and an interactive chart. There are no trick questions.
-- When ready, click the button to show the chart.
-- **The chart will disappear after a few seconds** so read it as quickly as possible. 
-- You will see different barchart configurations, however, the instruction remains the same.
-- Answer by selecting from a dropdown list, or write in a text area.
+- Each trial consists of a question and a chart. There are no trick questions.
+- Once you show a chart, **it will disappear after a few seconds** so, read it as quickly as possible. 
+- You will see different barchart configurations, however, your task remains the same: 
+- read the question → show the chart → answer using a dropdown list, or write in a text area.
 
-<!-- ![Image of a barchart used in this stud](en/intro-bar-task.svg) -->
+![Example of how to answer a question in this study](en/intro-bar-task.gif)
 
 You can access this instruction page at anytime by clicking on the help icon.
 <!-- // TODO: add help icon and indicate where it is -->
