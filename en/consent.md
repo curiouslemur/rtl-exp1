@@ -4,7 +4,7 @@ Before starting the study, please read this page carefully.
 
 **Procedure:** You will read about a fictitious context for which data was collected and visually presented. The study asks questions about what you see on the visualizations. You will have to identify a scpecific element or count elements in the chart.The charts will be visible only for a short time, so read it quickly, then type your answer in the provided area right below the chart.
 
-**What you will get**:** We hope that you will find the exercise enjoyable. Your participation will help us understand how people quickly read charts to form answer to questions.
+**What you will get:** We hope that you will find the exercise enjoyable. Your participation will help us understand how people quickly read charts to form answer to questions.
 
 **Duration:** about 10 minutes.
 
