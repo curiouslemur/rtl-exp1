@@ -39,7 +39,7 @@ export const Intro = (props) => {
 
                     {/* <props.expPages.Intro keywordColor="#ea3433" expLang={props.expLang} /> <br /> */}
 
-                    <Button variant='contained' style={{ marginTop: '5ch' }}
+                    <Button variant='contained' style={{ marginTop: '4ch', marginBottom: '4ch' }}
                         disabled={cannotStart}
                         onClick={(nav, nu) => {
                             ic.onClickStart(props.navigate, props.nextUrl)
