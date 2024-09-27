@@ -30,28 +30,17 @@ export const Trial = (props) => {
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
 
-    // const onClickShowChart = (e, setCannotShowChart) => {
-    //     e.preventDefault()
-    //     setCannotShowChart(true)
-    //     setChartIsVisible(true)
-    //     setVisibilityAnserwField(1)
-    // }
     const stimuli = props.stimuli
     // --------------------------------
-    // const [progressBlock, setProgressBlock] = useState(0)
 
-    useEffect(() => {
-        tc.addEmptyPlaceholder("#chartDiv");
-    }, []
-
-    );
+    useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
 
     useEffect(() => {
         if (chartIsVisible === true) {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 3000) // TODO: update the time 
+            }, 4000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
 
