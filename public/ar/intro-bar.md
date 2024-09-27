@@ -23,7 +23,7 @@
 - تشير الأشرطة ذات الألوان الداكنة إلى **العطلات**
 
 <!-- ![Image of a barchart used in this study](ar/intro-bar-bar.svg) -->
-![Image of a barchart used in this study](ar/intro-bar-bar.jpg)
+![Image of a barchart used in this study](ar/intro-bar-bar.png)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box">

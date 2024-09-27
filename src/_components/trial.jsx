@@ -68,6 +68,9 @@ export const Trial = (props) => {
                     <Typography fontSize={20} fontWeight='bold'>
                         {stimuli[progress][expLang].q}
                     </Typography>
+                    <Typography fontSize={16} marginTop={2}>
+                        {stimuli[progress][expLang].note}
+                    </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
                         onClick={(e, divId, stimulusData, svaf, scsc, sciv) => tc.onClickShowChart(
                             "chartDiv",
@@ -152,9 +155,9 @@ const AnswerSection = (props) => {
             )
         case "select":
             let options = ansElements.ansOptions
+
             return (<>
                 <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
-                    {/* <span style={{ marginTop: 10000 }}>{ansElements.ansLabel}</span> */}
                     <InputLabel>{ansElements.ansLabel} </InputLabel>
                     <FormControl variant="standard" style={{ minWidth: 110 }}>
                         <Select
@@ -171,8 +174,6 @@ const AnswerSection = (props) => {
                                     <MenuItem key={option} value={option}>{option}</MenuItem>
                                 )
                             })}
-                            {/* <MenuItem value={10}>{ansElements.ansOptions[1]}</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem> */}
                         </Select>
                     </FormControl>
                 </Box >

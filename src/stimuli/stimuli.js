@@ -26,7 +26,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: 11, ansL: 11, ansR: 11,
         ansType: "input",
         en: { q: "How many days did the data collection last?", unit: "days." },
-        ar: { q: "Question in arabic: How many days did the data collection last?", unit: "days" }
+        ar: { q: "كم يوما استغرقت عملية جمع البيانات؟", unit: "days" }
     }, {
         qId: "2-sst", // The second question will be either of the sst or sts versions
         chartType: "bar",
@@ -42,8 +42,8 @@ export const stimuli = [ // questions and labels in English. Order is important 
             q: "Did the number of visitors increase or decrease over the course of the study?",
             ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
         }, ar: {
-            q: "Question in arabic?",
-            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
+            q: "هل زاد عدد الزوار أم انخفض خلال فترة الدراسة؟",
+            ansLabel: "عدد الزوار", ansOptions: ["في تزايد", "في انخفاض"],
         }
     }, {
         qId: "2-sts", // The second question will be either of the sst or sts versions
@@ -60,8 +60,8 @@ export const stimuli = [ // questions and labels in English. Order is important 
             q: "Did the number of visitors increase or decrease over the course of the study?",
             ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
         }, ar: {
-            q: "Question in arabic?",
-            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
+            q: "هل زاد عدد الزوار أم انخفض خلال فترة الدراسة؟",
+            ansLabel: "عدد الزوار", ansOptions: ["في تزايد", "في انخفاض"],
         }
     }, {
         qId: "3-u",
@@ -86,7 +86,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: "either", ansL: 44, ansR: 64, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
-        ar: { q: "Question in arabic?" }
+        ar: { q: "كم عدد الزوار في اليوم السادس ؟" }
     }, {
         qId: "4-sts",
         chartType: "bar",
@@ -98,7 +98,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: "either", ansL: 88, ansR: 31, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
-        ar: { q: "Question in arabic?" }
+        ar: { q: "كم عدد الزوار في اليوم السادس ؟" }
     }, {
         qId: "5-u-1", // the fifth question will be either of the u-1 or u-2 versions
         chartType: "bar",
@@ -135,8 +135,10 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: 108, valL: 81, valR: 116,
         ansExpected: "either", ansL: 10, ansR: 5,
         ansType: 'input',
-        en: { q: "How many days passed before the holiday?", note: "Do not include the holiday in your count." }, // answer would be 11 or 6
-        ar: { q: "Question in Arabic?" }
+        en: { q: "How many days have passed before the holiday?", note: "(Do not include the holiday in your count.)" }, // answer would be 11 or 6
+        ar: {
+            q: "كم يوم مضى حتى العطلة الرسمية؟", note: "(لا تقم بتضمين العطلة الرسمية في حسابك.)"
+        }
     }, {
         qId: "6-count-from",
         chartType: "bar",
@@ -147,8 +149,10 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: 108, valL: 81, valR: 116,
         ansExpected: "either", ansL: 11, ansR: 6,
         ansType: 'input',
-        en: { q: "How many days passed after the holiday?" }, // answer would be 11th or 6th
-        ar: { q: "Question in Arabic?" }
+        en: { q: "How many days have passed after the holiday?", note: "(Do not include the holiday in your count.)" },
+        ar: {
+            q: "كم يوم مر على العطلة الرسمية؟", note: "(لا تقم بتضمين العطلة الرسمية في حسابك.)"
+        }
     }, {
         qId: "7-extract-before",
         chartType: "bar",
@@ -159,7 +163,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: 90, valL: 157, valR: 103,
         ansExpected: "either", ansL: 157, ansR: 103,
         ansType: 'input',
-        en: { q: "How many visistors were recorded on the day before the holiday?" },
+        en: { q: "How many visistors were there on the day before the holiday?" },
         ar: { q: "" }
     }, {
         qId: "7-extract-after",
@@ -171,8 +175,8 @@ export const stimuli = [ // questions and labels in English. Order is important 
         valMarked: 90, valL: 157, valR: 103,
         ansExpected: "either", ansL: 157, ansR: 103,
         ansType: 'input',
-        en: { q: "How many visistors were recorded on the day after the holiday?" },
-        ar: { q: "" }
+        en: { q: "How many visistors were there on the day after the holiday?" },
+        ar: { q: "كم عدد الزوار في اليوم السابق للعطلة الرسمية؟" }
     },
     {
         qId: "8-rank", // it's is hard to collect the data from this so maybe skip this one?
@@ -185,7 +189,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: "either", ansL: 6, ansR: 11,
         ansType: 'input-rank',
         en: { q: "On which day did the museum have 146 visitors?", note: "Holidays are represented with dark colored bars." }, // answer would be 11th or 6th
-        ar: { q: "Question in Arabic?" }
+        ar: { q: "في أي يوم كان عدد زوار المتحف 146؟" }
     },
     //, {
     //     qId: 0,

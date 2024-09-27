@@ -86,7 +86,7 @@ input[type=number] {
 /* On larger screens, make the image smaller (e.g., 70% of the container) */
 @media (min-width: 768px) {
   .markdown-content img {
-    max-width: 100%;
+    max-width: 90%;
     /* Image takes 100% of the container width on larger screens */
   }
 }
