@@ -27,7 +27,7 @@ export const Outro = (props) => {
         <Grid container style={styles.container} justifyContent='center'>
 
             <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
-                <Typography variant="h5">{labels.outroTitle}</Typography>
+                <Typography variant="h4">{labels.outroTitle}</Typography>
             </Grid>
 
             {oc.isProlificUser() ?

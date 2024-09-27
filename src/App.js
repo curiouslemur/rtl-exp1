@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Routes, Route, useNavigate, useSearchParams } from 'react-router-dom';
 
-// import ConsentEn from './locals/english/consentEn';
 import * as navigator from './_components/_route'
-// import { colorCodes } from './stimuli/colors'
 
 import './App.css';
 
@@ -33,7 +31,12 @@ function App() {
   const navigate = useNavigate()
   const subdom = "/rtl-exp1"
 
-  useEffect(() => { }, []);
+  useEffect(() => {
+    if (expLang === "ar" || expLang === "he") {
+      document.documentElement.lang = "ar"
+      document.documentElement.dir = "rtl"
+    }
+  }, []);
 
   return (
     expLang ?

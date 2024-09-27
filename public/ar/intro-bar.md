@@ -43,6 +43,4 @@
 <!-- ![Example of how to answer a question in this study](en/intro-bar-task.gif) -->
 
 
-يمكنك الوصول إلى صفحة التعليمات هذه في أي وقت عن طريق النقر فوق أيقونة المساعدة.
-<!-- // TODO: add help icon and indicate where it is -->
-<!-- // TODO: implement modal help -->
+يمكنك الوصول إلى ملخص صفحة التعليمات هذه في أي وقت بالضغط على أيقونة المساعدة الموجودة في أسفل الصفحة التالية.

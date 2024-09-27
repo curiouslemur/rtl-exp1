@@ -23,7 +23,7 @@ export const Intro = (props) => {
             .then((response) => response.text()).then((text) => { setIntro_md(text) }).catch((err) => console.error(err));
 
         return () => clearTimeout(timeout);
-    }, []);
+    }, [props.expLang]);
 
     const labels = props.expPages.IntroLabels
 
@@ -44,9 +44,9 @@ export const Intro = (props) => {
                         onClick={(nav, nu) => {
                             ic.onClickStart(props.navigate, props.nextUrl)
                         }}> {labels.start} </Button>
-
                 </Grid>
             </Grid>
+
         </IntroContext.Provider>
     )
 }

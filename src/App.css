@@ -66,9 +66,9 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+/* input[type=number] {
   -moz-appearance: textfield;
-}
+} */
 
 .markdown-content li {
   margin-bottom: 5px;
@@ -132,5 +132,64 @@ input[type=number] {
 
 .hover-box:hover {
   background-color: #9c27b022;
-  /* Color when hovered */
+}
+
+.help-icon {
+  position: fixed;
+  bottom: 90px;
+  /* Adjust based on how far from the bottom you want */
+  left: 50%;
+  transform: translateX(-0%);
+  cursor: pointer;
+  z-index: 1000;
+  /* To ensure it stays on top of other elements */
+}
+
+/* Modal for help */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center vertically */
+  align-items: center;
+  /* Center horizontally */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 20px;
+}
+
+.modal-content img {
+  display: block;
+  margin: 0 auto;
+  /* This centers the image */
+  width: 100%;
+  display: block;
 }

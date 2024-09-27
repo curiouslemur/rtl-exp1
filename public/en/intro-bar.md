@@ -23,7 +23,7 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - Dark-colored bars indicate **holidays**
 
-![Image of a barchart used in this study](en/intro-bar-bar.svg)
+![Image of a barchart used in this study](en/intro-bar-bar.png)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box">
@@ -42,5 +42,4 @@ Your task is to interpret the charts and answer questions to help understand the
 <!-- ![Example of how to answer a question in this study](en/intro-bar-task.gif) -->
 
 
-You can access this instruction page at anytime by clicking on the help icon.
-<!-- // TODO: add help icon and indicate where it is -->
+You can access the summary of this instruction page at anytime by clicking on the help icon at the bottom of the next page.

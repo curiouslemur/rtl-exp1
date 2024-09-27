@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container, Box, Button, Grid, Modal, TextField, Typography, MenuItem, FormControl, InputLabel, Select } from "@mui/material";
-// import * as d3 from 'd3'
-// import { ThemeProvider } from "@mui/material/styles";
-// import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import { Container, Box, Button, Grid, TextField, Typography, MenuItem, FormControl, InputLabel, Select } from "@mui/material";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
@@ -30,18 +30,15 @@ export const Trial = (props) => {
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
 
-    const onClickShowChart = (e, setCannotShowChart) => {
-        e.preventDefault()
-        setCannotShowChart(true)
-        setChartIsVisible(true)
-        setVisibilityAnserwField(1)
-    }
+    // const onClickShowChart = (e, setCannotShowChart) => {
+    //     e.preventDefault()
+    //     setCannotShowChart(true)
+    //     setChartIsVisible(true)
+    //     setVisibilityAnserwField(1)
+    // }
     const stimuli = props.stimuli
     // --------------------------------
-    const [progressBlock, setProgressBlock] = useState(0)
-    const [helpIsOpen, setHelpIsOpen] = useState(false)
-
-    const closeHelpModal = () => { setHelpIsOpen(false) }
+    // const [progressBlock, setProgressBlock] = useState(0)
 
     useEffect(() => {
         tc.addEmptyPlaceholder("#chartDiv");
@@ -82,7 +79,7 @@ export const Trial = (props) => {
                 </Grid>
 
                 <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
-
+                {/* answer section below */}
                 <Grid item xs={12} marginTop={2}>
                     {visibilityAnsField === "visible" ?
                         <>
@@ -91,8 +88,7 @@ export const Trial = (props) => {
                                 labels={labels}
                                 cannotNext={cannotNext}
                                 setCannotNext={setCannotNext}
-                                // progress={progress}
-                                // setProgress={setProgress}
+                                // progress={progress} setProgress={setProgress}
                                 setCannotShowChart={setCannotShowChart}
                                 setVisibilityAnserwField={setVisibilityAnserwField}
                                 // totalQ={stimuli.length}
@@ -121,7 +117,7 @@ export const Trial = (props) => {
                     }
                 </Grid>
             </Grid>
-
+            <HelpIcon expLang={props.expLang} />
         </Container >
     )
 }
@@ -182,39 +178,62 @@ const AnswerSection = (props) => {
     }
 }
 
-const HelpModal = (props) => {
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 400,
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
-        boxShadow: 24,
-        p: 4,
-    };
+const HelpIcon = (props) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openHelpModal = () => { setIsModalOpen(true) }
+    const closeHelpModal = () => { setIsModalOpen(false) }
 
-    const modalLabels = props.modalLabels
     return (
-        <Modal
-            open={props.open}
-            onClose={props.close}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-        >
-            <Box sx={style}>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    {modalLabels.title}
-                </Typography>
-                {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    {modalLabels.instruction1}
-                </Typography> */}
-                <Button onClick={props.close}>{modalLabels.close}</Button>
-            </Box>
-        </Modal>
+        <>
+            <div className="help-icon" >
+                <FontAwesomeIcon icon={faInfoCircle} size="2x" onClick={openHelpModal} />
+            </div>
+            <HelpModal open={isModalOpen} close={closeHelpModal} modalLabels={props.modalLabels} expLang={props.expLang} />
+        </>
     )
 }
 
+const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass props than 
+    // const HelpModal = (props) => { if (!props.open) return null;
+    if (!open) return null;
+
+    const handleOverlayClick = (e) => { // Function to handle clicks outside of modal content
+        if (e.target.className === 'modal-overlay') {
+            close();
+        }
+    }
+    return (
+        <div className="modal-overlay" onClick={handleOverlayClick}>
+            <div className="modal-content">
+
+                <span>{trialLabels[expLang].helpModalIntro}</span>
+                <br /> <br />
+                <img src={expLang + "/intro-bar-bar.png"} alt="Help modal" className="modal-image" />
+                <br />
+                <video width="100%" controls autoplay loop>
+                    <source src="en/intro-bar-task.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <Button onClick={close}>{trialLabels[expLang].helpModalCloseButton}</Button>
+            </div>
+        </div>
+    )
+}
+
+
+const trialLabels = {
+    "ar": {
+        "showChartButton": "إظهار الرسم البياني",
+        "nextButton": "التالي",
+        "helpModalIntro": "أنت جزء من فريق مكلف بتحليل أنماط الزوار في متحف محلي على مدار فترة زمنية. يتم تصور البيانات باستخدام مخطط شريطي. مهمتك هي الإجابة على الأسئلة بناءً على التصور.",
+        "helpModalCloseButton": "إغلاق"
+    },
+    "en": {
+        "showChartButton": "Show chart",
+        "nextButton": "Next",
+        "helpModalIntro": "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
+        "helpModalCloseButton": "Close"
+    },
+}
 
 export default Trial;
