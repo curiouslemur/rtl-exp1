@@ -31,7 +31,7 @@
 </div>
 
 <div style="text-align: center;">
-  <video width="600" controls autoplay loop muted><source src="en/intro-bar-task.mp4" type="video/mp4"></video>
+  <video width="600" controls autoplay loop muted><source src="ar/intro-bar-task.mp4" type="video/mp4"></video>
 </div>
 
 - تتكون كل تجربة من سؤال ومخطط. لا توجد أسئلة خادعة.

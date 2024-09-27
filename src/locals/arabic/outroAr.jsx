@@ -9,10 +9,10 @@ export const OutroAr = (props) => {
 }
 
 export const OutroLabelsAr = {
-    outroTitle: "Thank you for your participation.",
-    closeBrowser: "You may now close this window.",
-    prolificUserYes: "Prolific user, click below to collect your reward before closing this window",
-    prolificUserButton: "Collect"
+    outroTitle: "شكرا لمشاركتك.",
+    closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
+    prolificUserYes: "انقر أدناه لجمع مكافأتك قبل إغلاق هذه الصفحة.",
+    prolificUserButton: "مكافأة"
 }
 
 export default OutroAr;
