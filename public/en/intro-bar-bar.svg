@@ -104,7 +104,6 @@
   <g>
     <path class="cls-4" d="M696.5,297.4"/>
     <path class="cls-5" d="M696.5,374.6"/>
-    <line class="cls-5" x1="-20.8" y1="220.2" x2="696.5" y2="220.2"/>
     <rect class="cls-13" x="34.6" y="117.5" width="31" height="102.7"/>
     <rect class="cls-13" x="78.9" y="114.4" width="31" height="105.8"/>
     <rect class="cls-13" x="123.1" y="169.3" width="31" height="50.9"/>
@@ -119,69 +118,95 @@
     <rect class="cls-13" x="521.6" y="162.3" width="31" height="57.9"/>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(-.5 178)"><tspan x="0" y="0">52</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(-.5 178)"><tspan x="0" y="0">52</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(40.6 115.5)"><tspan x="0" y="0">133</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(40.6 115.5)"><tspan x="0" y="0">133</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(84.9 112.4)"><tspan x="0" y="0">137</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(84.9 112.4)"><tspan x="0" y="0">137</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(132.3 167.2)"><tspan x="0" y="0">66</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(132.3 167.2)"><tspan x="0" y="0">66</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(220.9 174.9)"><tspan x="0" y="0">56</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(220.9 174.9)"><tspan x="0" y="0">56</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(262 137.1)"><tspan x="0" y="0">105</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(262 137.1)"><tspan x="0" y="0">105</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(309.4 141.8)"><tspan x="0" y="0">99</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(309.4 141.8)"><tspan x="0" y="0">99</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(353.7 156.4)"><tspan x="0" y="0">80</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(353.7 156.4)"><tspan x="0" y="0">80</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(398 188.1)"><tspan x="0" y="0">39</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(398 188.1)"><tspan x="0" y="0">39</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(442.2 158)"><tspan x="0" y="0">78</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(442.2 158)"><tspan x="0" y="0">78</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(486.5 157.2)"><tspan x="0" y="0">79</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(486.5 157.2)"><tspan x="0" y="0">79</tspan></text>
+        </g>
       </g>
     </g>
     <g class="cls-10">
       <g class="cls-10">
-        <text class="cls-7" transform="translate(530.8 160.3)"><tspan x="0" y="0">75</tspan></text>
+        <g class="cls-10">
+          <text class="cls-7" transform="translate(530.8 160.3)"><tspan x="0" y="0">75</tspan></text>
+        </g>
       </g>
     </g>
     <line class="cls-2" x1="21.8" y1="220.2" x2="562.1" y2="220.2"/>
   </g>
   <g class="cls-10">
     <g class="cls-10">
-      <text class="cls-6" transform="translate(169.5 62.2)"><tspan x="0" y="0">201</tspan></text>
+      <g class="cls-10">
+        <text class="cls-6" transform="translate(169.5 62.2)"><tspan x="0" y="0">201</tspan></text>
+      </g>
     </g>
   </g>
   <g>
@@ -196,17 +221,23 @@
   </g>
   <rect class="cls-11" x="344.1" y="250.3" width="51.3" height="16.8"/>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(168.3 264.5)"><tspan x="0" y="0">12 Bars</tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(168.3 264.5)"><tspan x="0" y="0">12 Bars</tspan></text>
+    </g>
   </g>
   <path class="cls-3" d="M441.7,159.7c-6.3-5.8-14-15.3-16.3-28.4-.8-4.6-2.2-12.4,1.9-20.6,6.5-13.1,21.7-16.1,23.9-16.5"/>
   <path class="cls-14" d="M448.9,165.4c-2.3-3.9-4.7-9.4-5.4-13.7l-2.5,7.2-6.6,3.9c4.4-.1,10.2,1.1,14.5,2.6Z"/>
   <path class="cls-3" d="M212.2,47.5c-8.5-3.4-16.1-4.6-21-5.1-9.1-.9-17.7-1.4-24.3,2.8-3.9,2.6-6,7.2-4.8,11.6,2,7.3,12.6,9.8,14,10.1,10.1,2.4,23.1-.8,27.6-8,.6-1,2.5-3.9,1.6-7.2-1.9-6.8-14.5-12.1-31.3-11.9"/>
   <rect class="cls-11" x="322.4" y="34" width="70.3" height="19.7"/>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(215 48.6)"><tspan x="0" y="0">The team counted 201 visitors</tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(215 48.6)"><tspan x="0" y="0">The team counted 201 visitors</tspan></text>
+    </g>
   </g>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(266 67.8)"><tspan x="0" y="0">on this day</tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(266 67.8)"><tspan x="0" y="0">on this day</tspan></text>
+    </g>
   </g>
   <g>
     <line class="cls-1" x1="218.1" y1="260.3" x2="232.8" y2="260.3"/>
@@ -214,18 +245,28 @@
   </g>
   <rect class="cls-11" x="528.8" y="92.1" width="49.8" height="19.2"/>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(452.5 88.3)"><tspan x="0" y="0" xml:space="preserve">Dark colored bar         This day </tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(452.5 88.3)"><tspan x="0" y="0" xml:space="preserve">Dark colored bar         This day </tspan></text>
+    </g>
   </g>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(496.1 107.7)"><tspan x="0" y="0">was a holiday</tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(496.1 107.7)"><tspan x="0" y="0">was a holiday</tspan></text>
+    </g>
   </g>
   <g>
     <line class="cls-1" x1="553" y1="84.2" x2="568.7" y2="84.2"/>
     <polygon class="cls-12" points="567.5 88.3 574.6 84.2 567.5 80.1 567.5 88.3"/>
   </g>
   <g class="cls-10">
-    <text class="cls-9" transform="translate(244.6 264.5)"><tspan x="0" y="0" xml:space="preserve">The study lasted  </tspan></text>
-    <text class="cls-8" transform="translate(345.7 264.5)"><tspan x="0" y="0" xml:space="preserve">12  </tspan></text>
-    <text class="cls-9" transform="translate(366.1 264.5)"><tspan x="0" y="0">days</tspan></text>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(244.6 264.5)"><tspan x="0" y="0" xml:space="preserve">The study lasted  </tspan></text>
+    </g>
+    <g class="cls-10">
+      <text class="cls-8" transform="translate(345.7 264.5)"><tspan x="0" y="0" xml:space="preserve">12  </tspan></text>
+    </g>
+    <g class="cls-10">
+      <text class="cls-9" transform="translate(366.1 264.5)"><tspan x="0" y="0">days</tspan></text>
+    </g>
   </g>
 </svg>
