@@ -101,13 +101,10 @@ input::-webkit-inner-spin-button {
 
 .markdown-content mark {
   background-color: yellow;
-  /* Default is yellow, change if you want */
   color: black;
-  /* Customize the text color if needed */
+  /*text color*/
   padding: 0.1em 0.2em;
-  /* Adjust padding around the highlighted text */
   border-radius: 0.2em;
-  /* Optional: make the highlight look smoother */
 }
 
 .highlight-box {
@@ -137,15 +134,15 @@ input::-webkit-inner-spin-button {
 .help-icon {
   position: fixed;
   bottom: 90px;
-  /* Adjust based on how far from the bottom you want */
+  /* how far from the bottom the icon will be */
   left: 50%;
   transform: translateX(-0%);
   cursor: pointer;
   z-index: 1000;
-  /* To ensure it stays on top of other elements */
+  /* Ensure icon stays on top of other elements */
 }
 
-/* Modal for help */
+/* Modal component for help */
 
 .modal-overlay {
   position: fixed;
