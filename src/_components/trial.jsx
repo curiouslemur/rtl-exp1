@@ -155,7 +155,7 @@ const AnswerSection = (props) => {
                 <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                     <InputLabel>{ansElements.ansLabel} </InputLabel>
                     <FormControl variant="standard" style={{ minWidth: 110 }}>
-                        <Select
+                        <Select dir="rtl"
                             placeholder="Select"
                             labelId="answer-select-label"
                             id="answer-select"
