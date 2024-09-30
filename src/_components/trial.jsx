@@ -18,13 +18,19 @@ const styles = {
 
 export const Trial = (props) => {
     let expLang = props.config.expLang
-    const labels = props.expPages.TrialLabels
+    // const labels = props.expPages.TrialLabels
+    const labels = trialLabels[expLang]
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
+    const [showAlert, setShowAlert] = useState(false);
+
+    const handleShowAlert = () => { setShowAlert(true); };
+    const handleCloseAlert = () => { setShowAlert(false); };
+
     // --------------------------------
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
@@ -40,7 +46,7 @@ export const Trial = (props) => {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 4000) // TODO: update the time 
+            }, 5000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
 
@@ -58,12 +64,12 @@ export const Trial = (props) => {
                         {stimuli[progress][expLang].note}
                     </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                        onClick={(e, divId, stimulusData, svaf, scsc, sciv) => tc.onClickShowChart(
+                        onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am) => tc.onClickShowChart(
                             "chartDiv",
                             stimuli[progress],
                             setVisibilityAnserwField,
                             setCannotShowChart,
-                            setChartIsVisible)}
+                            setChartIsVisible, progress, labels.alertMessage)}
                         disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
 
@@ -106,6 +112,10 @@ export const Trial = (props) => {
                     }
                 </Grid>
             </Grid>
+
+            {/* {showAlert && (
+                <Alert message="This is a custom alerfdsfdsfsdfsdfs fdso loooongt!" onClose={handleCloseAlert} />
+            )} */}
             <HelpIcon expLang={props.expLang} />
         </Container >
     )
@@ -209,16 +219,17 @@ const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass pr
     )
 }
 
-
 const trialLabels = {
     "ar": {
         "showChartButton": "إظهار الرسم البياني",
+        "alertMessage": "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
         "nextButton": "التالي",
         "helpModalIntro": "أنت جزء من فريق مكلف بتحليل أنماط الزوار في متحف محلي على مدار فترة زمنية. يتم تصور البيانات باستخدام مخطط شريطي. مهمتك هي الإجابة على الأسئلة بناءً على التصور.",
         "helpModalCloseButton": "إغلاق"
     },
     "en": {
         "showChartButton": "Show chart",
+        "alertMessage": "Remember that the chart will only be visible for a few seconds.",
         "nextButton": "Next",
         "helpModalIntro": "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
         "helpModalCloseButton": "Close"

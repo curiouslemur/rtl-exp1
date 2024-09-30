@@ -72,7 +72,9 @@ export const addEmptyPlaceholder = (divId) => {
 }
 
 
-export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible) => {
+export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible, progress, alertMessage) => {
+    if (progress === 0) { alert(alertMessage) }
+
     d3.select("#chartSvg").remove()
 
     var elem = document.createElement("img");
