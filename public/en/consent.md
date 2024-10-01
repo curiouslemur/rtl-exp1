@@ -18,4 +18,4 @@ Before starting the study, please read this page carefully.
 
 For more information about your rights as a research participant, or any concerns related to this study, please contact Prof. Lane Harrison (ltharrison@wpi.edu)
 
-By filling in the following form, and clicking 'NEXT', you agree to participate in the study.
+By filling in the following form, and clicking 'SIGN', you agree to participate in the study.
