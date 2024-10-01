@@ -10,7 +10,8 @@ import * as ic from "../_controllers/introController"
 const IntroContext = createContext()
 
 export const Intro = (props) => {
-    const [intro_md, setIntro_md] = useState('');
+    const [introB_md, setintroB_md] = useState('');
+    const [introC_md, setintroC_md] = useState('');
 
     const [cannotStart, setCannotStart] = useState(true)
 
@@ -19,8 +20,11 @@ export const Intro = (props) => {
             setCannotStart(false)
         }, 3000) // TODO: make this like 30s instead 
 
-        fetch(props.expLang + "/intro-bar.md")
-            .then((response) => response.text()).then((text) => { setIntro_md(text) }).catch((err) => console.error(err));
+        props.chartType === "bar" ?
+            fetch(props.expLang + "/intro-bar.md")
+                .then((response) => response.text()).then((text) => { setintroB_md(text) }).catch((err) => console.error(err)) :
+            fetch(props.expLang + "/intro-radial.md")
+                .then((response) => response.text()).then((text) => { setintroC_md(text) }).catch((err) => console.error(err))
 
         return () => clearTimeout(timeout);
     }, [props.expLang]);
@@ -33,11 +37,13 @@ export const Intro = (props) => {
                 <Grid item xl={6} xs={10}>
                     <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
 
-                    <div className="markdown-content">
-                        <ReactMarkdown children={intro_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
-                    </div>
-
-                    {/* <props.expPages.Intro keywordColor="#ea3433" expLang={props.expLang} /> <br /> */}
+                    {props.chartType === "bar" ?
+                        <div className="markdown-content">
+                            <ReactMarkdown children={introB_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
+                        </div> :
+                        <div className="markdown-content">
+                            <ReactMarkdown children={introC_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
+                        </div>}
 
                     <Button variant='contained' style={{ marginTop: '4ch', marginBottom: '4ch' }}
                         disabled={cannotStart}

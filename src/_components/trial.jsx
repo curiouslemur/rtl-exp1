@@ -236,4 +236,10 @@ const trialLabels = {
     },
 }
 
+export const TrialC = (props) => {
+    return (
+        <>Welcome to trialC</>
+    )
+}
+
 export default Trial;

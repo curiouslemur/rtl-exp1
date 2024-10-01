@@ -46,11 +46,15 @@ function App() {
           <Route path={subdom} element={<navigator.Consent config={meta} navigate={navigate}
             nextUrl={subdom + "/intro"} expPages={expPages} expLang={expLang} />} />
 
-          <Route path={subdom + "/intro"} element={<navigator.Intro config={meta} navigate={navigate}
-            nextUrl={subdom + "/trial"} expPages={expPages} expLang={expLang} />} />
+          <Route path={subdom + "/intro"} element={<navigator.Intro config={meta} chartType={"bar"}
+            navigate={navigate} nextUrl={subdom + "/trial"} expPages={expPages} expLang={expLang} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial config={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
+            nextUrl={subdom + "/intro-2"} expPages={expPages} expLang={expLang}
+            stimuli={stimuli} />} />
+
+          <Route path={subdom + "/intro-2"} element={<navigator.Intro config={meta} chartType={"radial"}
+            navigate={navigate} nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
             stimuli={stimuli} />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro config={meta} navigate={navigate}
