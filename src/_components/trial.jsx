@@ -210,7 +210,7 @@ const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass pr
                 <img src={expLang + "/intro-bar-bar.png"} alt="Help modal" className="modal-image" />
                 <br />
                 <video width="100%" controls autoplay loop>
-                    <source src="en/intro-bar-task.mp4" type="video/mp4" />
+                    <source src={expLang + "/intro-bar-task.mp4"} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <Button onClick={close}>{trialLabels[expLang].helpModalCloseButton}</Button>

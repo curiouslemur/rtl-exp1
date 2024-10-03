@@ -1,4 +1,4 @@
-# Instructions 
+# Instructions (part 1)
 
 In this section of the study, consider the following scenario. 
 
@@ -11,9 +11,7 @@ Your task is to interpret the charts and answer questions to help understand the
 
 
 <!-- -------------------------------------------- -->
-<div class="highlight-box">
-<b> About the barchart </b>
-</div>
+<div class="highlight-box"><b> About the barchart </b></div>
 
 - Each day is represented by one bar in the barchart.
 
@@ -26,9 +24,7 @@ Your task is to interpret the charts and answer questions to help understand the
 ![Image of a barchart used in this study](en/intro-bar-bar.png)
 
 <!-- -------------------------------------------- -->
-<div class="highlight-box">
-<b> Your task </b>
-</div>
+<div class="highlight-box"><b> Your task </b></div>
 
 <div style="text-align: center;">
   <video width="600" controls autoplay loop muted><source src="en/intro-bar-task.mp4" type="video/mp4"></video>
