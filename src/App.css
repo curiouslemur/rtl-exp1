@@ -193,10 +193,14 @@ input::-webkit-inner-spin-button {
   display: block;
   margin: 0 auto;
   /* This centers the image */
-  width: 100%;
+  width: 90%;
   display: block;
+  filter: drop-shadow(0 0 10px #bab5b5)
 }
 
+.modal-content video {
+  filter: drop-shadow(0 0 10px #bab5b5);
+}
 
 /* ALERT on showing chart for the first question */
 

@@ -207,9 +207,9 @@ const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass pr
 
                 <span>{trialLabels[expLang].helpModalIntro}</span>
                 <br /> <br />
-                <img src={expLang + "/intro-bar-bar.png"} alt="Help modal" className="modal-image" />
+                <img src={expLang + "/intro-bar-bar.png"} alt="Help modal" className="modal-content" />
                 <br />
-                <video width="100%" controls autoplay loop>
+                <video controls autoplay loop className="modal-content">
                     <source src={expLang + "/intro-bar-task.mp4"} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
@@ -224,7 +224,7 @@ const trialLabels = {
         "showChartButton": "إظهار الرسم البياني",
         "alertMessage": "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
         "nextButton": "التالي",
-        "helpModalIntro": "أنت جزء من فريق مكلف بتحليل أنماط الزوار في متحف محلي على مدار فترة زمنية. يتم تصور البيانات باستخدام الرسوم العمودية. مهمتك هي الإجابة على الأسئلة بناءً على التصور.",
+        "helpModalIntro": "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
         "helpModalCloseButton": "إغلاق"
     },
     "en": {
