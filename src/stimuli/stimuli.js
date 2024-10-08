@@ -123,7 +123,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: 2, ansL: 2, ansR: 2,
         ansType: 'input',
         en: { q: "How many holidays were there during the study?" },
-        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة?" }
+        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة؟" }
     },
     {
         qId: "6-count-until",
