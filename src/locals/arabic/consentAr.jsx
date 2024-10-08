@@ -15,7 +15,7 @@ export const ConsentAr = (props) => {
 
 
 export const ConsentLabelsAr = {
-    mobileWarning: "يرجى استخدام جهاز أو كمبيوتر بشاشة أعرض.",
+    mobileWarning: "يرجى استخدام جهاز أو حاسوب بشاشة أعرض.",
     consentTitle: "مرحباً",
 
     countryResQ: "من أي بلد تشارك في هذا الاستطلاع؟ *",
