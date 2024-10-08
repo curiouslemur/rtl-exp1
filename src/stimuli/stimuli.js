@@ -86,7 +86,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: "either", ansL: 44, ansR: 64, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
-        ar: { q: "كم عدد الزوار في اليوم السادس ؟" }
+        ar: { q: "كم عدد الزوار في اليوم السادس؟" }
     }, {
         qId: "4-sts",
         chartType: "bar",
@@ -98,7 +98,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: "either", ansL: 88, ansR: 31, // TODO: Rather add it final now xxxx ansL and ansR can be added later to the data
         ansType: "input",
         en: { q: "How many visitors on the sixth (6th) day?" },
-        ar: { q: "كم عدد الزوار في اليوم السادس ؟" }
+        ar: { q: "كم عدد الزوار في اليوم السادس؟" }
     }, {
         qId: "5-u-1", // the fifth question will be either of the u-1 or u-2 versions
         chartType: "bar",
@@ -110,7 +110,7 @@ export const stimuli = [ // questions and labels in English. Order is important 
         ansExpected: 1, ansL: 1, ansR: 1,
         ansType: 'input',
         en: { q: "How many holidays were there during the study?" },
-        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة?" }
+        ar: { q: "كم عدد العطلات التي كانت هناك أثناء الدراسة؟" }
     },
     {
         qId: "5-u-2",
