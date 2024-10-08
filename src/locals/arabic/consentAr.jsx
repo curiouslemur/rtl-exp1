@@ -35,9 +35,9 @@ export const ConsentLabelsAr = {
 
     professionQ: "ما هي مهنتك؟ *", professionLabel: "مهنة",
 
-    visFamiliarityQ: "ما مدى تكرار استخدامك للمخططات أو تصورات البيانات؟",
+    visFamiliarityQ: "ما معدل استخدامك للرسوم البيانية؟",
     visFamiliarityLabel: "",
-    sign: "يوافق"
+    sign: "أوافق"
 }
 
 export default ConsentAr;
