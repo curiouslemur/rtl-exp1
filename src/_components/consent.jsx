@@ -23,7 +23,7 @@ export const Consent = (props) => {
     const [selectedValues, setSelectedValues] = useState()
     const [isMobile, setIsMobile] = useState(false)
 
-    const handleResize = () => { setIsMobile(window.innerWidth < 1094) }
+    const handleResize = () => { setIsMobile(window.innerWidth < 1050) }
 
     useEffect(
         () => {
@@ -45,7 +45,7 @@ export const Consent = (props) => {
                 window.removeEventListener('resize', handleResize)
             }
 
-        }, []);
+        });
 
     const labels = props.expPages.ConsentLabels
     const sessionID = props.config.sessionID

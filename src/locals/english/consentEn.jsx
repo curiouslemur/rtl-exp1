@@ -52,7 +52,7 @@ export const ConsentEn = (props) => {
 
 
 export const ConsentLabelsEn = {
-    mobileWarning: "Please use a device or a computer with wider screen.",
+    mobileWarning: "Please set your browser to full screen, or use a device or a computer with a wider display.",
     consentTitle: "Welcome",
 
     countryResQ: "From which country are you taking this survey? *",

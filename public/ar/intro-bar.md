@@ -21,7 +21,8 @@
 
 - يتم ترتيب الأيام من أول يوم إلى آخر يوم من الدراسة.
 
-- تشير الأشرطة ذات الألوان الداكنة إلى **العطلات**
+<!-- - تشير الأشرطة ذات الألوان الداكنة إلى **العطلات** -->
+- تشير الأعمدة السوداء إلى **العطلات**.
 
 <!-- ![Image of a barchart used in this study](ar/intro-bar-bar.svg) -->
 ![Image of a barchart used in this study](ar/intro-bar-bar.png)

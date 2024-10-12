@@ -19,7 +19,7 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - The days are ordered from the first to the last day of the study.
 
-- Dark-colored bars indicate **holidays**
+- Black-colored bars indicate **holidays**
 
 ![Image of a barchart used in this study](en/intro-bar-bar.png)
 
