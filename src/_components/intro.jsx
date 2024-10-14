@@ -9,7 +9,7 @@ import * as ic from "../_controllers/introController"
 
 const IntroContext = createContext()
 
-export const Intro = (props) => {
+export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
     const [introB_md, setintroB_md] = useState('');
     const [introC_md, setintroC_md] = useState('');
 
@@ -20,24 +20,24 @@ export const Intro = (props) => {
             setCannotStart(false)
         }, 3000) // TODO: make this like 30s instead 
 
-        props.chartType === "bar" ?
-            fetch(props.expLang + "/intro-bar.md")
-                .then((response) => response.text()).then((text) => { setintroB_md(text) }).catch((err) => console.error(err)) :
-            fetch(props.expLang + "/intro-radial.md")
-                .then((response) => response.text()).then((text) => { setintroC_md(text) }).catch((err) => console.error(err))
+        // chartType === "bar" ?
+        // fetch(meta.expLang + "/intro-bar.md")
+        fetch(meta.expLang + "/intro-" + chartType + ".md")
+            .then((response) => response.text()).then((text) => { setintroB_md(text) }).catch((err) => console.error(err)) //:
+        // fetch(meta.expLang + "/intro-radial.md")
+        //     .then((response) => response.text()).then((text) => { setintroC_md(text) }).catch((err) => console.error(err))
 
         return () => clearTimeout(timeout);
-    }, [props.expLang]);
+    });
 
-    const labels = props.expPages.IntroLabels
-
+    const labels = meta.expText.intro
     return (
         <IntroContext.Provider value={{ labels, setCannotStart }}>
             <Grid container justifyContent="center">
                 <Grid item xl={6} xs={10}>
                     <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
 
-                    {props.chartType === "bar" ?
+                    {chartType === "bar" ?
                         <div className="markdown-content">
                             <ReactMarkdown children={introB_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
                         </div> :
@@ -48,7 +48,7 @@ export const Intro = (props) => {
                     <Button variant='contained' style={{ marginTop: '4ch', marginBottom: '4ch' }}
                         disabled={cannotStart}
                         onClick={(nav, nu) => {
-                            ic.onClickStart(props.navigate, props.nextUrl)
+                            ic.onClickStart(navigate, nextUrl)
                         }}> {labels.start} </Button>
                 </Grid>
             </Grid>

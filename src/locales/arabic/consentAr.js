@@ -1,12 +1,3 @@
-import React from "react";
-import { Grid } from "@mui/material";
-
-export const ConsentAr = (props) => {
-    return (
-        <Grid align='justify'></Grid>
-    )
-}
-
 export const ConsentLabelsAr = {
     mobileWarning: "يرجى استخدام جهاز أو حاسوب بشاشة أعرض.",
     consentTitle: "مرحباً",
@@ -33,4 +24,4 @@ export const ConsentLabelsAr = {
     sign: "أوافق"
 }
 
-export default ConsentAr;
+export default ConsentLabelsAr;

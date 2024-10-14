@@ -1,10 +1,7 @@
 import React from "react";
-import { Grid } from "@mui/material";
 
 export const ConsentEn = (props) => {
-    return (
-        <Grid align='justify'> </Grid>
-    )
+    return (<></>)
 }
 
 
