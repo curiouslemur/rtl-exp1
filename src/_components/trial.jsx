@@ -155,14 +155,13 @@ const AnswerSection = (props) => {
                 <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                     <InputLabel>{ansElements.ansLabel} </InputLabel>
                     <FormControl variant="standard" style={{ minWidth: 110 }}>
-                        <Select dir="rtl"
+                        <Select
                             placeholder="Select"
                             labelId="answer-select-label"
                             id="answer-select"
                             value={optionValue}
                             label="age"
                             onChange={(e, scn, sav) => { setOptionValue(e.target.value); tc.onChangeAnsSelect(e, props.setCannotNext, props.setAnsValue) }}
-
                         >
                             {options.map((option, index) => {
                                 return (

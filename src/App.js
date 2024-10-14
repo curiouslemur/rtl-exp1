@@ -8,7 +8,6 @@ import './App.css';
 
 import { StudyContext } from './_utils/contexts';
 import { loadPages_inLang, loadStimuli_inLang } from './_utils/content-loader'
-// import { stimuli } from './stimuli/stimuli';
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en
@@ -36,7 +35,7 @@ function App() {
       document.documentElement.lang = "ar"
       document.documentElement.dir = "rtl"
     }
-  }, []);
+  }, [expLang]);
 
   return (
     expLang ?
@@ -66,7 +65,7 @@ function App() {
 }
 
 const PageMeta = (props) => {
-  if (props.meta.language === 'ar' || props.meta.language === "hebrew") {
+  if (props.meta.language === 'ar' || props.meta.language === "he") {
     return (
       <HelmetProvider>
         <Helmet htmlAttributes={{ lang: 'ar', dir: 'rtl' }}>
