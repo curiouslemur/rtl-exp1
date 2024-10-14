@@ -17,7 +17,7 @@ const styles = {
 }
 
 export const Trial = (props) => {
-    let expLang = props.config.expLang
+    let expLang = props.meta.expLang
     // const labels = props.expPages.TrialLabels
     const labels = trialLabels[expLang]
 
