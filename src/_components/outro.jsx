@@ -14,7 +14,6 @@ const styles = {
 export const Outro = ({ meta }) => {
     const [cannotCollect, setCannotCollect] = useState(false)
 
-    // const labels = props.expPages.OutroLabels
     const labels = meta.expText.outro
 
     const handleClick = () => { setCannotCollect(true) }
