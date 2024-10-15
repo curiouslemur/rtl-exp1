@@ -26,5 +26,12 @@ export const englishTexts = {
     },
     intro: {
         start: "Start"
+    },
+    trial: {
+        showChartButton: "Show chart",
+        alertMessage: "Remember that the chart will only be visible for a few seconds.",
+        nextButton: "Next",
+        helpModalIntro: "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
+        helpModalCloseButton: "Close"
     }
 }

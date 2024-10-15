@@ -50,8 +50,7 @@ function App() {
             nextUrl={subdom + "/trial"} chartType={"bar"} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
-            stimuli={stimuli} />} />
+            nextUrl={subdom + "/outro"} chartType={"bar"} stimuli={stimuli} />} />
 
           <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} chartType={"radial"}
             navigate={navigate} nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}

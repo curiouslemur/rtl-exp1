@@ -26,5 +26,12 @@ export const arabicTexts = {
     },
     intro: {
         start: "ابدأ"
+    },
+    trial: {
+        showChartButton: "إظهار الرسم البياني",
+        alertMessage: "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
+        nextButton: "التالي",
+        helpModalIntro: "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
+        helpModalCloseButton: "إغلاق"
     }
 }

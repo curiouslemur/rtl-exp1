@@ -1,17 +1,15 @@
-import React, { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Grid } from "@mui/material"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw';
 
 import * as ic from "../_controllers/introController"
-import { faW } from "@fortawesome/free-solid-svg-icons";
 
 // const IntroContext = createContext()
 
 export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
     const [intro_md, setintro_md] = useState('');
-    const [introC_md, setintroC_md] = useState('');
 
     const [cannotStart, setCannotStart] = useState(true)
 
@@ -35,13 +33,9 @@ export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
             <Grid item xl={6} xs={10}>
                 <hr style={{ color: "#9c27b0", backgroundColor: "#9c27b0", height: 2 }} />
 
-                {chartType === "bar" ?
-                    <div className="markdown-content">
-                        <ReactMarkdown children={intro_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
-                    </div> :
-                    <div className="markdown-content">
-                        <ReactMarkdown children={introC_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
-                    </div>}
+                <div className="markdown-content">
+                    <ReactMarkdown children={intro_md} rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]} />
+                </div>
 
                 <Button variant='contained' style={{ marginTop: '4ch', marginBottom: '4ch' }}
                     disabled={cannotStart}

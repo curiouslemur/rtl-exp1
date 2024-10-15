@@ -16,27 +16,23 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Trial = (props) => {
-    let expLang = props.meta.expLang
-    // const labels = props.expPages.TrialLabels
-    const labels = trialLabels[expLang]
+export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
+    let expLang = meta.expLang
+    // const labels = trialLabels[expLang]
+    const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
-    const [showAlert, setShowAlert] = useState(false);
-
-    const handleShowAlert = () => { setShowAlert(true); };
-    const handleCloseAlert = () => { setShowAlert(false); };
 
     // --------------------------------
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
 
-    const stimuli = props.stimuli
+    // const stimuli = stimuli
     // --------------------------------
 
     useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
@@ -88,7 +84,7 @@ export const Trial = (props) => {
                                 setVisibilityAnserwField={setVisibilityAnserwField}
                                 // totalQ={stimuli.length}
                                 stimulusData={stimuli[progress]}
-                                expLang={props.expLang}
+                                expLang={meta.expLang}
                                 setAnsValue={setAnsValue}
                             // navigate={props.navigate} nextUrl={props.nextUrl}
                             />
@@ -105,25 +101,21 @@ export const Trial = (props) => {
                                             setCannotShowChart, setVisibilityAnserwField,
                                             setCannotNext,
                                             stimuli.length, stimuli[progress], ansValue,
-                                            props.navigate, props.nextUrl)}
+                                            navigate, nextUrl)}
                                 > {labels.nextButton} </Button>
                             </Grid>
                         </> : <></>
                     }
                 </Grid>
+                <HelpIcon expLang={meta.expLang} chartType={chartType} />
             </Grid>
 
-            {/* {showAlert && (
-                <Alert message="This is a custom alerfdsfdsfsdfsdfs fdso loooongt!" onClose={handleCloseAlert} />
-            )} */}
-            <HelpIcon expLang={props.expLang} />
         </Container >
     )
 }
 
 const AnswerSection = (props) => {
     const [optionValue, setOptionValue] = useState('')
-    // console.log(props.answerType)
     const labels = props.labels
     const ansElements = props.stimulusData[props.expLang]
 
@@ -136,7 +128,6 @@ const AnswerSection = (props) => {
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
                             type="number"
                             minwidth={5}
-                            // helperText={labels.ansTextfieldHelper}
                             onChange={(e, scn, sav) => tc.onChangeAnsTextField(e, props.setCannotNext, props.setAnsValue)}
                             InputProps={{
                                 inputProps: {
@@ -150,7 +141,6 @@ const AnswerSection = (props) => {
             )
         case "select":
             let options = ansElements.ansOptions
-
             return (<>
                 <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                     <InputLabel>{ansElements.ansLabel} </InputLabel>
@@ -186,12 +176,12 @@ const HelpIcon = (props) => {
             <div className="help-icon" >
                 <FontAwesomeIcon icon={faInfoCircle} size="2x" onClick={openHelpModal} />
             </div>
-            <HelpModal open={isModalOpen} close={closeHelpModal} modalLabels={props.modalLabels} expLang={props.expLang} />
+            <HelpModal open={isModalOpen} close={closeHelpModal} expLang={props.expLang} chartType={props.chartType} />
         </>
     )
 }
 
-const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass props than 
+const HelpModal = ({ open, close, expLang, chartType }) => { // !!!!! Cooler way to pass props than 
     // const HelpModal = (props) => { if (!props.open) return null;
     if (!open) return null;
 
@@ -200,16 +190,16 @@ const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass pr
             close();
         }
     }
+    console.log(expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4")
     return (
         <div className="modal-overlay" onClick={handleOverlayClick}>
             <div className="modal-content">
-
                 <span>{trialLabels[expLang].helpModalIntro}</span>
                 <br /> <br />
-                <img src={expLang + "/intro-bar-bar.png"} alt="Help modal" className="modal-content" />
+                <img src={expLang + "/" + chartType + "/intro-" + chartType + "-ex.png"} alt="Help modal" className="modal-content" />
                 <br />
                 <video controls autoplay loop className="modal-content">
-                    <source src={expLang + "/intro-bar-task.mp4"} type="video/mp4" />
+                    <source src={expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <Button onClick={close}>{trialLabels[expLang].helpModalCloseButton}</Button>
@@ -219,20 +209,20 @@ const HelpModal = ({ open, close, expLang }) => { // !!!!! Cooler way to pass pr
 }
 
 const trialLabels = {
-    "ar": {
-        "showChartButton": "إظهار الرسم البياني",
-        "alertMessage": "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
-        "nextButton": "التالي",
-        "helpModalIntro": "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
-        "helpModalCloseButton": "إغلاق"
-    },
-    "en": {
-        "showChartButton": "Show chart",
-        "alertMessage": "Remember that the chart will only be visible for a few seconds.",
-        "nextButton": "Next",
-        "helpModalIntro": "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
-        "helpModalCloseButton": "Close"
-    },
+    // "ar": {
+    // "showChartButton": "إظهار الرسم البياني",
+    // "alertMessage": "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
+    // "nextButton": "التالي",
+    // "helpModalIntro": "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
+    // "helpModalCloseButton": "إغلاق"
+    // },
+    // "en": {
+    //     "showChartButton": "Show chart",
+    //     "alertMessage": "Remember that the chart will only be visible for a few seconds.",
+    //     "nextButton": "Next",
+    //     "helpModalIntro": "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
+    //     "helpModalCloseButton": "Close"
+    // },
 }
 
 export const TrialC = (props) => {
