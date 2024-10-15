@@ -33,5 +33,11 @@ export const arabicTexts = {
         nextButton: "التالي",
         helpModalIntro: "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
         helpModalCloseButton: "إغلاق"
+    },
+    outro: {
+        outroTitle: "شكرا لمشاركتك.",
+        closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
+        prolificUserYes: "انقر أدناه لجمع مكافأتك قبل إغلاق هذه الصفحة.",
+        prolificUserButton: "مكافأة"
     }
 }

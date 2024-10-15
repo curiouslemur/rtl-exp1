@@ -18,14 +18,14 @@ function App() {
   sessionStorage.setItem('expLang', expLang)
   // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
 
-  const stimuli = loadStimuli_inLang(expLang)
+  // const stimuli = loadStimuli_inLang(expLang)
 
   const meta = {
     expLang: expLang,
     expName: expLang + '-rtl1', title: "rtl-exp1",
     expText: loadTexts_inLang(expLang),
     sessionID: generateSessionID(),
-    totalQs: stimuli
+    // totalQs: stimuli
   }
 
   const navigate = useNavigate()
@@ -50,10 +50,14 @@ function App() {
             nextUrl={subdom + "/trial"} chartType={"bar"} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"bar"} stimuli={stimuli} />} />
+            nextUrl={subdom + "/outro"} chartType={"bar"}
+          // stimuli={stimuli} 
+          />} />
 
           <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"radial"} stimuli={stimuli} />} />
+            nextUrl={subdom + "/outro"} chartType={"radial"}
+          // stimuli={stimuli}
+          />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />
         </Routes>

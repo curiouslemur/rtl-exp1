@@ -17,14 +17,14 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
+export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     let expLang = meta.expLang
     // const labels = trialLabels[expLang]
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
 
-    const stimuli_ = loadStimuli_inLang_(meta.expLang, chartType)
+    const stimuli = loadStimuli_inLang_(meta.expLang, chartType)
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);

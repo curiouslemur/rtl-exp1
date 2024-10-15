@@ -11,14 +11,14 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Outro = (props) => {
+export const Outro = ({ meta }) => {
     const [cannotCollect, setCannotCollect] = useState(false)
 
-    const labels = props.expPages.OutroLabels
+    // const labels = props.expPages.OutroLabels
+    const labels = meta.expText.outro
 
-    const handleClick = () => {
-        setCannotCollect(true)
-    }
+    const handleClick = () => { setCannotCollect(true) }
+
     useEffect(() => {
         document.body.classList.add('outro-body');
     }, []);

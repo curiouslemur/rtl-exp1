@@ -33,5 +33,11 @@ export const englishTexts = {
         nextButton: "Next",
         helpModalIntro: "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
         helpModalCloseButton: "Close"
+    },
+    outro: {
+        outroTitle: "Thank you for your participation.",
+        closeBrowser: "You may now close this window.",
+        prolificUserYes: "Prolific user, click below to collect your reward before closing this window",
+        prolificUserButton: "Collect"
     }
 }
