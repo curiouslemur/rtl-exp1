@@ -7,7 +7,7 @@ import * as navigator from './_components/_route'
 import './App.css';
 
 import { StudyContext } from './_utils/contexts';
-import { loadPages_inLang, loadStimuli_inLang, loadTexts_inLang } from './_utils/content-loader'
+import { loadStimuli_inLang, loadTexts_inLang } from './_utils/content-loader'
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en
@@ -16,7 +16,7 @@ function App() {
   const [expLang, setExpLang] = useState(searchParams.get('lang') || sessionStorage.getItem('expLang'))// searchParams.get('lang'))
 
   sessionStorage.setItem('expLang', expLang)
-  const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
+  // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
 
   const stimuli = loadStimuli_inLang(expLang)
 
@@ -52,15 +52,14 @@ function App() {
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
             nextUrl={subdom + "/outro"} chartType={"bar"} stimuli={stimuli} />} />
 
-          <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} chartType={"radial"}
-            navigate={navigate} nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
-            stimuli={stimuli} />} />
+          <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
+            nextUrl={subdom + "/outro"} chartType={"radial"} stimuli={stimuli} />} />
 
-          <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} navigate={navigate}
-            expPages={expPages} />} />
+          <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />
         </Routes>
       </StudyContext.Provider> :
       <h3> Language undefined </h3>
+
     // <StudyContext.Provider value={{ expLang }}>
     //   <PageMeta meta={meta} />
     //   <Routes>

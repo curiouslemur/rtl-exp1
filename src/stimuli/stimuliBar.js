@@ -13,8 +13,8 @@
  * ansType: The expected type of answer from participants: two buttons (increasing / decreasing), input text
  **/
 
-const imgPath = "figures/"
-export const stimuli = [ // questions and labels in English. Order is important here
+const imgPath = "img-trials/"
+export const stimuliBar = [ // questions and labels in English. Order is important here
     {
         qId: "1-u",
         chartType: "bar",

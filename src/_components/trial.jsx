@@ -6,6 +6,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
+import { loadStimuli_inLang, loadStimuli_inLang_ } from "../_utils/content-loader";
 // import { stimuli } from "../stimuli/stimuli";
 
 const styles = {
@@ -22,11 +23,12 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
+
+    const stimuli_ = loadStimuli_inLang_(meta.expLang, chartType)
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
-
     // --------------------------------
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
@@ -60,12 +62,13 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
                         {stimuli[progress][expLang].note}
                     </Typography>
                     <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                        onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am) => tc.onClickShowChart(
+                        onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am, expL, chrtT) => tc.onClickShowChart(
                             "chartDiv",
                             stimuli[progress],
                             setVisibilityAnserwField,
                             setCannotShowChart,
-                            setChartIsVisible, progress, labels.alertMessage)}
+                            setChartIsVisible, progress, labels.alertMessage,
+                            expLang, chartType)}
                         disabled={cannotShowChart} > {labels.showChartButton}</Button>
                 </Grid>
 
@@ -107,7 +110,7 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
                         </> : <></>
                     }
                 </Grid>
-                <HelpIcon expLang={meta.expLang} chartType={chartType} />
+                <HelpIcon meta={meta} chartType={chartType} />
             </Grid>
 
         </Container >
@@ -166,64 +169,74 @@ const AnswerSection = (props) => {
     }
 }
 
-const HelpIcon = (props) => {
+const HelpIcon = ({ meta, chartType }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openHelpModal = () => { setIsModalOpen(true) }
     const closeHelpModal = () => { setIsModalOpen(false) }
+
+    const labels = meta.expText.trial
+    const handleOverlayClick = (e) => { // Function to handle clicks outside of modal content
+        if (e.target.className === 'modal-overlay') {
+            closeHelpModal();
+        }
+    }
+
 
     return (
         <>
             <div className="help-icon" >
                 <FontAwesomeIcon icon={faInfoCircle} size="2x" onClick={openHelpModal} />
             </div>
-            <HelpModal open={isModalOpen} close={closeHelpModal} expLang={props.expLang} chartType={props.chartType} />
+            {/* <HelpModal open={isModalOpen} close={closeHelpModal} meta={meta} chartType={chartType} /> */}
+
+            {
+                isModalOpen ? <div className="modal-overlay" onClick={handleOverlayClick}>
+                    <div className="modal-content">
+                        <span>{labels.helpModalIntro}</span>
+                        <br /> <br />
+                        <img src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-ex.png"} alt="Help modal" className="modal-content" />
+                        <br />
+                        <video controls autoplay loop className="modal-content">
+                            <source src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        <Button onClick={closeHelpModal}>{labels.helpModalCloseButton}</Button>
+                    </div>
+                </div>
+                    : <> </>
+
+            }
+
+
         </>
     )
 }
 
-const HelpModal = ({ open, close, expLang, chartType }) => { // !!!!! Cooler way to pass props than 
-    // const HelpModal = (props) => { if (!props.open) return null;
-    if (!open) return null;
+// const HelpModal_ = ({ open, close, meta, chartType }) => { // !!!!! Cooler way to pass props than 
+//     if (!open) return null;
+//     const labels = meta.expText.trial
+//     const handleOverlayClick = (e) => { // Function to handle clicks outside of modal content
+//         if (e.target.className === 'modal-overlay') {
+//             close();
+//         }
+//     }
 
-    const handleOverlayClick = (e) => { // Function to handle clicks outside of modal content
-        if (e.target.className === 'modal-overlay') {
-            close();
-        }
-    }
-    console.log(expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4")
-    return (
-        <div className="modal-overlay" onClick={handleOverlayClick}>
-            <div className="modal-content">
-                <span>{trialLabels[expLang].helpModalIntro}</span>
-                <br /> <br />
-                <img src={expLang + "/" + chartType + "/intro-" + chartType + "-ex.png"} alt="Help modal" className="modal-content" />
-                <br />
-                <video controls autoplay loop className="modal-content">
-                    <source src={expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <Button onClick={close}>{trialLabels[expLang].helpModalCloseButton}</Button>
-            </div>
-        </div>
-    )
-}
-
-const trialLabels = {
-    // "ar": {
-    // "showChartButton": "إظهار الرسم البياني",
-    // "alertMessage": "تذكر أن الرسم البياني سيكون مرئيًا لبضع ثوانٍ فقط.",
-    // "nextButton": "التالي",
-    // "helpModalIntro": "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
-    // "helpModalCloseButton": "إغلاق"
-    // },
-    // "en": {
-    //     "showChartButton": "Show chart",
-    //     "alertMessage": "Remember that the chart will only be visible for a few seconds.",
-    //     "nextButton": "Next",
-    //     "helpModalIntro": "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
-    //     "helpModalCloseButton": "Close"
-    // },
-}
+//     return (
+//         <div className="modal-overlay" onClick={handleOverlayClick}>
+//             <div className="modal-content">
+//                 <span>{labels.helpModalIntro}</span>
+//                 <br /> <br />
+//                 <img src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-ex.png"} alt="Help modal" className="modal-content" />
+//                 <br />
+//                 <video controls autoplay loop className="modal-content">
+//                     <source src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
+//                     Your browser does not support the video tag.
+//                 </video>
+//                 <Button onClick={close}>{labels.helpModalCloseButton}</Button>
+//             </div>
+//         </div>
+//     )
+// }
 
 export const TrialC = (props) => {
     return (
