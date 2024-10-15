@@ -7,7 +7,7 @@ import * as navigator from './_components/_route'
 import './App.css';
 
 import { StudyContext } from './_utils/contexts';
-import { loadStimuli_inLang, loadTexts_inLang } from './_utils/content-loader'
+import { loadTexts_inLang } from './_utils/content-loader'
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en

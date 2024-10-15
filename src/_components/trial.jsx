@@ -6,7 +6,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
-import { loadStimuli_inLang, loadStimuli_inLang_ } from "../_utils/content-loader";
+import { loadStimuli_inLang_ } from "../_utils/content-loader";
 // import { stimuli } from "../stimuli/stimuli";
 
 const styles = {
@@ -23,8 +23,8 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
-
-    const stimuli = loadStimuli_inLang_(meta.expLang, chartType)
+    const [stimuli, setStimuli] = useState(loadStimuli_inLang_(meta.expLang, chartType))
+    // const stimuli = loadStimuli_inLang_(meta.expLang, chartType)
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);

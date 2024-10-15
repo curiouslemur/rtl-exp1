@@ -156,7 +156,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
     }, {
         qId: "7-extract-before",
         chartType: "bar",
-        imgSrc: imgPath + "bar-7-u.svg",
+        imgSrc: imgPath + "bar-7-u-before.svg",
         cat: "",
         sorted: "u",
         anchorPos: 7,
@@ -168,10 +168,10 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
     }, {
         qId: "7-extract-after",
         chartType: "bar",
-        imgSrc: imgPath + "bar-7-u.svg",
+        imgSrc: imgPath + "bar-7-u-after.svg",
         cat: "u",
         sorted: "",
-        anchorPos: 71,
+        anchorPos: 7,
         valMarked: 90, valL: 157, valR: 103,
         ansExpected: "either", ansL: 157, ansR: 103,
         ansType: 'input',
