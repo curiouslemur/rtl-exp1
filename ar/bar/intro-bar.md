@@ -25,7 +25,7 @@
 - تشير الأعمدة السوداء إلى **العطلات**.
 
 <!-- ![Image of a barchart used in this study](ar/intro-bar-bar.svg) -->
-![Image of a barchart used in this study](ar/intro-bar-bar.png)
+![Image of a barchart used in this study](ar/bar/intro-bar-ex.png)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box">
@@ -33,7 +33,7 @@
 </div>
 
 <div style="text-align: center;">
-  <video width="600" controls autoplay loop muted><source src="ar/intro-bar-task.mp4" type="video/mp4"></video>
+  <video width="600" controls autoplay loop muted><source src="ar/bar/intro-bar-task.mp4" type="video/mp4"></video>
 </div>
 
 - تتكون كل تجربة من سؤال ورسم البيانية. لا توجد أسئلة خادعة.
