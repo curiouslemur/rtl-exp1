@@ -20,7 +20,7 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - Black-colored bars indicate **holidays**
 
-![Image of a barchart used in this study](en/bar/intro-bar-ex.png)
+![Barchart used in this study](en/bar/intro-bar-ex.png)
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box"><b> Your task </b></div>
@@ -35,6 +35,5 @@ Your task is to interpret the charts and answer questions to help understand the
 Read the question → show the chart → answer using a dropdown list, or write in a text area.
 
 <!-- ![Example of how to answer a question in this study](en/intro-bar-task.gif) -->
-
 
 You can access the summary of this instruction page at anytime by clicking on the help icon at the bottom of the next page.
