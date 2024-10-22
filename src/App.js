@@ -7,18 +7,20 @@ import * as navigator from './_components/_route'
 import './App.css';
 
 import { StudyContext } from './_utils/contexts';
-import { loadTexts_inLang } from './_utils/content-loader'
+import { loadStimuli_inLang, loadTexts_inLang } from './_utils/content-loader'
+import { stimuliRadial } from './stimuli/stimuliRadial';
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en
   const [searchParams, setSearchParams] = useSearchParams();
   // const [expLang, setExplang] = useState('en')
   const [expLang, setExpLang] = useState(searchParams.get('lang') || sessionStorage.getItem('expLang'))// searchParams.get('lang'))
-
   sessionStorage.setItem('expLang', expLang)
   // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
 
   // const stimuli = loadStimuli_inLang(expLang)
+  const [stimuliBar, setStimuliBar] = useState(loadStimuli_inLang(expLang, "bar"))
+  const stimuliRadial = loadStimuli_inLang(expLang, "radial")
 
   const meta = {
     expLang: expLang,
@@ -36,6 +38,7 @@ function App() {
       document.documentElement.lang = "ar"
       document.documentElement.dir = "rtl"
     }
+    console.log("StimuliBar: ----", stimuliBar)
   });
 
   return (
@@ -47,16 +50,21 @@ function App() {
             nextUrl={subdom + "/intro"} />} />
 
           <Route path={subdom + "/intro"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/trial"} chartType={"bar"} />} />
+            nextUrl={subdom + "/trial"} chartType={"bar"} stimuli={stimuliBar} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"bar"}
-          // stimuli={stimuli} 
+            // nextUrl={subdom + "/outro"} chartType={"bar"}
+            nextUrl={subdom + "/intro-2"} chartType={"bar"} stimuli={stimuliBar}
           />} />
 
           <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"radial"}
+            nextUrl={subdom + "/trial-2"} chartType={"radial"}
           // stimuli={stimuli}
+          />} />
+
+          <Route path={subdom + "/trial-2"} element={<navigator.Trial meta={meta} navigate={navigate}
+            // nextUrl={subdom + "/outro"} chartType={"bar"}
+            nextUrl={subdom + "/outro"} chartType={"radial"} stimuli={stimuliRadial}
           />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />
@@ -64,28 +72,6 @@ function App() {
       </StudyContext.Provider> :
       <h3> Language undefined </h3>
 
-    // <StudyContext.Provider value={{ expLang }}>
-    //   <PageMeta meta={meta} />
-    //   <Routes>
-    //     <Route path={subdom} element={<navigator.Consent config={meta} navigate={navigate}
-    //       nextUrl={subdom + "/intro"} expPages={expPages} expLang={expLang} />} />
-
-    //     <Route path={subdom + "/intro"} element={<navigator.Intro config={meta} chartType={"bar"}
-    //       navigate={navigate} nextUrl={subdom + "/trial"} expPages={expPages} expLang={expLang} />} />
-
-    //     <Route path={subdom + "/trial"} element={<navigator.Trial config={meta} navigate={navigate}
-    //       nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
-    //       stimuli={stimuli} />} />
-
-    //     <Route path={subdom + "/intro-2"} element={<navigator.Intro config={meta} chartType={"radial"}
-    //       navigate={navigate} nextUrl={subdom + "/outro"} expPages={expPages} expLang={expLang}
-    //       stimuli={stimuli} />} />
-
-    //     <Route path={subdom + "/outro"} element={<navigator.Outro config={meta} navigate={navigate}
-    //       expPages={expPages} />} />
-    //   </Routes>
-    // </StudyContext.Provider> :
-    // <h3> Language undefined </h3>
   );
 }
 

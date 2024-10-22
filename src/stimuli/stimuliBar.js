@@ -40,10 +40,10 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         ansType: "select",
         en: {
             q: "Did the number of visitors increase or decrease over the course of the study?",
-            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"],
+            ansLabel: "The number of visitors ", ansOptions: ["increased", "decreased"], ansValues: ["increased", "decreased"],
         }, ar: {
             q: "هل زاد عدد الزوار أم انخفض خلال فترة الدراسة؟",
-            ansLabel: "عدد الزوار", ansOptions: ["في تزايد", "في انخفاض"],
+            ansLabel: "عدد الزوار", ansOptions: ["في تزايد", "في انخفاض"], ansValues: ["increased", "decreased"],
         }
     }, {
         qId: "2-sts", // The second question will be either of the sst or sts versions

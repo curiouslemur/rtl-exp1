@@ -14,17 +14,21 @@ export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
     const [cannotStart, setCannotStart] = useState(true)
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
-            setCannotStart(false)
-        }, 3000) // TODO: make this like 30s instead 
-
-        // fetch(meta.expLang + "/intro-bar.md")
 
         fetch(meta.expLang + "/" + chartType + "/intro-" + chartType + ".md")
             .then((response) => response.text()).then((text) => { setintro_md(text) }).catch((err) => console.error(err)) //:
 
-        return () => clearTimeout(timeout);
-    });
+        if (JSON.parse(sessionStorage.getItem('demography')).countryResLen === '999') {
+            setCannotStart(false)
+        } else {
+            const timeout = setTimeout(() => {
+                setCannotStart(false)
+            }, 10000)
+            return () => clearTimeout(timeout);
+        } // TODO: make this like 30s instead 
+
+        // fetch(meta.expLang + "/intro-bar.md")
+    }, [chartType, meta.expLang]);
 
     const labels = meta.expText.intro
     return (

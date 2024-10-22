@@ -6,8 +6,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
-import { loadStimuli_inLang_ } from "../_utils/content-loader";
-// import { stimuli } from "../stimuli/stimuli";
+import { loadStimuli_inLang } from "../_utils/content-loader";
 
 const styles = {
     button: { marginTop: 20, marginBottom: 10 },
@@ -17,14 +16,12 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
+export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
     let expLang = meta.expLang
-    // const labels = trialLabels[expLang]
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
-    const [stimuli, setStimuli] = useState(loadStimuli_inLang_(meta.expLang, chartType))
-    // const stimuli = loadStimuli_inLang_(meta.expLang, chartType)
+    // const [stimuli, setStimuli] = useState(loadStimuli_inLang(meta.expLang, chartType))
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
@@ -34,24 +31,27 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
 
-    // const stimuli = stimuli
     // --------------------------------
 
-    useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
+    useEffect(() => {
+        tc.addEmptyPlaceholder("#chartDiv");
+
+    }, []);
 
     useEffect(() => {
         if (chartIsVisible === true) {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 5000) // TODO: update the time 
+            }, 15000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
 
     }, [chartIsVisible])
 
+    console.log(stimuli)
+
     return (
-        // <ThemeProvider> </ThemeProvider>
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
                 <Grid item xs={12} marginTop={2}>
@@ -85,17 +85,14 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                                 // progress={progress} setProgress={setProgress}
                                 setCannotShowChart={setCannotShowChart}
                                 setVisibilityAnserwField={setVisibilityAnserwField}
-                                // totalQ={stimuli.length}
                                 stimulusData={stimuli[progress]}
                                 expLang={meta.expLang}
                                 setAnsValue={setAnsValue}
-                            // navigate={props.navigate} nextUrl={props.nextUrl}
                             />
                             <Grid>
 
                                 <Button id="trial-next-button" variant="contained" color="secondary"
                                     disableRipple disableFocusRipple style={styles.button}
-                                    // onClick={(e, p, n) => { tc.onClickNext(e, props.config, props.stimuli[qIndex[0] - 1], setProgress, progress, setCannotShowChart, setDisplayAnserwField, setCannotNext, navigate) }}
                                     disabled={cannotNext}
                                     onClick={(e, p, setP, chartSvgId, scsc, svaf,
                                         scn,

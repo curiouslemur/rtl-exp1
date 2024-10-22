@@ -74,7 +74,7 @@ export const addEmptyPlaceholder = (divId) => {
 
 export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible, progress, alertMessage, expLang, chartType) => {
 
-    console.log(expLang, chartType)
+    // console.log(expLang, chartType)
     if (progress === 0) { alert(alertMessage) }
 
     d3.select("#chartSvg").remove()
