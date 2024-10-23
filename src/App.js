@@ -8,7 +8,6 @@ import './App.css';
 
 import { StudyContext } from './_utils/contexts';
 import { loadStimuli_inLang, loadTexts_inLang } from './_utils/content-loader'
-import { stimuliRadial } from './stimuli/stimuliRadial';
 
 function App() {
   // Uncomment the two lines below to collect experiment language from the experiment link ?lang=en
@@ -19,7 +18,7 @@ function App() {
   // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
 
   // const stimuli = loadStimuli_inLang(expLang)
-  const [stimuliBar, setStimuliBar] = useState(loadStimuli_inLang(expLang, "bar"))
+  const stimuliBar = loadStimuli_inLang(expLang, "bar")
   const stimuliRadial = loadStimuli_inLang(expLang, "radial")
 
   const meta = {
@@ -38,7 +37,6 @@ function App() {
       document.documentElement.lang = "ar"
       document.documentElement.dir = "rtl"
     }
-    console.log("StimuliBar: ----", stimuliBar)
   });
 
   return (
@@ -50,20 +48,17 @@ function App() {
             nextUrl={subdom + "/intro"} />} />
 
           <Route path={subdom + "/intro"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/trial"} chartType={"bar"} stimuli={stimuliBar} />} />
+            nextUrl={subdom + "/trial"} chartType={"bar"} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            // nextUrl={subdom + "/outro"} chartType={"bar"}
             nextUrl={subdom + "/intro-2"} chartType={"bar"} stimuli={stimuliBar}
           />} />
 
           <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
             nextUrl={subdom + "/trial-2"} chartType={"radial"}
-          // stimuli={stimuli}
           />} />
 
           <Route path={subdom + "/trial-2"} element={<navigator.Trial meta={meta} navigate={navigate}
-            // nextUrl={subdom + "/outro"} chartType={"bar"}
             nextUrl={subdom + "/outro"} chartType={"radial"} stimuli={stimuliRadial}
           />} />
 

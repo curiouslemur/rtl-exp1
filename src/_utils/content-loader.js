@@ -53,15 +53,56 @@ export const loadStimuli_inLang = (lang, chartType) => {
 
         case "radial":
             tmp = stimuliRadial;
-            // set the final set of stimuli for radial
             let q1 = stimuliRadial[0]
             let q2 = stimuliRadial[1]
             q2.qId = q2.qId + radialFirstPos[0];
             q2.imgSrc = q2.imgSrc + radialFirstPos[0] + ".svg";
             q2.first = radialFirstPos[0];
-            fin = [q1, q2]
 
-            // console.log(q2, radialFirstPos[0])
+            // Participants will see either the before or after question. Qs use the same images, it's the ansC and ansCounter that change
+            let q3_after = stimuliRadial[2]
+            q3_after.qId = q3_after.qId + radialFirstPos[1];
+            q3_after.imgSrc = q3_after.imgSrc + radialFirstPos[1] + ".svg";
+            q3_after.first = radialFirstPos[1];
+
+            let q3_before = stimuliRadial[3]
+            q3_before.qId = q3_before.qId + radialFirstPos[1];
+            q3_before.imgSrc = q3_before.imgSrc + radialFirstPos[1] + ".svg";
+            q3_before.first = radialFirstPos[1];
+
+            let q4 = stimuliRadial[4]
+            let n_sg = [2, 3][(Math.random() > 0.5) ? 1 : 0]
+            q4.qId = q4.qId + n_sg;
+            q4.imgSrc = q4.imgSrc + n_sg + ".svg";
+            q4.first = n_sg === 2 ? 11 : 5;
+
+            let q5_after = stimuliRadial[5]
+            q5_after.qId = q5_after.qId + radialFirstPos[2];
+            q5_after.imgSrc = q5_after.imgSrc + radialFirstPos[2] + ".svg";
+            q5_after.first = radialFirstPos[2];
+
+            let q5_before = stimuliRadial[6]
+            q5_before.qId = q5_before.qId + radialFirstPos[2];
+            q5_before.imgSrc = q5_before.imgSrc + radialFirstPos[2] + ".svg";
+            q5_before.first = radialFirstPos[2];
+
+            let q6_after = stimuliRadial[7]
+            q6_after.qId = q6_after.qId + radialFirstPos[3];
+            q6_after.imgSrc = q6_after.imgSrc + radialFirstPos[3] + ".svg";
+            q6_after.first = radialFirstPos[3];
+
+            let q6_before = stimuliRadial[8]
+            q6_before.qId = q6_before.qId + radialFirstPos[3];
+            q6_before.imgSrc = q6_before.imgSrc + radialFirstPos[3] + ".svg";
+            q6_before.first = radialFirstPos[3];
+
+            fin = [q1, q2,
+                [q3_after, q3_before][(Math.random() > 0.5) ? 1 : 0],
+                q4,
+                [q5_after, q5_before][(Math.random() > 0.5) ? 1 : 0],
+                [q6_after, q6_before][(Math.random() > 0.5) ? 1 : 0]
+            ]
+
             break;
 
         default: tmp = stimuliBar;

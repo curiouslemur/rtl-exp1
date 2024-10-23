@@ -6,7 +6,6 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
-import { loadStimuli_inLang } from "../_utils/content-loader";
 
 const styles = {
     button: { marginTop: 20, marginBottom: 10 },
@@ -21,7 +20,7 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
-    // const [stimuli, setStimuli] = useState(loadStimuli_inLang(meta.expLang, chartType))
+
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
@@ -46,11 +45,9 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
             }, 15000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
-
     }, [chartIsVisible])
 
     console.log(stimuli)
-
     return (
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
