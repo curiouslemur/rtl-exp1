@@ -74,8 +74,8 @@ export const loadStimuli_inLang = (lang, chartType) => {
             q3_before.imgSrc = q3_before.imgSrc + radialFirstPos[1] + img_extension;
             q3_before.first = radialFirstPos[1];
 
-            console.log("stimuliRadial: ", stimuliRadial)
-            console.log("stimuliRadial[4]: ", stimuliRadial[4])
+            // console.log("stimuliRadial: ", stimuliRadial)
+            // console.log("stimuliRadial[4]: ", stimuliRadial[4])
 
             let q4 = stimuliRadial[4]
             let n_sg = [2, 3][(Math.random() > 0.5) ? 1 : 0]

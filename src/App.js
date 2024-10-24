@@ -15,11 +15,8 @@ function App() {
   // const [expLang, setExplang] = useState('en')
   const [expLang, setExpLang] = useState(searchParams.get('lang') || sessionStorage.getItem('expLang'))// searchParams.get('lang'))
   sessionStorage.setItem('expLang', expLang)
-  // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
-  const [stimuliRadial, setStimuliRadial] = useState(loadStimuli_inLang(expLang, "radial"))
 
-  // const stimuli = loadStimuli_inLang(expLang)
-  const stimuliBar = loadStimuli_inLang(expLang, "bar")
+  // const stimuliBar = loadStimuli_inLang(expLang, "bar")
   // const stimuliRadial = loadStimuli_inLang(expLang, "radial")
 
   const meta = {
@@ -52,7 +49,7 @@ function App() {
             nextUrl={subdom + "/trial"} chartType={"bar"} />} />
 
           <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/intro-2"} chartType={"bar"} stimuli={stimuliBar}
+            nextUrl={subdom + "/intro-2"} chartType={"bar"} //stimuli={stimuliBar}
           />} />
 
           <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
@@ -60,7 +57,7 @@ function App() {
           />} />
 
           <Route path={subdom + "/trial-2"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"radial"} stimuli={stimuliRadial}
+            nextUrl={subdom + "/outro"} chartType={"radial"} //stimuli={stimuliRadial}
           />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />

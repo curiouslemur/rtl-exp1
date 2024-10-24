@@ -6,6 +6,7 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 import '../App.css'
 import * as tc from "../_controllers/trialController"
+import { loadStimuli_inLang } from "../_utils/content-loader";
 
 const styles = {
     button: { marginTop: 20, marginBottom: 10 },
@@ -15,12 +16,15 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
+// export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
+export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
+
     let expLang = meta.expLang
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
 
+    const [stimuli, setStimuli] = useState(null)
     // --------------------------------
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
@@ -34,6 +38,8 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
 
     useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
 
+    useEffect(() => { setStimuli(loadStimuli_inLang(expLang, chartType)) }, [])
+
     useEffect(() => {
         if (chartIsVisible === true) {
             const timeoutT = setTimeout(() => {
@@ -45,68 +51,69 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
     }, [chartIsVisible])
 
     return (
-        <Container maxWidth='md'>
-            <Grid container justify="center" align="center">
-                <Grid item xs={12} marginTop={2}>
-                    <Typography fontSize={20} fontWeight='bold'>
-                        {stimuli[progress][expLang].q}
-                    </Typography>
-                    <Typography fontSize={16} marginTop={2}>
-                        {stimuli[progress][expLang].note}
-                    </Typography>
-                    <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                        onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am, expL, chrtT) => tc.onClickShowChart(
-                            "chartDiv",
-                            stimuli[progress],
-                            setVisibilityAnserwField,
-                            setCannotShowChart,
-                            setChartIsVisible, progress, labels.alertMessage,
-                            expLang, chartType)}
-                        disabled={cannotShowChart} > {labels.showChartButton}</Button>
+        stimuli === null ? <></> :
+            <Container maxWidth='md'>
+                <Grid container justify="center" align="center">
+                    <Grid item xs={12} marginTop={2}>
+                        <Typography fontSize={20} fontWeight='bold'>
+                            {stimuli[progress][expLang].q}
+                        </Typography>
+                        <Typography fontSize={16} marginTop={2}>
+                            {stimuli[progress][expLang].note}
+                        </Typography>
+                        <Button sx={{ display: '' }} style={styles.button} variant="outlined"
+                            onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am, expL, chrtT) => tc.onClickShowChart(
+                                "chartDiv",
+                                stimuli[progress],
+                                setVisibilityAnserwField,
+                                setCannotShowChart,
+                                setChartIsVisible, progress, labels.alertMessage,
+                                expLang, chartType)}
+                            disabled={cannotShowChart} > {labels.showChartButton}</Button>
+                    </Grid>
+
+                    <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
+
+                    {/* answer section below */}
+                    <Grid item xs={12} marginTop={2}>
+                        {visibilityAnsField === "visible" ?
+                            <>
+                                <AnswerSection
+                                    chartType={chartType}
+                                    answerType={stimuli[progress].ansType}
+                                    labels={labels}
+                                    cannotNext={cannotNext}
+                                    setCannotNext={setCannotNext}
+                                    // progress={progress} setProgress={setProgress}
+                                    setCannotShowChart={setCannotShowChart}
+                                    setVisibilityAnserwField={setVisibilityAnserwField}
+                                    stimulusData={stimuli[progress]}
+                                    expLang={meta.expLang}
+                                    setAnsValue={setAnsValue}
+                                />
+                                <Grid>
+
+                                    <Button id="trial-next-button" variant="contained" color="secondary"
+                                        disableRipple disableFocusRipple style={styles.button}
+                                        disabled={cannotNext}
+
+                                        onClick={(e, p, setP, chartSvgId, scsc, svaf,
+                                            scn, answer, ct, stim, nav, nU) => tc.onClickNext(
+                                                e, progress, setProgress, "#chartSvg",
+                                                setCannotShowChart, setVisibilityAnserwField,
+                                                setCannotNext,
+                                                ansValue,
+                                                chartType,
+                                                stimuli, navigate, nextUrl)}
+                                    > {labels.nextButton} </Button>
+                                </Grid>
+                            </> : <></>
+                        }
+                    </Grid>
+                    <HelpIcon meta={meta} chartType={chartType} />
                 </Grid>
 
-                <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
-
-                {/* answer section below */}
-                <Grid item xs={12} marginTop={2}>
-                    {visibilityAnsField === "visible" ?
-                        <>
-                            <AnswerSection
-                                chartType={chartType}
-                                answerType={stimuli[progress].ansType}
-                                labels={labels}
-                                cannotNext={cannotNext}
-                                setCannotNext={setCannotNext}
-                                // progress={progress} setProgress={setProgress}
-                                setCannotShowChart={setCannotShowChart}
-                                setVisibilityAnserwField={setVisibilityAnserwField}
-                                stimulusData={stimuli[progress]}
-                                expLang={meta.expLang}
-                                setAnsValue={setAnsValue}
-                            />
-                            <Grid>
-
-                                <Button id="trial-next-button" variant="contained" color="secondary"
-                                    disableRipple disableFocusRipple style={styles.button}
-                                    disabled={cannotNext}
-
-                                    onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                                        scn, answer, ct, stim, nav, nU) => tc.onClickNext(
-                                            e, progress, setProgress, "#chartSvg",
-                                            setCannotShowChart, setVisibilityAnserwField,
-                                            setCannotNext,
-                                            ansValue,
-                                            chartType,
-                                            stimuli, navigate, nextUrl)}
-                                > {labels.nextButton} </Button>
-                            </Grid>
-                        </> : <></>
-                    }
-                </Grid>
-                <HelpIcon meta={meta} chartType={chartType} />
-            </Grid>
-
-        </Container >
+            </Container >
     )
 }
 
