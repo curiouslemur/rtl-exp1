@@ -6,7 +6,7 @@ In this part of the study, consider the follow up scenario below.
 
 In one of the museum's exhibition rooms, visitors are invited to participate in a round table discussion. 
 You will see a series fo circular charts showing how the visitors are placed in the room. 
-Your task is to interpret the charts and answer questions to help understand the visitors' seating patterns. 
+Your task is to interpret the charts and answer questions about the visitors' seating patterns. 
 </div>
 
 <!-- -------------------------------------------- -->
@@ -16,17 +16,15 @@ Your task is to interpret the charts and answer questions to help understand the
 
 - Only occupied seats are shown in the data visualization. They will be arranged in circle around an imaginary table.
 
-- The first arriving visitor will be indicated by an arrow
+- The first arriving visitor will be indicated by an arrow.
 
-- Black-colored circles indicate the visitor is a **special guest**
+- Black-colored circles indicate the visitor is a **special guest**.
 
 ![Radial chart used in this study](en/radial/intro-radial-ex.png)
 
 
 <!-- -------------------------------------------- -->
 <div class="highlight-box"><b> Your task </b></div>
-
-
 
 - Like in the previous part, each trial consists of a question and a chart. There are no trick questions.
 - Once you show a chart, **it will disappear after a few seconds** so, read it as quickly as possible. 
