@@ -11,7 +11,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         ansExpected: 9, // ansCounter is if read counter-clockwise, ansClock is if read clockwise
         ansType: "input",
         en: {
-            q: "How many visitors were in the room?", unit: "visitors.",
+            q: "How many visitors are in the room?", unit: "visitors.",
             ansCounter: 9, ansClock: 9
         },
         ar: {
