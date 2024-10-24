@@ -4,7 +4,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "1",
         chartType: "radial",
         cat: "count-all", // also attention-checker
-        imgSrc: imgPath + "radial-1.png",
+        imgSrc: imgPath + "_radial-1.png",
         first: "not relevant",
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -23,7 +23,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "2-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "radial-2-",
+        imgSrc: imgPath + "_radial-2-",
         first: 0,       // indicates the position of the first arriving guest
         anchorPos: -1,  // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -44,7 +44,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "3-after-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "radial-3-",
+        imgSrc: imgPath + "_radial-3-",
         first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -65,7 +65,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "3-before-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "radial-3-",
+        imgSrc: imgPath + "_radial-3-",
         first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -86,7 +86,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "4-sg-count-", // sg == special guest
         chartType: "radial",
         cat: "count", // also attention-checker
-        imgSrc: imgPath + "radial-4-",
+        imgSrc: imgPath + "_radial-4-",
         first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -105,7 +105,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "5-sg-after-", // sg == special guest
         chartType: "radial",
         cat: "extract-value",
-        imgSrc: imgPath + "radial-5-",
+        imgSrc: imgPath + "_radial-5-",
         first: 0, //indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -126,7 +126,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "5-sg-before-",
         chartType: "radial",
         cat: "extract-value",
-        imgSrc: imgPath + "radial-5-",
+        imgSrc: imgPath + "_radial-5-",
         first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -147,7 +147,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "6-count-after-",
         chartType: "radial",
         cat: "count",
-        imgSrc: imgPath + "radial-6-",
+        imgSrc: imgPath + "_radial-6-",
         // first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
@@ -167,7 +167,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "6-count-before-",
         chartType: "radial",
         cat: "count",
-        imgSrc: imgPath + "radial-6-",
+        imgSrc: imgPath + "_radial-6-",
         // first: 0, // indicates the position of the first arriving guest. 
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,

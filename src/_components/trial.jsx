@@ -39,7 +39,7 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 5000) // TODO: update the time 
+            }, 6000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
     }, [chartIsVisible])
@@ -72,6 +72,7 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
                     {visibilityAnsField === "visible" ?
                         <>
                             <AnswerSection
+                                chartType={chartType}
                                 answerType={stimuli[progress].ansType}
                                 labels={labels}
                                 cannotNext={cannotNext}
@@ -121,7 +122,7 @@ const AnswerSection = (props) => {
                     <Box sx={{ minwidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                         {/* <Grid item xs={12} marginTop={2}> */}
                         <TextField id="standard-basic" placeholder={labels.ansTextfieldLabel} variant="standard"
-                            type="number"
+                            type={props.chartType === "bar" ? "number" : "string"}
                             minwidth={5}
                             onChange={(e, scn, sav) => tc.onChangeAnsTextField(e, props.setCannotNext, props.setAnsValue)}
                             InputProps={{

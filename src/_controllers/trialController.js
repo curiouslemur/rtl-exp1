@@ -67,7 +67,7 @@ export const onClickNext_old = (
 export const addEmptyPlaceholder = (divId) => {
     d3.select("#chartSvg").remove()
     d3.select(divId).append('svg')
-        .attr('width', 720).attr('height', 340)
+        .attr('width', 720).attr('height', 380)
         .attr('id', "chartSvg")
 }
 
@@ -84,7 +84,7 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
     // elem.src = stimulusData.imgSrc;
     elem.src = expLang + "/" + chartType + "/" + stimulusData.imgSrc
     elem.id = "chartSvg"
-    elem.style.width = "100%"
+    elem.style.height = "380px"
     // elem.style.height = 
 
     setVisibilityAnserwField("visible")
@@ -106,16 +106,6 @@ export const onChangeAnsSelect = (e, setCannotNext, setAnsValue) => {
 }
 
 
-
-/**
- * @param {*} e 
- * @param {*} progress initiated at 0
- * @param {*} setProgress 
- * @param {*} chartSvgId 
- * @param {*} setCannotShowChart 
- * @param {*} setVisibilityAnserwField 
- * @param {*} stimuli 
- */
 export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowChart,
     setVisibilityAnserwField,
     setCannotNext,
@@ -140,18 +130,21 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
 
     stimulusData.ans = ansValue // ans is the answer from the participant
     stimulusData.sessionID = dem.sessionID
-    stimulusData.ansCounter = stimulusData[dem.expLang].ansCounter
-    stimulusData.ansClock = stimulusData[dem.expLang].ansClock
 
-    delete stimulusData[dem.expLang];
+    if (chartType === "radial") {
+        stimulusData.ansCounter = stimulusData[dem.expLang].ansCounter
+        stimulusData.ansClock = stimulusData[dem.expLang].ansClock
+    }
+
+    // delete stimulusData[dem.expLang];
 
     let idx = chartType + "-" + (progress + 1)
     let record = {}
     record[idx] = stimulusData
 
     dao.logData(dem, record)
-
     // if (progress < totalQ - 1) {
+    console.log(progress, stimuli.length - 1)
     if (progress < stimuli.length - 1) {
         setProgress(progress + 1)
         addEmptyPlaceholder(chartSvgId)

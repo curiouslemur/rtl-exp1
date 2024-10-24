@@ -16,10 +16,11 @@ function App() {
   const [expLang, setExpLang] = useState(searchParams.get('lang') || sessionStorage.getItem('expLang'))// searchParams.get('lang'))
   sessionStorage.setItem('expLang', expLang)
   // const expPages = loadPages_inLang(expLang) // these are the pages to be used depending on the language of the exp: consentAr, consentEn, etc.
+  const [stimuliRadial, setStimuliRadial] = useState(loadStimuli_inLang(expLang, "radial"))
 
   // const stimuli = loadStimuli_inLang(expLang)
   const stimuliBar = loadStimuli_inLang(expLang, "bar")
-  const stimuliRadial = loadStimuli_inLang(expLang, "radial")
+  // const stimuliRadial = loadStimuli_inLang(expLang, "radial")
 
   const meta = {
     expLang: expLang,

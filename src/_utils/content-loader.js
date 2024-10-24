@@ -36,9 +36,9 @@ export const loadTexts_inLang = (lang) => {
 
 
 export const loadStimuli_inLang = (lang, chartType) => {
-    let radialFirstPos = shuffle([5, 6, 11, 12])
     let tmp, fin;
     let img_extension = ".png"
+    console.log(lang, chartType)
     switch (chartType) {
         case "bar":
             tmp = stimuliBar;
@@ -53,6 +53,9 @@ export const loadStimuli_inLang = (lang, chartType) => {
             break;
 
         case "radial":
+            let radialFirstPos = shuffle([5, 6, 11, 12]) // to ensure all position of firstPos are covered
+            console.log(radialFirstPos)
+
             tmp = stimuliRadial;
             let q1 = stimuliRadial[0]
             let q2 = stimuliRadial[1]
@@ -70,6 +73,9 @@ export const loadStimuli_inLang = (lang, chartType) => {
             q3_before.qId = q3_before.qId + radialFirstPos[1];
             q3_before.imgSrc = q3_before.imgSrc + radialFirstPos[1] + img_extension;
             q3_before.first = radialFirstPos[1];
+
+            console.log("stimuliRadial: ", stimuliRadial)
+            console.log("stimuliRadial[4]: ", stimuliRadial[4])
 
             let q4 = stimuliRadial[4]
             let n_sg = [2, 3][(Math.random() > 0.5) ? 1 : 0]
@@ -107,6 +113,7 @@ export const loadStimuli_inLang = (lang, chartType) => {
                 [q6_after, q6_before][(Math.random() > 0.5) ? 1 : 0]
             ]
 
+            console.log("fin : ", fin)
             break;
 
         default: tmp = stimuliBar;
@@ -125,16 +132,6 @@ export const loadStimuli_inLang = (lang, chartType) => {
         }
     }
 
-    // Removing unnecessary questions
-    // let fin = [
-    //     tmp[0],
-    //     [tmp[1], tmp[2]][(Math.random() > 0.5) ? 1 : 0],
-    //     tmp[3],
-    //     [tmp[4], tmp[5]][(Math.random() > 0.5) ? 1 : 0],
-    //     [tmp[6], tmp[7]][(Math.random() > 0.5) ? 1 : 0],
-    //     [tmp[8], tmp[9]][(Math.random() > 0.5) ? 1 : 0],
-
-    // ]
     return (fin)
 
     // imgSrc: imgPath + ["bar-2-sst.svg", "bar-2-sts.svg"][(Math.random() > 0.5) ? 1 : 0],
