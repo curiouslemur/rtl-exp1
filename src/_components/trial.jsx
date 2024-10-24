@@ -32,22 +32,18 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
 
     // --------------------------------
 
-    useEffect(() => {
-        tc.addEmptyPlaceholder("#chartDiv");
-
-    }, []);
+    useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
 
     useEffect(() => {
         if (chartIsVisible === true) {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 15000) // TODO: update the time 
+            }, 5000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
     }, [chartIsVisible])
 
-    console.log(stimuli)
     return (
         <Container maxWidth='md'>
             <Grid container justify="center" align="center">
@@ -70,6 +66,7 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
                 </Grid>
 
                 <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
+
                 {/* answer section below */}
                 <Grid item xs={12} marginTop={2}>
                     {visibilityAnsField === "visible" ?
@@ -91,14 +88,15 @@ export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
                                 <Button id="trial-next-button" variant="contained" color="secondary"
                                     disableRipple disableFocusRipple style={styles.button}
                                     disabled={cannotNext}
+
                                     onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                                        scn,
-                                        tq, stimData, answer, nav, nU) => tc.onClickNext(
+                                        scn, answer, ct, stim, nav, nU) => tc.onClickNext(
                                             e, progress, setProgress, "#chartSvg",
                                             setCannotShowChart, setVisibilityAnserwField,
                                             setCannotNext,
-                                            stimuli.length, stimuli[progress], ansValue,
-                                            navigate, nextUrl)}
+                                            ansValue,
+                                            chartType,
+                                            stimuli, navigate, nextUrl)}
                                 > {labels.nextButton} </Button>
                             </Grid>
                         </> : <></>

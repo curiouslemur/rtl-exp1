@@ -4,87 +4,42 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "1",
         chartType: "radial",
         cat: "count-all", // also attention-checker
-        imgSrc: imgPath + "radial-1.svg",
-        first: "",
+        imgSrc: imgPath + "radial-1.png",
+        first: "not relevant",
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 9, ansCounter: 9, ansClock: 9, // ansCounter is if read counter-clockwise, ansClock is if read clockwise
+        ansExpected: 9, // ansCounter is if read counter-clockwise, ansClock is if read clockwise
         ansType: "input",
-        en: { q: "How many visitors were in the room?", unit: "visitors." },
-        ar: { q: "كم عدد الزوار في الغرفة؟", unit: "زائر." }
+        en: {
+            q: "How many visitors were in the room?", unit: "visitors.",
+            ansCounter: 9, ansClock: 9
+        },
+        ar: {
+            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            ansCounter: 9, ansClock: 9,
+        }
     },
     {
         qId: "2-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "radial-2-",
-        first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
+        first: 0,       // indicates the position of the first arriving guest
+        anchorPos: -1,  // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 'either', // ansCounter: 'Sami', ansClock: 'Eva',
+        ansExpected: 'either',
         ansType: "select",
         en: {
-            q: "Which guest arrived fourth?", unit: "",
-            ansCounter: 'Chantal', ansClock: 'Annie',
+            q: "Who is the visitor who arrived fourth?", unit: "",
+            ansCounter: 'Sami', ansClock: 'Eva',
             ansOptions: ["Eva", "Lane", "Sami", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
-            ansCounter: 'Chantal', ansClock: 'Annie',
-            ansOptions: ["Eva", "Lane", "Sami", "Theo"]
+            q: "ما اسم الزائر الذي وصل في اليوم الرابع؟", unit: "",
+            ansCounter: 'أكرم', ansClock: 'فدوى',
+            ansOptions: ["أكرم", "يونس", "فدوى", "منى"]
         }
     },
-    // {
-    //     qId: "2-5",
-    //     chartType: "radial",
-    //     cat: "extract-value", // also attention-checker
-    //     imgSrc: imgPath + "radial-2-5.svg",
-    //     first: 5, // indicates the position of the first arriving guest
-    //     anchorPos: -1, // no anchor i.e. no special guests
-    //     valMarked: -1, valL: -1, valR: -1,
-    //     ansExpected: 'either', ansCounter: 'Sami', ansClock: 'Eva',
-    //     ansType: "select",
-    //     en: { q: "Which guest arrived fourth?", unit: "", ansOptions: ["Eva", "Lane", "Sami", "Theo"] },
-    //     ar: { q: "كم عدد الزوار في الغرفة؟", unit: "زائر.", ansOptions: ["Eva", "Lane", "Sami", "Theo"] }
-    // }, {
-    //     qId: "2-6",
-    //     chartType: "radial",
-    //     cat: "extract-value", // also attention-checker
-    //     imgSrc: imgPath + "radial-2-6.svg",
-    //     first: 6, // indicates the position of the first arriving guest
-    //     anchorPos: -1, // no anchor i.e. no special guests
-    //     valMarked: -1, valL: -1, valR: -1,
-    //     ansExpected: 'either', ansCounter: 'Sami', ansClock: 'Eva',
-    //     ansType: "select",
-    //     en: { q: "Which guest arrived fourth?", unit: "", ansOptions: ["Eva", "Lane", "Sami", "Theo"] },
-    //     ar: { q: "كم عدد الزوار في الغرفة؟", unit: "زائر.", ansOptions: ["Sami", "Eva", "Lane", "Theo"] }
-    // },
-    // {
-    //     qId: "2-11",
-    //     chartType: "radial",
-    //     cat: "extract-value", // also attention-checker
-    //     imgSrc: imgPath + "radial-2-11.svg",
-    //     first: 11, // indicates the position of the first arriving guest
-    //     anchorPos: -1, // no anchor i.e. no special guests
-    //     valMarked: -1, valL: -1, valR: -1,
-    //     ansExpected: 'either', ansCounter: 'Sami', ansClock: 'Eva',
-    //     ansType: "select",
-    //     en: { q: "Which guest arrived fourth?", unit: "", ansOptions: ["Eva", "Lane", "Sami", "Theo"] },
-    //     ar: { q: "كم عدد الزوار في الغرفة؟", unit: "زائر.", ansOptions: ["Sami", "Eva", "Lane", "Theo"] }
-    // },
-    // {
-    //     qId: "2-12",
-    //     chartType: "radial",
-    //     cat: "extract-value", // also attention-checker
-    //     imgSrc: imgPath + "radial-2-12.svg",
-    //     first: 12, // indicates the position of the first arriving guest
-    //     anchorPos: -1, // no anchor i.e. no special guests
-    //     valMarked: -1, valL: -1, valR: -1,
-    //     ansExpected: 'either', ansCounter: 'Sami', ansClock: 'Eva',
-    //     ansType: "select",
-    //     en: { q: "Which guest arrived fourth?", unit: "", ansOptions: ["Eva", "Lane", "Sami", "Theo"] },
-    //     ar: { q: "كم عدد الزوار في الغرفة؟", unit: "زائر.", ansOptions: ["Sami", "Eva", "Lane", "Theo"] }
-    // },
     {
         qId: "3-after-",
         chartType: "radial",
@@ -96,14 +51,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         ansExpected: 'either', //ansCounter: 'Chantal', ansClock: 'Annie',
         ansType: "select",
         en: {
-            q: "Which guest arrived after Damian?", unit: "",
+            q: "Who is the visitor who arrived after Damian?", unit: "",
             ansCounter: 'Chantal', ansClock: 'Annie',
             ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
-            ansCounter: 'Chantal', ansClock: 'Annie',
-            ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
+            q: "من هو الزائر الذي وصل بعد منى؟", unit: ".",
+            ansCounter: 'يونس', ansClock: 'داني',
+            ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
         }
     },
     {
@@ -122,9 +77,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
-            ansCounter: 'Chantal', ansClock: 'Annie',
-            ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
+            q: "كم عدد الزوار في الغرفة؟", unit: ".",
+            ansCounter: 'داني', ansClock: 'يونس',
+            ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
         }
     },
     {
@@ -135,14 +90,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         first: 0, // indicates the position of the first arriving guest
         anchorPos: -1, // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 0, //ansCounter: 'Chantal', ansClock: 'Annie',
+        ansExpected: 0,
         ansType: "input",
         en: {
-            q: "How many special guests were in the room?", unit: "",
+            q: "How many special guests are in the room?", unit: "",
             ansCounter: '', ansClock: '',
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            q: "كم عدد الضيوف المميزين في الغرفة؟", unit: "",
             ansCounter: '', ansClock: '',
         }
     },
@@ -162,9 +117,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
-            ansCounter: 'Sami', ansClock: 'Chantal',
-            ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
+            q: "كم عدد الزوار في الغرفة؟", unit: "",
+            ansCounter: 'منى', ansClock: 'جميل',
+            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
         }
     },
     {
@@ -183,9 +138,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
-            ansCounter: 'Akim', ansClock: 'Sami',
-            ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
+            q: "كم عدد الزوار في الغرفة؟", unit: "",
+            ansCounter: 'جميل', ansClock: 'منى',
+            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
         }
     },
     {
@@ -204,7 +159,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             note: "(Do not include the special guest and the first arriving guest in your count.)"
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            q: "كم عدد الزوار الذين وصلوا بعد الضيف المميز؟", unit: "زائر.",
+            ansCounter: 2, ansClock: 8,
+            note: "(لا تقم بتضمين الضيف المميز وأول ضيف يصل في حسابك.)"
         }
     }, {
         qId: "6-count-before-",
@@ -218,11 +175,13 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         ansType: "input",
         en: {
             q: "How many visitors arrived before the special guest?", unit: "visitors",
-            ansCounter: 8, ansClock: 2,
-            note: "(Do not include the special guest and the first arriving guest in your count.)"
+            ansCounter: 9, ansClock: 3,
+            note: "(Do not include the special guest in your count.)"
         },
         ar: {
             q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            ansCounter: 9, ansClock: 3,
+            note: "(لا تقم بتضمين الضيف المميز في حسابك.)"
         }
     },
 

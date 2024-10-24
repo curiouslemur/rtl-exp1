@@ -114,31 +114,45 @@ export const onChangeAnsSelect = (e, setCannotNext, setAnsValue) => {
  * @param {*} chartSvgId 
  * @param {*} setCannotShowChart 
  * @param {*} setVisibilityAnserwField 
- * @param {*} totalQ 
- * @param {*} stimulusData 
+ * @param {*} stimuli 
  */
-export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowChart, setVisibilityAnserwField,
+export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowChart,
+    setVisibilityAnserwField,
     setCannotNext,
-    totalQ, stimulusData, ansValue,
+    ansValue,
+    chartType,
+    stimuli,
     navigate, nextUrl) => {
 
+    var id = window.setTimeout(function () { }, 0); // clearing all timeouts
+    while (id--) { window.clearTimeout(id); }// will do nothing if no timeout with id is present
+
     let dem = JSON.parse(sessionStorage.getItem('demography'))
-    // console.log(dem)
+    let stimulusData = stimuli[progress]
+
+    // console.log("stimuli[progress] : ", stimuli[progress])
+    // console.log("stimulusData : ", stimulusData)
+    // console.log(stimuli[progress] === stimulusData)
+
     dem.progress = progress + 1 // because progress was initiated at 0
     dao.logDem(dem)
     sessionStorage.setItem("demography", JSON.stringify(dem))
 
-    delete stimulusData[dem.expLang];
     stimulusData.ans = ansValue // ans is the answer from the participant
     stimulusData.sessionID = dem.sessionID
+    stimulusData.ansCounter = stimulusData[dem.expLang].ansCounter
+    stimulusData.ansClock = stimulusData[dem.expLang].ansClock
 
-    let idx = progress + 1
+    delete stimulusData[dem.expLang];
+
+    let idx = chartType + "-" + (progress + 1)
     let record = {}
     record[idx] = stimulusData
 
     dao.logData(dem, record)
 
-    if (progress < totalQ - 1) {
+    // if (progress < totalQ - 1) {
+    if (progress < stimuli.length - 1) {
         setProgress(progress + 1)
         addEmptyPlaceholder(chartSvgId)
         setCannotShowChart(false)
