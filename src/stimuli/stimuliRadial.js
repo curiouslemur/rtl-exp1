@@ -45,10 +45,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "_radial-3-",
-        first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
-        valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 'either', //ansCounter: 'Chantal', ansClock: 'Annie',
+        first: 0,
+        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
+        ansExpected: 'either',
         ansType: "select",
         en: {
             q: "Who is the visitor who arrived after Damian?", unit: "",
@@ -66,10 +65,10 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "_radial-3-",
-        first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
+        // first: 0,
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 'either', //ansCounter: 'Chantal', ansClock: 'Annie',
+        ansExpected: 'either',
         ansType: "select",
         en: {
             q: "Which guest arrived before Damian?", unit: "",
@@ -77,7 +76,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: ".",
+            q: "من هو الضيف الذي وصل قبل منى؟", unit: ".",
             ansCounter: 'داني', ansClock: 'يونس',
             ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
         }
@@ -87,9 +86,8 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count", // also attention-checker
         imgSrc: imgPath + "_radial-4-",
-        first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
-        valMarked: -1, valL: -1, valR: -1,
+        first: 0,
+        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "input",
         en: {
@@ -106,10 +104,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value",
         imgSrc: imgPath + "_radial-5-",
-        first: 0, //indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
-        valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 0, //ansCounter: 'Chantal', ansClock: 'Annie',
+        first: 0,
+        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
+        ansExpected: 0,
         ansType: "select",
         en: {
             q: "Who arrived after the special guest?", unit: "",
@@ -117,7 +114,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "",
+            q: "من وصل بعد الضيف الخاص؟", unit: "",
             ansCounter: 'منى', ansClock: 'جميل',
             ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
         }
@@ -127,10 +124,9 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value",
         imgSrc: imgPath + "_radial-5-",
-        first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
-        valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 0, //ansCounter: 'Chantal', ansClock: 'Annie',
+        first: 0,
+        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
+        ansExpected: 0,
         ansType: "select",
         en: {
             q: "Who arrived before the special guest?", unit: "",
@@ -138,7 +134,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "",
+            q: "من وصل قبل الضيف الخاص؟", unit: "",
             ansCounter: 'جميل', ansClock: 'منى',
             ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
         }
@@ -148,10 +144,8 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count",
         imgSrc: imgPath + "_radial-6-",
-        // first: 0, // indicates the position of the first arriving guest
-        anchorPos: -1, // no anchor i.e. no special guests
-        valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 0, //ansCounter: 'Chantal', ansClock: 'Annie',
+        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
+        ansExpected: 0,
         ansType: "input",
         en: {
             q: "How many visitors arrived after the special guest?", unit: "visitors",
@@ -168,7 +162,6 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count",
         imgSrc: imgPath + "_radial-6-",
-        // first: 0, // indicates the position of the first arriving guest. 
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
@@ -179,7 +172,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             note: "(Do not include the special guest in your count.)"
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            q: "كم عدد الزوار الذين وصلوا قبل الضيف الخاص؟", unit: "زائر.",
             ansCounter: 9, ansClock: 3,
             note: "(لا تقم بتضمين الضيف المميز في حسابك.)"
         }
