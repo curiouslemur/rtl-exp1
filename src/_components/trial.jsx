@@ -38,7 +38,7 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
 
     useEffect(() => { tc.addEmptyPlaceholder("#chartDiv"); }, []);
 
-    useEffect(() => { setStimuli(loadStimuli_inLang(expLang, chartType)) }, [])
+    useEffect(() => { setStimuli(loadStimuli_inLang(expLang, chartType)) }, [chartType, expLang])
 
     useEffect(() => {
         if (chartIsVisible === true) {

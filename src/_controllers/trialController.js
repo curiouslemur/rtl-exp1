@@ -143,8 +143,7 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     record[idx] = stimulusData
 
     dao.logData(dem, record)
-    // if (progress < totalQ - 1) {
-    console.log(progress, stimuli.length - 1)
+
     if (progress < stimuli.length - 1) {
         setProgress(progress + 1)
         addEmptyPlaceholder(chartSvgId)
