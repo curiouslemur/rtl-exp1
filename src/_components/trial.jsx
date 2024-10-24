@@ -45,7 +45,7 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
             const timeoutT = setTimeout(() => {
                 tc.addEmptyPlaceholder("#chartDiv");
                 setChartIsVisible(false)
-            }, 16000) // TODO: update the time 
+            }, 6000) // TODO: update the time 
             return () => clearTimeout(timeoutT);
         }
     }, [chartIsVisible])
