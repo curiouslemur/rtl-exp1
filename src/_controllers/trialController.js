@@ -114,8 +114,8 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     stimuli,
     navigate, nextUrl) => {
 
-    var id = window.setTimeout(function () { }, 0); // clearing all timeouts
-    while (id--) { window.clearTimeout(id); }// will do nothing if no timeout with id is present
+    // var id = window.setTimeout(function () { }, 0); // clearing all timeouts
+    // while (id--) { window.clearTimeout(id); }// will do nothing if no timeout with id is present
 
     let dem = JSON.parse(sessionStorage.getItem('demography'))
     let stimulusData = stimuli[progress]

@@ -23,7 +23,7 @@ export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
         } else {
             const timeout = setTimeout(() => {
                 setCannotStart(false)
-            }, 20000)
+            }, 15000)
             return () => clearTimeout(timeout);
         } // TODO: make this like 30s instead 
 
