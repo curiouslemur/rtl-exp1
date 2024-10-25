@@ -90,7 +90,8 @@ input::-webkit-inner-spin-button {
 /* On larger screens, make the image smaller (e.g., 70% of the container) */
 @media (min-width: 768px) {
   .markdown-content img {
-    max-width: 90%;
+    /* max-width: 90%; */
+    max-width: 600px;
     /* Image takes 100% of the container width on larger screens */
     filter: drop-shadow(0 0 10px #bab5b5);
   }
@@ -99,7 +100,7 @@ input::-webkit-inner-spin-button {
 /* On very large screens, further reduce the image size */
 @media (min-width: 1200px) {
   .markdown-content img {
-    max-width: 50%;
+    max-width: 600px;
     /* Image takes 80% of the container width on very large screens */
     filter: drop-shadow(0 0 10px #bab5b5);
   }
@@ -171,7 +172,7 @@ input::-webkit-inner-spin-button {
   padding: 20px;
   border-radius: 10px;
   width: 80%;
-  max-width: 800px;
+  max-width: 55%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   overflow-y: auto;

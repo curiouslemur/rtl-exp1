@@ -200,7 +200,7 @@ const HelpIcon = ({ meta, chartType }) => {
                             <source src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
-                        <Button onClick={closeHelpModal}>{labels.helpModalCloseButton}</Button>
+                        <Button onClick={closeHelpModal} variant="contained">{labels.helpModalCloseButton}</Button>
                     </div>
                 </div>
                     : <> </>
