@@ -72,30 +72,24 @@ export const addEmptyPlaceholder = (divId) => {
 }
 
 
-export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible, progress, alertMessage, expLang, chartType, setTimeoutID) => {
+export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, setCannotShowChart, setChartIsVisible, progress, alertMessage, expLang, chartType) => {
 
+    // console.log(expLang, chartType)
     if (progress === 0) { alert(alertMessage) }
 
-    if (d3.select("#chartSvg")) { d3.select("#chartSvg").remove() }
+    d3.select("#chartSvg").remove()
 
-    // var elem = document.createElement("img");
-    // document.getElementById(divId).appendChild(elem);
-    // // elem.src = stimulusData.imgSrc;
-    // elem.src = expLang + "/" + chartType + "/" + stimulusData.imgSrc
-    // elem.id = "chartSvg"
-    // elem.style.height = "380px"
+    var elem = document.createElement("img");
+    document.getElementById(divId).appendChild(elem);
+    // elem.src = stimulusData.imgSrc;
+    elem.src = expLang + "/" + chartType + "/" + stimulusData.imgSrc
+    elem.id = "chartSvg"
+    elem.style.height = "380px"
     // elem.style.height = 
 
     setVisibilityAnserwField("visible")
     setCannotShowChart(true)
     setChartIsVisible(true)
-
-    const id = setTimeout(() => {
-        console.log("resetting timeout")
-        addEmptyPlaceholder("#chartDiv");
-        setChartIsVisible(false)
-    }, 5000) //
-    setTimeoutID(id)
 }
 
 export const onChangeAnsTextField = (e, setCannotNext, setAnsValue) => {
@@ -118,17 +112,17 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     ansValue,
     chartType,
     stimuli,
-    navigate, nextUrl,
-    timeoutID, setTimeoutID,
-    setChartIsVisible) => {
+    navigate, nextUrl) => {
 
-    if (timeoutID) {
-        clearTimeout(timeoutID)
-        setTimeoutID(null)
-    }
+    // var id = window.setTimeout(function () { }, 0); // clearing all timeouts
+    // while (id--) { window.clearTimeout(id); }// will do nothing if no timeout with id is present
 
     let dem = JSON.parse(sessionStorage.getItem('demography'))
     let stimulusData = stimuli[progress]
+
+    // console.log("stimuli[progress] : ", stimuli[progress])
+    // console.log("stimulusData : ", stimulusData)
+    // console.log(stimuli[progress] === stimulusData)
 
     dem.progress = progress + 1 // because progress was initiated at 0
     dao.logDem(dem)
@@ -156,7 +150,6 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
         setCannotShowChart(false)
         setVisibilityAnserwField("hidden")
         setCannotNext(true)
-        setChartIsVisible(false)
     } else {
         navigate(nextUrl)
     }

@@ -9,7 +9,7 @@ import * as tc from "../_controllers/trialController"
 import { loadStimuli_inLang } from "../_utils/content-loader";
 
 const styles = {
-    button: { marginTop: 20, marginBottom: 20 },
+    button: { marginTop: 20, marginBottom: 10 },
     container: { display: 'flex', flexWrap: 'wrap', padding: '5%' },
     gridItem: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
     root: { flexGrow: 1, margin: '2%' },
@@ -29,8 +29,6 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     const [cannotNext, setCannotNext] = React.useState(true);
     const [chartIsVisible, setChartIsVisible] = React.useState(false);
     const [cannotShowChart, setCannotShowChart] = React.useState(false)
-    const [timeoutID, setTimeoutID] = React.useState(null)
-
     // --------------------------------
 
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
@@ -42,21 +40,16 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
 
     useEffect(() => { setStimuli(loadStimuli_inLang(expLang, chartType)) }, [chartType, expLang])
 
-    // useEffect(() => {
-    //     if (chartIsVisible === true) {
-    //         const timeoutT = setTimeout(() => {
-    //             console.log("resetting timeout")
-    //             tc.addEmptyPlaceholder("#chartDiv");
-    //             setChartIsVisible(false)
-    //         }, 5000) // TODO: update the time 
-
-    //         setTimeoutID(timeoutT)
-
-    //         return () => clearTimeout(timeoutT);
-    //     }
-    // }, [chartIsVisible])
-
-    useEffect(() => { return () => clearTimeout(timeoutID) }, [timeoutID])
+    useEffect(() => {
+        if (chartIsVisible === true) {
+            const timeoutT = setTimeout(() => {
+                console.log("resetting timeout")
+                tc.addEmptyPlaceholder("#chartDiv");
+                setChartIsVisible(false)
+            }, 5000) // TODO: update the time 
+            return () => clearTimeout(timeoutT);
+        }
+    }, [chartIsVisible])
 
     return (
         stimuli === null ? <></> :
@@ -70,24 +63,17 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                             {stimuli[progress][expLang].note}
                         </Typography>
                         <Button sx={{ display: '' }} style={styles.button} variant="outlined"
-                            onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am, expL, chrtT, stoID) => tc.onClickShowChart(
+                            onClick={(e, divId, stimulusData, svaf, scsc, sciv, p, am, expL, chrtT) => tc.onClickShowChart(
                                 "chartDiv",
                                 stimuli[progress],
                                 setVisibilityAnserwField,
                                 setCannotShowChart,
                                 setChartIsVisible, progress, labels.alertMessage,
-                                expLang, chartType,
-                                setTimeoutID)}
+                                expLang, chartType)}
                             disabled={cannotShowChart} > {labels.showChartButton}</Button>
                     </Grid>
 
-                    {chartIsVisible ? <img src={expLang + "/" + chartType + "/" + stimuli[progress].imgSrc} alt={chartType} id="chartvg"
-                        style={{ width: "100%" }}
-                    /> :
-                        <img src={expLang + "/" + chartType + "/empty-placeholder.png"} alt={"empty"} style={{ width: '100%' }}></img>
-                    }
-
-                    {/* <Grid id="chartDiv" item xs={12} marginTop={2}></Grid> */}
+                    <Grid id="chartDiv" item xs={12} marginTop={2}></Grid>
 
                     {/* answer section below */}
                     <Grid item xs={12} marginTop={2}>
@@ -99,6 +85,7 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                                     labels={labels}
                                     cannotNext={cannotNext}
                                     setCannotNext={setCannotNext}
+                                    // progress={progress} setProgress={setProgress}
                                     setCannotShowChart={setCannotShowChart}
                                     setVisibilityAnserwField={setVisibilityAnserwField}
                                     stimulusData={stimuli[progress]}
@@ -112,15 +99,13 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                                         disabled={cannotNext}
 
                                         onClick={(e, p, setP, chartSvgId, scsc, svaf,
-                                            scn, answer, ct, stim, nav, nU,
-                                            toid, stoid, sciv) => tc.onClickNext(
+                                            scn, answer, ct, stim, nav, nU) => tc.onClickNext(
                                                 e, progress, setProgress, "#chartSvg",
                                                 setCannotShowChart, setVisibilityAnserwField,
                                                 setCannotNext,
                                                 ansValue,
                                                 chartType,
-                                                stimuli, navigate, nextUrl,
-                                                timeoutID, setTimeoutID, setChartIsVisible)}
+                                                stimuli, navigate, nextUrl)}
                                     > {labels.nextButton} </Button>
                                 </Grid>
                             </> : <></>
@@ -204,6 +189,7 @@ const HelpIcon = ({ meta, chartType }) => {
                 <FontAwesomeIcon icon={faInfoCircle} size="2x" onClick={openHelpModal} />
             </div>
             {/* <HelpModal open={isModalOpen} close={closeHelpModal} meta={meta} chartType={chartType} /> */}
+
             {
                 isModalOpen ? <div className="modal-overlay" onClick={handleOverlayClick}>
                     <div className="modal-content">
@@ -227,6 +213,31 @@ const HelpIcon = ({ meta, chartType }) => {
     )
 }
 
+// const HelpModal_ = ({ open, close, meta, chartType }) => { // !!!!! Cooler way to pass props than 
+//     if (!open) return null;
+//     const labels = meta.expText.trial
+//     const handleOverlayClick = (e) => { // Function to handle clicks outside of modal content
+//         if (e.target.className === 'modal-overlay') {
+//             close();
+//         }
+//     }
+
+//     return (
+//         <div className="modal-overlay" onClick={handleOverlayClick}>
+//             <div className="modal-content">
+//                 <span>{labels.helpModalIntro}</span>
+//                 <br /> <br />
+//                 <img src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-ex.png"} alt="Help modal" className="modal-content" />
+//                 <br />
+//                 <video controls autoplay loop className="modal-content">
+//                     <source src={meta.expLang + "/" + chartType + "/intro-" + chartType + "-task.mp4"} type="video/mp4" />
+//                     Your browser does not support the video tag.
+//                 </video>
+//                 <Button onClick={close}>{labels.helpModalCloseButton}</Button>
+//             </div>
+//         </div>
+//     )
+// }
 
 // export const TrialC = (props) => {
 //     return (
