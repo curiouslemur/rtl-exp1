@@ -55,7 +55,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
-            q: "من هو الزائر الذي وصل بعد منى؟", unit: ".",
+            q: "من هو الزائر الذي وصل الغرفة بعد منى؟", unit: ".",
             ansCounter: 'يونس', ansClock: 'داني',
             ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
         }
@@ -76,7 +76,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
-            q: "من هو الضيف الذي وصل قبل منى؟", unit: ".",
+            q: "من هو الضيف الذي وصل الغرفة قبل منى؟", unit: ".",
             ansCounter: 'داني', ansClock: 'يونس',
             ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
         }
