@@ -1,4 +1,4 @@
-# Instructions (part 2)
+# Part 2
 
 In this part of the study, consider the follow up scenario below.
 
