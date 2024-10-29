@@ -16,7 +16,6 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-// export const Trial = ({ stimuli, chartType, meta, navigate, nextUrl }) => {
 export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
 
     let expLang = meta.expLang
@@ -49,12 +48,9 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     //             tc.addEmptyPlaceholder("#chartDiv");
     //             setChartIsVisible(false)
     //         }, 5000) // TODO: update the time 
-
     //         setTimeoutID(timeoutT)
-
     //         return () => clearTimeout(timeoutT);
-    //     }
-    // }, [chartIsVisible])
+    //     }}, [chartIsVisible])
 
     useEffect(() => { return () => clearTimeout(timeoutID) }, [timeoutID])
 
@@ -226,12 +222,5 @@ const HelpIcon = ({ meta, chartType }) => {
         </>
     )
 }
-
-
-// export const TrialC = (props) => {
-//     return (
-//         <>Welcome to trialC</>
-//     )
-// }
 
 export default Trial;

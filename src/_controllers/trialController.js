@@ -140,12 +140,15 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     if (chartType === "radial") {
         stimulusData.ansCounter = stimulusData[dem.expLang].ansCounter
         stimulusData.ansClock = stimulusData[dem.expLang].ansClock
+        delete stimulusData["valR"]; delete stimulusData["valL"]
+        delete stimulusData["valMarked"]; delete stimulusData["anchorPos"]
     }
-
-    // delete stimulusData[dem.expLang];
 
     let idx = chartType + "-" + (progress + 1)
     let record = {}
+
+    delete stimulusData[dem.expLang];
+
     record[idx] = stimulusData
 
     dao.logData(dem, record)

@@ -5,8 +5,8 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count-all", // also attention-checker
         imgSrc: imgPath + "_radial-1.png",
-        first: "not relevant",
-        anchorPos: -1, // no anchor i.e. no special guests
+        firstGuestPos: "not relevant",
+        anchorPos: -1, // 
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 9, // ansCounter is if read counter-clockwise, ansClock is if read clockwise
         ansType: "input",
@@ -24,7 +24,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "_radial-2-",
-        first: 0,       // indicates the position of the first arriving guest
+        firstGuestPos: 0,       // indicates the position of the first arriving guest
         anchorPos: -1,  // no anchor i.e. no special guests
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
@@ -45,7 +45,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "_radial-3-",
-        first: 0,
+        firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
         ansType: "select",
@@ -65,7 +65,6 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value", // also attention-checker
         imgSrc: imgPath + "_radial-3-",
-        // first: 0,
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
@@ -86,7 +85,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count", // also attention-checker
         imgSrc: imgPath + "_radial-4-",
-        first: 0,
+        firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "input",
@@ -104,7 +103,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value",
         imgSrc: imgPath + "_radial-5-",
-        first: 0,
+        firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "select",
@@ -124,7 +123,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "extract-value",
         imgSrc: imgPath + "_radial-5-",
-        first: 0,
+        firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "select",
