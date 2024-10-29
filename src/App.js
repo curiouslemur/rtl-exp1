@@ -43,21 +43,25 @@ function App() {
         <PageMeta meta={meta} />
         <Routes>
           <Route path={subdom} element={<navigator.Consent meta={meta} navigate={navigate}
-            nextUrl={subdom + "/intro"} />} />
+            nextUrl={subdom + "/introB"} />} />
 
-          <Route path={subdom + "/intro"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/trial"} chartType={"bar"} />} />
+          <Route path={subdom + "/introB"} element={<navigator.Intro meta={meta} navigate={navigate}
+            nextUrl={subdom + "/trialB"} chartType={"bar"} />} />
 
-          <Route path={subdom + "/trial"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/intro-2"} chartType={"bar"} //stimuli={stimuliBar}
+          <Route path={subdom + "/trialB"} element={<navigator.Trial meta={meta} navigate={navigate}
+            nextUrl={subdom + "/break"} chartType={"bar"}
           />} />
 
-          <Route path={subdom + "/intro-2"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/trial-2"} chartType={"radial"}
+          <Route path={subdom + "/break"} element={<navigator.Break meta={meta} navigate={navigate}
+            nextUrl={subdom + "/introR"}
           />} />
 
-          <Route path={subdom + "/trial-2"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"radial"} //stimuli={stimuliRadial}
+          <Route path={subdom + "/introR"} element={<navigator.Intro meta={meta} navigate={navigate}
+            nextUrl={subdom + "/trialR"} chartType={"radial"}
+          />} />
+
+          <Route path={subdom + "/trialR"} element={<navigator.Trial meta={meta} navigate={navigate}
+            nextUrl={subdom + "/outro"} chartType={"radial"}
           />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />

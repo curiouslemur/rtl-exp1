@@ -34,6 +34,11 @@ export const englishTexts = {
         helpModalIntro: "You're part of a team tasked with analyzing visitor patterns at a local museum over a period of time. The data is visualized using a bar chart. Your task is to answer questions based on the visualization.",
         helpModalCloseButton: "Close"
     },
+    break: {
+        breakTitle: "You completed the first part of the study.",
+        breakText: "When ready, click to continue to the next part.",
+        breakButton: "Continue"
+    },
     outro: {
         outroTitle: "Thank you for your participation.",
         closeBrowser: "You may now close this window.",

@@ -34,6 +34,11 @@ export const arabicTexts = {
         helpModalIntro: "تخيل أنك جزء من فريق بحثي في متحف الفن المحلي و قد كلفت بتحليل أنماط زوار المتحف.",
         helpModalCloseButton: "إغلاق"
     },
+    break: {
+        breakTitle: "لقد أكملت الجزء الأول من الدراسة.",
+        breakText: "انقر على الزر أدناه لبدء الجزء التالي.",
+        breakButton: "البدء الجزء الثاني"
+    },
     outro: {
         outroTitle: "شكرا لمشاركتك.",
         closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
