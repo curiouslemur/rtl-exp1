@@ -35,7 +35,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
             ansOptions: ["Eva", "Lane", "Sami", "Theo"]
         },
         ar: {
-            q: "ما اسم الزائر الذي وصل في اليوم الرابع؟", unit: "",
+            q: "ما اسم الزائر الرابع الذي وصل إلى الغرفة؟", unit: "",
             ansCounter: 'أكرم', ansClock: 'فدوى',
             ansOptions: ["أكرم", "يونس", "فدوى", "منى"]
         }
@@ -143,7 +143,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         chartType: "radial",
         cat: "count",
         imgSrc: imgPath + "_radial-6-",
-        anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
+        anchorPos: -1, valMarkde: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "input",
         en: {
