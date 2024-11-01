@@ -156,6 +156,8 @@ const AnswerSection = (props) => {
             )
         case "select":
             let options = ansElements.ansOptions
+            let values = ansElements.ansValues
+
             return (<>
                 <Box sx={{ minWidth: 120, display: 'inline-flex', alignItems: 'center' }}>
                     <InputLabel>{ansElements.ansLabel} </InputLabel>
@@ -170,7 +172,8 @@ const AnswerSection = (props) => {
                         >
                             {options.map((option, index) => {
                                 return (
-                                    <MenuItem key={option} value={option}>{option}</MenuItem>
+                                    // <MenuItem key={option} value={option}>{option}</MenuItem>
+                                    <MenuItem key={option} value={values[index]}>{option}</MenuItem>
                                 )
                             })}
                         </Select>

@@ -32,12 +32,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         en: {
             q: "Who is the visitor who arrived fourth?", unit: "",
             ansCounter: 'Sami', ansClock: 'Eva',
-            ansOptions: ["Eva", "Lane", "Sami", "Theo"]
+            ansOptions: ["Eva", "Lane", "Sami", "Theo"],
+            ansValues: ["Eva", "Lane", "Sami", "Theo"]
         },
         ar: {
             q: "ما اسم الزائر الرابع الذي وصل إلى الغرفة؟", unit: "",
-            ansCounter: 'أكرم', ansClock: 'فدوى',
-            ansOptions: ["أكرم", "يونس", "فدوى", "منى"]
+            ansCounter: 'Akram', ansClock: 'Fadoua',
+            ansOptions: ["أكرم", "يونس", "فدوى", "منى"],
+            ansValues: ["Akram", "Yunus", "Fadoua", "Muna"]
         }
     },
     {
@@ -52,12 +54,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         en: {
             q: "Who is the visitor who arrived after Damian?", unit: "",
             ansCounter: 'Chantal', ansClock: 'Annie',
-            ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
+            ansOptions: ["Annie", "Chantal", "Lane", "Theo"],
+            ansValues: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
             q: "من هو الزائر الذي وصل الغرفة بعد منى؟", unit: ".",
-            ansCounter: 'يونس', ansClock: 'داني',
-            ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
+            ansCounter: 'Yunus', ansClock: 'Dany',
+            ansOptions: ["داني", "فاطمة", "يونس", "جميل"],
+            ansValues: ["Dany", "Fatma", "Yunus", "Jamil"]
         }
     },
     {
@@ -72,12 +76,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         en: {
             q: "Which guest arrived before Damian?", unit: "",
             ansCounter: 'Annie', ansClock: 'Chantal',
-            ansOptions: ["Annie", "Chantal", "Lane", "Theo"]
+            ansOptions: ["Annie", "Chantal", "Lane", "Theo"],
+            ansValues: ["Annie", "Chantal", "Lane", "Theo"]
         },
         ar: {
             q: "من هو الضيف الذي وصل الغرفة قبل منى؟", unit: ".",
-            ansCounter: 'داني', ansClock: 'يونس',
-            ansOptions: ["داني", "فاطمة", "يونس", "جميل"]
+            ansCounter: 'Dany', ansClock: 'Yunus',
+            ansOptions: ["داني", "فاطمة", "يونس", "جميل"],
+            ansValues: ["Dany", "Fatma", "Yunus", "Jamil"]
         }
     },
     {
@@ -110,12 +116,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         en: {
             q: "Who arrived after the special guest?", unit: "",
             ansCounter: 'Sami', ansClock: 'Akim',
-            ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
+            ansOptions: ["Akim", "Chantal", "Sami", "Theo"],
+            ansValues: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
             q: "من وصل بعد الضيف الخاص؟", unit: "",
-            ansCounter: 'منى', ansClock: 'جميل',
-            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
+            ansCounter: 'Muna', ansClock: 'Jamil',
+            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"],
+            ansValues: ["Fadoua", "Jamil", "Ibtisam", "Muna"]
         }
     },
     {
@@ -130,12 +138,14 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         en: {
             q: "Who arrived before the special guest?", unit: "",
             ansCounter: 'Akim', ansClock: 'Sami',
-            ansOptions: ["Akim", "Chantal", "Sami", "Theo"]
+            ansOptions: ["Akim", "Chantal", "Sami", "Theo"],
+            ansValues: ["Akim", "Chantal", "Sami", "Theo"]
         },
         ar: {
             q: "من وصل قبل الضيف الخاص؟", unit: "",
-            ansCounter: 'جميل', ansClock: 'منى',
-            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"]
+            ansCounter: 'Jamil', ansClock: 'Muna',
+            ansOptions: ["فدوى", "جميل", "إبتسام", "منى"],
+            ansValues: ["Fadoua", "Jamil", "Ibtisam", "Muna"]
         }
     },
     {
