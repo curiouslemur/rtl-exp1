@@ -37,7 +37,7 @@ export const arabicTexts = {
     break: {
         breakTitle: "لقد أكملت الجزء الأول من الدراسة.",
         breakText: "انقر على الزر أدناه لبدء الجزء التالي.",
-        breakButton: "البدء الجزء الثاني"
+        breakButton: "ابدأ الجزء الثاني"
     },
     outro: {
         outroTitle: "شكرا لمشاركتك.",
