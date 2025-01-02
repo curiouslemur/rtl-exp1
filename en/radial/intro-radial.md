@@ -1,6 +1,6 @@
-# Part 2
+# Instructions
 
-In this part of the study, consider the follow up scenario below.
+In this part of the study, consider the follow up scenario below taking place at a museum.
 
 <div class="hover-box">
 
