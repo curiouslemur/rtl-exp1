@@ -31,7 +31,8 @@ var demography = {
     expCountry: getUrlParams().ct ? getUrlParams().ct : "", // mdg2 == pilot #2 for mdg participants
     sessionID: 0,
     expName: "rtl1",
-    visFamiliarity: ""
+    visFamiliarity: "",
+    firstBlock: ""
 }
 
 // // Params: demography, setDisableButton: dis/enable button to move to next experiment page
@@ -53,8 +54,10 @@ export const onChangeField = (value, key, setDisabledButton) => {
     checkStart(demography, setDisabledButton)
 }
 
-export const onClickStart = (sessionID, navigate, nextUrl) => {
+export const onClickStart = (sessionID, navigate, nextUrl, firstBlock) => { // firstBlock: "B" or "R"
+    console.log("--", sessionID)
     demography.sessionID = sessionID
+    demography.firstBlock = firstBlock
     sessionStorage.setItem("demography", JSON.stringify(demography))
     // document.body.classList.remove('consent-body');
     navigate(nextUrl)

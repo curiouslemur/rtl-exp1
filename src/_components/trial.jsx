@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Box, Button, Grid, TextField, Typography, MenuItem, FormControl, InputLabel, Select } from "@mui/material";
+import { StudyContext } from "../_utils/contexts";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +19,9 @@ const styles = {
 
 export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
 
-    let expLang = meta.expLang
+    // let expLang = meta.expLang
+    const { expLang, firstBlock } = useContext(StudyContext)
+
     const labels = meta.expText.trial
 
     const [progress, setProgress] = useState(0) // TODO: when saving progress: add +1
@@ -31,7 +34,6 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
     const [timeoutID, setTimeoutID] = React.useState(null)
 
     // --------------------------------
-
     const [visibilityAnsField, setVisibilityAnserwField] = React.useState("hidden") // possible values: hidden or visible
     const [ansValue, setAnsValue] = useState()
 
@@ -116,7 +118,8 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                                                 ansValue,
                                                 chartType,
                                                 stimuli, navigate, nextUrl,
-                                                timeoutID, setTimeoutID, setChartIsVisible)}
+                                                timeoutID, setTimeoutID, setChartIsVisible
+                                            )}
                                     > {labels.nextButton} </Button>
                                 </Grid>
                             </> : <></>

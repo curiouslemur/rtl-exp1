@@ -16,7 +16,7 @@ const styles = {
     textField: { marginLeft: 10, marginRight: 10, width: 200, }, label: { margin: 0 }
 }
 
-export const Consent = ({ meta, navigate, nextUrl }) => {
+export const Consent = ({ meta, sessionID, navigate, nextUrl }) => {
     const [consent_md, setConsent_md] = useState('');
 
     const [disabledButton, setDisabledButton] = useState(true);
@@ -45,7 +45,7 @@ export const Consent = ({ meta, navigate, nextUrl }) => {
         });
 
     // const labels = meta.expPages.ConsentLabels
-    const sessionID = meta.sessionID
+    // const sessionID = sessionID
     const labels = meta.expText.consent
     const countryNames = loadCountries_inLang(meta.expLang)
     const languageNames = loadLanguages_inLang(meta.expLang)
@@ -189,8 +189,8 @@ export const Consent = ({ meta, navigate, nextUrl }) => {
                 <Button style={{ marginTop: '20px' }}
                     variant="contained"
                     disabled={disabledButton}
-                    onClick={(sid, nav, nu) => {
-                        cc.onClickStart(sessionID, navigate, nextUrl)
+                    onClick={(sid, nav, nu, fb) => {
+                        cc.onClickStart(sessionID, navigate, nextUrl, meta.firstBlock)
                     }}> {labels.sign} </Button>
             </Grid>
         </Grid>

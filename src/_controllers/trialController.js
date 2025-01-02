@@ -131,7 +131,9 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     let stimulusData = stimuli[progress]
 
     dem.progress = progress + 1 // because progress was initiated at 0
-    dao.logDem(dem)
+
+    let demPath = dem.expLang + "-" + dem.expName + "-dem/" + dem.sessionID
+    dao.logDem(demPath, dem)
     sessionStorage.setItem("demography", JSON.stringify(dem))
 
     stimulusData.ans = ansValue // ans is the answer from the participant
@@ -151,7 +153,10 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
 
     record[idx] = stimulusData
 
-    dao.logData(dem, record)
+    // dao.logData(dem, record)
+    // path: en-rtl1/sessionID-B
+    let path = dem.expLang + "-" + dem.expName + '/' + dem.sessionID
+    dao.logData(path, dem, record)
 
     if (progress < stimuli.length - 1) {
         setProgress(progress + 1)

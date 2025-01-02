@@ -1,4 +1,4 @@
-# Instructions (part 1)
+# Instructions
 
 In this section of the study, consider the following scenario. 
 

@@ -6,7 +6,9 @@ export const onClickStart = (navigate, nextUrl) => {
     let dem = JSON.parse(sessionStorage.getItem('demography'))
     dem.languageOther = JSON.stringify(dem.languageOther)
     sessionStorage.setItem('demography', JSON.stringify(dem))
-    dao.logDem(dem)
+    let pathDem = dem.expLang + "-" + dem.expName + "-dem/" + dem.sessionID
+
+    dao.logDem(pathDem, dem)
     navigate(nextUrl)
 }
 
