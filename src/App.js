@@ -52,12 +52,12 @@ function App() {
   useEffect(() => {
     dao.getExpFirstBlock("first-block", expLang).then((data) => {
       if (data.block1 === "bar") {
-        // meta.sessionID = generateSessionID() + "-B"
         setSessionID(generateSessionID() + "-B")
         setFirstBlock("B"); setFirstChartType("bar")
         setSecondBlock("R"); setSecondChartType("radial")
         dao.setNextFirstBlock("first-block", expLang, "radial")
       } else {
+        setSessionID(generateSessionID() + "-R")
         setFirstBlock("R"); setFirstChartType("radial")
         setSecondBlock("B"); setSecondChartType("bar")
         dao.setNextFirstBlock("first-block", expLang, "bar")
@@ -77,26 +77,21 @@ function App() {
             // nextUrl={subdom + "/introB"} />} /> 
             nextUrl={subdom + "/intro" + firstBlock} />} />
 
-          <Route path={subdom + "/introB"} element={<navigator.Intro meta={meta} navigate={navigate}
-            // nextUrl={subdom + "/trialB"} chartType={"bar"} />} />
+          <Route path={subdom + "/intro" + firstBlock} element={<navigator.Intro meta={meta} navigate={navigate}
             nextUrl={subdom + "/trial" + firstBlock} chartType={firstChartType} />} />
 
-          <Route path={subdom + "/trialB"} element={<navigator.Trial meta={meta} navigate={navigate}
+          <Route path={subdom + "/trial" + firstBlock} element={<navigator.Trial meta={meta} navigate={navigate}
             // nextUrl={subdom + "/break"} chartType={"bar"}
-            nextUrl={subdom + "/break"} chartType={firstChartType}
-          />} />
+            nextUrl={subdom + "/break"} chartType={firstChartType} />} />
 
           <Route path={subdom + "/break"} element={<navigator.Break meta={meta} navigate={navigate}
-            nextUrl={subdom + "/introR"}
-          />} />
+            nextUrl={subdom + "/intro" + secondBlock} />} />
 
-          <Route path={subdom + "/introR"} element={<navigator.Intro meta={meta} navigate={navigate}
-            nextUrl={subdom + "/trialR"} chartType={"radial"}
-          />} />
+          <Route path={subdom + "/intro" + secondBlock} element={<navigator.Intro meta={meta} navigate={navigate}
+            nextUrl={subdom + "/trial" + secondBlock} chartType={secondChartType} />} />
 
-          <Route path={subdom + "/trialR"} element={<navigator.Trial meta={meta} navigate={navigate}
-            nextUrl={subdom + "/outro"} chartType={"radial"}
-          />} />
+          <Route path={subdom + "/trial" + secondBlock} element={<navigator.Trial meta={meta} navigate={navigate}
+            nextUrl={subdom + "/outro"} chartType={secondChartType} />} />
 
           <Route path={subdom + "/outro"} element={<navigator.Outro meta={meta} />} />
         </Routes>
