@@ -42,19 +42,27 @@ export const loadStimuli_inLang = (lang, chartType) => {
     switch (chartType) {
         case "bar":
             tmp = stimuliBar;
-            fin = [   // Removing unnecessary questions
+            let tmp_fin = [   // Removing unnecessary questions
                 tmp[0],
-                [tmp[1], tmp[2]][(Math.random() > 0.5) ? 1 : 0],
+                [tmp[1], tmp[2]][Math.round(Math.random())], // random between 0 and 1
                 tmp[3],
-                [tmp[4], tmp[5]][(Math.random() > 0.5) ? 1 : 0],
-                [tmp[6], tmp[7]][(Math.random() > 0.5) ? 1 : 0],
-                [tmp[8], tmp[9]][(Math.random() > 0.5) ? 1 : 0],
+                [tmp[4], tmp[5]][Math.round(Math.random())],
+                [tmp[6], tmp[7]][Math.round(Math.random())],
+                [tmp[8], tmp[9]][Math.round(Math.random())],
+                [tmp[10], tmp[11], tmp[12], tmp[13], tmp[14], tmp[15]][Math.floor(Math.random() * 6)] // rand between 0 and 5
             ]
+            // some questions need to be fixed since they are attention checks as well
+            fin = [
+                tmp_fin[0],
+                ...shuffle(tmp_fin.slice(1, 4)),
+                tmp_fin[4],
+                ...shuffle(tmp_fin.slice(5, 7))
+            ]
+            console.log(fin)
             break;
 
         case "radial":
             let radialFirstPos = shuffle([5, 6, 11, 12]) // to ensure all position of firstPos are covered
-            // console.log(radialFirstPos)
 
             tmp = stimuliRadial;
             let q1 = stimuliRadial[0]
