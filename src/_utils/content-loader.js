@@ -36,13 +36,13 @@ export const loadTexts_inLang = (lang) => {
 
 
 export const loadStimuli_inLang = (lang, chartType) => {
-    let tmp, fin;
+    let tmp, tmp_fin, fin;
     let img_extension = ".png"
 
     switch (chartType) {
         case "bar":
             tmp = stimuliBar;
-            let tmp_fin = [   // Removing unnecessary questions
+            tmp_fin = [   // Removing unnecessary questions
                 tmp[0],
                 [tmp[1], tmp[2]][Math.round(Math.random())], // random between 0 and 1
                 tmp[3],
@@ -58,7 +58,7 @@ export const loadStimuli_inLang = (lang, chartType) => {
                 tmp_fin[4],
                 ...shuffle(tmp_fin.slice(5, 7))
             ]
-            console.log(fin)
+            // console.log(fin)
             break;
 
         case "radial":
@@ -111,14 +111,22 @@ export const loadStimuli_inLang = (lang, chartType) => {
             q6_before.imgSrc = q6_before.imgSrc + radialFirstPos[3] + img_extension;
             q6_before.firstGuestPos = radialFirstPos[3];
 
-            fin = [q1, q2,
+            tmp_fin = [q1, q2,
                 [q3_after, q3_before][(Math.random() > 0.5) ? 1 : 0],
                 q4,
                 [q5_after, q5_before][(Math.random() > 0.5) ? 1 : 0],
                 [q6_after, q6_before][(Math.random() > 0.5) ? 1 : 0]
             ]
 
-            // console.log("fin : ", fin)
+            fin = [
+                tmp_fin[0],
+                ...shuffle(tmp_fin.slice(1, 3)),
+                tmp_fin[3],
+                ...shuffle(tmp_fin.slice(4, 6))
+            ]
+
+            console.log("fin : ", fin)
+
             break;
 
         default: tmp = stimuliBar;
