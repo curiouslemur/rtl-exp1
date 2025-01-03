@@ -36,7 +36,7 @@ export const Outro = ({ meta }) => {
                     </Grid>
                     <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
                         <Button
-                            target="_blank" href="https://app.prolific.com/submissions/complete?cc=C4SQTHN5"
+                            target="_blank" href="https://app.prolific.com/submissions/complete?cc=CVT9LBLD"
                             variant="outlined"
                             disabled={cannotCollect}
                             onClick={handleClick}
