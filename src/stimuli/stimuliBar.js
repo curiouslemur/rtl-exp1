@@ -177,7 +177,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         ansExpected: "either", ansL: 64, ansR: 70,
         ansType: 'input',
         en: { q: "How many visistors were there on the day before the holiday?" },
-        ar: { q: "كم عدد الزوار في اليوم السابق للعطلة الرسمية؟" }
+        ar: { q: "كم عدد الزوار في اليوم السابق للعطلة؟" }
     }, {// index: 12
         qId: "7-extract-before-sts",
         chartType: "bar",
@@ -189,7 +189,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         ansExpected: "either", ansL: 100, ansR: 88,
         ansType: 'input',
         en: { q: "How many visistors were there on the day before the holiday?" },
-        ar: { q: "كم عدد الزوار في اليوم السابق للعطلة الرسمية؟" }
+        ar: { q: "كم عدد الزوار في اليوم السابق للعطلة؟" }
     }, {// index: 13
         qId: "7-extract-after-u",
         chartType: "bar",
@@ -213,7 +213,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         ansExpected: "either", ansL: 70, ansR: 64,
         ansType: 'input',
         en: { q: "How many visistors were there on the day after the holiday?" },
-        ar: { q: "كم عدد الزوار في اليوم التالي للعطلة الرسمية؟" }
+        ar: { q: "كم عدد الزوار في اليوم التالي للعطلة؟" }
     }, {// index: 15
         qId: "7-extract-after-sts",
         chartType: "bar",
