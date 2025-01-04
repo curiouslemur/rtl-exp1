@@ -42,6 +42,9 @@ export const arabicTexts = {
     outro: {
         outroTitle: "شكرا لمشاركتك.",
         closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
+        commentQuestion: "هل لديك أي تعليقات على الدراسة أو المهام؟",
+        commentSendButton: "إرسال",
+        commentReceived: "شكرا لك على تعليقك.",
         prolificUserYes: "انقر أدناه لجمع مكافأتك قبل إغلاق هذه الصفحة.",
         prolificUserButton: "مكافأة"
     }

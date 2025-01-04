@@ -100,7 +100,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         en: { q: "How many visitors on the sixth (6th) day?" },
         ar: { q: "كم عدد الزوار في اليوم السادس؟" }
     }, {// index: 6
-        qId: "5-u-1", // the fifth question will be either of the u-1 or u-2 versions
+        qId: "5-u-1", // the fifth question will be either of the u-1 (unsorted w/ 1 colored) or u-2 (unsorted w/ 2 colored) versions
         chartType: "bar",
         imgSrc: imgPath + "bar-5-u-1.svg",
         cat: "count", // also attention-checker

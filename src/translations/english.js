@@ -42,6 +42,9 @@ export const englishTexts = {
     outro: {
         outroTitle: "Thank you for your participation.",
         closeBrowser: "You may now close this window.",
+        commentQuestion: "Do you have any comments on the dificulty of the task or the study in general?",
+        commentSendButton: "send comment",
+        commentReceived: "Thank you for your feedback",
         prolificUserYes: "Prolific user, click below to collect your reward before closing this window",
         prolificUserButton: "Collect"
     }
