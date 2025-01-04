@@ -23,7 +23,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         sorted: "u",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
-        ansExpected: 11, ansL: 10, ansR: 10,
+        ansExpected: 10, ansL: 10, ansR: 10,
         ansType: "input",
         en: { q: "How many days did the data collection last?", unit: "days." },
         ar: { q: "كم يوما استغرقت عملية جمع البيانات؟", unit: "days" }

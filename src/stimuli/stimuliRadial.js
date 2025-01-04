@@ -4,7 +4,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "1",
         chartType: "radial",
         cat: "count-all", // also attention-checker
-        imgSrc: imgPath + "_radial-1.png",
+        imgSrc: imgPath + "radial-1.png",
         firstGuestPos: "not relevant",
         anchorPos: -1, // 
         valMarked: -1, valL: -1, valR: -1,
@@ -22,16 +22,16 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
     {
         qId: "2-",
         chartType: "radial",
-        cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "_radial-2-",
+        cat: "extract-value",
+        imgSrc: imgPath + "radial-2-",
         firstGuestPos: 0,       // indicates the position of the first arriving guest
-        anchorPos: -1,  // no anchor i.e. no special guests
+        anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
         ansType: "select",
         en: {
             q: "Who is the visitor who arrived fourth?", unit: "",
-            ansCounter: 'Sami', ansClock: 'Eva',
+            ansCounter: 'Sami', ansClock: 'Eva', // this answer should also be in ansOptions, and should be the same regardless of the firstQuestPos
             ansOptions: ["Eva", "Lane", "Sami", "Theo"],
             ansValues: ["Eva", "Lane", "Sami", "Theo"]
         },
@@ -46,7 +46,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "3-after-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "_radial-3-",
+        imgSrc: imgPath + "radial-3-",
         firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
@@ -68,7 +68,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "3-before-",
         chartType: "radial",
         cat: "extract-value", // also attention-checker
-        imgSrc: imgPath + "_radial-3-",
+        imgSrc: imgPath + "radial-3-",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 'either',
@@ -90,7 +90,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "4-sg-count-", // sg == special guest
         chartType: "radial",
         cat: "count", // also attention-checker
-        imgSrc: imgPath + "_radial-4-",
+        imgSrc: imgPath + "radial-4-",
         firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
@@ -108,7 +108,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "5-sg-after-", // sg == special guest
         chartType: "radial",
         cat: "extract-value",
-        imgSrc: imgPath + "_radial-5-",
+        imgSrc: imgPath + "radial-5-",
         firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
@@ -130,7 +130,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "5-sg-before-",
         chartType: "radial",
         cat: "extract-value",
-        imgSrc: imgPath + "_radial-5-",
+        imgSrc: imgPath + "radial-5-",
         firstGuestPos: 0,
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
@@ -152,7 +152,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "6-count-after-",
         chartType: "radial",
         cat: "count",
-        imgSrc: imgPath + "_radial-6-",
+        imgSrc: imgPath + "radial-6-",
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
         ansType: "input",
@@ -170,7 +170,7 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         qId: "6-count-before-",
         chartType: "radial",
         cat: "count",
-        imgSrc: imgPath + "_radial-6-",
+        imgSrc: imgPath + "radial-6-",
         anchorPos: -1,
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 0,
