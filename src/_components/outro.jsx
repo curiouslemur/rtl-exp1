@@ -23,12 +23,9 @@ export const Outro = ({ meta }) => {
         else { setCannotSendComment(true) }
     }
 
-    const handleSendComment = () => {
-        setCommentSent(true)
-        setCannotSendComment(true)
-    }
-
+    const handleSendComment = () => { setCommentSent(true) }
     const handleCollect = () => { setCannotCollect(true) }
+
 
     useEffect(() => { document.body.classList.add('outro-body'); }, []);
 
