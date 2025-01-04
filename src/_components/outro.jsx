@@ -13,17 +13,24 @@ const styles = {
 
 export const Outro = ({ meta }) => {
     const [cannotCollect, setCannotCollect] = useState(false)
+    const [comment, setComment] = useState('')
     const [cannotSendComment, setCannotSendComment] = useState(true)
     const [commentSent, setCommentSent] = useState(false)
 
     const labels = meta.expText.outro
 
     const handleCommentChange = (e) => {
-        if (e.target.value.length >= 2) { setCannotSendComment(false) }
+        if (e.target.value.length >= 2) {
+            setComment(e.target.value)
+            setCannotSendComment(false)
+        }
         else { setCannotSendComment(true) }
     }
 
-    const handleSendComment = () => { setCommentSent(true) }
+    const handleSendComment = (e) => {
+        oc.sendComment(e)
+        setCommentSent(true)
+    }
     const handleCollect = () => { setCannotCollect(true) }
 
 
@@ -53,7 +60,7 @@ export const Outro = ({ meta }) => {
                 <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
                     <Button variant="outlined"
                         disabled={cannotSendComment}
-                        onClick={handleSendComment}
+                        onClick={c => handleSendComment(comment)}
                     >{labels.commentSendButton}</Button>
                 </Grid>
             }

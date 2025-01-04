@@ -20,7 +20,7 @@ const styles = {
 export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
 
     // let expLang = meta.expLang
-    const { expLang, firstBlock } = useContext(StudyContext)
+    const { expLang } = useContext(StudyContext)
 
     const labels = meta.expText.trial
 
