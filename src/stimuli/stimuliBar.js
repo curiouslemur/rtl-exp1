@@ -35,8 +35,8 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         cat: "identify-trend", sorted: "sst",
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", // two possible answers depending on from where participant starts
-        ansL: "increase", // answer had the user started from the left
-        ansR: "decrease", // answer had the user started from the right
+        ansL: "increased", // answer had the user started from the left
+        ansR: "decreased", // answer had the user started from the right
         ansType: "select",
         en: {
             q: "Did the number of visitors increase or decrease over the course of the study?",
@@ -53,8 +53,8 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         cat: "identify-trend", sorted: "sts",
         anchorPos: -1, valMarked: -1, valL: -1, valR: -1,
         ansExpected: "either", // two possible answers depending on from where participant starts
-        ansL: "increase", // answer had the user started from the left
-        ansR: "decrease", // answer had the user started from the right
+        ansL: "increased", // answer had the user started from the left
+        ansR: "decreased", // answer had the user started from the right
         ansType: "select",
         en: {
             q: "Did the number of visitors increase or decrease over the course of the study?",
