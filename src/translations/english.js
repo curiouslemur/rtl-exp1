@@ -44,7 +44,7 @@ export const englishTexts = {
         langDailySpeak: "In your daily life, what language do you mostly speak in?",
         langDailyWrite: "What language do you mostly write in?",
         langDailyVis: "In your daily life, in what language are the data visualizations that you use?",
-        commentQuestion: "Do you have any comments on the dificulty of the task or the study in general?",
+        commentQuestion: "Do you have any comments on the dificulty of this study in general?",
         commentSendButton: "send comment",
 
         commentReceived: "Thank you for your answers.",

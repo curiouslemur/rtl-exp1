@@ -45,7 +45,7 @@ export const arabicTexts = {
         langDailySpeak: "في حياتك اليومية، ما هي اللغة التي تتحدث بها غالبًا؟",
         langDailyWrite: "في حياتك اليومية، ما هي اللغة التي تكتب بها غالبًا؟",
         langDailyVis: "في حياتك اليومية، ما هي اللغة التي تستخدمها غالبًا مع رسوم البيانات؟",
-        commentQuestion: "هل لديك أي تعليقات على الدراسة أو المهام؟",
+        commentQuestion: "هل لديك أي تعليقات على هذه الدراسة؟",
         commentSendButton: "إرسال",
         commentReceived: "شكرا على إجاباتك.",
         closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
