@@ -40,11 +40,15 @@ export const englishTexts = {
         breakButton: "Continue"
     },
     outro: {
-        outroTitle: "Thank you for your participation.",
-        closeBrowser: "You may now close this window.",
+        outroTitle: "Thank you for your participation. Lastly, please answer the following questions.",
+        langDailySpeak: "In your daily life, what language do you mostly speak in?",
+        langDailyWrite: "What language do you mostly write in?",
+        langDailyVis: "In your daily life, in what language are the data visualizations that you use?",
         commentQuestion: "Do you have any comments on the dificulty of the task or the study in general?",
         commentSendButton: "send comment",
-        commentReceived: "Thank you for your feedback",
+
+        commentReceived: "Thank you for your answers.",
+        closeBrowser: "You may now close this window.",
         prolificUserYes: "Prolific user, click below to collect your reward before closing this window",
         prolificUserButton: "Collect"
     }

@@ -8,6 +8,15 @@ export const isProlificUser = () => {
 export const sendComment = (c) => {
     let dem = JSON.parse(sessionStorage.getItem('demography'))
     dem.comment = c
+    sessionStorage.setItem("demography", JSON.stringify(dem))
+    let demPath = dem.expLang + "-" + dem.expName + "-dem/" + dem.sessionID
+    dao.logDem(demPath, dem)
+}
+
+export const handleDailyChange = (e, type) => {
+    let dem = JSON.parse(sessionStorage.getItem('demography'))
+    dem[type] = e.target.value
+    sessionStorage.setItem("demography", JSON.stringify(dem))
     let demPath = dem.expLang + "-" + dem.expName + "-dem/" + dem.sessionID
     dao.logDem(demPath, dem)
 }

@@ -40,11 +40,15 @@ export const arabicTexts = {
         breakButton: "ابدأ الجزء الثاني"
     },
     outro: {
-        outroTitle: "شكرا لمشاركتك.",
-        closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
+        // outroTitle: "شكرا لمشاركتك.",
+        outroTitle: "شكرا لمشاركتك. يُرجى الإجابة على هذه الأسئلة النهائية.",
+        langDailySpeak: "في حياتك اليومية، ما هي اللغة التي تتحدث بها غالبًا؟",
+        langDailyWrite: "ما هي اللغة التي تكتب بها غالبًا؟",
+        langDailyVis: "في حياتك اليومية، ما هي اللغة التي تستخدمها غالبًا مع رسم البيانات؟",
         commentQuestion: "هل لديك أي تعليقات على الدراسة أو المهام؟",
         commentSendButton: "إرسال",
-        commentReceived: "شكرا لك على تعليقك.",
+        commentReceived: "شكرا على إجاباتك.",
+        closeBrowser: "يمكنك الآن إغلاق هذه الصفحة.",
         prolificUserYes: "انقر أدناه لجمع مكافأتك قبل إغلاق هذه الصفحة.",
         prolificUserButton: "مكافأة"
     }

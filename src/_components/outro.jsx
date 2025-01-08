@@ -38,10 +38,40 @@ export const Outro = ({ meta }) => {
 
     return (
         <Grid container style={styles.container} justifyContent='center'>
-
             <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
                 <Typography variant="h4">{labels.outroTitle}</Typography>
             </Grid>
+            {/* <Grid id="langDailySpeak"> */}
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <Typography>{labels.langDailySpeak}</Typography>
+            </Grid>
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <TextField style={{ width: 500 }}
+                    onChange={(e, ds) => oc.handleDailyChange(e, "dailySpeak")}
+                />
+            </Grid>
+            {/* </Grid> */}
+            {/* <Grid id="langDailyWrite"> */}
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <Typography>{labels.langDailyWrite}</Typography>
+            </Grid>
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <TextField style={{ width: 500 }}
+                    onChange={(e, dw) => oc.handleDailyChange(e, "dailyWrite")}
+                />
+            </Grid>
+            {/* </Grid> */}
+            {/* <Grid id="langDailyVis"> */}
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <Typography>{labels.langDailyVis}</Typography>
+            </Grid>
+            <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
+                <TextField style={{ width: 500 }}
+                    onChange={(e, dv) => oc.handleDailyChange(e, "dailyVis")}
+                />
+            </Grid>
+            {/* </Grid> */}
+            {/* <Grid> */}
             <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
                 <Typography >{labels.commentQuestion} </Typography>
             </Grid>
@@ -53,6 +83,7 @@ export const Outro = ({ meta }) => {
                     onChange={e => handleCommentChange(e)}
                 />
             </Grid>
+            {/* </Grid> */}
             {(commentSent) ?
                 <Grid item xs={10} sm={8} xl={8} style={styles.gridItem} marginTop={2}>
                     <Typography sx={{ color: 'gray' }}>{labels.commentReceived}</Typography> </Grid>
