@@ -11,11 +11,11 @@ export const stimuliRadial = [ // questions and labels in English. Order is impo
         ansExpected: 9, // ansCounter is if read counter-clockwise, ansClock is if read clockwise
         ansType: "input",
         en: {
-            q: "How many visitors are in the room?", unit: "visitors.",
+            q: "How many visitors are in the room?", note: "(Each small circle in teh chart represents one visitor", unit: "visitors.",
             ansCounter: 9, ansClock: 9
         },
         ar: {
-            q: "كم عدد الزوار في الغرفة؟", unit: "زائر.",
+            q: "كم عدد الزوار في الغرفة؟", note: "(كل دائرة صغيرة في الرسم البياني تمثل زائرًا واحدًا)", unit: "زائر.",
             ansCounter: 9, ansClock: 9,
         }
     },

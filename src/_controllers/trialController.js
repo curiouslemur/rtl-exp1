@@ -36,7 +36,7 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
     setChartIsVisible(true)
 
     const id = setTimeout(() => {
-        console.log("resetting timeout")
+        // console.log("resetting timeout")
         addEmptyPlaceholder("#chartDiv");
         setChartIsVisible(false)
     }, 5000) //
@@ -85,6 +85,8 @@ export const onClickNext = (e, progress, setProgress, chartSvgId, setCannotShowC
     stimulusData.sessionID = dem.sessionID
 
     if (chartType === "radial") {
+        stimulusData.lol = 0
+        console.log(dem.expLang)
         stimulusData.ansCounter = stimulusData[dem.expLang].ansCounter
         stimulusData.ansClock = stimulusData[dem.expLang].ansClock
         delete stimulusData["valR"]; delete stimulusData["valL"]

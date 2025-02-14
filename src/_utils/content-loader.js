@@ -125,7 +125,7 @@ export const loadStimuli_inLang = (lang, chartType) => {
                 ...shuffle(tmp_fin.slice(4, 6))
             ]
 
-            console.log("fin : ", fin)
+            // console.log("fin : ", fin)
 
             break;
 

@@ -85,8 +85,6 @@ export const Trial = ({ chartType, meta, navigate, nextUrl }) => {
                         <img src={expLang + "/" + chartType + "/empty-placeholder.png"} alt={"empty"} style={{ width: '100%' }}></img>
                     }
 
-                    {/* <Grid id="chartDiv" item xs={12} marginTop={2}></Grid> */}
-
                     {/* answer section below */}
                     <Grid item xs={12} marginTop={2}>
                         {visibilityAnsField === "visible" ?

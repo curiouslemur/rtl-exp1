@@ -25,8 +25,8 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         valMarked: -1, valL: -1, valR: -1,
         ansExpected: 10, ansL: 10, ansR: 10,
         ansType: "input",
-        en: { q: "How many days did the data collection last?", unit: "days." },
-        ar: { q: "كم يوما استغرقت عملية جمع البيانات؟", unit: "days" }
+        en: { q: "How many days did the data collection last?", note: "Each bar in the graph represents one day.", unit: "days." },
+        ar: { q: "كم يوما استغرقت عملية جمع البيانات؟", note: "يمثل كل عمود في الرسم البياني يومًا واحدًا.", unit: "days" }
     }, { // index: 1
         qId: "2-sst", // The second question will be either of the sst or sts versions
         chartType: "bar",
