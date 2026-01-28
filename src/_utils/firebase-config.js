@@ -54,6 +54,8 @@ export const logDem = async (pathDem, dem) => {
         return await setDoc(doc(fsdb, "test-" + pathDem), dem, { merge: true })
     } else if (dem.expCountry === 'revisit') {
         return await setDoc(doc(fsdb, "revisit-" + pathDem), dem, { merge: true })
+    } else if (dem.expCountry === 'demo') {
+        return await setDoc(doc(fsdb, "demo-" + pathDem), dem, { merge: true })
     } else {
         return await setDoc(doc(fsdb, pathDem), dem, { merge: true })
     }

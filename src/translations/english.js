@@ -1,6 +1,7 @@
 export const englishTexts = {
     consent: {
         mobileWarning: "Please set your browser to full screen, or use a device or a computer with a wider display.",
+        demoConsentTitle: "Welcome. (this is demo. u can skip all Qs)",
         consentTitle: "Welcome",
 
         countryResQ: "From which country are you taking this survey? *",

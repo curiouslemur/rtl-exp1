@@ -1,6 +1,7 @@
 export const arabicTexts = {
     consent: {
         mobileWarning: "يرجى استخدام جهاز أو حاسوب بشاشة أعرض.",
+        demoConsentTitle: "مرحباً (you can skip the Qs)",
         consentTitle: "مرحباً",
 
         countryResQ: "من أي بلد تشارك في هذا الاستطلاع؟ *",

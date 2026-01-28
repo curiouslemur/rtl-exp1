@@ -19,7 +19,7 @@ const styles = {
 export const Consent = ({ meta, sessionID, navigate, nextUrl }) => {
     const [consent_md, setConsent_md] = useState('');
 
-    const [disabledButton, setDisabledButton] = useState(true);
+    const [disabledButton, setDisabledButton] = useState(cc.getUrlParams().ct === "demo" ? false : true);
     const [selectedValues, setSelectedValues] = useState()
     const [isMobile, setIsMobile] = useState(false)
 
@@ -59,7 +59,7 @@ export const Consent = ({ meta, sessionID, navigate, nextUrl }) => {
     } else if (!meta.expLang) {
         return (
             <Grid container style={styles.container} justifyContent="center">
-                <Typography variant="h4"> Language undefined </Typography>
+                <Typography variant="h3"> Language undefined </Typography>
             </Grid>
         )
     }
@@ -68,7 +68,9 @@ export const Consent = ({ meta, sessionID, navigate, nextUrl }) => {
         <Grid container style={styles.container} justifyContent="center">
 
             <Grid item xl={6} xs={10} marginTop={2}>
-                <Typography variant="h4">{labels.consentTitle}</Typography>
+                <Typography variant="h4">
+                    {cc.getUrlParams().ct === "demo" ? labels.demoConsentTitle : labels.consentTitle}
+                </Typography>
                 <Grid item >
                     <hr style={{ color: "#ea3433", backgroundColor: "#ea3433", height: 1.5 }} />
                     <div className="markdown-content">
