@@ -39,7 +39,9 @@ export const onClickShowChart = (divId, stimulusData, setVisibilityAnserwField, 
         // console.log("resetting timeout")
         addEmptyPlaceholder("#chartDiv");
         setChartIsVisible(false)
-    }, 5000) //
+    },
+        JSON.parse(sessionStorage.getItem('demography')).expCountry === 'demo' ? 20000 :
+            5000) // timeout to hide chart after 5s
     setTimeoutID(id)
 }
 

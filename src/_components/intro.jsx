@@ -21,9 +21,9 @@ export const Intro = ({ chartType, meta, navigate, nextUrl }) => {
         if (JSON.parse(sessionStorage.getItem('demography')).countryResLen === '999') {
             setCannotStart(false)
         } else {
-            const timeout = setTimeout(() => {
+            const timeout = setTimeout(() => { // timeout to enable start button
                 setCannotStart(false)
-            }, 15000)
+            }, JSON.parse(sessionStorage.getItem('demography')).expCountry === 'demo' ? 2000 : 17000)
             return () => clearTimeout(timeout);
         } // TODO: make this like 30s instead 
 
