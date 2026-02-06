@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/rtl-exp1/static/css/main.940b4083.css",
-    "main.js": "/rtl-exp1/static/js/main.92223f55.js",
+    "main.js": "/rtl-exp1/static/js/main.b9e6ae98.js",
     "index.html": "/rtl-exp1/index.html"
   },
   "entrypoints": [
     "static/css/main.940b4083.css",
-    "static/js/main.92223f55.js"
+    "static/js/main.b9e6ae98.js"
   ]
 }
