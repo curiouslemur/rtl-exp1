@@ -163,7 +163,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         valMarked: 90, valL: 157, valR: 103,
         ansExpected: "either", ansL: 157, ansR: 103,
         ansType: 'input',
-        en: { q: "How many visistors were there on the day before the holiday?" },
+        en: { q: "How many visitors were there on the day before the holiday?" },
         ar: { q: "كم عدد الزوار في اليوم السابق للعطلة الرسمية؟" }
     },
     {// index: 11
@@ -176,7 +176,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         valMarked: 65, valL: 64, valR: 70,
         ansExpected: "either", ansL: 64, ansR: 70,
         ansType: 'input',
-        en: { q: "How many visistors were there on the day before the holiday?" },
+        en: { q: "How many visitors were there on the day before the holiday?" },
         ar: { q: "كم عدد الزوار في اليوم السابق للعطلة؟" }
     }, {// index: 12
         qId: "7-extract-before-sts",
@@ -188,7 +188,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         valMarked: 99, valL: 100, valR: 88,
         ansExpected: "either", ansL: 100, ansR: 88,
         ansType: 'input',
-        en: { q: "How many visistors were there on the day before the holiday?" },
+        en: { q: "How many visitors were there on the day before the holiday?" },
         ar: { q: "كم عدد الزوار في اليوم السابق للعطلة؟" }
     }, {// index: 13
         qId: "7-extract-after-u",
@@ -200,7 +200,7 @@ export const stimuliBar = [ // questions and labels in English. Order is importa
         valMarked: 90, valL: 157, valR: 103,
         ansExpected: "either", ansL: 103, ansR: 157,
         ansType: 'input',
-        en: { q: "How many visistors were there on the day after the holiday?" },
+        en: { q: "How many visitors were there on the day after the holiday?" },
         ar: { q: "كم عدد الزوار في اليوم التالي للعطلة الرسمية؟" }
     }, {// index: 14
         qId: "7-extract-after-sst",
